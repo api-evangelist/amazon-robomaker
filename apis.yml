@@ -1,4 +1,4 @@
-name: AWS RoboMaker API
+name: Amazon RoboMaker
 description: AWS RoboMaker is a cloud-based service that makes it easy to develop, simulate, and deploy intelligent robotics applications. RoboMaker extends the most widely used open-source robotics software framework, Robot Operating System (ROS), with connectivity to cloud services, providing tools for building, testing, and deploying robotics applications at scale.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://aws.amazon.com/robomaker/
