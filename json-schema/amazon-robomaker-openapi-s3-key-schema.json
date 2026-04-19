@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-s3-key-schema.json",
+  "title": "S3Key",
+  "description": "S3Key schema from openapi",
+  "type": "string",
+  "pattern": ".*",
+  "minLength": 1,
+  "maxLength": 1024
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-upload-configurations-schema.json",
+  "title": "UploadConfigurations",
+  "description": "UploadConfigurations schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/UploadConfiguration"
+  },
+  "minItems": 0,
+  "maxItems": 10
+}

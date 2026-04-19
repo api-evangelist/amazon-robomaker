@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-robot-application-configs-structure.json",
+  "description": "RobotApplicationConfigs schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/RobotApplicationConfig"
+  },
+  "minItems": 1,
+  "maxItems": 1,
+  "name": "RobotApplicationConfigs"
+}

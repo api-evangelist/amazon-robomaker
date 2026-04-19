@@ -1,0 +1,7 @@
+{
+  "name": "Example Resource",
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "version": "example-value",
+  "lastUpdatedAt": "example-value",
+  "robotSoftwareSuite": "example-value"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-failed-create-simulation-job-requests-structure.json",
+  "description": "FailedCreateSimulationJobRequests schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/FailedCreateSimulationJobRequest"
+  },
+  "name": "FailedCreateSimulationJobRequests"
+}

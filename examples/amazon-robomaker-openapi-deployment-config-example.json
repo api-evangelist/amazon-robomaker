@@ -1,0 +1,6 @@
+{
+  "concurrentDeploymentPercentage": "example-value",
+  "failureThresholdPercentage": "example-value",
+  "robotDeploymentTimeoutInSeconds": "example-value",
+  "downloadConditionFile": "example-value"
+}

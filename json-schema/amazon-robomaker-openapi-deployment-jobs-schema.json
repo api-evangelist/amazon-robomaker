@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-deployment-jobs-schema.json",
+  "title": "DeploymentJobs",
+  "description": "DeploymentJobs schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/DeploymentJob"
+  },
+  "minItems": 0,
+  "maxItems": 200
+}

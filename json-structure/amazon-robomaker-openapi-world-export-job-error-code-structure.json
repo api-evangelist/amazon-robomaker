@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-world-export-job-error-code-structure.json",
+  "description": "WorldExportJobErrorCode schema from openapi",
+  "type": "string",
+  "enum": [
+    "InternalServiceError",
+    "LimitExceeded",
+    "ResourceNotFound",
+    "RequestThrottled",
+    "InvalidInput",
+    "AccessDenied"
+  ],
+  "name": "WorldExportJobErrorCode"
+}

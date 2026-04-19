@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-deployment-application-config-schema.json",
+  "title": "DeploymentApplicationConfig",
+  "description": "Information about a deployment application configuration.",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the robot application."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentVersion"
+        },
+        {
+          "description": "The version of the application."
+        }
+      ]
+    },
+    "launchConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentLaunchConfig"
+        },
+        {
+          "description": "The launch configuration."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application",
+    "applicationVersion",
+    "launchConfig"
+  ]
+}

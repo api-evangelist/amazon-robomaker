@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-simulation-job-request-schema.json",
+  "title": "SimulationJobRequest",
+  "description": "Information about a simulation job request.",
+  "type": "object",
+  "properties": {
+    "outputLocation": {
+      "$ref": "#/components/schemas/OutputLocation"
+    },
+    "loggingConfig": {
+      "$ref": "#/components/schemas/LoggingConfig"
+    },
+    "maxJobDurationInSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobDuration"
+        },
+        {
+          "description": "The maximum simulation job duration in seconds. The value must be 8 days (691,200 seconds) or less."
+        }
+      ]
+    },
+    "iamRole": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRole"
+        },
+        {
+          "description": "The IAM role name that allows the simulation instance to call the AWS APIs that are specified in its associated policies on your behalf. This is how credentials are passed in to your simulation job. "
+        }
+      ]
+    },
+    "failureBehavior": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureBehavior"
+        },
+        {
+          "description": "<p>The failure behavior the simulation job.</p> <dl> <dt>Continue</dt> <dd> <p>Leaves the host running for its maximum timeout duration after a <code>4XX</code> error code.</p> </dd> <dt>Fail</dt> <dd> <p>Stop the simulation job and terminate the instance.</p> </dd> </dl>"
+        }
+      ]
+    },
+    "useDefaultApplications": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "description": "A Boolean indicating whether to use default applications in the simulation job. Default applications include Gazebo, rqt, rviz and terminal access. "
+        }
+      ]
+    },
+    "robotApplications": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotApplicationConfigs"
+        },
+        {
+          "description": "The robot applications to use in the simulation job."
+        }
+      ]
+    },
+    "simulationApplications": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationApplicationConfigs"
+        },
+        {
+          "description": "The simulation applications to use in the simulation job."
+        }
+      ]
+    },
+    "dataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSourceConfigs"
+        },
+        {
+          "description": "<p>Specify data sources to mount read-only files from S3 into your simulation. These files are available under <code>/opt/robomaker/datasources/data_source_name</code>. </p> <note> <p>There is a limit of 100 files and a combined size of 25GB for all <code>DataSourceConfig</code> objects. </p> </note>"
+        }
+      ]
+    },
+    "vpcConfig": {
+      "$ref": "#/components/schemas/VPCConfig"
+    },
+    "compute": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Compute"
+        },
+        {
+          "description": "Compute information for the simulation job"
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A map that contains tag keys and tag values that are attached to the simulation job request."
+        }
+      ]
+    }
+  },
+  "required": [
+    "maxJobDurationInSeconds"
+  ]
+}

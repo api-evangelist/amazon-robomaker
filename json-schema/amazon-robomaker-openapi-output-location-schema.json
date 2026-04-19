@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-output-location-schema.json",
+  "title": "OutputLocation",
+  "description": "The output location.",
+  "type": "object",
+  "properties": {
+    "s3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Bucket"
+        },
+        {
+          "description": "The S3 bucket for output."
+        }
+      ]
+    },
+    "s3Prefix": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The S3 folder in the <code>s3Bucket</code> where output files will be placed."
+        }
+      ]
+    }
+  }
+}

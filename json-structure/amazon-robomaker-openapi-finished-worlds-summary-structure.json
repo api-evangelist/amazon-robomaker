@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-finished-worlds-summary-structure.json",
+  "description": "Information about worlds that finished.",
+  "type": "object",
+  "properties": {
+    "finishedCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The total number of finished worlds."
+        }
+      ]
+    },
+    "succeededWorlds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arns"
+        },
+        {
+          "description": "A list of worlds that succeeded."
+        }
+      ]
+    },
+    "failureSummary": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureSummary"
+        },
+        {
+          "description": "Information about worlds that failed."
+        }
+      ]
+    }
+  },
+  "name": "FinishedWorldsSummary"
+}

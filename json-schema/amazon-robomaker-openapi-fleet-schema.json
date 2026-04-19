@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-fleet-schema.json",
+  "title": "Fleet",
+  "description": "Information about a fleet.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "description": "The name of the fleet."
+        }
+      ]
+    },
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the fleet."
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the fleet was created."
+        }
+      ]
+    },
+    "lastDeploymentStatus": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentStatus"
+        },
+        {
+          "description": "The status of the last fleet deployment."
+        }
+      ]
+    },
+    "lastDeploymentJob": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the last deployment job."
+        }
+      ]
+    },
+    "lastDeploymentTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time of the last deployment."
+        }
+      ]
+    }
+  }
+}

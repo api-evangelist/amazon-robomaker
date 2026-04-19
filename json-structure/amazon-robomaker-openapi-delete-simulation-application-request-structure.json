@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-delete-simulation-application-request-structure.json",
+  "description": "DeleteSimulationApplicationRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the simulation application to delete."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the simulation application to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application"
+  ],
+  "name": "DeleteSimulationApplicationRequest"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-simulation-software-suite-version-type-structure.json",
+  "description": "SimulationSoftwareSuiteVersionType schema from openapi",
+  "type": "string",
+  "pattern": "7|9|11|Kinetic|Melodic|Dashing|Foxy",
+  "minLength": 0,
+  "maxLength": 1024,
+  "name": "SimulationSoftwareSuiteVersionType"
+}

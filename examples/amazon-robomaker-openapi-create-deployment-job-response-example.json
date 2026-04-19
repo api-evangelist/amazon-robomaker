@@ -1,0 +1,11 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "fleet": "example-value",
+  "status": "ACTIVE",
+  "deploymentApplicationConfigs": "example-value",
+  "failureReason": "example-value",
+  "failureCode": "example-value",
+  "createdAt": "example-value",
+  "deploymentConfig": "example-value",
+  "tags": "example-value"
+}

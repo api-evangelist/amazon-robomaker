@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-simulation-job-batch-status-schema.json",
+  "title": "SimulationJobBatchStatus",
+  "description": "SimulationJobBatchStatus schema from openapi",
+  "type": "string",
+  "enum": [
+    "Pending",
+    "InProgress",
+    "Failed",
+    "Completed",
+    "Canceled",
+    "Canceling",
+    "Completing",
+    "TimingOut",
+    "TimedOut"
+  ]
+}

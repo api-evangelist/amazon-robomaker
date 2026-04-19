@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-batch-timeout-in-seconds-structure.json",
+  "description": "BatchTimeoutInSeconds schema from openapi",
+  "type": "int32",
+  "name": "BatchTimeoutInSeconds"
+}

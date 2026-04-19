@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-source-config-structure.json",
+  "description": "Information about a source configuration.",
+  "type": "object",
+  "properties": {
+    "s3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Bucket"
+        },
+        {
+          "description": "The Amazon S3 bucket name."
+        }
+      ]
+    },
+    "s3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The s3 object key."
+        }
+      ]
+    },
+    "architecture": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Architecture"
+        },
+        {
+          "description": "The target processor architecture for the application."
+        }
+      ]
+    }
+  },
+  "name": "SourceConfig"
+}

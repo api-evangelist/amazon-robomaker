@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-data-source-configs-structure.json",
+  "description": "DataSourceConfigs schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/DataSourceConfig"
+  },
+  "minItems": 1,
+  "maxItems": 6,
+  "name": "DataSourceConfigs"
+}

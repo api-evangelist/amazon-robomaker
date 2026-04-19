@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-register-robot-request-schema.json",
+  "title": "RegisterRobotRequest",
+  "description": "AWS RoboMaker is unable to process this request as the support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.",
+  "type": "object",
+  "properties": {
+    "fleet": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the fleet."
+        }
+      ]
+    },
+    "robot": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the robot."
+        }
+      ]
+    }
+  },
+  "required": [
+    "fleet",
+    "robot"
+  ],
+  "deprecated": true
+}

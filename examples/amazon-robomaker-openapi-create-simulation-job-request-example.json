@@ -1,0 +1,12 @@
+{
+  "clientRequestToken": "example-value",
+  "outputLocation": "example-value",
+  "loggingConfig": "example-value",
+  "maxJobDurationInSeconds": "example-value",
+  "iamRole": "example-value",
+  "failureBehavior": "example-value",
+  "robotApplications": "example-value",
+  "simulationApplications": "example-value",
+  "dataSources": "example-value",
+  "tags": "example-value"
+}

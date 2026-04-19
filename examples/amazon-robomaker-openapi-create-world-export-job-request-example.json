@@ -1,0 +1,7 @@
+{
+  "clientRequestToken": "example-value",
+  "worlds": "example-value",
+  "outputLocation": "example-value",
+  "iamRole": "example-value",
+  "tags": "example-value"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-cancel-world-generation-job-response-structure.json",
+  "description": "CancelWorldGenerationJobResponse schema from openapi",
+  "type": "object",
+  "properties": {},
+  "name": "CancelWorldGenerationJobResponse"
+}

@@ -1,0 +1,806 @@
+{
+  "@context": {
+    "@version": 1.1,
+    "aws": "https://aws.amazon.com/schema/",
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "BatchDeleteWorldsRequest": "aws:BatchDeleteWorldsRequest",
+    "BatchDeleteWorldsResponse": "aws:BatchDeleteWorldsResponse",
+    "BatchDescribeSimulationJobRequest": "aws:BatchDescribeSimulationJobRequest",
+    "BatchDescribeSimulationJobResponse": "aws:BatchDescribeSimulationJobResponse",
+    "BatchPolicy": "aws:BatchPolicy",
+    "CancelDeploymentJobRequest": "aws:CancelDeploymentJobRequest",
+    "CancelDeploymentJobResponse": "aws:CancelDeploymentJobResponse",
+    "CancelSimulationJobBatchRequest": "aws:CancelSimulationJobBatchRequest",
+    "CancelSimulationJobBatchResponse": "aws:CancelSimulationJobBatchResponse",
+    "CancelSimulationJobRequest": "aws:CancelSimulationJobRequest",
+    "CancelSimulationJobResponse": "aws:CancelSimulationJobResponse",
+    "CancelWorldExportJobRequest": "aws:CancelWorldExportJobRequest",
+    "CancelWorldExportJobResponse": "aws:CancelWorldExportJobResponse",
+    "CancelWorldGenerationJobRequest": "aws:CancelWorldGenerationJobRequest",
+    "CancelWorldGenerationJobResponse": "aws:CancelWorldGenerationJobResponse",
+    "ComputeResponse": "aws:ComputeResponse",
+    "Compute": "aws:Compute",
+    "CreateDeploymentJobRequest": "aws:CreateDeploymentJobRequest",
+    "CreateDeploymentJobResponse": "aws:CreateDeploymentJobResponse",
+    "CreateFleetRequest": "aws:CreateFleetRequest",
+    "CreateFleetResponse": "aws:CreateFleetResponse",
+    "CreateRobotApplicationRequest": "aws:CreateRobotApplicationRequest",
+    "CreateRobotApplicationResponse": "aws:CreateRobotApplicationResponse",
+    "CreateRobotApplicationVersionRequest": "aws:CreateRobotApplicationVersionRequest",
+    "CreateRobotApplicationVersionResponse": "aws:CreateRobotApplicationVersionResponse",
+    "CreateRobotRequest": "aws:CreateRobotRequest",
+    "CreateRobotResponse": "aws:CreateRobotResponse",
+    "CreateSimulationApplicationRequest": "aws:CreateSimulationApplicationRequest",
+    "CreateSimulationApplicationResponse": "aws:CreateSimulationApplicationResponse",
+    "CreateSimulationApplicationVersionRequest": "aws:CreateSimulationApplicationVersionRequest",
+    "CreateSimulationApplicationVersionResponse": "aws:CreateSimulationApplicationVersionResponse",
+    "CreateSimulationJobRequest": "aws:CreateSimulationJobRequest",
+    "CreateSimulationJobResponse": "aws:CreateSimulationJobResponse",
+    "CreateWorldExportJobRequest": "aws:CreateWorldExportJobRequest",
+    "CreateWorldExportJobResponse": "aws:CreateWorldExportJobResponse",
+    "CreateWorldGenerationJobRequest": "aws:CreateWorldGenerationJobRequest",
+    "CreateWorldGenerationJobResponse": "aws:CreateWorldGenerationJobResponse",
+    "CreateWorldTemplateRequest": "aws:CreateWorldTemplateRequest",
+    "CreateWorldTemplateResponse": "aws:CreateWorldTemplateResponse",
+    "DataSourceConfig": "aws:DataSourceConfig",
+    "DataSource": "aws:DataSource",
+    "DeleteFleetRequest": "aws:DeleteFleetRequest",
+    "DeleteFleetResponse": "aws:DeleteFleetResponse",
+    "DeleteRobotApplicationRequest": "aws:DeleteRobotApplicationRequest",
+    "DeleteRobotApplicationResponse": "aws:DeleteRobotApplicationResponse",
+    "DeleteRobotRequest": "aws:DeleteRobotRequest",
+    "DeleteRobotResponse": "aws:DeleteRobotResponse",
+    "DeleteSimulationApplicationRequest": "aws:DeleteSimulationApplicationRequest",
+    "DeleteSimulationApplicationResponse": "aws:DeleteSimulationApplicationResponse",
+    "DeleteWorldTemplateRequest": "aws:DeleteWorldTemplateRequest",
+    "DeleteWorldTemplateResponse": "aws:DeleteWorldTemplateResponse",
+    "DeploymentApplicationConfig": "aws:DeploymentApplicationConfig",
+    "DeploymentConfig": "aws:DeploymentConfig",
+    "DeploymentJob": "aws:DeploymentJob",
+    "DeploymentLaunchConfig": "aws:DeploymentLaunchConfig",
+    "DeregisterRobotRequest": "aws:DeregisterRobotRequest",
+    "DeregisterRobotResponse": "aws:DeregisterRobotResponse",
+    "DescribeDeploymentJobRequest": "aws:DescribeDeploymentJobRequest",
+    "DescribeDeploymentJobResponse": "aws:DescribeDeploymentJobResponse",
+    "DescribeFleetRequest": "aws:DescribeFleetRequest",
+    "DescribeFleetResponse": "aws:DescribeFleetResponse",
+    "DescribeRobotApplicationRequest": "aws:DescribeRobotApplicationRequest",
+    "DescribeRobotApplicationResponse": "aws:DescribeRobotApplicationResponse",
+    "DescribeRobotRequest": "aws:DescribeRobotRequest",
+    "DescribeRobotResponse": "aws:DescribeRobotResponse",
+    "DescribeSimulationApplicationRequest": "aws:DescribeSimulationApplicationRequest",
+    "DescribeSimulationApplicationResponse": "aws:DescribeSimulationApplicationResponse",
+    "DescribeSimulationJobBatchRequest": "aws:DescribeSimulationJobBatchRequest",
+    "DescribeSimulationJobBatchResponse": "aws:DescribeSimulationJobBatchResponse",
+    "DescribeSimulationJobRequest": "aws:DescribeSimulationJobRequest",
+    "DescribeSimulationJobResponse": "aws:DescribeSimulationJobResponse",
+    "DescribeWorldExportJobRequest": "aws:DescribeWorldExportJobRequest",
+    "DescribeWorldExportJobResponse": "aws:DescribeWorldExportJobResponse",
+    "DescribeWorldGenerationJobRequest": "aws:DescribeWorldGenerationJobRequest",
+    "DescribeWorldGenerationJobResponse": "aws:DescribeWorldGenerationJobResponse",
+    "DescribeWorldRequest": "aws:DescribeWorldRequest",
+    "DescribeWorldResponse": "aws:DescribeWorldResponse",
+    "DescribeWorldTemplateRequest": "aws:DescribeWorldTemplateRequest",
+    "DescribeWorldTemplateResponse": "aws:DescribeWorldTemplateResponse",
+    "Environment": "aws:Environment",
+    "EnvironmentVariableMap": "aws:EnvironmentVariableMap",
+    "FailedCreateSimulationJobRequest": "aws:FailedCreateSimulationJobRequest",
+    "FailureSummary": "aws:FailureSummary",
+    "Filter": "aws:Filter",
+    "FinishedWorldsSummary": "aws:FinishedWorldsSummary",
+    "Fleet": "aws:Fleet",
+    "GetWorldTemplateBodyRequest": "aws:GetWorldTemplateBodyRequest",
+    "GetWorldTemplateBodyResponse": "aws:GetWorldTemplateBodyResponse",
+    "LaunchConfig": "aws:LaunchConfig",
+    "ListDeploymentJobsRequest": "aws:ListDeploymentJobsRequest",
+    "ListDeploymentJobsResponse": "aws:ListDeploymentJobsResponse",
+    "ListFleetsRequest": "aws:ListFleetsRequest",
+    "ListFleetsResponse": "aws:ListFleetsResponse",
+    "ListRobotApplicationsRequest": "aws:ListRobotApplicationsRequest",
+    "ListRobotApplicationsResponse": "aws:ListRobotApplicationsResponse",
+    "ListRobotsRequest": "aws:ListRobotsRequest",
+    "ListRobotsResponse": "aws:ListRobotsResponse",
+    "ListSimulationApplicationsRequest": "aws:ListSimulationApplicationsRequest",
+    "ListSimulationApplicationsResponse": "aws:ListSimulationApplicationsResponse",
+    "ListSimulationJobBatchesRequest": "aws:ListSimulationJobBatchesRequest",
+    "ListSimulationJobBatchesResponse": "aws:ListSimulationJobBatchesResponse",
+    "ListSimulationJobsRequest": "aws:ListSimulationJobsRequest",
+    "ListSimulationJobsResponse": "aws:ListSimulationJobsResponse",
+    "ListTagsForResourceRequest": "aws:ListTagsForResourceRequest",
+    "ListTagsForResourceResponse": "aws:ListTagsForResourceResponse",
+    "ListWorldExportJobsRequest": "aws:ListWorldExportJobsRequest",
+    "ListWorldExportJobsResponse": "aws:ListWorldExportJobsResponse",
+    "ListWorldGenerationJobsRequest": "aws:ListWorldGenerationJobsRequest",
+    "ListWorldGenerationJobsResponse": "aws:ListWorldGenerationJobsResponse",
+    "ListWorldTemplatesRequest": "aws:ListWorldTemplatesRequest",
+    "ListWorldTemplatesResponse": "aws:ListWorldTemplatesResponse",
+    "ListWorldsRequest": "aws:ListWorldsRequest",
+    "ListWorldsResponse": "aws:ListWorldsResponse",
+    "LoggingConfig": "aws:LoggingConfig",
+    "NetworkInterface": "aws:NetworkInterface",
+    "OutputLocation": "aws:OutputLocation",
+    "PortForwardingConfig": "aws:PortForwardingConfig",
+    "PortMapping": "aws:PortMapping",
+    "ProgressDetail": "aws:ProgressDetail",
+    "RegisterRobotRequest": "aws:RegisterRobotRequest",
+    "RegisterRobotResponse": "aws:RegisterRobotResponse",
+    "RenderingEngine": "aws:RenderingEngine",
+    "RestartSimulationJobRequest": "aws:RestartSimulationJobRequest",
+    "RestartSimulationJobResponse": "aws:RestartSimulationJobResponse",
+    "RobotApplicationConfig": "aws:RobotApplicationConfig",
+    "RobotApplicationSummary": "aws:RobotApplicationSummary",
+    "RobotDeployment": "aws:RobotDeployment",
+    "Robot": "aws:Robot",
+    "RobotSoftwareSuite": "aws:RobotSoftwareSuite",
+    "S3KeyOutput": "aws:S3KeyOutput",
+    "S3Object": "aws:S3Object",
+    "SimulationApplicationConfig": "aws:SimulationApplicationConfig",
+    "SimulationApplicationSummary": "aws:SimulationApplicationSummary",
+    "SimulationJobBatchSummary": "aws:SimulationJobBatchSummary",
+    "SimulationJobRequest": "aws:SimulationJobRequest",
+    "SimulationJob": "aws:SimulationJob",
+    "SimulationJobSummary": "aws:SimulationJobSummary",
+    "SimulationSoftwareSuite": "aws:SimulationSoftwareSuite",
+    "SourceConfig": "aws:SourceConfig",
+    "Source": "aws:Source",
+    "StartSimulationJobBatchRequest": "aws:StartSimulationJobBatchRequest",
+    "StartSimulationJobBatchResponse": "aws:StartSimulationJobBatchResponse",
+    "SyncDeploymentJobRequest": "aws:SyncDeploymentJobRequest",
+    "SyncDeploymentJobResponse": "aws:SyncDeploymentJobResponse",
+    "TagMap": "aws:TagMap",
+    "TagResourceRequest": "aws:TagResourceRequest",
+    "TagResourceResponse": "aws:TagResourceResponse",
+    "TemplateLocation": "aws:TemplateLocation",
+    "TemplateSummary": "aws:TemplateSummary",
+    "Tool": "aws:Tool",
+    "UntagResourceRequest": "aws:UntagResourceRequest",
+    "UntagResourceResponse": "aws:UntagResourceResponse",
+    "UpdateRobotApplicationRequest": "aws:UpdateRobotApplicationRequest",
+    "UpdateRobotApplicationResponse": "aws:UpdateRobotApplicationResponse",
+    "UpdateSimulationApplicationRequest": "aws:UpdateSimulationApplicationRequest",
+    "UpdateSimulationApplicationResponse": "aws:UpdateSimulationApplicationResponse",
+    "UpdateWorldTemplateRequest": "aws:UpdateWorldTemplateRequest",
+    "UpdateWorldTemplateResponse": "aws:UpdateWorldTemplateResponse",
+    "UploadConfiguration": "aws:UploadConfiguration",
+    "VPCConfigResponse": "aws:VPCConfigResponse",
+    "VPCConfig": "aws:VPCConfig",
+    "WorldConfig": "aws:WorldConfig",
+    "WorldCount": "aws:WorldCount",
+    "WorldExportJobSummary": "aws:WorldExportJobSummary",
+    "WorldFailure": "aws:WorldFailure",
+    "WorldGenerationJobSummary": "aws:WorldGenerationJobSummary",
+    "WorldSummary": "aws:WorldSummary",
+    "worlds": {
+      "@id": "aws:worlds",
+      "@type": "xsd:string"
+    },
+    "unprocessedWorlds": {
+      "@id": "aws:unprocessedWorlds",
+      "@type": "xsd:string"
+    },
+    "jobs": {
+      "@id": "aws:jobs",
+      "@type": "xsd:string"
+    },
+    "unprocessedJobs": {
+      "@id": "aws:unprocessedJobs",
+      "@type": "xsd:string"
+    },
+    "timeoutInSeconds": {
+      "@id": "aws:timeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "maxConcurrency": {
+      "@id": "aws:maxConcurrency",
+      "@type": "xsd:string"
+    },
+    "job": {
+      "@id": "aws:job",
+      "@type": "xsd:string"
+    },
+    "batch": {
+      "@id": "aws:batch",
+      "@type": "xsd:string"
+    },
+    "simulationUnitLimit": {
+      "@id": "aws:simulationUnitLimit",
+      "@type": "xsd:string"
+    },
+    "computeType": {
+      "@id": "aws:computeType",
+      "@type": "xsd:string"
+    },
+    "gpuUnitLimit": {
+      "@id": "aws:gpuUnitLimit",
+      "@type": "xsd:string"
+    },
+    "deploymentConfig": {
+      "@id": "aws:deploymentConfig",
+      "@type": "xsd:string"
+    },
+    "clientRequestToken": {
+      "@id": "aws:clientRequestToken",
+      "@type": "xsd:string"
+    },
+    "fleet": {
+      "@id": "aws:fleet",
+      "@type": "xsd:string"
+    },
+    "deploymentApplicationConfigs": {
+      "@id": "aws:deploymentApplicationConfigs",
+      "@type": "xsd:string"
+    },
+    "tags": {
+      "@id": "aws:tags",
+      "@type": "xsd:string"
+    },
+    "arn": {
+      "@id": "aws:arn",
+      "@type": "xsd:string"
+    },
+    "status": {
+      "@id": "aws:status",
+      "@type": "xsd:string"
+    },
+    "failureReason": {
+      "@id": "aws:failureReason",
+      "@type": "xsd:string"
+    },
+    "failureCode": {
+      "@id": "aws:failureCode",
+      "@type": "xsd:string"
+    },
+    "createdAt": {
+      "@id": "aws:createdAt",
+      "@type": "xsd:string"
+    },
+    "name": {
+      "@id": "schema:name"
+    },
+    "sources": {
+      "@id": "aws:sources",
+      "@type": "xsd:string"
+    },
+    "robotSoftwareSuite": {
+      "@id": "aws:robotSoftwareSuite",
+      "@type": "xsd:string"
+    },
+    "environment": {
+      "@id": "aws:environment",
+      "@type": "xsd:string"
+    },
+    "version": {
+      "@id": "schema:version"
+    },
+    "lastUpdatedAt": {
+      "@id": "aws:lastUpdatedAt",
+      "@type": "xsd:string"
+    },
+    "revisionId": {
+      "@id": "aws:revisionId",
+      "@type": "xsd:string"
+    },
+    "application": {
+      "@id": "aws:application",
+      "@type": "xsd:string"
+    },
+    "currentRevisionId": {
+      "@id": "aws:currentRevisionId",
+      "@type": "xsd:string"
+    },
+    "s3Etags": {
+      "@id": "aws:s3Etags",
+      "@type": "xsd:string"
+    },
+    "imageDigest": {
+      "@id": "aws:imageDigest",
+      "@type": "xsd:string"
+    },
+    "architecture": {
+      "@id": "aws:architecture",
+      "@type": "xsd:string"
+    },
+    "greengrassGroupId": {
+      "@id": "aws:greengrassGroupId",
+      "@type": "xsd:string"
+    },
+    "simulationSoftwareSuite": {
+      "@id": "aws:simulationSoftwareSuite",
+      "@type": "xsd:string"
+    },
+    "renderingEngine": {
+      "@id": "aws:renderingEngine",
+      "@type": "xsd:string"
+    },
+    "outputLocation": {
+      "@id": "aws:outputLocation",
+      "@type": "xsd:string"
+    },
+    "loggingConfig": {
+      "@id": "aws:loggingConfig",
+      "@type": "xsd:string"
+    },
+    "maxJobDurationInSeconds": {
+      "@id": "aws:maxJobDurationInSeconds",
+      "@type": "xsd:string"
+    },
+    "iamRole": {
+      "@id": "aws:iamRole",
+      "@type": "xsd:string"
+    },
+    "failureBehavior": {
+      "@id": "aws:failureBehavior",
+      "@type": "xsd:string"
+    },
+    "robotApplications": {
+      "@id": "aws:robotApplications",
+      "@type": "xsd:string"
+    },
+    "simulationApplications": {
+      "@id": "aws:simulationApplications",
+      "@type": "xsd:string"
+    },
+    "dataSources": {
+      "@id": "aws:dataSources",
+      "@type": "xsd:string"
+    },
+    "vpcConfig": {
+      "@id": "aws:vpcConfig",
+      "@type": "xsd:string"
+    },
+    "compute": {
+      "@id": "aws:compute",
+      "@type": "xsd:string"
+    },
+    "lastStartedAt": {
+      "@id": "aws:lastStartedAt",
+      "@type": "xsd:string"
+    },
+    "simulationTimeMillis": {
+      "@id": "aws:simulationTimeMillis",
+      "@type": "xsd:string"
+    },
+    "template": {
+      "@id": "aws:template",
+      "@type": "xsd:string"
+    },
+    "worldCount": {
+      "@id": "aws:worldCount",
+      "@type": "xsd:string"
+    },
+    "worldTags": {
+      "@id": "aws:worldTags",
+      "@type": "xsd:string"
+    },
+    "templateBody": {
+      "@id": "aws:templateBody",
+      "@type": "xsd:string"
+    },
+    "templateLocation": {
+      "@id": "aws:templateLocation",
+      "@type": "xsd:string"
+    },
+    "s3Bucket": {
+      "@id": "aws:s3Bucket",
+      "@type": "xsd:string"
+    },
+    "s3Keys": {
+      "@id": "aws:s3Keys",
+      "@type": "xsd:string"
+    },
+    "type": {
+      "@id": "aws:type",
+      "@type": "xsd:string"
+    },
+    "destination": {
+      "@id": "aws:destination",
+      "@type": "xsd:string"
+    },
+    "applicationVersion": {
+      "@id": "aws:applicationVersion",
+      "@type": "xsd:string"
+    },
+    "robot": {
+      "@id": "aws:robot",
+      "@type": "xsd:string"
+    },
+    "launchConfig": {
+      "@id": "aws:launchConfig",
+      "@type": "xsd:string"
+    },
+    "concurrentDeploymentPercentage": {
+      "@id": "aws:concurrentDeploymentPercentage",
+      "@type": "xsd:string"
+    },
+    "failureThresholdPercentage": {
+      "@id": "aws:failureThresholdPercentage",
+      "@type": "xsd:string"
+    },
+    "robotDeploymentTimeoutInSeconds": {
+      "@id": "aws:robotDeploymentTimeoutInSeconds",
+      "@type": "xsd:string"
+    },
+    "downloadConditionFile": {
+      "@id": "aws:downloadConditionFile",
+      "@type": "xsd:string"
+    },
+    "packageName": {
+      "@id": "aws:packageName",
+      "@type": "xsd:string"
+    },
+    "preLaunchFile": {
+      "@id": "aws:preLaunchFile",
+      "@type": "xsd:string"
+    },
+    "launchFile": {
+      "@id": "aws:launchFile",
+      "@type": "xsd:string"
+    },
+    "postLaunchFile": {
+      "@id": "aws:postLaunchFile",
+      "@type": "xsd:string"
+    },
+    "environmentVariables": {
+      "@id": "aws:environmentVariables",
+      "@type": "xsd:string"
+    },
+    "robotDeploymentSummary": {
+      "@id": "aws:robotDeploymentSummary",
+      "@type": "xsd:string"
+    },
+    "robots": {
+      "@id": "aws:robots",
+      "@type": "xsd:string"
+    },
+    "lastDeploymentStatus": {
+      "@id": "aws:lastDeploymentStatus",
+      "@type": "xsd:string"
+    },
+    "lastDeploymentJob": {
+      "@id": "aws:lastDeploymentJob",
+      "@type": "xsd:string"
+    },
+    "lastDeploymentTime": {
+      "@id": "aws:lastDeploymentTime",
+      "@type": "xsd:string"
+    },
+    "fleetArn": {
+      "@id": "aws:fleetArn",
+      "@type": "xsd:string"
+    },
+    "batchPolicy": {
+      "@id": "aws:batchPolicy",
+      "@type": "xsd:string"
+    },
+    "failedRequests": {
+      "@id": "aws:failedRequests",
+      "@type": "xsd:string"
+    },
+    "pendingRequests": {
+      "@id": "aws:pendingRequests",
+      "@type": "xsd:string"
+    },
+    "createdRequests": {
+      "@id": "aws:createdRequests",
+      "@type": "xsd:string"
+    },
+    "networkInterface": {
+      "@id": "aws:networkInterface",
+      "@type": "xsd:string"
+    },
+    "finishedWorldsSummary": {
+      "@id": "aws:finishedWorldsSummary",
+      "@type": "xsd:string"
+    },
+    "world": {
+      "@id": "aws:world",
+      "@type": "xsd:string"
+    },
+    "generationJob": {
+      "@id": "aws:generationJob",
+      "@type": "xsd:string"
+    },
+    "worldDescriptionBody": {
+      "@id": "aws:worldDescriptionBody",
+      "@type": "xsd:string"
+    },
+    "uri": {
+      "@id": "aws:uri",
+      "@type": "xsd:string"
+    },
+    "request": {
+      "@id": "aws:request",
+      "@type": "xsd:string"
+    },
+    "failedAt": {
+      "@id": "aws:failedAt",
+      "@type": "xsd:string"
+    },
+    "totalFailureCount": {
+      "@id": "aws:totalFailureCount",
+      "@type": "xsd:string"
+    },
+    "failures": {
+      "@id": "aws:failures",
+      "@type": "xsd:string"
+    },
+    "values": {
+      "@id": "aws:values",
+      "@type": "xsd:string"
+    },
+    "finishedCount": {
+      "@id": "aws:finishedCount",
+      "@type": "xsd:string"
+    },
+    "succeededWorlds": {
+      "@id": "aws:succeededWorlds",
+      "@type": "xsd:string"
+    },
+    "failureSummary": {
+      "@id": "aws:failureSummary",
+      "@type": "xsd:string"
+    },
+    "portForwardingConfig": {
+      "@id": "aws:portForwardingConfig",
+      "@type": "xsd:string"
+    },
+    "streamUI": {
+      "@id": "aws:streamUI",
+      "@type": "xsd:string"
+    },
+    "command": {
+      "@id": "aws:command",
+      "@type": "xsd:string"
+    },
+    "filters": {
+      "@id": "aws:filters",
+      "@type": "xsd:string"
+    },
+    "nextToken": {
+      "@id": "aws:nextToken",
+      "@type": "xsd:string"
+    },
+    "maxResults": {
+      "@id": "aws:maxResults",
+      "@type": "xsd:string"
+    },
+    "deploymentJobs": {
+      "@id": "aws:deploymentJobs",
+      "@type": "xsd:string"
+    },
+    "fleetDetails": {
+      "@id": "aws:fleetDetails",
+      "@type": "xsd:string"
+    },
+    "versionQualifier": {
+      "@id": "aws:versionQualifier",
+      "@type": "xsd:string"
+    },
+    "robotApplicationSummaries": {
+      "@id": "aws:robotApplicationSummaries",
+      "@type": "xsd:string"
+    },
+    "simulationApplicationSummaries": {
+      "@id": "aws:simulationApplicationSummaries",
+      "@type": "xsd:string"
+    },
+    "simulationJobBatchSummaries": {
+      "@id": "aws:simulationJobBatchSummaries",
+      "@type": "xsd:string"
+    },
+    "simulationJobSummaries": {
+      "@id": "aws:simulationJobSummaries",
+      "@type": "xsd:string"
+    },
+    "worldExportJobSummaries": {
+      "@id": "aws:worldExportJobSummaries",
+      "@type": "xsd:string"
+    },
+    "worldGenerationJobSummaries": {
+      "@id": "aws:worldGenerationJobSummaries",
+      "@type": "xsd:string"
+    },
+    "templateSummaries": {
+      "@id": "aws:templateSummaries",
+      "@type": "xsd:string"
+    },
+    "worldSummaries": {
+      "@id": "aws:worldSummaries",
+      "@type": "xsd:string"
+    },
+    "recordAllRosTopics": {
+      "@id": "aws:recordAllRosTopics",
+      "@type": "xsd:string"
+    },
+    "networkInterfaceId": {
+      "@id": "aws:networkInterfaceId",
+      "@type": "xsd:string"
+    },
+    "privateIpAddress": {
+      "@id": "aws:privateIpAddress",
+      "@type": "xsd:string"
+    },
+    "publicIpAddress": {
+      "@id": "aws:publicIpAddress",
+      "@type": "xsd:string"
+    },
+    "s3Prefix": {
+      "@id": "aws:s3Prefix",
+      "@type": "xsd:string"
+    },
+    "portMappings": {
+      "@id": "aws:portMappings",
+      "@type": "xsd:string"
+    },
+    "jobPort": {
+      "@id": "aws:jobPort",
+      "@type": "xsd:string"
+    },
+    "applicationPort": {
+      "@id": "aws:applicationPort",
+      "@type": "xsd:string"
+    },
+    "enableOnPublicIp": {
+      "@id": "aws:enableOnPublicIp",
+      "@type": "xsd:string"
+    },
+    "currentProgress": {
+      "@id": "aws:currentProgress",
+      "@type": "xsd:string"
+    },
+    "percentDone": {
+      "@id": "aws:percentDone",
+      "@type": "xsd:string"
+    },
+    "estimatedTimeRemainingSeconds": {
+      "@id": "aws:estimatedTimeRemainingSeconds",
+      "@type": "xsd:string"
+    },
+    "targetResource": {
+      "@id": "aws:targetResource",
+      "@type": "xsd:string"
+    },
+    "uploadConfigurations": {
+      "@id": "aws:uploadConfigurations",
+      "@type": "xsd:string"
+    },
+    "useDefaultUploadConfigurations": {
+      "@id": "aws:useDefaultUploadConfigurations",
+      "@type": "xsd:string"
+    },
+    "tools": {
+      "@id": "aws:tools",
+      "@type": "xsd:string"
+    },
+    "useDefaultTools": {
+      "@id": "aws:useDefaultTools",
+      "@type": "xsd:string"
+    },
+    "deploymentStartTime": {
+      "@id": "aws:deploymentStartTime",
+      "@type": "xsd:string"
+    },
+    "deploymentFinishTime": {
+      "@id": "aws:deploymentFinishTime",
+      "@type": "xsd:string"
+    },
+    "progressDetail": {
+      "@id": "aws:progressDetail",
+      "@type": "xsd:string"
+    },
+    "greenGrassGroupId": {
+      "@id": "aws:greenGrassGroupId",
+      "@type": "xsd:string"
+    },
+    "s3Key": {
+      "@id": "aws:s3Key",
+      "@type": "xsd:string"
+    },
+    "etag": {
+      "@id": "aws:etag",
+      "@type": "xsd:string"
+    },
+    "bucket": {
+      "@id": "aws:bucket",
+      "@type": "xsd:string"
+    },
+    "key": {
+      "@id": "aws:key",
+      "@type": "xsd:string"
+    },
+    "worldConfigs": {
+      "@id": "aws:worldConfigs",
+      "@type": "xsd:string"
+    },
+    "failedRequestCount": {
+      "@id": "aws:failedRequestCount",
+      "@type": "xsd:string"
+    },
+    "pendingRequestCount": {
+      "@id": "aws:pendingRequestCount",
+      "@type": "xsd:string"
+    },
+    "createdRequestCount": {
+      "@id": "aws:createdRequestCount",
+      "@type": "xsd:string"
+    },
+    "useDefaultApplications": {
+      "@id": "aws:useDefaultApplications",
+      "@type": "xsd:string"
+    },
+    "simulationApplicationNames": {
+      "@id": "aws:simulationApplicationNames",
+      "@type": "xsd:string"
+    },
+    "robotApplicationNames": {
+      "@id": "aws:robotApplicationNames",
+      "@type": "xsd:string"
+    },
+    "dataSourceNames": {
+      "@id": "aws:dataSourceNames",
+      "@type": "xsd:string"
+    },
+    "createSimulationJobRequests": {
+      "@id": "aws:createSimulationJobRequests",
+      "@type": "xsd:string"
+    },
+    "streamOutputToCloudWatch": {
+      "@id": "aws:streamOutputToCloudWatch",
+      "@type": "xsd:string"
+    },
+    "exitBehavior": {
+      "@id": "aws:exitBehavior",
+      "@type": "xsd:string"
+    },
+    "path": {
+      "@id": "aws:path",
+      "@type": "xsd:string"
+    },
+    "uploadBehavior": {
+      "@id": "aws:uploadBehavior",
+      "@type": "xsd:string"
+    },
+    "subnets": {
+      "@id": "aws:subnets",
+      "@type": "xsd:string"
+    },
+    "securityGroups": {
+      "@id": "aws:securityGroups",
+      "@type": "xsd:string"
+    },
+    "vpcId": {
+      "@id": "aws:vpcId",
+      "@type": "xsd:string"
+    },
+    "assignPublicIp": {
+      "@id": "aws:assignPublicIp",
+      "@type": "xsd:string"
+    },
+    "floorplanCount": {
+      "@id": "aws:floorplanCount",
+      "@type": "xsd:string"
+    },
+    "interiorCountPerFloorplan": {
+      "@id": "aws:interiorCountPerFloorplan",
+      "@type": "xsd:string"
+    },
+    "sampleFailureReason": {
+      "@id": "aws:sampleFailureReason",
+      "@type": "xsd:string"
+    },
+    "failureCount": {
+      "@id": "aws:failureCount",
+      "@type": "xsd:string"
+    },
+    "succeededWorldCount": {
+      "@id": "aws:succeededWorldCount",
+      "@type": "xsd:string"
+    },
+    "failedWorldCount": {
+      "@id": "aws:failedWorldCount",
+      "@type": "xsd:string"
+    }
+  }
+}

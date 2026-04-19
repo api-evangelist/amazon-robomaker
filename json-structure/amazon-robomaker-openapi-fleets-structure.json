@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-fleets-structure.json",
+  "description": "Fleets schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Fleet"
+  },
+  "minItems": 0,
+  "maxItems": 200,
+  "name": "Fleets"
+}

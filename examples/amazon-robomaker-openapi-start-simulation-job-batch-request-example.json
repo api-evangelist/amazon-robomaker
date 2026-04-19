@@ -1,0 +1,6 @@
+{
+  "clientRequestToken": "example-value",
+  "batchPolicy": "example-value",
+  "createSimulationJobRequests": "example-value",
+  "tags": "example-value"
+}

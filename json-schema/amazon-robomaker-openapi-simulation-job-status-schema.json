@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-simulation-job-status-schema.json",
+  "title": "SimulationJobStatus",
+  "description": "SimulationJobStatus schema from openapi",
+  "type": "string",
+  "enum": [
+    "Pending",
+    "Preparing",
+    "Running",
+    "Restarting",
+    "Completed",
+    "Failed",
+    "RunningFailed",
+    "Terminating",
+    "Terminated",
+    "Canceled"
+  ]
+}

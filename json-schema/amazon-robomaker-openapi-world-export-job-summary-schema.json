@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-world-export-job-summary-schema.json",
+  "title": "WorldExportJobSummary",
+  "description": "Information about a world export job.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the world export job."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WorldExportJobStatus"
+        },
+        {
+          "description": "<p>The status of the world export job.</p> <dl> <dt>Pending</dt> <dd> <p>The world export job request is pending.</p> </dd> <dt>Running</dt> <dd> <p>The world export job is running. </p> </dd> <dt>Completed</dt> <dd> <p>The world export job completed. </p> </dd> <dt>Failed</dt> <dd> <p>The world export job failed. See <code>failureCode</code> for more information. </p> </dd> <dt>Canceled</dt> <dd> <p>The world export job was cancelled.</p> </dd> <dt>Canceling</dt> <dd> <p>The world export job is being cancelled.</p> </dd> </dl>"
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the world export job was created."
+        }
+      ]
+    },
+    "worlds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arns"
+        },
+        {
+          "description": "A list of worlds."
+        }
+      ]
+    },
+    "outputLocation": {
+      "$ref": "#/components/schemas/OutputLocation"
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "clientRequestToken": "example-value",
+  "name": "Example Resource",
+  "templateBody": "example-value",
+  "templateLocation": "example-value",
+  "tags": "example-value"
+}

@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-simulation-application-config-structure.json",
+  "description": "Information about a simulation application configuration.",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the simulation application."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the simulation application."
+        }
+      ]
+    },
+    "launchConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LaunchConfig"
+        },
+        {
+          "description": "The launch configuration for the simulation application."
+        }
+      ]
+    },
+    "uploadConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UploadConfigurations"
+        },
+        {
+          "description": "Information about upload configurations for the simulation application."
+        }
+      ]
+    },
+    "worldConfigs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WorldConfigs"
+        },
+        {
+          "description": "A list of world configurations."
+        }
+      ]
+    },
+    "useDefaultUploadConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "deprecated": true,
+          "description": "<p>A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be recorded.</p> <p>If you set this value, you must specify an <code>outputLocation</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html."
+        }
+      ]
+    },
+    "tools": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tools"
+        },
+        {
+          "description": "Information about tools configured for the simulation application."
+        }
+      ]
+    },
+    "useDefaultTools": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "deprecated": true,
+          "description": "<p>A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application",
+    "launchConfig"
+  ],
+  "name": "SimulationApplicationConfig"
+}

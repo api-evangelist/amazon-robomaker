@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-non-system-port-structure.json",
+  "description": "NonSystemPort schema from openapi",
+  "type": "int32",
+  "minimum": 1024,
+  "maximum": 65535,
+  "name": "NonSystemPort"
+}

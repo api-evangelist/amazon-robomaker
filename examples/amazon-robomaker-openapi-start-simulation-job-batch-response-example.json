@@ -1,0 +1,12 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "status": "ACTIVE",
+  "createdAt": "example-value",
+  "clientRequestToken": "example-value",
+  "batchPolicy": "example-value",
+  "failureCode": "example-value",
+  "failureReason": "example-value",
+  "failedRequests": "example-value",
+  "pendingRequests": "example-value",
+  "createdRequests": "example-value"
+}

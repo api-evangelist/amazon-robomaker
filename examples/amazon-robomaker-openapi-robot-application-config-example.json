@@ -1,0 +1,9 @@
+{
+  "application": "example-value",
+  "applicationVersion": "example-value",
+  "launchConfig": "example-value",
+  "uploadConfigurations": "example-value",
+  "useDefaultUploadConfigurations": "example-value",
+  "tools": "example-value",
+  "useDefaultTools": "example-value"
+}

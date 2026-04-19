@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-cancel-world-export-job-request-structure.json",
+  "description": "CancelWorldExportJobRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "job": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world export job to cancel."
+        }
+      ]
+    }
+  },
+  "required": [
+    "job"
+  ],
+  "name": "CancelWorldExportJobRequest"
+}

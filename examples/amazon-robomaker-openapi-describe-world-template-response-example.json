@@ -1,0 +1,9 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "clientRequestToken": "example-value",
+  "name": "Example Resource",
+  "createdAt": "example-value",
+  "lastUpdatedAt": "example-value",
+  "tags": "example-value",
+  "version": "example-value"
+}

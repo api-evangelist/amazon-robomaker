@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-source-config-schema.json",
+  "title": "SourceConfig",
+  "description": "Information about a source configuration.",
+  "type": "object",
+  "properties": {
+    "s3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Bucket"
+        },
+        {
+          "description": "The Amazon S3 bucket name."
+        }
+      ]
+    },
+    "s3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The s3 object key."
+        }
+      ]
+    },
+    "architecture": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Architecture"
+        },
+        {
+          "description": "The target processor architecture for the application."
+        }
+      ]
+    }
+  }
+}

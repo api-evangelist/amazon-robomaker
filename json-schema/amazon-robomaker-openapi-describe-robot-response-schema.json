@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-describe-robot-response-schema.json",
+  "title": "DescribeRobotResponse",
+  "description": "Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the robot."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "description": "The name of the robot."
+        }
+      ]
+    },
+    "fleetArn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the fleet."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotStatus"
+        },
+        {
+          "description": "The status of the fleet."
+        }
+      ]
+    },
+    "greengrassGroupId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Id"
+        },
+        {
+          "description": "The Greengrass group id."
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the robot was created."
+        }
+      ]
+    },
+    "architecture": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Architecture"
+        },
+        {
+          "description": "The target architecture of the robot application."
+        }
+      ]
+    },
+    "lastDeploymentJob": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the last deployment job."
+        }
+      ]
+    },
+    "lastDeploymentTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time of the last deployment job."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "The list of all tags added to the specified robot."
+        }
+      ]
+    }
+  },
+  "deprecated": true
+}

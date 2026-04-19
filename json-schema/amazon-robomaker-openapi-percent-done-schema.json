@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-percent-done-schema.json",
+  "title": "PercentDone",
+  "description": "PercentDone schema from openapi",
+  "type": "number",
+  "format": "float",
+  "minimum": 0,
+  "maximum": 100
+}

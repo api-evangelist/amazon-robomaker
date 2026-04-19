@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-simulation-unit-structure.json",
+  "description": "SimulationUnit schema from openapi",
+  "type": "int32",
+  "minimum": 1,
+  "maximum": 15,
+  "name": "SimulationUnit"
+}

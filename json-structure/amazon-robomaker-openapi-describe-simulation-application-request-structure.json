@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-describe-simulation-application-request-structure.json",
+  "description": "DescribeSimulationApplicationRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the simulation application."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the simulation application to describe."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application"
+  ],
+  "name": "DescribeSimulationApplicationRequest"
+}

@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-vpc-config-response-structure.json",
+  "description": "VPC configuration associated with your simulation job.",
+  "type": "object",
+  "properties": {
+    "subnets": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Subnets"
+        },
+        {
+          "description": "A list of subnet IDs associated with the simulation job."
+        }
+      ]
+    },
+    "securityGroups": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SecurityGroups"
+        },
+        {
+          "description": "A list of security group IDs associated with the simulation job."
+        }
+      ]
+    },
+    "vpcId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The VPC ID associated with your simulation job."
+        }
+      ]
+    },
+    "assignPublicIp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "A boolean indicating if a public IP was assigned."
+        }
+      ]
+    }
+  },
+  "name": "VPCConfigResponse"
+}

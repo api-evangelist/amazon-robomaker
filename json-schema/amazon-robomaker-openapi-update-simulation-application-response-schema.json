@@ -1,0 +1,109 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-update-simulation-application-response-schema.json",
+  "title": "UpdateSimulationApplicationResponse",
+  "description": "UpdateSimulationApplicationResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the updated simulation application."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "description": "The name of the simulation application."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the robot application."
+        }
+      ]
+    },
+    "sources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Sources"
+        },
+        {
+          "description": "The sources of the simulation application."
+        }
+      ]
+    },
+    "simulationSoftwareSuite": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationSoftwareSuite"
+        },
+        {
+          "description": "The simulation software suite used by the simulation application."
+        }
+      ]
+    },
+    "robotSoftwareSuite": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotSoftwareSuite"
+        },
+        {
+          "description": "Information about the robot software suite (ROS distribution)."
+        }
+      ]
+    },
+    "renderingEngine": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RenderingEngine"
+        },
+        {
+          "description": "The rendering engine for the simulation application."
+        }
+      ]
+    },
+    "lastUpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the simulation application was last updated."
+        }
+      ]
+    },
+    "revisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionId"
+        },
+        {
+          "description": "The revision id of the simulation application."
+        }
+      ]
+    },
+    "environment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Environment"
+        },
+        {
+          "description": "The object that contains the Docker image URI used for your simulation application."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-create-deployment-job-request-structure.json",
+  "description": "AWS RoboMaker is unable to process this request as the support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.",
+  "type": "object",
+  "properties": {
+    "deploymentConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentConfig"
+        },
+        {
+          "description": "The requested deployment configuration."
+        }
+      ]
+    },
+    "clientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestToken"
+        },
+        {
+          "description": "Unique, case-sensitive identifier that you provide to ensure the idempotency of the request."
+        }
+      ]
+    },
+    "fleet": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the fleet to deploy."
+        }
+      ]
+    },
+    "deploymentApplicationConfigs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentApplicationConfigs"
+        },
+        {
+          "description": "The deployment application configuration."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A map that contains tag keys and tag values that are attached to the deployment job."
+        }
+      ]
+    }
+  },
+  "required": [
+    "clientRequestToken",
+    "fleet",
+    "deploymentApplicationConfigs"
+  ],
+  "deprecated": true,
+  "name": "CreateDeploymentJobRequest"
+}

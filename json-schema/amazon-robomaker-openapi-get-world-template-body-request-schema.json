@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-get-world-template-body-request-schema.json",
+  "title": "GetWorldTemplateBodyRequest",
+  "description": "GetWorldTemplateBodyRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "template": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world template."
+        }
+      ]
+    },
+    "generationJob": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world generator job."
+        }
+      ]
+    }
+  }
+}

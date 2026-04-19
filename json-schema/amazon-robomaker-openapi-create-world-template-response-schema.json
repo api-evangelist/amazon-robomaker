@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-create-world-template-response-schema.json",
+  "title": "CreateWorldTemplateResponse",
+  "description": "CreateWorldTemplateResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the world template."
+        }
+      ]
+    },
+    "clientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestToken"
+        },
+        {
+          "description": "Unique, case-sensitive identifier that you provide to ensure the idempotency of the request."
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the world template was created."
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TemplateName"
+        },
+        {
+          "description": "The name of the world template."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A map that contains tag keys and tag values that are attached to the world template."
+        }
+      ]
+    }
+  }
+}

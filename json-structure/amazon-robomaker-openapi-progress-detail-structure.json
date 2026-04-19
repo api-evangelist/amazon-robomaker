@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-progress-detail-structure.json",
+  "description": "Information about the progress of a deployment job.",
+  "type": "object",
+  "properties": {
+    "currentProgress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotDeploymentStep"
+        },
+        {
+          "description": "<p>The current progress status.</p> <dl> <dt>Validating</dt> <dd> <p>Validating the deployment.</p> </dd> <dt>DownloadingExtracting</dt> <dd> <p>Downloading and extracting the bundle on the robot.</p> </dd> <dt>ExecutingPreLaunch</dt> <dd> <p>Executing pre-launch script(s) if provided.</p> </dd> <dt>Launching</dt> <dd> <p>Launching the robot application.</p> </dd> <dt>ExecutingPostLaunch</dt> <dd> <p>Executing post-launch script(s) if provided.</p> </dd> <dt>Finished</dt> <dd> <p>Deployment is complete.</p> </dd> </dl>"
+        }
+      ]
+    },
+    "percentDone": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/PercentDone"
+        },
+        {
+          "description": "Precentage of the step that is done. This currently only applies to the <code>Downloading/Extracting</code> step of the deployment. It is empty for other steps."
+        }
+      ]
+    },
+    "estimatedTimeRemainingSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericInteger"
+        },
+        {
+          "description": "Estimated amount of time in seconds remaining in the step. This currently only applies to the <code>Downloading/Extracting</code> step of the deployment. It is empty for other steps."
+        }
+      ]
+    },
+    "targetResource": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the deployment job."
+        }
+      ]
+    }
+  },
+  "name": "ProgressDetail"
+}

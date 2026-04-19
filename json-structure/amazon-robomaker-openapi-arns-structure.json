@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-arns-structure.json",
+  "description": "Arns schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/Arn"
+  },
+  "minItems": 1,
+  "maxItems": 100,
+  "name": "Arns"
+}

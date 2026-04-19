@@ -1,0 +1,7 @@
+{
+  "deploymentConfig": "example-value",
+  "clientRequestToken": "example-value",
+  "fleet": "example-value",
+  "deploymentApplicationConfigs": "example-value",
+  "tags": "example-value"
+}

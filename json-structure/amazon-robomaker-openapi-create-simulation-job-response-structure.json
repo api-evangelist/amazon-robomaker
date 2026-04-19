@@ -1,0 +1,189 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-create-simulation-job-response-structure.json",
+  "description": "CreateSimulationJobResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the simulation job."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationJobStatus"
+        },
+        {
+          "description": "The status of the simulation job."
+        }
+      ]
+    },
+    "lastStartedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastStartedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the simulation job was last started."
+        }
+      ]
+    },
+    "lastUpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the simulation job was last updated."
+        }
+      ]
+    },
+    "failureBehavior": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailureBehavior"
+        },
+        {
+          "description": "the failure behavior for the simulation job."
+        }
+      ]
+    },
+    "failureCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationJobErrorCode"
+        },
+        {
+          "description": "<p>The failure code of the simulation job if it failed:</p> <dl> <dt>InternalServiceError</dt> <dd> <p>Internal service error.</p> </dd> <dt>RobotApplicationCrash</dt> <dd> <p>Robot application exited abnormally.</p> </dd> <dt>SimulationApplicationCrash</dt> <dd> <p> Simulation application exited abnormally.</p> </dd> <dt>BadPermissionsRobotApplication</dt> <dd> <p>Robot application bundle could not be downloaded.</p> </dd> <dt>BadPermissionsSimulationApplication</dt> <dd> <p>Simulation application bundle could not be downloaded.</p> </dd> <dt>BadPermissionsS3Output</dt> <dd> <p>Unable to publish outputs to customer-provided S3 bucket.</p> </dd> <dt>BadPermissionsCloudwatchLogs</dt> <dd> <p>Unable to publish logs to customer-provided CloudWatch Logs resource.</p> </dd> <dt>SubnetIpLimitExceeded</dt> <dd> <p>Subnet IP limit exceeded.</p> </dd> <dt>ENILimitExceeded</dt> <dd> <p>ENI limit exceeded.</p> </dd> <dt>BadPermissionsUserCredentials</dt> <dd> <p>Unable to use the Role provided.</p> </dd> <dt>InvalidBundleRobotApplication</dt> <dd> <p>Robot bundle cannot be extracted (invalid format, bundling error, or other issue).</p> </dd> <dt>InvalidBundleSimulationApplication</dt> <dd> <p>Simulation bundle cannot be extracted (invalid format, bundling error, or other issue).</p> </dd> <dt>RobotApplicationVersionMismatchedEtag</dt> <dd> <p>Etag for RobotApplication does not match value during version creation.</p> </dd> <dt>SimulationApplicationVersionMismatchedEtag</dt> <dd> <p>Etag for SimulationApplication does not match value during version creation.</p> </dd> </dl>"
+        }
+      ]
+    },
+    "clientRequestToken": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ClientRequestToken"
+        },
+        {
+          "description": "Unique, case-sensitive identifier that you provide to ensure the idempotency of the request."
+        }
+      ]
+    },
+    "outputLocation": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/OutputLocation"
+        },
+        {
+          "description": "Simulation job output files location."
+        }
+      ]
+    },
+    "loggingConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LoggingConfig"
+        },
+        {
+          "description": "The logging configuration."
+        }
+      ]
+    },
+    "maxJobDurationInSeconds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/JobDuration"
+        },
+        {
+          "description": "The maximum simulation job duration in seconds. "
+        }
+      ]
+    },
+    "simulationTimeMillis": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationTimeMillis"
+        },
+        {
+          "description": "The simulation job execution duration in milliseconds."
+        }
+      ]
+    },
+    "iamRole": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/IamRole"
+        },
+        {
+          "description": "The IAM role that allows the simulation job to call the AWS APIs that are specified in its associated policies on your behalf."
+        }
+      ]
+    },
+    "robotApplications": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotApplicationConfigs"
+        },
+        {
+          "description": "The robot application used by the simulation job."
+        }
+      ]
+    },
+    "simulationApplications": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationApplicationConfigs"
+        },
+        {
+          "description": "The simulation application used by the simulation job."
+        }
+      ]
+    },
+    "dataSources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DataSources"
+        },
+        {
+          "description": "The data sources for the simulation job."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "The list of all tags added to the simulation job."
+        }
+      ]
+    },
+    "vpcConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/VPCConfigResponse"
+        },
+        {
+          "description": "Information about the vpc configuration."
+        }
+      ]
+    },
+    "compute": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ComputeResponse"
+        },
+        {
+          "description": "Compute information for the simulation job."
+        }
+      ]
+    }
+  },
+  "name": "CreateSimulationJobResponse"
+}

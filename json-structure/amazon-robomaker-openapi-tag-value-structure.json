@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-tag-value-structure.json",
+  "description": "TagValue schema from openapi",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9 _.\\-\\/+=:]*",
+  "minLength": 0,
+  "maxLength": 256,
+  "name": "TagValue"
+}

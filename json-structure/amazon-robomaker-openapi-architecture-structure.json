@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-architecture-structure.json",
+  "description": "Architecture schema from openapi",
+  "type": "string",
+  "enum": [
+    "X86_64",
+    "ARM64",
+    "ARMHF"
+  ],
+  "name": "Architecture"
+}

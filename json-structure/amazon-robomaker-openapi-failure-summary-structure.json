@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-failure-summary-structure.json",
+  "description": "Information about worlds that failed.",
+  "type": "object",
+  "properties": {
+    "totalFailureCount": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Integer"
+        },
+        {
+          "description": "The total number of failures."
+        }
+      ]
+    },
+    "failures": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/WorldFailures"
+        },
+        {
+          "description": "The worlds that failed."
+        }
+      ]
+    }
+  },
+  "name": "FailureSummary"
+}

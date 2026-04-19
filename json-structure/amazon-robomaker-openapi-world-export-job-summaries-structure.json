@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-world-export-job-summaries-structure.json",
+  "description": "WorldExportJobSummaries schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/WorldExportJobSummary"
+  },
+  "minItems": 0,
+  "maxItems": 100,
+  "name": "WorldExportJobSummaries"
+}

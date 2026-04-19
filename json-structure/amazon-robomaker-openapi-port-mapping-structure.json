@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-port-mapping-structure.json",
+  "description": "An object representing a port mapping.",
+  "type": "object",
+  "properties": {
+    "jobPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Port"
+        },
+        {
+          "description": "The port number on the simulation job instance to use as a remote connection point. "
+        }
+      ]
+    },
+    "applicationPort": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/NonSystemPort"
+        },
+        {
+          "description": "The port number on the application."
+        }
+      ]
+    },
+    "enableOnPublicIp": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Boolean"
+        },
+        {
+          "description": "A Boolean indicating whether to enable this port mapping on public IP."
+        }
+      ]
+    }
+  },
+  "required": [
+    "jobPort",
+    "applicationPort"
+  ],
+  "name": "PortMapping"
+}

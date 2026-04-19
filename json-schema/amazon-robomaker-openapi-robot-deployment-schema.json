@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-robot-deployment-schema.json",
+  "title": "RobotDeployment",
+  "description": "Information about a robot deployment.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The robot deployment Amazon Resource Name (ARN)."
+        }
+      ]
+    },
+    "deploymentStartTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the deployment was started."
+        }
+      ]
+    },
+    "deploymentFinishTime": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the deployment finished."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotStatus"
+        },
+        {
+          "description": "The status of the robot deployment."
+        }
+      ]
+    },
+    "progressDetail": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ProgressDetail"
+        },
+        {
+          "description": "Information about how the deployment is progressing."
+        }
+      ]
+    },
+    "failureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "A short description of the reason why the robot deployment failed."
+        }
+      ]
+    },
+    "failureCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentJobErrorCode"
+        },
+        {
+          "description": "The robot deployment failure code."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-describe-robot-application-request-schema.json",
+  "title": "DescribeRobotApplicationRequest",
+  "description": "DescribeRobotApplicationRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the robot application."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the robot application to describe."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application"
+  ]
+}

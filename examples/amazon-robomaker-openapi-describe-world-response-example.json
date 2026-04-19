@@ -1,0 +1,8 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "generationJob": "example-value",
+  "template": "example-value",
+  "createdAt": "example-value",
+  "tags": "example-value",
+  "worldDescriptionBody": "Example description"
+}

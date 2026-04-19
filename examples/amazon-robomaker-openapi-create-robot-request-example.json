@@ -1,0 +1,6 @@
+{
+  "name": "Example Resource",
+  "architecture": "example-value",
+  "greengrassGroupId": "abc123",
+  "tags": "example-value"
+}

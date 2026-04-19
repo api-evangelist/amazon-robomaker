@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-tool-schema.json",
+  "title": "Tool",
+  "description": "Information about a tool. Tools are used in a simulation job.",
+  "type": "object",
+  "properties": {
+    "streamUI": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "description": "Boolean indicating whether a streaming session will be configured for the tool. If <code>True</code>, AWS RoboMaker will configure a connection so you can interact with the tool as it is running in the simulation. It must have a graphical user interface. The default is <code>False</code>. "
+        }
+      ]
+    },
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "description": "The name of the tool."
+        }
+      ]
+    },
+    "command": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UnrestrictedCommand"
+        },
+        {
+          "description": "Command-line arguments for the tool. It must include the tool executable name."
+        }
+      ]
+    },
+    "streamOutputToCloudWatch": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "description": "Boolean indicating whether logs will be recorded in CloudWatch for the tool. The default is <code>False</code>. "
+        }
+      ]
+    },
+    "exitBehavior": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ExitBehavior"
+        },
+        {
+          "description": "Exit behavior determines what happens when your tool quits running. <code>RESTART</code> will cause your tool to be restarted. <code>FAIL</code> will cause your job to exit. The default is <code>RESTART</code>. "
+        }
+      ]
+    }
+  },
+  "required": [
+    "name",
+    "command"
+  ]
+}

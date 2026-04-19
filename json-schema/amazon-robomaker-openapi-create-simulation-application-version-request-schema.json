@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-create-simulation-application-version-request-schema.json",
+  "title": "CreateSimulationApplicationVersionRequest",
+  "description": "CreateSimulationApplicationVersionRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the simulation application."
+        }
+      ]
+    },
+    "currentRevisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionId"
+        },
+        {
+          "description": "The current revision id for the simulation application. If you provide a value and it matches the latest revision ID, a new version will be created."
+        }
+      ]
+    },
+    "s3Etags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Etags"
+        },
+        {
+          "description": "The Amazon S3 eTag identifier for the zip file bundle that you use to create the simulation application."
+        }
+      ]
+    },
+    "imageDigest": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/ImageDigest"
+        },
+        {
+          "description": "The SHA256 digest used to identify the Docker image URI used to created the simulation application."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Example Resource",
+  "s3Bucket": "example-value",
+  "s3Keys": "example-value",
+  "type": "example-value",
+  "destination": "example-value"
+}

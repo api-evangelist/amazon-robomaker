@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-simulation-software-suite-schema.json",
+  "title": "SimulationSoftwareSuite",
+  "description": "Information about a simulation software suite.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationSoftwareSuiteType"
+        },
+        {
+          "description": "The name of the simulation software suite."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationSoftwareSuiteVersionType"
+        },
+        {
+          "description": "The version of the simulation software suite."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "packageName": "Example Resource",
+  "preLaunchFile": "example-value",
+  "launchFile": "example-value",
+  "postLaunchFile": "example-value",
+  "environmentVariables": "example-value"
+}

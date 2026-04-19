@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-update-robot-application-request-structure.json",
+  "description": "UpdateRobotApplicationRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the robot application."
+        }
+      ]
+    },
+    "sources": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SourceConfigs"
+        },
+        {
+          "description": "The sources of the robot application."
+        }
+      ]
+    },
+    "robotSoftwareSuite": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotSoftwareSuite"
+        },
+        {
+          "description": "The robot software suite (ROS distribution) used by the robot application."
+        }
+      ]
+    },
+    "currentRevisionId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RevisionId"
+        },
+        {
+          "description": "The revision id for the robot application."
+        }
+      ]
+    },
+    "environment": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Environment"
+        },
+        {
+          "description": "The object that contains the Docker image URI for your robot application."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application",
+    "robotSoftwareSuite"
+  ],
+  "name": "UpdateRobotApplicationRequest"
+}

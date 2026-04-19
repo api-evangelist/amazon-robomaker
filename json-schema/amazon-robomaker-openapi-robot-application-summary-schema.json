@@ -1,0 +1,59 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-robot-application-summary-schema.json",
+  "title": "RobotApplicationSummary",
+  "description": "Summary information for a robot application.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Name"
+        },
+        {
+          "description": "The name of the robot application."
+        }
+      ]
+    },
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the robot."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the robot application."
+        }
+      ]
+    },
+    "lastUpdatedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LastUpdatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the robot application was last updated."
+        }
+      ]
+    },
+    "robotSoftwareSuite": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RobotSoftwareSuite"
+        },
+        {
+          "description": "Information about a robot software suite (ROS distribution)."
+        }
+      ]
+    }
+  }
+}

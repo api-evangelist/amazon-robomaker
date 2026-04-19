@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-deployment-job-structure.json",
+  "description": "Information about a deployment job.",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the deployment job."
+        }
+      ]
+    },
+    "fleet": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (ARN) of the fleet."
+        }
+      ]
+    },
+    "status": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentStatus"
+        },
+        {
+          "description": "The status of the deployment job."
+        }
+      ]
+    },
+    "deploymentApplicationConfigs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentApplicationConfigs"
+        },
+        {
+          "description": "The deployment application configuration."
+        }
+      ]
+    },
+    "deploymentConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentConfig"
+        },
+        {
+          "description": "The deployment configuration."
+        }
+      ]
+    },
+    "failureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "A short description of the reason why the deployment job failed."
+        }
+      ]
+    },
+    "failureCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/DeploymentJobErrorCode"
+        },
+        {
+          "description": "The deployment job failure code."
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the deployment job was created."
+        }
+      ]
+    }
+  },
+  "name": "DeploymentJob"
+}

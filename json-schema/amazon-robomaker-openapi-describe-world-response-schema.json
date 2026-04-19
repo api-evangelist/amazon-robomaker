@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-describe-world-response-schema.json",
+  "title": "DescribeWorldResponse",
+  "description": "DescribeWorldResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "arn": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world."
+        }
+      ]
+    },
+    "generationJob": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world generation job that generated the world."
+        }
+      ]
+    },
+    "template": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The world template."
+        }
+      ]
+    },
+    "createdAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/CreatedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the world was created."
+        }
+      ]
+    },
+    "tags": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/TagMap"
+        },
+        {
+          "description": "A map that contains tag keys and tag values that are attached to the world."
+        }
+      ]
+    },
+    "worldDescriptionBody": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Json"
+        },
+        {
+          "description": "Returns the JSON formatted string that describes the contents of your world."
+        }
+      ]
+    }
+  }
+}

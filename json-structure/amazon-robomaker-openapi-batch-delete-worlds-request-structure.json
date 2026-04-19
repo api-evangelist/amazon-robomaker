@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-batch-delete-worlds-request-structure.json",
+  "description": "BatchDeleteWorldsRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "worlds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arns"
+        },
+        {
+          "description": "A list of Amazon Resource Names (arns) that correspond to worlds to delete."
+        }
+      ]
+    }
+  },
+  "required": [
+    "worlds"
+  ],
+  "name": "BatchDeleteWorldsRequest"
+}

@@ -1,0 +1,8 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-list-tags-for-resource-request-structure.json",
+  "description": "ListTagsForResourceRequest schema from openapi",
+  "type": "object",
+  "properties": {},
+  "name": "ListTagsForResourceRequest"
+}

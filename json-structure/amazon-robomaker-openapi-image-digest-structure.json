@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-image-digest-structure.json",
+  "description": "ImageDigest schema from openapi",
+  "type": "string",
+  "pattern": "[Ss][Hh][Aa]256:[0-9a-fA-F]{64}",
+  "minLength": 0,
+  "maxLength": 72,
+  "name": "ImageDigest"
+}

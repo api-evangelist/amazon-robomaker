@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-command-list-schema.json",
+  "title": "CommandList",
+  "description": "CommandList schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/NonEmptyString"
+  }
+}

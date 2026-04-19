@@ -1,0 +1,11 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "name": "Example Resource",
+  "fleetArn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "status": "ACTIVE",
+  "greenGrassGroupId": "abc123",
+  "createdAt": "example-value",
+  "architecture": "example-value",
+  "lastDeploymentJob": "example-value",
+  "lastDeploymentTime": "example-value"
+}

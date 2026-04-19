@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-rendering-engine-schema.json",
+  "title": "RenderingEngine",
+  "description": "Information about a rendering engine.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RenderingEngineType"
+        },
+        {
+          "description": "The name of the rendering engine."
+        }
+      ]
+    },
+    "version": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/RenderingEngineVersionType"
+        },
+        {
+          "description": "The version of the rendering engine."
+        }
+      ]
+    }
+  }
+}

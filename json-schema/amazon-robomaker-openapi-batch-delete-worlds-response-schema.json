@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-batch-delete-worlds-response-schema.json",
+  "title": "BatchDeleteWorldsResponse",
+  "description": "BatchDeleteWorldsResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "unprocessedWorlds": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arns"
+        },
+        {
+          "description": "A list of unprocessed worlds associated with the call. These worlds were not deleted."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "subnets": "example-value",
+  "securityGroups": "https://example.com/resource",
+  "vpcId": "abc123",
+  "assignPublicIp": "example-value"
+}

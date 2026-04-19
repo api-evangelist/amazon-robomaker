@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-revision-id-structure.json",
+  "description": "RevisionId schema from openapi",
+  "type": "string",
+  "pattern": "[a-zA-Z0-9_.\\-]*",
+  "minLength": 1,
+  "maxLength": 40,
+  "name": "RevisionId"
+}

@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-network-interface-structure.json",
+  "description": "Describes a network interface.",
+  "type": "object",
+  "properties": {
+    "networkInterfaceId": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The ID of the network interface."
+        }
+      ]
+    },
+    "privateIpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The IPv4 address of the network interface within the subnet."
+        }
+      ]
+    },
+    "publicIpAddress": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The IPv4 public address of the network interface."
+        }
+      ]
+    }
+  },
+  "name": "NetworkInterface"
+}

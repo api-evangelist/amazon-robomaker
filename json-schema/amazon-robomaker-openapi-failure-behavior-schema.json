@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-failure-behavior-schema.json",
+  "title": "FailureBehavior",
+  "description": "FailureBehavior schema from openapi",
+  "type": "string",
+  "enum": [
+    "Fail",
+    "Continue"
+  ]
+}

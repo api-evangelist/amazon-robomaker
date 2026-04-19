@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-failed-create-simulation-job-request-structure.json",
+  "description": "Information about a failed create simulation job request.",
+  "type": "object",
+  "properties": {
+    "request": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationJobRequest"
+        },
+        {
+          "description": "The simulation job request."
+        }
+      ]
+    },
+    "failureReason": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/GenericString"
+        },
+        {
+          "description": "The failure reason of the simulation job request."
+        }
+      ]
+    },
+    "failureCode": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationJobErrorCode"
+        },
+        {
+          "description": "The failure code."
+        }
+      ]
+    },
+    "failedAt": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/FailedAt"
+        },
+        {
+          "description": "The time, in milliseconds since the epoch, when the simulation job batch failed."
+        }
+      ]
+    }
+  },
+  "name": "FailedCreateSimulationJobRequest"
+}

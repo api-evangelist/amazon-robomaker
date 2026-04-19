@@ -1,0 +1,5 @@
+{
+  "jobPort": "example-value",
+  "applicationPort": "example-value",
+  "enableOnPublicIp": "example-value"
+}

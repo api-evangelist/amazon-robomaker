@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-cancel-simulation-job-batch-request-structure.json",
+  "description": "CancelSimulationJobBatchRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "batch": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The id of the batch to cancel."
+        }
+      ]
+    }
+  },
+  "required": [
+    "batch"
+  ],
+  "name": "CancelSimulationJobBatchRequest"
+}

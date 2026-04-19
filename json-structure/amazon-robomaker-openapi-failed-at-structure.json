@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-failed-at-structure.json",
+  "description": "FailedAt schema from openapi",
+  "type": "datetime",
+  "name": "FailedAt"
+}

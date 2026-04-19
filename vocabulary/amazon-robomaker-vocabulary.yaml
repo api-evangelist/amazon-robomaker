@@ -1,0 +1,197 @@
+vocabulary: 1.0.0
+info:
+  provider: Amazon Robomaker
+  description: Vocabulary for Amazon Robomaker APIs covering operational and capability dimensions
+  created: '2026-04-19'
+  modified: '2026-04-19'
+operational:
+  apis:
+  - name: Amazon Robomaker
+    namespace: amazon-robomaker
+    status: active
+  resources:
+  - name: batchDeleteWorlds
+    api: amazon-robomaker-openapi
+    actions:
+    - BatchDeleteWorlds
+  - name: batchDescribeSimulationJob
+    api: amazon-robomaker-openapi
+    actions:
+    - BatchDescribeSimulationJob
+  - name: cancelDeploymentJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CancelDeploymentJob
+  - name: cancelSimulationJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CancelSimulationJob
+  - name: cancelSimulationJobBatch
+    api: amazon-robomaker-openapi
+    actions:
+    - CancelSimulationJobBatch
+  - name: cancelWorldExportJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CancelWorldExportJob
+  - name: cancelWorldGenerationJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CancelWorldGenerationJob
+  - name: createDeploymentJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateDeploymentJob
+  - name: createFleet
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateFleet
+  - name: createRobot
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateRobot
+  - name: createRobotApplication
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateRobotApplication
+  - name: createRobotApplicationVersion
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateRobotApplicationVersion
+  - name: createSimulationApplication
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateSimulationApplication
+  - name: createSimulationApplicationVersion
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateSimulationApplicationVersion
+  - name: createSimulationJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateSimulationJob
+  - name: createWorldExportJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateWorldExportJob
+  - name: createWorldGenerationJob
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateWorldGenerationJob
+  - name: createWorldTemplate
+    api: amazon-robomaker-openapi
+    actions:
+    - CreateWorldTemplate
+  - name: deleteFleet
+    api: amazon-robomaker-openapi
+    actions:
+    - DeleteFleet
+  - name: deleteRobot
+    api: amazon-robomaker-openapi
+    actions:
+    - DeleteRobot
+  actions:
+  - name: post
+    httpMethod: POST
+    pattern: write
+  - name: create
+    httpMethod: POST
+    pattern: write
+  - name: delete
+    httpMethod: POST
+    pattern: write
+  - name: list
+    httpMethod: POST
+    pattern: write
+  - name: update
+    httpMethod: POST
+    pattern: write
+  schemas:
+    core:
+    - amazon-robomaker-openapi-architecture
+    - amazon-robomaker-openapi-arn
+    - amazon-robomaker-openapi-arns
+    - amazon-robomaker-openapi-batch-delete-worlds-request
+    - amazon-robomaker-openapi-batch-delete-worlds-response
+    - amazon-robomaker-openapi-batch-describe-simulation-job-request
+    - amazon-robomaker-openapi-batch-describe-simulation-job-response
+    - amazon-robomaker-openapi-batch-policy
+    - amazon-robomaker-openapi-batch-timeout-in-seconds
+    - amazon-robomaker-openapi-boolean
+    - amazon-robomaker-openapi-boxed-boolean
+    - amazon-robomaker-openapi-cancel-deployment-job-request
+    - amazon-robomaker-openapi-cancel-deployment-job-response
+    - amazon-robomaker-openapi-cancel-simulation-job-batch-request
+    - amazon-robomaker-openapi-cancel-simulation-job-batch-response
+    - amazon-robomaker-openapi-cancel-simulation-job-request
+    - amazon-robomaker-openapi-cancel-simulation-job-response
+    - amazon-robomaker-openapi-cancel-world-export-job-request
+    - amazon-robomaker-openapi-cancel-world-export-job-response
+    - amazon-robomaker-openapi-cancel-world-generation-job-request
+  authentication:
+    schemes:
+    - type: bearer
+      description: AWS Signature V4
+capability:
+  workflows:
+  - name: Amazon Robomaker Operations
+    file: capabilities/amazon-robomaker.yaml
+    description: Automation workflow for Amazon Robomaker
+  personas:
+  - id: cloud-engineer
+    name: Cloud Engineer
+    description: Engineer managing Amazon Robomaker resources
+  domains:
+  - name: Cloud Operations
+    description: AWS cloud resource management
+crossReference:
+- resource: batchDeleteWorlds
+  operations:
+  - BatchDeleteWorlds
+  workflows:
+  - Amazon Robomaker Operations
+- resource: batchDescribeSimulationJob
+  operations:
+  - BatchDescribeSimulationJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: cancelDeploymentJob
+  operations:
+  - CancelDeploymentJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: cancelSimulationJob
+  operations:
+  - CancelSimulationJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: cancelSimulationJobBatch
+  operations:
+  - CancelSimulationJobBatch
+  workflows:
+  - Amazon Robomaker Operations
+- resource: cancelWorldExportJob
+  operations:
+  - CancelWorldExportJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: cancelWorldGenerationJob
+  operations:
+  - CancelWorldGenerationJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: createDeploymentJob
+  operations:
+  - CreateDeploymentJob
+  workflows:
+  - Amazon Robomaker Operations
+- resource: createFleet
+  operations:
+  - CreateFleet
+  workflows:
+  - Amazon Robomaker Operations
+- resource: createRobot
+  operations:
+  - CreateRobot
+  workflows:
+  - Amazon Robomaker Operations

@@ -1,0 +1,8 @@
+{
+  "packageName": "Example Resource",
+  "launchFile": "example-value",
+  "environmentVariables": "example-value",
+  "portForwardingConfig": "example-value",
+  "streamUI": "example-value",
+  "command": "example-value"
+}

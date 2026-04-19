@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-get-world-template-body-response-schema.json",
+  "title": "GetWorldTemplateBodyResponse",
+  "description": "GetWorldTemplateBodyResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "templateBody": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Json"
+        },
+        {
+          "description": "The world template body."
+        }
+      ]
+    }
+  }
+}

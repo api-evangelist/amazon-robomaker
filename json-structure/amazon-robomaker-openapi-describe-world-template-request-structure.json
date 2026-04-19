@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-describe-world-template-request-structure.json",
+  "description": "DescribeWorldTemplateRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "template": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The Amazon Resource Name (arn) of the world template you want to describe."
+        }
+      ]
+    }
+  },
+  "required": [
+    "template"
+  ],
+  "name": "DescribeWorldTemplateRequest"
+}

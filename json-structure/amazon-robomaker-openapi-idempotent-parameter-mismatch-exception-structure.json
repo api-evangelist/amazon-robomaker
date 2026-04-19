@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-idempotent-parameter-mismatch-exception-structure.json",
+  "description": "IdempotentParameterMismatchException schema from openapi",
+  "name": "IdempotentParameterMismatchException"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-robot-software-suite-type-structure.json",
+  "description": "RobotSoftwareSuiteType schema from openapi",
+  "type": "string",
+  "enum": [
+    "ROS",
+    "ROS2",
+    "General"
+  ],
+  "name": "RobotSoftwareSuiteType"
+}

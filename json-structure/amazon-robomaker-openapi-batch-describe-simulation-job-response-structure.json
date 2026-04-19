@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-batch-describe-simulation-job-response-structure.json",
+  "description": "BatchDescribeSimulationJobResponse schema from openapi",
+  "type": "object",
+  "properties": {
+    "jobs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/SimulationJobs"
+        },
+        {
+          "description": "A list of simulation jobs."
+        }
+      ]
+    },
+    "unprocessedJobs": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arns"
+        },
+        {
+          "description": "A list of unprocessed simulation job Amazon Resource Names (ARNs)."
+        }
+      ]
+    }
+  },
+  "name": "BatchDescribeSimulationJobResponse"
+}

@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-deployment-launch-config-schema.json",
+  "title": "DeploymentLaunchConfig",
+  "description": "Configuration information for a deployment launch.",
+  "type": "object",
+  "properties": {
+    "packageName": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Command"
+        },
+        {
+          "description": "The package name."
+        }
+      ]
+    },
+    "preLaunchFile": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Path"
+        },
+        {
+          "description": "The deployment pre-launch file. This file will be executed prior to the launch file."
+        }
+      ]
+    },
+    "launchFile": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Command"
+        },
+        {
+          "description": "The launch file name."
+        }
+      ]
+    },
+    "postLaunchFile": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Path"
+        },
+        {
+          "description": "The deployment post-launch file. This file will be executed after the launch file."
+        }
+      ]
+    },
+    "environmentVariables": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/EnvironmentVariableMap"
+        },
+        {
+          "description": "An array of key/value pairs specifying environment variables for the robot application"
+        }
+      ]
+    }
+  },
+  "required": [
+    "packageName",
+    "launchFile"
+  ]
+}

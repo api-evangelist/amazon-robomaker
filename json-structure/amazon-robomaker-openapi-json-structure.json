@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-json-structure.json",
+  "description": "Json schema from openapi",
+  "type": "string",
+  "pattern": "[\\S\\s]+",
+  "minLength": 1,
+  "maxLength": 262144,
+  "name": "Json"
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-simulation-software-suite-type-schema.json",
+  "title": "SimulationSoftwareSuiteType",
+  "description": "SimulationSoftwareSuiteType schema from openapi",
+  "type": "string",
+  "enum": [
+    "Gazebo",
+    "RosbagPlay",
+    "SimulationRuntime"
+  ]
+}

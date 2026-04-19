@@ -1,0 +1,9 @@
+{
+  "name": "Example Resource",
+  "sources": "example-value",
+  "simulationSoftwareSuite": "example-value",
+  "robotSoftwareSuite": "example-value",
+  "renderingEngine": "example-value",
+  "tags": "example-value",
+  "environment": "example-value"
+}

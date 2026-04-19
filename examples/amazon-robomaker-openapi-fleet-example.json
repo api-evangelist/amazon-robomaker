@@ -1,0 +1,8 @@
+{
+  "name": "Example Resource",
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "createdAt": "example-value",
+  "lastDeploymentStatus": "ACTIVE",
+  "lastDeploymentJob": "example-value",
+  "lastDeploymentTime": "example-value"
+}

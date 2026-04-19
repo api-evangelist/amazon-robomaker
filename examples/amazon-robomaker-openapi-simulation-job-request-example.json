@@ -1,0 +1,12 @@
+{
+  "outputLocation": "example-value",
+  "loggingConfig": "example-value",
+  "maxJobDurationInSeconds": "example-value",
+  "iamRole": "example-value",
+  "failureBehavior": "example-value",
+  "useDefaultApplications": "example-value",
+  "robotApplications": "example-value",
+  "simulationApplications": "example-value",
+  "dataSources": "example-value",
+  "vpcConfig": "example-value"
+}

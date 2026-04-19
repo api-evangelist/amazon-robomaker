@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-s3-bucket-structure.json",
+  "description": "S3Bucket schema from openapi",
+  "type": "string",
+  "pattern": "[a-z0-9][a-z0-9.\\-]*[a-z0-9]",
+  "minLength": 3,
+  "maxLength": 63,
+  "name": "S3Bucket"
+}

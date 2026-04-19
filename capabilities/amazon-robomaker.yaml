@@ -1,0 +1,48 @@
+naftiko: 1.0.0-alpha1
+info:
+  label: Amazon Robomaker Operations
+  description: Workflow capability for Amazon Robomaker. Enables automation of Amazon Robomaker resources for cloud operations teams.
+  tags:
+  - Amazon Robomaker
+  - AWS
+  - Cloud Operations
+  created: '2026-04-19'
+  modified: '2026-04-19'
+binds:
+- namespace: env
+  keys:
+    AWS_ACCESS_KEY: AWS_ACCESS_KEY
+    AWS_SECRET_KEY: AWS_SECRET_KEY
+capability:
+  consumes:
+  - import: amazon-robomaker
+    location: ./shared/amazon-robomaker.yaml
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: amazon-robomaker-api
+    description: Unified REST API for Amazon Robomaker operations.
+    resources:
+    - path: /v1/resources
+      name: resources
+      description: Amazon Robomaker resources
+      operations:
+      - method: GET
+        name: list-resources
+        description: List Amazon Robomaker resources
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: amazon-robomaker-mcp
+    transport: http
+    description: MCP server for AI-assisted Amazon Robomaker operations.
+    tools:
+    - name: list-amazon-robomaker-resources
+      description: List Amazon Robomaker resources
+      hints:
+        readOnly: true
+      outputParameters:
+      - type: object
+        mapping: $.

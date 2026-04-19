@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-s3-key-output-structure.json",
+  "description": "Information about S3 keys.",
+  "type": "object",
+  "properties": {
+    "s3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3KeyOrPrefix"
+        },
+        {
+          "description": "The S3 key."
+        }
+      ]
+    },
+    "etag": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Etag"
+        },
+        {
+          "description": "The etag for the object."
+        }
+      ]
+    }
+  },
+  "name": "S3KeyOutput"
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-gpu-unit-structure.json",
+  "description": "GPUUnit schema from openapi",
+  "type": "int32",
+  "minimum": 0,
+  "maximum": 1,
+  "name": "GPUUnit"
+}

@@ -1,0 +1,7 @@
+{
+  "streamUI": "example-value",
+  "name": "Example Resource",
+  "command": "example-value",
+  "streamOutputToCloudWatch": "example-value",
+  "exitBehavior": "example-value"
+}

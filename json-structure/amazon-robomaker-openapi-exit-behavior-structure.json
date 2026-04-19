@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-exit-behavior-structure.json",
+  "description": "ExitBehavior schema from openapi",
+  "type": "string",
+  "enum": [
+    "FAIL",
+    "RESTART"
+  ],
+  "name": "ExitBehavior"
+}

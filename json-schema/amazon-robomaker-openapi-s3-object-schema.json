@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-s3-object-schema.json",
+  "title": "S3Object",
+  "description": "Information about an S3 object.",
+  "type": "object",
+  "properties": {
+    "bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Bucket"
+        },
+        {
+          "description": "The bucket containing the object."
+        }
+      ]
+    },
+    "key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The key of the object."
+        }
+      ]
+    },
+    "etag": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Etag"
+        },
+        {
+          "description": "The etag of the object."
+        }
+      ]
+    }
+  },
+  "required": [
+    "bucket",
+    "key"
+  ]
+}

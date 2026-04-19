@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-robot-application-config-schema.json",
+  "title": "RobotApplicationConfig",
+  "description": "Application configuration information for a robot.",
+  "type": "object",
+  "properties": {
+    "application": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The application information for the robot application."
+        }
+      ]
+    },
+    "applicationVersion": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Version"
+        },
+        {
+          "description": "The version of the robot application."
+        }
+      ]
+    },
+    "launchConfig": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/LaunchConfig"
+        },
+        {
+          "description": "The launch configuration for the robot application."
+        }
+      ]
+    },
+    "uploadConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/UploadConfigurations"
+        },
+        {
+          "description": "The upload configurations for the robot application."
+        }
+      ]
+    },
+    "useDefaultUploadConfigurations": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "deprecated": true,
+          "description": "<p>A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be recorded.</p> <p>If you set this value, you must specify an <code>outputLocation</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html."
+        }
+      ]
+    },
+    "tools": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Tools"
+        },
+        {
+          "description": "Information about tools configured for the robot application."
+        }
+      ]
+    },
+    "useDefaultTools": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/BoxedBoolean"
+        },
+        {
+          "deprecated": true,
+          "description": "<p>A Boolean indicating whether to use default robot application tools. The default tools are rviz, rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html."
+        }
+      ]
+    }
+  },
+  "required": [
+    "application",
+    "launchConfig"
+  ]
+}

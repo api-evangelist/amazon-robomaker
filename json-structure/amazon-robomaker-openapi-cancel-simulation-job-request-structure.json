@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-cancel-simulation-job-request-structure.json",
+  "description": "CancelSimulationJobRequest schema from openapi",
+  "type": "object",
+  "properties": {
+    "job": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/Arn"
+        },
+        {
+          "description": "The simulation job ARN to cancel."
+        }
+      ]
+    }
+  },
+  "required": [
+    "job"
+  ],
+  "name": "CancelSimulationJobRequest"
+}

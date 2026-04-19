@@ -1,0 +1,6 @@
+{
+  "application": "example-value",
+  "currentRevisionId": "abc123",
+  "s3Etags": "example-value",
+  "imageDigest": "example-value"
+}

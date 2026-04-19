@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-template-location-structure.json",
+  "description": "Information about a template location.",
+  "type": "object",
+  "properties": {
+    "s3Bucket": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Bucket"
+        },
+        {
+          "description": "The Amazon S3 bucket name."
+        }
+      ]
+    },
+    "s3Key": {
+      "allOf": [
+        {
+          "$ref": "#/components/schemas/S3Key"
+        },
+        {
+          "description": "The list of S3 keys identifying the data source files."
+        }
+      ]
+    }
+  },
+  "required": [
+    "s3Bucket",
+    "s3Key"
+  ],
+  "name": "TemplateLocation"
+}

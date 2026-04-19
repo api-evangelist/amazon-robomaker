@@ -1,0 +1,9 @@
+{
+  "application": "example-value",
+  "sources": "example-value",
+  "simulationSoftwareSuite": "example-value",
+  "robotSoftwareSuite": "example-value",
+  "renderingEngine": "example-value",
+  "currentRevisionId": "abc123",
+  "environment": "example-value"
+}

@@ -1,0 +1,7 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-floorplan-count-structure.json",
+  "description": "FloorplanCount schema from openapi",
+  "type": "int32",
+  "name": "FloorplanCount"
+}

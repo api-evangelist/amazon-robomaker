@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-s3-key-outputs-schema.json",
+  "title": "S3KeyOutputs",
+  "description": "S3KeyOutputs schema from openapi",
+  "type": "array",
+  "items": {
+    "$ref": "#/components/schemas/S3KeyOutput"
+  }
+}

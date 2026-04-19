@@ -1,0 +1,12 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "name": "Example Resource",
+  "status": "ACTIVE",
+  "lastStartedAt": "example-value",
+  "lastUpdatedAt": "example-value",
+  "failureBehavior": "example-value",
+  "failureCode": "example-value",
+  "failureReason": "example-value",
+  "clientRequestToken": "example-value",
+  "outputLocation": "example-value"
+}

@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-rendering-engine-version-type-schema.json",
+  "title": "RenderingEngineVersionType",
+  "description": "RenderingEngineVersionType schema from openapi",
+  "type": "string",
+  "pattern": "1.x",
+  "minLength": 1,
+  "maxLength": 4
+}

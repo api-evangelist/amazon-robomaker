@@ -1,0 +1,9 @@
+{
+  "arn": "arn:aws:service:us-east-1:123456789012:resource/example",
+  "lastUpdatedAt": "example-value",
+  "createdAt": "example-value",
+  "status": "ACTIVE",
+  "failedRequestCount": "example-value",
+  "pendingRequestCount": "example-value",
+  "createdRequestCount": "example-value"
+}

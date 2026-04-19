@@ -1,0 +1,6 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-schema/amazon-robomaker-openapi-concurrent-deployment-exception-schema.json",
+  "title": "ConcurrentDeploymentException",
+  "description": "ConcurrentDeploymentException schema from openapi"
+}

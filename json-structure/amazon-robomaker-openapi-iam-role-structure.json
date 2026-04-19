@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-structure.org/meta/core/v0/#",
+  "$id": "https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/json-structure/amazon-robomaker-openapi-iam-role-structure.json",
+  "description": "IamRole schema from openapi",
+  "type": "string",
+  "pattern": "arn:aws:iam::\\w+:role/.*",
+  "minLength": 1,
+  "maxLength": 255,
+  "name": "IamRole"
+}
