@@ -1,13 +1,14 @@
-naftiko: 1.0.0-alpha1
+naftiko: 1.0.0-alpha2
 info:
   label: Amazon Robomaker Operations
-  description: Workflow capability for Amazon Robomaker. Enables automation of Amazon Robomaker resources for cloud operations teams.
+  description: Workflow capability for Amazon Robomaker. Enables automation of Amazon Robomaker resources for cloud operations
+    teams.
   tags:
   - Amazon Robomaker
   - AWS
   - Cloud Operations
   created: '2026-04-19'
-  modified: '2026-04-19'
+  modified: '2026-05-06'
 binds:
 - namespace: env
   keys:
@@ -15,8 +16,254 @@ binds:
     AWS_SECRET_KEY: AWS_SECRET_KEY
 capability:
   consumes:
-  - import: amazon-robomaker
-    location: ./shared/amazon-robomaker.yaml
+  - type: http
+    namespace: amazon-robomaker
+    baseUri: http://robomaker.{region}.amazonaws.com
+    description: AWS RoboMaker
+    authentication:
+      type: bearer
+      token: '{{AWS_ACCESS_KEY}}'
+    resources:
+    - name: batchDeleteWorlds
+      path: /batchDeleteWorlds
+      description: batchDeleteWorlds operations
+      operations:
+      - name: BatchDeleteWorlds
+        method: POST
+        description: BatchDeleteWorlds
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: batchDescribeSimulationJob
+      path: /batchDescribeSimulationJob
+      description: batchDescribeSimulationJob operations
+      operations:
+      - name: BatchDescribeSimulationJob
+        method: POST
+        description: BatchDescribeSimulationJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: cancelDeploymentJob
+      path: /cancelDeploymentJob
+      description: cancelDeploymentJob operations
+      operations:
+      - name: CancelDeploymentJob
+        method: POST
+        description: CancelDeploymentJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: cancelSimulationJob
+      path: /cancelSimulationJob
+      description: cancelSimulationJob operations
+      operations:
+      - name: CancelSimulationJob
+        method: POST
+        description: CancelSimulationJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: cancelSimulationJobBatch
+      path: /cancelSimulationJobBatch
+      description: cancelSimulationJobBatch operations
+      operations:
+      - name: CancelSimulationJobBatch
+        method: POST
+        description: CancelSimulationJobBatch
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: cancelWorldExportJob
+      path: /cancelWorldExportJob
+      description: cancelWorldExportJob operations
+      operations:
+      - name: CancelWorldExportJob
+        method: POST
+        description: CancelWorldExportJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: cancelWorldGenerationJob
+      path: /cancelWorldGenerationJob
+      description: cancelWorldGenerationJob operations
+      operations:
+      - name: CancelWorldGenerationJob
+        method: POST
+        description: CancelWorldGenerationJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createDeploymentJob
+      path: /createDeploymentJob
+      description: createDeploymentJob operations
+      operations:
+      - name: CreateDeploymentJob
+        method: POST
+        description: CreateDeploymentJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createFleet
+      path: /createFleet
+      description: createFleet operations
+      operations:
+      - name: CreateFleet
+        method: POST
+        description: CreateFleet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createRobot
+      path: /createRobot
+      description: createRobot operations
+      operations:
+      - name: CreateRobot
+        method: POST
+        description: CreateRobot
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createRobotApplication
+      path: /createRobotApplication
+      description: createRobotApplication operations
+      operations:
+      - name: CreateRobotApplication
+        method: POST
+        description: CreateRobotApplication
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createRobotApplicationVersion
+      path: /createRobotApplicationVersion
+      description: createRobotApplicationVersion operations
+      operations:
+      - name: CreateRobotApplicationVersion
+        method: POST
+        description: CreateRobotApplicationVersion
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createSimulationApplication
+      path: /createSimulationApplication
+      description: createSimulationApplication operations
+      operations:
+      - name: CreateSimulationApplication
+        method: POST
+        description: CreateSimulationApplication
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createSimulationApplicationVersion
+      path: /createSimulationApplicationVersion
+      description: createSimulationApplicationVersion operations
+      operations:
+      - name: CreateSimulationApplicationVersion
+        method: POST
+        description: CreateSimulationApplicationVersion
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createSimulationJob
+      path: /createSimulationJob
+      description: createSimulationJob operations
+      operations:
+      - name: CreateSimulationJob
+        method: POST
+        description: CreateSimulationJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createWorldExportJob
+      path: /createWorldExportJob
+      description: createWorldExportJob operations
+      operations:
+      - name: CreateWorldExportJob
+        method: POST
+        description: CreateWorldExportJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createWorldGenerationJob
+      path: /createWorldGenerationJob
+      description: createWorldGenerationJob operations
+      operations:
+      - name: CreateWorldGenerationJob
+        method: POST
+        description: CreateWorldGenerationJob
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: createWorldTemplate
+      path: /createWorldTemplate
+      description: createWorldTemplate operations
+      operations:
+      - name: CreateWorldTemplate
+        method: POST
+        description: CreateWorldTemplate
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: deleteFleet
+      path: /deleteFleet
+      description: deleteFleet operations
+      operations:
+      - name: DeleteFleet
+        method: POST
+        description: DeleteFleet
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: deleteRobot
+      path: /deleteRobot
+      description: deleteRobot operations
+      operations:
+      - name: DeleteRobot
+        method: POST
+        description: DeleteRobot
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
   exposes:
   - type: rest
     port: 8080
