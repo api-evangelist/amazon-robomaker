@@ -1,18 +1,16 @@
 name: Amazon RoboMaker
-description: AWS RoboMaker is a cloud-based service that makes it easy to develop, simulate, and deploy intelligent robotics applications. RoboMaker extends the most widely used open-source robotics 
-  software framework, Robot Operating System (ROS), with connectivity to cloud services, providing tools for building, testing, and deploying robotics applications at scale.
+description: AWS RoboMaker is a cloud-based service that makes it easy to develop, simulate, and deploy intelligent robotics
+  applications. RoboMaker extends the most widely used open-source robotics software framework, Robot Operating System (ROS),
+  with connectivity to cloud services, providing tools for building, testing, and deploying robotics applications at scale.
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/apis.yml
 created: '2024-01-15'
-modified: '2026-04-19'
+modified: '2026-05-19'
 apis:
 - name: AWS RoboMaker API
-  description: >-
-    The AWS RoboMaker API provides programmatic access to create and manage
-    robotics applications, simulation jobs, and fleet deployments. It enables
-    developers to build robot applications, run simulation jobs for testing,
-    manage simulation worlds, and deploy applications to physical robots at
-    scale.
+  description: The AWS RoboMaker API provides programmatic access to create and manage robotics applications, simulation jobs,
+    and fleet deployments. It enables developers to build robot applications, run simulation jobs for testing, manage simulation
+    worlds, and deploy applications to physical robots at scale.
   image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
   humanURL: https://aws.amazon.com/robomaker/
   baseURL: https://robomaker.amazonaws.com
@@ -31,6 +29,8 @@ apis:
     url: https://aws.amazon.com/robomaker/getting-started/
   - type: FAQ
     url: https://aws.amazon.com/robomaker/faqs/
+  - type: NaftikoCapability
+    url: capabilities/amazon-robomaker.yaml
 common:
 - type: Portal
   url: https://aws.amazon.com/
@@ -1514,10 +1514,6 @@ common:
   url: examples/amazon-robomaker-openapi-world-generation-job-summary-example.json
 - type: Example
   url: examples/amazon-robomaker-openapi-world-summary-example.json
-- type: NaftikoCapability
-  url: capabilities/amazon-robomaker.yaml
-- type: NaftikoCapability
-  url: capabilities/shared/amazon-robomaker.yaml
 - type: SpectralRules
   url: rules/amazon-robomaker-spectral-rules.yml
 - type: Vocabulary
@@ -1525,14 +1521,14 @@ common:
 - type: Integrations
   url: https://aws.amazon.com/partners/
 integrations:
-  - name: Partner Programs
-  - name: Resources
-  - name: Success Stories
-  - name: Work with an AWS Partner
-  - name: AWS Marketplace
-  - name: AWS Partner Central
-  - name: Partner Paths
-  - name: co-sell with AWS
+- name: Partner Programs
+- name: Resources
+- name: Success Stories
+- name: Work with an AWS Partner
+- name: AWS Marketplace
+- name: AWS Partner Central
+- name: Partner Paths
+- name: co-sell with AWS
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
