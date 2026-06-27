@@ -49,7 +49,7 @@ common:
     url: https://github.com/aws
   - type: Portal
     url: https://console.aws.amazon.com/robomaker/
-  - type: SignUp
+  - type: Signup
     url: https://signin.aws.amazon.com/signup?request_type=register
   - type: Login
     url: https://aws.amazon.com/console/
@@ -1215,305 +1215,305 @@ common:
     url: json-structure/amazon-robomaker-openapi-world-summaries-structure.json
   - type: JSONStructure
     url: json-structure/amazon-robomaker-openapi-world-summary-structure.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-batch-delete-worlds-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-batch-delete-worlds-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-batch-describe-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-batch-describe-simulation-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-batch-policy-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-cancel-deployment-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-cancel-simulation-job-batch-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-cancel-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-cancel-world-export-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-cancel-world-generation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-compute-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-compute-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-deployment-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-deployment-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-fleet-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-fleet-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-application-version-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-application-version-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-robot-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-application-version-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-application-version-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-simulation-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-export-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-export-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-generation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-generation-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-template-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-create-world-template-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-data-source-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-data-source-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-delete-fleet-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-delete-robot-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-delete-robot-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-delete-simulation-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-delete-world-template-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deployment-application-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deployment-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deployment-job-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deployment-launch-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deregister-robot-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-deregister-robot-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-deployment-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-deployment-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-fleet-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-fleet-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-robot-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-robot-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-robot-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-robot-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-job-batch-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-job-batch-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-simulation-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-export-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-export-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-generation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-generation-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-template-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-describe-world-template-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-environment-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-failed-create-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-failure-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-filter-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-finished-worlds-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-fleet-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-get-world-template-body-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-get-world-template-body-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-launch-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-deployment-jobs-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-deployment-jobs-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-fleets-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-fleets-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-robot-applications-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-robot-applications-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-robots-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-robots-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-applications-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-applications-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-job-batches-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-job-batches-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-jobs-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-simulation-jobs-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-tags-for-resource-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-export-jobs-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-export-jobs-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-generation-jobs-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-generation-jobs-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-templates-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-world-templates-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-worlds-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-list-worlds-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-logging-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-network-interface-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-output-location-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-port-forwarding-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-port-mapping-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-progress-detail-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-register-robot-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-register-robot-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-rendering-engine-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-restart-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-robot-application-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-robot-application-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-robot-deployment-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-robot-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-robot-software-suite-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-s3-key-output-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-s3-object-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-application-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-application-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-job-batch-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-job-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-job-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-simulation-software-suite-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-source-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-source-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-start-simulation-job-batch-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-start-simulation-job-batch-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-sync-deployment-job-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-sync-deployment-job-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-tag-resource-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-template-location-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-template-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-tool-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-robot-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-robot-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-simulation-application-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-simulation-application-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-world-template-request-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-update-world-template-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-upload-configuration-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-vpc-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-vpc-config-response-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-config-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-count-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-export-job-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-failure-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-generation-job-summary-example.json
-  - type: Example
+  - type: Examples
     url: examples/amazon-robomaker-openapi-world-summary-example.json
   - type: SpectralRules
     url: rules/amazon-robomaker-spectral-rules.yml
