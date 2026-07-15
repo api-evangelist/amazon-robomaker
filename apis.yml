@@ -33,6 +33,8 @@ apis:
       - type: FAQ
         url: https://aws.amazon.com/robomaker/faqs/
 common:
+  - type: AgenticAccess
+    url: agentic-access/amazon-robomaker-agentic-access.yml
   - type: TrustCenter
     url: security/amazon-robomaker-trust-center.yml
   - type: VulnerabilityDisclosure
