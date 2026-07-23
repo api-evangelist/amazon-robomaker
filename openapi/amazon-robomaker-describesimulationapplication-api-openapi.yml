@@ -1,0 +1,458 @@
+openapi: 3.0.0
+info:
+  version: '2018-06-29'
+  x-release: v4
+  title: AWS RoboMaker BatchDeleteWorlds DescribeSimulationApplication API
+  description: This section provides documentation for the AWS RoboMaker API operations.
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: robomaker
+  x-aws-signingName: robomaker
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/robomaker-2018-06-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: https://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: http://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+- url: https://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: DescribeSimulationApplication
+paths:
+  /describeSimulationApplication:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeSimulationApplication
+      description: Describes a simulation application.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeSimulationApplicationResponse'
+        '480':
+          description: InvalidParameterException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterException'
+        '481':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '482':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+        '483':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - application
+              properties:
+                application:
+                  description: The application information for the simulation application.
+                  type: string
+                  pattern: arn:.*
+                  minLength: 1
+                  maxLength: 1224
+                applicationVersion:
+                  description: The version of the simulation application to describe.
+                  type: string
+                  pattern: (\$LATEST)|[0-9]*
+                  minLength: 1
+                  maxLength: 255
+      tags:
+      - DescribeSimulationApplication
+components:
+  schemas:
+    RobotSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
+    SimulationSoftwareSuiteVersionType:
+      type: string
+      pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
+      minLength: 0
+      maxLength: 1024
+    Source:
+      type: object
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The s3 bucket name.
+        s3Key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The s3 object key.
+        etag:
+          allOf:
+          - $ref: '#/components/schemas/S3Etag'
+          - description: A hash of the object specified by <code>s3Bucket</code> and <code>s3Key</code>.
+        architecture:
+          allOf:
+          - $ref: '#/components/schemas/Architecture'
+          - description: The taget processor architecture for the application.
+      description: Information about a source.
+    TagMap:
+      type: object
+      minProperties: 0
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    SimulationSoftwareSuiteType:
+      type: string
+      enum:
+      - Gazebo
+      - RosbagPlay
+      - SimulationRuntime
+    ResourceNotFoundException: {}
+    RobotSoftwareSuiteType:
+      type: string
+      enum:
+      - ROS
+      - ROS2
+      - General
+    S3Etag:
+      type: string
+    Environment:
+      type: object
+      properties:
+        uri:
+          allOf:
+          - $ref: '#/components/schemas/RepositoryUrl'
+          - description: The Docker image URI for either your robot or simulation applications.
+      description: The object that contains the Docker image URI for either your robot or simulation applications.
+    DescribeSimulationApplicationResponse:
+      type: object
+      properties:
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the robot simulation application.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the simulation application.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: The version of the simulation application.
+        sources:
+          allOf:
+          - $ref: '#/components/schemas/Sources'
+          - description: The sources of the simulation application.
+        simulationSoftwareSuite:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuite'
+          - description: The simulation software suite used by the simulation application.
+        robotSoftwareSuite:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuite'
+          - description: Information about the robot software suite (ROS distribution).
+        renderingEngine:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngine'
+          - description: The rendering engine for the simulation application.
+        revisionId:
+          allOf:
+          - $ref: '#/components/schemas/RevisionId'
+          - description: The revision id of the simulation application.
+        lastUpdatedAt:
+          allOf:
+          - $ref: '#/components/schemas/LastUpdatedAt'
+          - description: The time, in milliseconds since the epoch, when the simulation application was last updated.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: The list of all tags added to the specified simulation application.
+        environment:
+          allOf:
+          - $ref: '#/components/schemas/Environment'
+          - description: The object that contains the Docker image URI used to create the simulation application.
+        imageDigest:
+          allOf:
+          - $ref: '#/components/schemas/ImageDigest'
+          - description: A SHA256 identifier for the Docker image that you use for your simulation application.
+    Sources:
+      type: array
+      items:
+        $ref: '#/components/schemas/Source'
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    RenderingEngineType:
+      type: string
+      enum:
+      - OGRE
+    RenderingEngine:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineType'
+          - description: The name of the rendering engine.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineVersionType'
+          - description: The version of the rendering engine.
+      description: Information about a rendering engine.
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
+    Architecture:
+      type: string
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    InvalidParameterException: {}
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    ImageDigest:
+      type: string
+      pattern: '[Ss][Hh][Aa]256:[0-9a-fA-F]{64}'
+      minLength: 0
+      maxLength: 72
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    InternalServerException: {}
+    SimulationSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
+          - description: The name of the simulation software suite.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
+          - description: The version of the simulation software suite.
+      description: Information about a simulation software suite.
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    RepositoryUrl:
+      type: string
+      pattern: .+
+      minLength: 1
+      maxLength: 1024
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    ThrottlingException: {}
+    RenderingEngineVersionType:
+      type: string
+      pattern: 1.x
+      minLength: 1
+      maxLength: 4
+    RevisionId:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 40
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/robomaker/
+x-hasEquivalentPaths: true

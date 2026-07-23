@@ -1,0 +1,972 @@
+openapi: 3.0.0
+info:
+  version: '2018-06-29'
+  x-release: v4
+  title: AWS RoboMaker BatchDeleteWorlds DescribeSimulationJobBatch API
+  description: This section provides documentation for the AWS RoboMaker API operations.
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: robomaker
+  x-aws-signingName: robomaker
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/robomaker-2018-06-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: https://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: http://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+- url: https://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: DescribeSimulationJobBatch
+paths:
+  /describeSimulationJobBatch:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      operationId: DescribeSimulationJobBatch
+      description: Describes a simulation job batch.
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DescribeSimulationJobBatchResponse'
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '481':
+          description: InvalidParameterException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterException'
+        '482':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+      parameters: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+              - batch
+              properties:
+                batch:
+                  description: The id of the batch to describe.
+                  type: string
+                  pattern: arn:.*
+                  minLength: 1
+                  maxLength: 1224
+      tags:
+      - DescribeSimulationJobBatch
+components:
+  parameters:
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    NonEmptyString:
+      type: string
+      pattern: .+
+      minLength: 1
+      maxLength: 255
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
+    BatchPolicy:
+      type: object
+      properties:
+        timeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/BatchTimeoutInSeconds'
+          - description: <p>The amount of time, in seconds, to wait for the batch to complete. </p> <p>If a batch times out, and there are pending requests that were failing due to an internal failure (like <code>InternalServiceError</code>), they will be moved to the failed list and the batch status will be <code>Failed</code>. If the pending requests were failing for any other reason, the failed pending requests will be moved to the failed list and the batch status will be <code>TimedOut</code>. </p>
+        maxConcurrency:
+          allOf:
+          - $ref: '#/components/schemas/MaxConcurrency'
+          - description: '<p>The number of active simulation jobs create as part of the batch that can be in an active state at the same time. </p> <p>Active states include: <code>Pending</code>,<code>Preparing</code>, <code>Running</code>, <code>Restarting</code>, <code>RunningFailed</code> and <code>Terminating</code>. All other states are terminal states. </p>'
+      description: Information about the batch policy.
+    SimulationJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Preparing
+      - Running
+      - Restarting
+      - Completed
+      - Failed
+      - RunningFailed
+      - Terminating
+      - Terminated
+      - Canceled
+    WorldConfig:
+      type: object
+      properties:
+        world:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The world generated by Simulation WorldForge.
+      description: Configuration information for a world.
+    FailureBehavior:
+      type: string
+      enum:
+      - Fail
+      - Continue
+    BoxedBoolean:
+      type: boolean
+    RobotApplicationConfig:
+      type: object
+      required:
+      - application
+      - launchConfig
+      properties:
+        application:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The application information for the robot application.
+        applicationVersion:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: The version of the robot application.
+        launchConfig:
+          allOf:
+          - $ref: '#/components/schemas/LaunchConfig'
+          - description: The launch configuration for the robot application.
+        uploadConfigurations:
+          allOf:
+          - $ref: '#/components/schemas/UploadConfigurations'
+          - description: The upload configurations for the robot application.
+        useDefaultUploadConfigurations:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - deprecated: true
+            description: <p>A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be recorded.</p> <p>If you set this value, you must specify an <code>outputLocation</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.
+        tools:
+          allOf:
+          - $ref: '#/components/schemas/Tools'
+          - description: Information about tools configured for the robot application.
+        useDefaultTools:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - deprecated: true
+            description: <p>A Boolean indicating whether to use default robot application tools. The default tools are rviz, rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.
+      description: Application configuration information for a robot.
+    BatchTimeoutInSeconds:
+      type: integer
+    RobotApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/RobotApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    EnvironmentVariableValue:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    DataSourceConfig:
+      type: object
+      required:
+      - name
+      - s3Bucket
+      - s3Keys
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the data source.
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The S3 bucket where the data files are located.
+        s3Keys:
+          allOf:
+          - $ref: '#/components/schemas/S3KeysOrPrefixes'
+          - description: The list of S3 keys identifying the data source files.
+        type:
+          allOf:
+          - $ref: '#/components/schemas/DataSourceType'
+          - description: <p>The data type for the data source that you're using for your container image or simulation job. You can use this field to specify whether your data source is an Archive, an Amazon S3 prefix, or a file.</p> <p>If you don't specify a field, the default value is <code>File</code>.</p>
+        destination:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: <p>The location where your files are mounted in the container image.</p> <p>If you've specified the <code>type</code> of the data source as an <code>Archive</code>, you must provide an Amazon S3 object key to your archive. The object key must point to either a <code>.zip</code> or <code>.tar.gz</code> file.</p> <p>If you've specified the <code>type</code> of the data source as a <code>Prefix</code>, you provide the Amazon S3 prefix that points to the files that you are using for your data source.</p> <p>If you've specified the <code>type</code> of the data source as a <code>File</code>, you provide the Amazon S3 path to the file that you're using as your data source.</p>
+      description: Information about a data source.
+    IamRole:
+      type: string
+      pattern: arn:aws:iam::\w+:role/.*
+      minLength: 1
+      maxLength: 255
+    CreateSimulationJobRequests:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationJobRequest'
+      minItems: 1
+      maxItems: 1000
+    PortMapping:
+      type: object
+      required:
+      - jobPort
+      - applicationPort
+      properties:
+        jobPort:
+          allOf:
+          - $ref: '#/components/schemas/Port'
+          - description: 'The port number on the simulation job instance to use as a remote connection point. '
+        applicationPort:
+          allOf:
+          - $ref: '#/components/schemas/NonSystemPort'
+          - description: The port number on the application.
+        enableOnPublicIp:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A Boolean indicating whether to enable this port mapping on public IP.
+      description: An object representing a port mapping.
+    WorldConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldConfig'
+      minItems: 0
+      maxItems: 1
+    SimulationJobBatchStatus:
+      type: string
+      enum:
+      - Pending
+      - InProgress
+      - Failed
+      - Completed
+      - Canceled
+      - Canceling
+      - Completing
+      - TimingOut
+      - TimedOut
+    ExitBehavior:
+      type: string
+      enum:
+      - FAIL
+      - RESTART
+    SimulationJobErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+      - RobotApplicationCrash
+      - SimulationApplicationCrash
+      - RobotApplicationHealthCheckFailure
+      - SimulationApplicationHealthCheckFailure
+      - BadPermissionsRobotApplication
+      - BadPermissionsSimulationApplication
+      - BadPermissionsS3Object
+      - BadPermissionsS3Output
+      - BadPermissionsCloudwatchLogs
+      - SubnetIpLimitExceeded
+      - ENILimitExceeded
+      - BadPermissionsUserCredentials
+      - InvalidBundleRobotApplication
+      - InvalidBundleSimulationApplication
+      - InvalidS3Resource
+      - ThrottlingError
+      - LimitExceeded
+      - MismatchedEtag
+      - RobotApplicationVersionMismatchedEtag
+      - SimulationApplicationVersionMismatchedEtag
+      - ResourceNotFound
+      - RequestThrottled
+      - BatchTimedOut
+      - BatchCanceled
+      - InvalidInput
+      - WrongRegionS3Bucket
+      - WrongRegionS3Output
+      - WrongRegionRobotApplication
+      - WrongRegionSimulationApplication
+      - UploadContentMismatchError
+    SecurityGroups:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+      minItems: 1
+      maxItems: 5
+    S3KeysOrPrefixes:
+      type: array
+      items:
+        $ref: '#/components/schemas/S3KeyOrPrefix'
+      minItems: 1
+      maxItems: 100
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    LaunchConfig:
+      type: object
+      properties:
+        packageName:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The package name.
+        launchFile:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The launch file name.
+        environmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/EnvironmentVariableMap'
+          - description: The environment variables for the application launch.
+        portForwardingConfig:
+          allOf:
+          - $ref: '#/components/schemas/PortForwardingConfig'
+          - description: The port forwarding configuration.
+        streamUI:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: 'Boolean indicating whether a streaming session will be configured for the application. If <code>True</code>, AWS RoboMaker will configure a connection so you can interact with your application as it is running in the simulation. You must configure and launch the component. It must have a graphical user interface. '
+        command:
+          allOf:
+          - $ref: '#/components/schemas/CommandList'
+          - description: <p>If you've specified <code>General</code> as the value for your <code>RobotSoftwareSuite</code>, you can use this field to specify a list of commands for your container image.</p> <p>If you've specified <code>SimulationRuntime</code> as the value for your <code>SimulationSoftwareSuite</code>, you can use this field to specify a list of commands for your container image.</p>
+      description: Information about a launch configuration.
+    DataSourceType:
+      type: string
+      enum:
+      - Prefix
+      - Archive
+      - File
+    Subnets:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+      minItems: 1
+      maxItems: 16
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    ComputeType:
+      type: string
+      enum:
+      - CPU
+      - GPU_AND_CPU
+    FailedCreateSimulationJobRequests:
+      type: array
+      items:
+        $ref: '#/components/schemas/FailedCreateSimulationJobRequest'
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    Compute:
+      type: object
+      properties:
+        simulationUnitLimit:
+          allOf:
+          - $ref: '#/components/schemas/SimulationUnit'
+          - description: 'The simulation unit limit. Your simulation is allocated CPU and memory proportional to the supplied simulation unit limit. A simulation unit is 1 vcpu and 2GB of memory. You are only billed for the SU utilization you consume up to the maximum value provided. The default is 15. '
+        computeType:
+          allOf:
+          - $ref: '#/components/schemas/ComputeType'
+          - description: Compute type information for the simulation job.
+        gpuUnitLimit:
+          allOf:
+          - $ref: '#/components/schemas/GPUUnit'
+          - description: Compute GPU unit limit for the simulation job. It is the same as the number of GPUs allocated to the SimulationJob.
+      description: Compute information for the simulation job.
+    VPCConfig:
+      type: object
+      required:
+      - subnets
+      properties:
+        subnets:
+          allOf:
+          - $ref: '#/components/schemas/Subnets'
+          - description: A list of one or more subnet IDs in your VPC.
+        securityGroups:
+          allOf:
+          - $ref: '#/components/schemas/SecurityGroups'
+          - description: A list of one or more security groups IDs in your VPC.
+        assignPublicIp:
+          allOf:
+          - $ref: '#/components/schemas/Boolean'
+          - description: A boolean indicating whether to assign a public IP address.
+      description: If your simulation job accesses resources in a VPC, you provide this parameter identifying the list of security group IDs and subnet IDs. These must belong to the same VPC. You must provide at least one security group and two subnet IDs.
+    SimulationJobBatchErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+    Path:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    DescribeSimulationJobBatchResponse:
+      type: object
+      properties:
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the batch.
+        status:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobBatchStatus'
+          - description: <p>The status of the batch.</p> <dl> <dt>Pending</dt> <dd> <p>The simulation job batch request is pending.</p> </dd> <dt>InProgress</dt> <dd> <p>The simulation job batch is in progress. </p> </dd> <dt>Failed</dt> <dd> <p>The simulation job batch failed. One or more simulation job requests could not be completed due to an internal failure (like <code>InternalServiceError</code>). See <code>failureCode</code> and <code>failureReason</code> for more information.</p> </dd> <dt>Completed</dt> <dd> <p>The simulation batch job completed. A batch is complete when (1) there are no pending simulation job requests in the batch and none of the failed simulation job requests are due to <code>InternalServiceError</code> and (2) when all created simulation jobs have reached a terminal state (for example, <code>Completed</code> or <code>Failed</code>). </p> </dd> <dt>Canceled</dt> <dd> <p>The simulation batch job was cancelled.</p> </dd> <dt>Canceling</dt> <dd> <p>The simulation batch job is being cancelled.</p> </dd> <dt>Completing</dt> <dd> <p>The simulation batch job is completing.</p> </dd> <dt>TimingOut</dt> <dd> <p>The simulation job batch is timing out.</p> <p>If a batch timing out, and there are pending requests that were failing due to an internal failure (like <code>InternalServiceError</code>), the batch status will be <code>Failed</code>. If there are no such failing request, the batch status will be <code>TimedOut</code>. </p> </dd> <dt>TimedOut</dt> <dd> <p>The simulation batch job timed out.</p> </dd> </dl>
+        lastUpdatedAt:
+          allOf:
+          - $ref: '#/components/schemas/LastUpdatedAt'
+          - description: The time, in milliseconds since the epoch, when the simulation job batch was last updated.
+        createdAt:
+          allOf:
+          - $ref: '#/components/schemas/CreatedAt'
+          - description: The time, in milliseconds since the epoch, when the simulation job batch was created.
+        clientRequestToken:
+          allOf:
+          - $ref: '#/components/schemas/ClientRequestToken'
+          - description: Unique, case-sensitive identifier that you provide to ensure the idempotency of the request.
+        batchPolicy:
+          allOf:
+          - $ref: '#/components/schemas/BatchPolicy'
+          - description: The batch policy.
+        failureCode:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobBatchErrorCode'
+          - description: The failure code of the simulation job batch.
+        failureReason:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The reason the simulation job batch failed.
+        failedRequests:
+          allOf:
+          - $ref: '#/components/schemas/FailedCreateSimulationJobRequests'
+          - description: 'A list of failed create simulation job requests. The request failed to be created into a simulation job. Failed requests do not have a simulation job ID. '
+        pendingRequests:
+          allOf:
+          - $ref: '#/components/schemas/CreateSimulationJobRequests'
+          - description: A list of pending simulation job requests. These requests have not yet been created into simulation jobs.
+        createdRequests:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobSummaries'
+          - description: A list of created simulation job summaries.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: A map that contains tag keys and tag values that are attached to the simulation job batch.
+    JobDuration:
+      type: integer
+    SimulationApplicationConfig:
+      type: object
+      required:
+      - application
+      - launchConfig
+      properties:
+        application:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The application information for the simulation application.
+        applicationVersion:
+          allOf:
+          - $ref: '#/components/schemas/Version'
+          - description: The version of the simulation application.
+        launchConfig:
+          allOf:
+          - $ref: '#/components/schemas/LaunchConfig'
+          - description: The launch configuration for the simulation application.
+        uploadConfigurations:
+          allOf:
+          - $ref: '#/components/schemas/UploadConfigurations'
+          - description: Information about upload configurations for the simulation application.
+        worldConfigs:
+          allOf:
+          - $ref: '#/components/schemas/WorldConfigs'
+          - description: A list of world configurations.
+        useDefaultUploadConfigurations:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - deprecated: true
+            description: <p>A Boolean indicating whether to use default upload configurations. By default, <code>.ros</code> and <code>.gazebo</code> files are uploaded when the application terminates and all ROS topics will be recorded.</p> <p>If you set this value, you must specify an <code>outputLocation</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.
+        tools:
+          allOf:
+          - $ref: '#/components/schemas/Tools'
+          - description: Information about tools configured for the simulation application.
+        useDefaultTools:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - deprecated: true
+            description: <p>A Boolean indicating whether to use default simulation application tools. The default tools are rviz, rqt, terminal and rosbag record. The default is <code>False</code>.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.
+      description: Information about a simulation application configuration.
+    SimulationJobSummary:
+      type: object
+      properties:
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the simulation job.
+        lastUpdatedAt:
+          allOf:
+          - $ref: '#/components/schemas/LastUpdatedAt'
+          - description: The time, in milliseconds since the epoch, when the simulation job was last updated.
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the simulation job.
+        status:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobStatus'
+          - description: The status of the simulation job.
+        simulationApplicationNames:
+          allOf:
+          - $ref: '#/components/schemas/SimulationApplicationNames'
+          - description: A list of simulation job simulation application names.
+        robotApplicationNames:
+          allOf:
+          - $ref: '#/components/schemas/RobotApplicationNames'
+          - description: A list of simulation job robot application names.
+        dataSourceNames:
+          allOf:
+          - $ref: '#/components/schemas/DataSourceNames'
+          - description: The names of the data sources.
+        computeType:
+          allOf:
+          - $ref: '#/components/schemas/ComputeType'
+          - description: The compute type for the simulation job summary.
+      description: Summary information for a simulation job.
+    UnrestrictedCommand:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    SimulationJobRequest:
+      type: object
+      required:
+      - maxJobDurationInSeconds
+      properties:
+        outputLocation:
+          $ref: '#/components/schemas/OutputLocation'
+        loggingConfig:
+          $ref: '#/components/schemas/LoggingConfig'
+        maxJobDurationInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/JobDuration'
+          - description: The maximum simulation job duration in seconds. The value must be 8 days (691,200 seconds) or less.
+        iamRole:
+          allOf:
+          - $ref: '#/components/schemas/IamRole'
+          - description: 'The IAM role name that allows the simulation instance to call the AWS APIs that are specified in its associated policies on your behalf. This is how credentials are passed in to your simulation job. '
+        failureBehavior:
+          allOf:
+          - $ref: '#/components/schemas/FailureBehavior'
+          - description: <p>The failure behavior the simulation job.</p> <dl> <dt>Continue</dt> <dd> <p>Leaves the host running for its maximum timeout duration after a <code>4XX</code> error code.</p> </dd> <dt>Fail</dt> <dd> <p>Stop the simulation job and terminate the instance.</p> </dd> </dl>
+        useDefaultApplications:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - description: 'A Boolean indicating whether to use default applications in the simulation job. Default applications include Gazebo, rqt, rviz and terminal access. '
+        robotApplications:
+          allOf:
+          - $ref: '#/components/schemas/RobotApplicationConfigs'
+          - description: The robot applications to use in the simulation job.
+        simulationApplications:
+          allOf:
+          - $ref: '#/components/schemas/SimulationApplicationConfigs'
+          - description: The simulation applications to use in the simulation job.
+        dataSources:
+          allOf:
+          - $ref: '#/components/schemas/DataSourceConfigs'
+          - description: <p>Specify data sources to mount read-only files from S3 into your simulation. These files are available under <code>/opt/robomaker/datasources/data_source_name</code>. </p> <note> <p>There is a limit of 100 files and a combined size of 25GB for all <code>DataSourceConfig</code> objects. </p> </note>
+        vpcConfig:
+          $ref: '#/components/schemas/VPCConfig'
+        compute:
+          allOf:
+          - $ref: '#/components/schemas/Compute'
+          - description: Compute information for the simulation job
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: A map that contains tag keys and tag values that are attached to the simulation job request.
+      description: Information about a simulation job request.
+    Tool:
+      type: object
+      required:
+      - name
+      - command
+      properties:
+        streamUI:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - description: 'Boolean indicating whether a streaming session will be configured for the tool. If <code>True</code>, AWS RoboMaker will configure a connection so you can interact with the tool as it is running in the simulation. It must have a graphical user interface. The default is <code>False</code>. '
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the tool.
+        command:
+          allOf:
+          - $ref: '#/components/schemas/UnrestrictedCommand'
+          - description: Command-line arguments for the tool. It must include the tool executable name.
+        streamOutputToCloudWatch:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - description: 'Boolean indicating whether logs will be recorded in CloudWatch for the tool. The default is <code>False</code>. '
+        exitBehavior:
+          allOf:
+          - $ref: '#/components/schemas/ExitBehavior'
+          - description: 'Exit behavior determines what happens when your tool quits running. <code>RESTART</code> will cause your tool to be restarted. <code>FAIL</code> will cause your job to exit. The default is <code>RESTART</code>. '
+      description: Information about a tool. Tools are used in a simulation job.
+    InvalidParameterException: {}
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    SimulationApplicationNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+    CommandList:
+      type: array
+      items:
+        $ref: '#/components/schemas/NonEmptyString'
+    LoggingConfig:
+      type: object
+      properties:
+        recordAllRosTopics:
+          allOf:
+          - $ref: '#/components/schemas/BoxedBoolean'
+          - deprecated: true
+            description: <p>A boolean indicating whether to record all ROS topics.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.
+      description: The logging configuration.
+    SimulationJobSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationJobSummary'
+      minItems: 0
+      maxItems: 100
+    Boolean:
+      type: boolean
+    PortForwardingConfig:
+      type: object
+      properties:
+        portMappings:
+          allOf:
+          - $ref: '#/components/schemas/PortMappingList'
+          - description: The port mappings for the configuration.
+      description: Configuration information for port forwarding.
+    RobotApplicationNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+    ResourceNotFoundException: {}
+    EnvironmentVariableMap:
+      type: object
+      minProperties: 0
+      maxProperties: 20
+      additionalProperties:
+        $ref: '#/components/schemas/EnvironmentVariableValue'
+    Port:
+      type: integer
+      minimum: 1
+      maximum: 65535
+    FailedCreateSimulationJobRequest:
+      type: object
+      properties:
+        request:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobRequest'
+          - description: The simulation job request.
+        failureReason:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: The failure reason of the simulation job request.
+        failureCode:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobErrorCode'
+          - description: The failure code.
+        failedAt:
+          allOf:
+          - $ref: '#/components/schemas/FailedAt'
+          - description: The time, in milliseconds since the epoch, when the simulation job batch failed.
+      description: Information about a failed create simulation job request.
+    UploadConfiguration:
+      type: object
+      required:
+      - name
+      - path
+      - uploadBehavior
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: <p>A prefix that specifies where files will be uploaded in Amazon S3. It is appended to the simulation output location to determine the final path. </p> <p> For example, if your simulation output location is <code>s3://my-bucket</code> and your upload configuration name is <code>robot-test</code>, your files will be uploaded to <code>s3://my-bucket/&lt;simid&gt;/&lt;runid&gt;/robot-test</code>. </p>
+        path:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: ' Specifies the path of the file(s) to upload. Standard Unix glob matching rules are accepted, with the addition of <code>**</code> as a <i>super asterisk</i>. For example, specifying <code>/var/log/**.log</code> causes all .log files in the <code>/var/log</code> directory tree to be collected. For more examples, see <a href="https://github.com/gobwas/glob">Glob Library</a>. '
+        uploadBehavior:
+          allOf:
+          - $ref: '#/components/schemas/UploadBehavior'
+          - description: <p>Specifies when to upload the files:</p> <dl> <dt>UPLOAD_ON_TERMINATE</dt> <dd> <p>Matching files are uploaded once the simulation enters the <code>TERMINATING</code> state. Matching files are not uploaded until all of your code (including tools) have stopped. </p> <p>If there is a problem uploading a file, the upload is retried. If problems persist, no further upload attempts will be made.</p> </dd> <dt>UPLOAD_ROLLING_AUTO_REMOVE</dt> <dd> <p>Matching files are uploaded as they are created. They are deleted after they are uploaded. The specified path is checked every 5 seconds. A final check is made when all of your code (including tools) have stopped. </p> </dd> </dl>
+      description: 'Provides upload configuration information. Files are uploaded from the simulation job to a location you specify. '
+    FailedAt:
+      type: string
+      format: date-time
+    TagMap:
+      type: object
+      minProperties: 0
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    CreatedAt:
+      type: string
+      format: date-time
+    UploadBehavior:
+      type: string
+      enum:
+      - UPLOAD_ON_TERMINATE
+      - UPLOAD_ROLLING_AUTO_REMOVE
+    DataSourceNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    PortMappingList:
+      type: array
+      items:
+        $ref: '#/components/schemas/PortMapping'
+      minItems: 0
+      maxItems: 10
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    GPUUnit:
+      type: integer
+      minimum: 0
+      maximum: 1
+    DataSourceConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DataSourceConfig'
+      minItems: 1
+      maxItems: 6
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    UploadConfigurations:
+      type: array
+      items:
+        $ref: '#/components/schemas/UploadConfiguration'
+      minItems: 0
+      maxItems: 10
+    OutputLocation:
+      type: object
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The S3 bucket for output.
+        s3Prefix:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The S3 folder in the <code>s3Bucket</code> where output files will be placed.
+      description: The output location.
+    InternalServerException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    SimulationUnit:
+      type: integer
+      minimum: 1
+      maximum: 15
+    SimulationApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/SimulationApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    NonSystemPort:
+      type: integer
+      minimum: 1024
+      maximum: 65535
+    S3KeyOrPrefix:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    Tools:
+      type: array
+      items:
+        $ref: '#/components/schemas/Tool'
+      minItems: 0
+      maxItems: 10
+    MaxConcurrency:
+      type: integer
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/robomaker/
+x-hasEquivalentPaths: true

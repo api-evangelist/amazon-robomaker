@@ -1,0 +1,527 @@
+openapi: 3.0.0
+info:
+  version: '2018-06-29'
+  x-release: v4
+  title: AWS RoboMaker BatchDeleteWorlds ListDeploymentJobs API
+  description: This section provides documentation for the AWS RoboMaker API operations.
+  x-logo:
+    url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
+    backgroundColor: '#FFFFFF'
+  termsOfService: https://aws.amazon.com/service-terms/
+  contact:
+    name: Mike Ralphson
+    email: mike.ralphson@gmail.com
+    url: https://github.com/mermade/aws2openapi
+    x-twitter: PermittedSoc
+  license:
+    name: Apache 2.0 License
+    url: http://www.apache.org/licenses/
+  x-providerName: amazonaws.com
+  x-serviceName: robomaker
+  x-aws-signingName: robomaker
+  x-origin:
+  - contentType: application/json
+    url: https://raw.githubusercontent.com/aws/aws-sdk-js/master/apis/robomaker-2018-06-29.normal.json
+    converter:
+      url: https://github.com/mermade/aws2openapi
+      version: 1.0.0
+    x-apisguru-driver: external
+  x-apiClientRegistration:
+    url: https://portal.aws.amazon.com/gp/aws/developer/registration/index.html?nc2=h_ct
+  x-apisguru-categories:
+  - cloud
+  x-preferred: true
+servers:
+- url: http://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: https://robomaker.{region}.amazonaws.com
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - us-east-1
+      - us-east-2
+      - us-west-1
+      - us-west-2
+      - us-gov-west-1
+      - us-gov-east-1
+      - ca-central-1
+      - eu-north-1
+      - eu-west-1
+      - eu-west-2
+      - eu-west-3
+      - eu-central-1
+      - eu-south-1
+      - af-south-1
+      - ap-northeast-1
+      - ap-northeast-2
+      - ap-northeast-3
+      - ap-southeast-1
+      - ap-southeast-2
+      - ap-east-1
+      - ap-south-1
+      - sa-east-1
+      - me-south-1
+      default: us-east-1
+  description: The RoboMaker multi-region endpoint
+- url: http://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+- url: https://robomaker.{region}.amazonaws.com.cn
+  variables:
+    region:
+      description: The AWS region
+      enum:
+      - cn-north-1
+      - cn-northwest-1
+      default: cn-north-1
+  description: The RoboMaker endpoint for China (Beijing) and China (Ningxia)
+security:
+- hmac: []
+tags:
+- name: ListDeploymentJobs
+paths:
+  /listDeploymentJobs:
+    parameters:
+    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
+    - $ref: '#/components/parameters/X-Amz-Date'
+    - $ref: '#/components/parameters/X-Amz-Algorithm'
+    - $ref: '#/components/parameters/X-Amz-Credential'
+    - $ref: '#/components/parameters/X-Amz-Security-Token'
+    - $ref: '#/components/parameters/X-Amz-Signature'
+    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
+    post:
+      deprecated: true
+      operationId: ListDeploymentJobs
+      description: <p>Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>
+      responses:
+        '200':
+          description: Success
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ListDeploymentJobsResponse'
+        '480':
+          description: ResourceNotFoundException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ResourceNotFoundException'
+        '481':
+          description: InvalidParameterException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvalidParameterException'
+        '482':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
+        '483':
+          description: ThrottlingException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ThrottlingException'
+      parameters:
+      - name: maxResults
+        in: query
+        schema:
+          type: string
+        description: Pagination limit
+        required: false
+      - name: nextToken
+        in: query
+        schema:
+          type: string
+        description: Pagination token
+        required: false
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                filters:
+                  description: <p>Optional filters to limit results.</p> <p>The filter names <code>status</code> and <code>fleetName</code> are supported. When filtering, you must use the complete value of the filtered item. You can use up to three filters, but they must be for the same named item. For example, if you are looking for items with the status <code>InProgress</code> or the status <code>Pending</code>.</p>
+                  type: array
+                  items:
+                    $ref: '#/components/schemas/Filter'
+                  minItems: 1
+                  maxItems: 1
+                nextToken:
+                  description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListDeploymentJobs</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+                  type: string
+                  pattern: '[a-zA-Z0-9_.\-\/+=]*'
+                  minLength: 1
+                  maxLength: 2048
+                maxResults:
+                  description: 'When this parameter is used, <code>ListDeploymentJobs</code> only returns <code>maxResults</code> results in a single page along with a <code>nextToken</code> response element. The remaining results of the initial request can be seen by sending another <code>ListDeploymentJobs</code> request with the returned <code>nextToken</code> value. This value can be between 1 and 200. If this parameter is not used, then <code>ListDeploymentJobs</code> returns up to 200 results and a <code>nextToken</code> value if applicable. '
+                  type: integer
+      tags:
+      - ListDeploymentJobs
+components:
+  schemas:
+    CreatedAt:
+      type: string
+      format: date-time
+    DeploymentApplicationConfig:
+      type: object
+      required:
+      - application
+      - applicationVersion
+      - launchConfig
+      properties:
+        application:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the robot application.
+        applicationVersion:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentVersion'
+          - description: The version of the application.
+        launchConfig:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentLaunchConfig'
+          - description: The launch configuration.
+      description: Information about a deployment application configuration.
+    Path:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    S3Etag:
+      type: string
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
+    DeploymentVersion:
+      type: string
+      pattern: '[0-9]*'
+      minLength: 1
+      maxLength: 255
+    DeploymentJobErrorCode:
+      type: string
+      enum:
+      - ResourceNotFound
+      - EnvironmentSetupError
+      - EtagMismatch
+      - FailureThresholdBreached
+      - RobotDeploymentAborted
+      - RobotDeploymentNoResponse
+      - RobotAgentConnectionTimeout
+      - GreengrassDeploymentFailed
+      - InvalidGreengrassGroup
+      - MissingRobotArchitecture
+      - MissingRobotApplicationArchitecture
+      - MissingRobotDeploymentResource
+      - GreengrassGroupVersionDoesNotExist
+      - LambdaDeleted
+      - ExtractingBundleFailure
+      - PreLaunchFileFailure
+      - PostLaunchFileFailure
+      - BadPermissionError
+      - DownloadConditionFailed
+      - BadLambdaAssociated
+      - InternalServerError
+      - RobotApplicationDoesNotExist
+      - DeploymentFleetDoesNotExist
+      - FleetDeploymentTimeout
+    DeploymentConfig:
+      type: object
+      properties:
+        concurrentDeploymentPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of robots receiving the deployment at the same time.
+        failureThresholdPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of deployments that need to fail before stopping deployment.
+        robotDeploymentTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentTimeout'
+          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
+        downloadConditionFile:
+          allOf:
+          - $ref: '#/components/schemas/S3Object'
+          - description: The download condition file.
+      description: Information about a deployment configuration.
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
+    DeploymentTimeout:
+      type: integer
+    DeploymentJobs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentJob'
+      minItems: 0
+      maxItems: 200
+    S3Object:
+      type: object
+      required:
+      - bucket
+      - key
+      properties:
+        bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The bucket containing the object.
+        key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The key of the object.
+        etag:
+          allOf:
+          - $ref: '#/components/schemas/S3Etag'
+          - description: The etag of the object.
+      description: Information about an S3 object.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    DeploymentStatus:
+      type: string
+      enum:
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
+    InvalidParameterException: {}
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    Percentage:
+      type: integer
+      minimum: 1
+      maximum: 100
+    EnvironmentVariableValue:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    DeploymentLaunchConfig:
+      type: object
+      required:
+      - packageName
+      - launchFile
+      properties:
+        packageName:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The package name.
+        preLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment pre-launch file. This file will be executed prior to the launch file.
+        launchFile:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The launch file name.
+        postLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment post-launch file. This file will be executed after the launch file.
+        environmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/EnvironmentVariableMap'
+          - description: An array of key/value pairs specifying environment variables for the robot application
+      description: Configuration information for a deployment launch.
+    InternalServerException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    DeploymentJob:
+      type: object
+      properties:
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the deployment job.
+        fleet:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the fleet.
+        status:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentStatus'
+          - description: The status of the deployment job.
+        deploymentApplicationConfigs:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentApplicationConfigs'
+          - description: The deployment application configuration.
+        deploymentConfig:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentConfig'
+          - description: The deployment configuration.
+        failureReason:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: A short description of the reason why the deployment job failed.
+        failureCode:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentJobErrorCode'
+          - description: The deployment job failure code.
+        createdAt:
+          allOf:
+          - $ref: '#/components/schemas/CreatedAt'
+          - description: The time, in milliseconds since the epoch, when the deployment job was created.
+      description: Information about a deployment job.
+    ListDeploymentJobsResponse:
+      type: object
+      deprecated: true
+      properties:
+        deploymentJobs:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentJobs'
+          - description: A list of deployment jobs that meet the criteria of the request.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListDeploymentJobs</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    DeploymentApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
+    EnvironmentVariableMap:
+      type: object
+      minProperties: 0
+      maxProperties: 20
+      additionalProperties:
+        $ref: '#/components/schemas/EnvironmentVariableValue'
+  parameters:
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  securitySchemes:
+    hmac:
+      type: apiKey
+      name: Authorization
+      in: header
+      description: Amazon Signature authorization v4
+      x-amazon-apigateway-authtype: awsSigv4
+externalDocs:
+  description: Amazon Web Services documentation
+  url: https://docs.aws.amazon.com/robomaker/
+x-hasEquivalentPaths: true
