@@ -4,35 +4,1057 @@ description: >-
   applications. RoboMaker extends the most widely used open-source robotics software framework, Robot Operating System
   (ROS), with connectivity to cloud services, providing tools for building, testing, and deploying robotics applications
   at scale.
+accessModel:
+  pricing: freemium
+  onboarding: self-serve
+  trial: false
+  try_now: true
+  public: false
+  label: Freemium · Self-serve signup
+  confidence: high
+  source:
+  - plans
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/apis.yml
 created: '2024-01-15'
 modified: '2026-05-19'
 apis:
-  - name: AWS RoboMaker API
-    description: >-
-      The AWS RoboMaker API provides programmatic access to create and manage robotics applications, simulation jobs,
-      and fleet deployments. It enables developers to build robot applications, run simulation jobs for testing, manage
-      simulation worlds, and deploy applications to physical robots at scale.
-    image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
-    humanURL: https://aws.amazon.com/robomaker/
-    baseURL: https://robomaker.amazonaws.com
-    tags:
-      - AWS
-      - Robotics
-      - Simulation
-    properties:
-      - type: Documentation
-        url: https://docs.aws.amazon.com/robomaker/
-      - type: OpenAPI
-        url: openapi/amazon-robomaker-openapi.yml
-      - type: Pricing
-        url: https://aws.amazon.com/robomaker/pricing/
-      - type: GettingStarted
-        url: https://aws.amazon.com/robomaker/getting-started/
-      - type: FAQ
-        url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-batchdeleteworlds-api
+  name: Amazon RoboMaker BatchDeleteWorlds API
+  description: The BatchDeleteWorlds API from Amazon RoboMaker — 1 operation(s) for batchdeleteworlds.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - BatchDeleteWorlds
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-batchdeleteworlds-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-batchdescribesimulationjob-api
+  name: Amazon RoboMaker BatchDescribeSimulationJob API
+  description: >-
+    The BatchDescribeSimulationJob API from Amazon RoboMaker — 1 operation(s) for batchdescribesimulationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - BatchDescribeSimulationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-batchdescribesimulationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-canceldeploymentjob-api
+  name: Amazon RoboMaker CancelDeploymentJob API
+  description: >-
+    The CancelDeploymentJob API from Amazon RoboMaker — 1 operation(s) for canceldeploymentjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CancelDeploymentJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-canceldeploymentjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-cancelsimulationjob-api
+  name: Amazon RoboMaker CancelSimulationJob API
+  description: >-
+    The CancelSimulationJob API from Amazon RoboMaker — 1 operation(s) for cancelsimulationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CancelSimulationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-cancelsimulationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-cancelsimulationjobbatch-api
+  name: Amazon RoboMaker CancelSimulationJobBatch API
+  description: >-
+    The CancelSimulationJobBatch API from Amazon RoboMaker — 1 operation(s) for cancelsimulationjobbatch.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CancelSimulationJobBatch
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-cancelsimulationjobbatch-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-cancelworldexportjob-api
+  name: Amazon RoboMaker CancelWorldExportJob API
+  description: >-
+    The CancelWorldExportJob API from Amazon RoboMaker — 1 operation(s) for cancelworldexportjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CancelWorldExportJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-cancelworldexportjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-cancelworldgenerationjob-api
+  name: Amazon RoboMaker CancelWorldGenerationJob API
+  description: >-
+    The CancelWorldGenerationJob API from Amazon RoboMaker — 1 operation(s) for cancelworldgenerationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CancelWorldGenerationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-cancelworldgenerationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createdeploymentjob-api
+  name: Amazon RoboMaker CreateDeploymentJob API
+  description: >-
+    The CreateDeploymentJob API from Amazon RoboMaker — 1 operation(s) for createdeploymentjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateDeploymentJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createdeploymentjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createfleet-api
+  name: Amazon RoboMaker CreateFleet API
+  description: The CreateFleet API from Amazon RoboMaker — 1 operation(s) for createfleet.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateFleet
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createfleet-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createrobot-api
+  name: Amazon RoboMaker CreateRobot API
+  description: The CreateRobot API from Amazon RoboMaker — 1 operation(s) for createrobot.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateRobot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createrobot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createrobotapplication-api
+  name: Amazon RoboMaker CreateRobotApplication API
+  description: >-
+    The CreateRobotApplication API from Amazon RoboMaker — 1 operation(s) for createrobotapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateRobotApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createrobotapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createrobotapplicationversion-api
+  name: Amazon RoboMaker CreateRobotApplicationVersion API
+  description: >-
+    The CreateRobotApplicationVersion API from Amazon RoboMaker — 1 operation(s) for createrobotapplicationversion.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateRobotApplicationVersion
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createrobotapplicationversion-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createsimulationapplication-api
+  name: Amazon RoboMaker CreateSimulationApplication API
+  description: >-
+    The CreateSimulationApplication API from Amazon RoboMaker — 1 operation(s) for createsimulationapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateSimulationApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createsimulationapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createsimulationapplicationversion-api
+  name: Amazon RoboMaker CreateSimulationApplicationVersion API
+  description: >-
+    The CreateSimulationApplicationVersion API from Amazon RoboMaker — 1 operation(s) for createsimulationapplicationversion.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateSimulationApplicationVersion
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createsimulationapplicationversion-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createsimulationjob-api
+  name: Amazon RoboMaker CreateSimulationJob API
+  description: >-
+    The CreateSimulationJob API from Amazon RoboMaker — 1 operation(s) for createsimulationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateSimulationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createsimulationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createworldexportjob-api
+  name: Amazon RoboMaker CreateWorldExportJob API
+  description: >-
+    The CreateWorldExportJob API from Amazon RoboMaker — 1 operation(s) for createworldexportjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateWorldExportJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createworldexportjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createworldgenerationjob-api
+  name: Amazon RoboMaker CreateWorldGenerationJob API
+  description: >-
+    The CreateWorldGenerationJob API from Amazon RoboMaker — 1 operation(s) for createworldgenerationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateWorldGenerationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createworldgenerationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-createworldtemplate-api
+  name: Amazon RoboMaker CreateWorldTemplate API
+  description: >-
+    The CreateWorldTemplate API from Amazon RoboMaker — 1 operation(s) for createworldtemplate.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - CreateWorldTemplate
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-createworldtemplate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deletefleet-api
+  name: Amazon RoboMaker DeleteFleet API
+  description: The DeleteFleet API from Amazon RoboMaker — 1 operation(s) for deletefleet.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeleteFleet
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deletefleet-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deleterobot-api
+  name: Amazon RoboMaker DeleteRobot API
+  description: The DeleteRobot API from Amazon RoboMaker — 1 operation(s) for deleterobot.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeleteRobot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deleterobot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deleterobotapplication-api
+  name: Amazon RoboMaker DeleteRobotApplication API
+  description: >-
+    The DeleteRobotApplication API from Amazon RoboMaker — 1 operation(s) for deleterobotapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeleteRobotApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deleterobotapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deletesimulationapplication-api
+  name: Amazon RoboMaker DeleteSimulationApplication API
+  description: >-
+    The DeleteSimulationApplication API from Amazon RoboMaker — 1 operation(s) for deletesimulationapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeleteSimulationApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deletesimulationapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deleteworldtemplate-api
+  name: Amazon RoboMaker DeleteWorldTemplate API
+  description: >-
+    The DeleteWorldTemplate API from Amazon RoboMaker — 1 operation(s) for deleteworldtemplate.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeleteWorldTemplate
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deleteworldtemplate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-deregisterrobot-api
+  name: Amazon RoboMaker DeregisterRobot API
+  description: The DeregisterRobot API from Amazon RoboMaker — 1 operation(s) for deregisterrobot.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DeregisterRobot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-deregisterrobot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describedeploymentjob-api
+  name: Amazon RoboMaker DescribeDeploymentJob API
+  description: >-
+    The DescribeDeploymentJob API from Amazon RoboMaker — 1 operation(s) for describedeploymentjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeDeploymentJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describedeploymentjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describefleet-api
+  name: Amazon RoboMaker DescribeFleet API
+  description: The DescribeFleet API from Amazon RoboMaker — 1 operation(s) for describefleet.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeFleet
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describefleet-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describerobot-api
+  name: Amazon RoboMaker DescribeRobot API
+  description: The DescribeRobot API from Amazon RoboMaker — 1 operation(s) for describerobot.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeRobot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describerobot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describerobotapplication-api
+  name: Amazon RoboMaker DescribeRobotApplication API
+  description: >-
+    The DescribeRobotApplication API from Amazon RoboMaker — 1 operation(s) for describerobotapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeRobotApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describerobotapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describesimulationapplication-api
+  name: Amazon RoboMaker DescribeSimulationApplication API
+  description: >-
+    The DescribeSimulationApplication API from Amazon RoboMaker — 1 operation(s) for describesimulationapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeSimulationApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describesimulationapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describesimulationjob-api
+  name: Amazon RoboMaker DescribeSimulationJob API
+  description: >-
+    The DescribeSimulationJob API from Amazon RoboMaker — 1 operation(s) for describesimulationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeSimulationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describesimulationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describesimulationjobbatch-api
+  name: Amazon RoboMaker DescribeSimulationJobBatch API
+  description: >-
+    The DescribeSimulationJobBatch API from Amazon RoboMaker — 1 operation(s) for describesimulationjobbatch.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeSimulationJobBatch
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describesimulationjobbatch-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describeworld-api
+  name: Amazon RoboMaker DescribeWorld API
+  description: The DescribeWorld API from Amazon RoboMaker — 1 operation(s) for describeworld.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeWorld
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describeworld-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describeworldexportjob-api
+  name: Amazon RoboMaker DescribeWorldExportJob API
+  description: >-
+    The DescribeWorldExportJob API from Amazon RoboMaker — 1 operation(s) for describeworldexportjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeWorldExportJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describeworldexportjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describeworldgenerationjob-api
+  name: Amazon RoboMaker DescribeWorldGenerationJob API
+  description: >-
+    The DescribeWorldGenerationJob API from Amazon RoboMaker — 1 operation(s) for describeworldgenerationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeWorldGenerationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describeworldgenerationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-describeworldtemplate-api
+  name: Amazon RoboMaker DescribeWorldTemplate API
+  description: >-
+    The DescribeWorldTemplate API from Amazon RoboMaker — 1 operation(s) for describeworldtemplate.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - DescribeWorldTemplate
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-describeworldtemplate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-getworldtemplatebody-api
+  name: Amazon RoboMaker GetWorldTemplateBody API
+  description: >-
+    The GetWorldTemplateBody API from Amazon RoboMaker — 1 operation(s) for getworldtemplatebody.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - GetWorldTemplateBody
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-getworldtemplatebody-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listdeploymentjobs-api
+  name: Amazon RoboMaker ListDeploymentJobs API
+  description: >-
+    The ListDeploymentJobs API from Amazon RoboMaker — 1 operation(s) for listdeploymentjobs.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListDeploymentJobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listdeploymentjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listfleets-api
+  name: Amazon RoboMaker ListFleets API
+  description: The ListFleets API from Amazon RoboMaker — 1 operation(s) for listfleets.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListFleets
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listfleets-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listrobotapplications-api
+  name: Amazon RoboMaker ListRobotApplications API
+  description: >-
+    The ListRobotApplications API from Amazon RoboMaker — 1 operation(s) for listrobotapplications.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListRobotApplications
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listrobotapplications-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listrobots-api
+  name: Amazon RoboMaker ListRobots API
+  description: The ListRobots API from Amazon RoboMaker — 1 operation(s) for listrobots.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListRobots
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listrobots-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listsimulationapplications-api
+  name: Amazon RoboMaker ListSimulationApplications API
+  description: >-
+    The ListSimulationApplications API from Amazon RoboMaker — 1 operation(s) for listsimulationapplications.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListSimulationApplications
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listsimulationapplications-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listsimulationjobbatches-api
+  name: Amazon RoboMaker ListSimulationJobBatches API
+  description: >-
+    The ListSimulationJobBatches API from Amazon RoboMaker — 1 operation(s) for listsimulationjobbatches.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListSimulationJobBatches
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listsimulationjobbatches-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listsimulationjobs-api
+  name: Amazon RoboMaker ListSimulationJobs API
+  description: >-
+    The ListSimulationJobs API from Amazon RoboMaker — 1 operation(s) for listsimulationjobs.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListSimulationJobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listsimulationjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listworldexportjobs-api
+  name: Amazon RoboMaker ListWorldExportJobs API
+  description: >-
+    The ListWorldExportJobs API from Amazon RoboMaker — 1 operation(s) for listworldexportjobs.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListWorldExportJobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listworldexportjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listworldgenerationjobs-api
+  name: Amazon RoboMaker ListWorldGenerationJobs API
+  description: >-
+    The ListWorldGenerationJobs API from Amazon RoboMaker — 1 operation(s) for listworldgenerationjobs.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListWorldGenerationJobs
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listworldgenerationjobs-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listworlds-api
+  name: Amazon RoboMaker ListWorlds API
+  description: The ListWorlds API from Amazon RoboMaker — 1 operation(s) for listworlds.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListWorlds
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listworlds-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-listworldtemplates-api
+  name: Amazon RoboMaker ListWorldTemplates API
+  description: >-
+    The ListWorldTemplates API from Amazon RoboMaker — 1 operation(s) for listworldtemplates.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - ListWorldTemplates
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-listworldtemplates-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-registerrobot-api
+  name: Amazon RoboMaker RegisterRobot API
+  description: The RegisterRobot API from Amazon RoboMaker — 1 operation(s) for registerrobot.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - RegisterRobot
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-registerrobot-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-restartsimulationjob-api
+  name: Amazon RoboMaker RestartSimulationJob API
+  description: >-
+    The RestartSimulationJob API from Amazon RoboMaker — 1 operation(s) for restartsimulationjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - RestartSimulationJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-restartsimulationjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-startsimulationjobbatch-api
+  name: Amazon RoboMaker StartSimulationJobBatch API
+  description: >-
+    The StartSimulationJobBatch API from Amazon RoboMaker — 1 operation(s) for startsimulationjobbatch.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - StartSimulationJobBatch
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-startsimulationjobbatch-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-syncdeploymentjob-api
+  name: Amazon RoboMaker SyncDeploymentJob API
+  description: The SyncDeploymentJob API from Amazon RoboMaker — 1 operation(s) for syncdeploymentjob.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - SyncDeploymentJob
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-syncdeploymentjob-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-tags-api
+  name: Amazon RoboMaker Tags API
+  description: The Tags API from Amazon RoboMaker — 2 operation(s) for tags.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - Tags
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-tags-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-updaterobotapplication-api
+  name: Amazon RoboMaker UpdateRobotApplication API
+  description: >-
+    The UpdateRobotApplication API from Amazon RoboMaker — 1 operation(s) for updaterobotapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - UpdateRobotApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-updaterobotapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-updatesimulationapplication-api
+  name: Amazon RoboMaker UpdateSimulationApplication API
+  description: >-
+    The UpdateSimulationApplication API from Amazon RoboMaker — 1 operation(s) for updatesimulationapplication.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - UpdateSimulationApplication
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-updatesimulationapplication-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
+- aid: amazon-robomaker:amazon-robomaker-updateworldtemplate-api
+  name: Amazon RoboMaker UpdateWorldTemplate API
+  description: >-
+    The UpdateWorldTemplate API from Amazon RoboMaker — 1 operation(s) for updateworldtemplate.
+  humanURL: https://aws.amazon.com/robomaker/
+  baseURL: https://robomaker.amazonaws.com
+  tags:
+  - UpdateWorldTemplate
+  properties:
+  - type: OpenAPI
+    url: openapi/amazon-robomaker-updateworldtemplate-api-openapi.yml
+  - type: Documentation
+    url: https://docs.aws.amazon.com/robomaker/
+  - type: Pricing
+    url: https://aws.amazon.com/robomaker/pricing/
+  - type: GettingStarted
+    url: https://aws.amazon.com/robomaker/getting-started/
+  - type: FAQ
+    url: https://aws.amazon.com/robomaker/faqs/
 common:
+  - type: PostmanWorkspace
+    url: https://www.postman.com/kinlaneapi/amazon-robomaker/overview
   - type: AgenticAccess
     url: agentic-access/amazon-robomaker-agentic-access.yml
   - type: TrustCenter
