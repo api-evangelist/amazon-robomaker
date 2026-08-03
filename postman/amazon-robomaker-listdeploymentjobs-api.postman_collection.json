@@ -1,0 +1,610 @@
+{
+  "info": {
+    "_postman_id": "dcb964ba-ad28-4da3-8959-9769fcabddc1",
+    "name": "AWS RoboMaker BatchDeleteWorlds ListDeploymentJobs API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:46:19.000Z",
+    "updatedAt": "2026-07-28T10:46:19.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-dcb964ba-ad28-4da3-8959-9769fcabddc1"
+  },
+  "item": [
+    {
+      "name": "listDeploymentJobs",
+      "item": [
+        {
+          "name": "List Deployment Jobs",
+          "id": "e6b7b03e-082b-4dec-8ca2-406e6f5c1bf8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "listDeploymentJobs"
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "<p>Returns a list of deployment jobs for a fleet. You can optionally provide filters to retrieve specific deployment jobs.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>"
+          },
+          "response": [
+            {
+              "id": "0ea55871-4d6b-401b-9a3c-b658faecb73c",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listDeploymentJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"deploymentJobs\": [\n    {\n      \"arn\": \"arn:8@`-XT;TE\",\n      \"fleet\": \"arn:B@\",\n      \"status\": \"Failed\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:fTz}Hcwh5&\",\n          \"applicationVersion\": \"0713578\",\n          \"launchConfig\": {\n            \"packageName\": \"fbaedzzL\",\n            \"launchFile\": \"aP\",\n            \"preLaunchFile\": \"p:\",\n            \"postLaunchFile\": \"I(Ox)('\",\n            \"environmentVariables\": {\n              \"esse7_9\": \"kuf/N3\",\n              \"laborumbd\": \"HKY0rBc)\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"0rjfnkyr746\",\n          \"key\": \")Z`Q_]$7\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \")H\",\n      \"failureCode\": \"BadLambdaAssociated\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"fleet\": \"arn:\",\n      \"status\": \"Canceled\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:q`%aq>el\",\n          \"applicationVersion\": \"160\",\n          \"launchConfig\": {\n            \"packageName\": \"G-0E2iiK\",\n            \"launchFile\": \"t_V\",\n            \"preLaunchFile\": \"$9qU+#\",\n            \"postLaunchFile\": \"Pb\",\n            \"environmentVariables\": {\n              \"voluptated\": \"!W>0lz@\",\n              \"in_58\": \"A!*ci4G\",\n              \"anim_4\": \"P(Vl|6W\",\n              \"qui_60\": \"3B\",\n              \"culpadb\": \"5\",\n              \"voluptate681\": \"gnR{)5\",\n              \"irure3c3\": \" \",\n              \"sint6dd\": \"E\",\n              \"nostrud1\": \"&dzg\",\n              \"laboris12\": \"0aD~Y#:M\",\n              \"minim__4_\": \"c,#ti\",\n              \"exercitation_3\": \"l32-\",\n              \"sunt54\": \" \"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"5vc.z0fjo\",\n          \"key\": \"V\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"Z./\",\n      \"failureCode\": \"PostLaunchFileFailure\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:-jmmmj6)m\",\n      \"fleet\": \"arn:J[j$(AZ\",\n      \"status\": \"Preparing\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:B>&uLgqX-!\",\n          \"applicationVersion\": \"9204\",\n          \"launchConfig\": {\n            \"packageName\": \"TQY\",\n            \"launchFile\": \"KB\",\n            \"preLaunchFile\": \"k&v/s+\",\n            \"postLaunchFile\": \":sR\",\n            \"environmentVariables\": {\n              \"reprehenderitf\": \"_?\",\n              \"Excepteur_99\": \"E_D\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"hzjk6m\",\n          \"key\": \"&dyje3$1b\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"4!\",\n      \"failureCode\": \"ResourceNotFound\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"fleet\": \"arn:\",\n      \"status\": \"Pending\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:PICf}}]&Jc\",\n          \"applicationVersion\": \"2594\",\n          \"launchConfig\": {\n            \"packageName\": \"_Vp\",\n            \"launchFile\": \" \",\n            \"preLaunchFile\": \" \",\n            \"postLaunchFile\": \"&GZI\",\n            \"environmentVariables\": {\n              \"ipsum_e6f\": \"G\",\n              \"sunt9de\": \"|[_LAZ<Bp!\",\n              \"in_e\": \"Aw\\\"`GT\",\n              \"laborum_243\": \"]&fdrCE\",\n              \"Ut_36\": \" \",\n              \"sit_80\": \" \",\n              \"veniam_fa\": \"+-7X-u\",\n              \"ut0\": \"E \",\n              \"aliqua_d\": \"?Jpw+JI!\",\n              \"reprehenderitbc\": \"fD\",\n              \"reprehenderit88c\": \"CL3^U\",\n              \"sint72a\": \"4.0NK\",\n              \"amet_35\": \"8;\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"52euhd6.6qwg\",\n          \"key\": \"xW\\\"g!0s~ $\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"n(dRBy\\\"E/|\",\n      \"failureCode\": \"RobotDeploymentAborted\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:fC]RQkKuC~\",\n      \"fleet\": \"arn:(f.MS\",\n      \"status\": \"InProgress\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:S[Y.m\",\n          \"applicationVersion\": \"861710\",\n          \"launchConfig\": {\n            \"packageName\": \"Jm0qBiI\",\n            \"launchFile\": \"Ly5MK\",\n            \"preLaunchFile\": \"]b-Z\",\n            \"postLaunchFile\": \"DO_d0\",\n            \"environmentVariables\": {\n              \"amet9b\": \"6[#`a},\",\n              \"ipsum_f\": \"*\",\n              \"cillum_02\": \"`h#z.N\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"ob8tvzvi\",\n          \"key\": \"4{MO~\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"\",\n      \"failureCode\": \"DeploymentFleetDoesNotExist\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:o;>/Gl\",\n      \"fleet\": \"arn:dz\",\n      \"status\": \"Preparing\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:#`O&\",\n          \"applicationVersion\": \"0522770\",\n          \"launchConfig\": {\n            \"packageName\": \"PScpv8y\",\n            \"launchFile\": \"i-UT\",\n            \"preLaunchFile\": \"]E3vQ\",\n            \"postLaunchFile\": \"nDV\",\n            \"environmentVariables\": {\n              \"eu20\": \"<\",\n              \"incididunt_4\": \"s\\\\\",\n              \"laboris_d0c\": \"`q|z&\",\n              \"ine8_\": \"sS\\\\\",\n              \"eaf3c\": \":s!a}_=&_p\",\n              \"fugiat44\": \"|[w#\",\n              \"cillum_b\": \"I(u\",\n              \"dolor0\": \"~n2owB9W\",\n              \"anim_d\": \"?xU;WCk\",\n              \"nisi_fe\": \"ZT^;\",\n              \"fugiat6e\": \";xVL<Qmqk\",\n              \"elit_0a\": \"& |(1V:\",\n              \"doloreb\": \" \"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"743t-jnh\",\n          \"key\": \"?}|vuW\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \",z|mRR,\",\n      \"failureCode\": \"BadLambdaAssociated\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:dXU_\",\n      \"fleet\": \"arn:AFW]\",\n      \"status\": \"Preparing\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:u9bsW+\",\n          \"applicationVersion\": \"58711363\",\n          \"launchConfig\": {\n            \"packageName\": \" \",\n            \"launchFile\": \"7\",\n            \"preLaunchFile\": \"s+4\",\n            \"postLaunchFile\": \">mC\",\n            \"environmentVariables\": {\n              \"nullae\": \")\",\n              \"ea_9e4\": \"wc~ZV\",\n              \"Ut_0c_\": \"u:\",\n              \"quic\": \"s)Q[\",\n              \"ine7b\": \"v\",\n              \"magna8\": \"w^^Pc\",\n              \"sed_b0_\": \"1L%bx>n4!\",\n              \"dolore387\": \">r@&\",\n              \"nisi_b\": \"N7BF@~(o?#\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"ht.yiepkg2pd\",\n          \"key\": \"3;9b(*iJ)e\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"Rw\",\n      \"failureCode\": \"MissingRobotArchitecture\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:8H^n\",\n      \"fleet\": \"arn:n1r+QjqMv\",\n      \"status\": \"Canceled\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:)\",\n          \"applicationVersion\": \"4\",\n          \"launchConfig\": {\n            \"packageName\": \"oj5uNNbm\",\n            \"launchFile\": \"jrp\",\n            \"preLaunchFile\": \"ft}q\",\n            \"postLaunchFile\": \"&q('mfjs\",\n            \"environmentVariables\": {\n              \"Ut_65a\": \"Ac-lXrN6\",\n              \"ameta6\": \"}\",\n              \"ipsum6\": \"#Z*dy9s/\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"zwu\",\n          \"key\": \"ekwONW`\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"_|:*\",\n      \"failureCode\": \"DeploymentFleetDoesNotExist\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:#N:\",\n      \"fleet\": \"arn:YO;\",\n      \"status\": \"Succeeded\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:Pv\",\n          \"applicationVersion\": \"942715\",\n          \"launchConfig\": {\n            \"packageName\": \"xbk-\",\n            \"launchFile\": \"ODBP5xT\",\n            \"preLaunchFile\": \"hM\",\n            \"postLaunchFile\": \" \",\n            \"environmentVariables\": {\n              \"in_5e\": \"N\",\n              \"adipisicing_3\": \"4md\",\n              \"non1\": \"D6P\",\n              \"dolor_d\": \"{\",\n              \"ut_1d\": \"D&|tfzG-t\",\n              \"cillum5d2\": \" \",\n              \"estf\": \"DDE\",\n              \"aute5\": \"0?tr9*\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"enp1zqg1x3\",\n          \"key\": \")g )S*GGs#\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"x\",\n      \"failureCode\": \"BadPermissionError\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:4\\\"<z\",\n      \"fleet\": \"arn:4{D&\",\n      \"status\": \"InProgress\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:\",\n          \"applicationVersion\": \"2\",\n          \"launchConfig\": {\n            \"packageName\": \" \",\n            \"launchFile\": \"AV2sn4aVB\",\n            \"preLaunchFile\": \"/GaG\",\n            \"postLaunchFile\": \"pgTwo\",\n            \"environmentVariables\": {\n              \"enim831\": \"FG274(vy_p\",\n              \"dolor_58\": \"^,T1SdJ\",\n              \"nisi2b\": \"O2\",\n              \"doloreb9\": \"|HhDLq6\",\n              \"ullamco_0_\": \"EIn3$\",\n              \"in_c1\": \"-tb8zX%<\",\n              \"culpa2\": \"|1h4p\",\n              \"eiusmod_5\": \"Kt<}=^$k&\",\n              \"nostrudf\": \"$,\",\n              \"sed9\": \"(\",\n              \"do__9\": \"n'\",\n              \"exercitation__\": \"8\",\n              \"esse1_7\": \" \",\n              \"ullamco38d\": \"o'-s\",\n              \"Excepteurf8\": \",>eR\",\n              \"sunt4\": \"f?_MN\",\n              \"eu_f\": \"8!XCRsAB.}\",\n              \"estc\": \"V\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"esss-.3drydy\",\n          \"key\": \"?WsJXQ\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \";RV joiA~\",\n      \"failureCode\": \"GreengrassGroupVersionDoesNotExist\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:ROUZd\",\n      \"fleet\": \"arn:,X\",\n      \"status\": \"InProgress\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:wnbee1A\",\n          \"applicationVersion\": \"3691\",\n          \"launchConfig\": {\n            \"packageName\": \"KTB37I\",\n            \"launchFile\": \"HT\",\n            \"preLaunchFile\": \"+_\",\n            \"postLaunchFile\": \";4;@@5La\",\n            \"environmentVariables\": {\n              \"commodo_e03\": \"YFt\",\n              \"Ut_520\": \"Zc,jh`mUk~\",\n              \"exercitation_6b\": \"il9\",\n              \"cupidatat_9db\": \"H{:.n;\",\n              \"sint_e4c\": \" \",\n              \"incididunt_\": \"wD\",\n              \"aliquip77\": \"P\",\n              \"inb\": \"wQhQw\",\n              \"deserunt_55\": \"(4S\",\n              \"fugiat_a\": \"J\",\n              \"irure772\": \"e2@\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"6i6i\",\n          \"key\": \"]QpY\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"N0[J\",\n      \"failureCode\": \"MissingRobotDeploymentResource\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\\\"M-k\",\n      \"fleet\": \"arn:'h'Q_GIr\",\n      \"status\": \"Failed\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:V%H$d\",\n          \"applicationVersion\": \"28\",\n          \"launchConfig\": {\n            \"packageName\": \"OOKeo7XnC\",\n            \"launchFile\": \"glXeQrl\",\n            \"preLaunchFile\": \"mymq\",\n            \"postLaunchFile\": \"{li)\\\"=0Wrl\",\n            \"environmentVariables\": {\n              \"ut3be\": \"#I\",\n              \"anim_5ff\": \"{rOg5-Lu{\",\n              \"minim_659\": \"O_1:X|1M\",\n              \"proident_729\": \"pC:GL\",\n              \"utb_\": \"_`'`k^8Y`\",\n              \"adipisicing47\": \"7W@;Zqanq\",\n              \"proident_4c\": \"q~\",\n              \"sed2c\": \"SUZZnxODx\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"zlmkp4bod\",\n          \"key\": \"?\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"\\\\tmu0*(\",\n      \"failureCode\": \"DownloadConditionFailed\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:Xt5,'\",\n      \"fleet\": \"arn:Zi}\",\n      \"status\": \"Pending\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:\\\"{?kW\",\n          \"applicationVersion\": \"5793630264\",\n          \"launchConfig\": {\n            \"packageName\": \"Ec7plC\",\n            \"launchFile\": \"X\",\n            \"preLaunchFile\": \"N\",\n            \"postLaunchFile\": \"sk4e/)_z*=\",\n            \"environmentVariables\": {\n              \"Lorem_021\": \"/!\",\n              \"aliquip8bd\": \"R%<pZHT:w\",\n              \"ex_2d\": \"zs\",\n              \"eu07\": \"\\\\'W)}cN\",\n              \"aliquipe\": \"'VUcA\\\\\",\n              \"amet_7_1\": \"?l~@{<0\",\n              \"nostrudd\": \"n*baL6V0P&\",\n              \"inf_\": \"6L*\",\n              \"culpa_4\": \"PW_E%\",\n              \"ipsum_57\": \" \",\n              \"consequat65\": \"7'\",\n              \"tempor_15\": \"l(\",\n              \"magna_e\": \"5\",\n              \"esse_d\": \" \",\n              \"deserunt_7\": \" \",\n              \"ea_90_\": \"3qQ@Q-0:d\",\n              \"inf5\": \" \"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"at7o72p299p\",\n          \"key\": \"|W.E2PtJ\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"\",\n      \"failureCode\": \"GreengrassGroupVersionDoesNotExist\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:uFv>Jk4F%\",\n      \"fleet\": \"arn:F{!\",\n      \"status\": \"Canceled\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:KZ\",\n          \"applicationVersion\": \"19139599\",\n          \"launchConfig\": {\n            \"packageName\": \" \",\n            \"launchFile\": \"BVuJt\",\n            \"preLaunchFile\": \"1N%,\\\\oZ~\",\n            \"postLaunchFile\": \"f!*==9=J\",\n            \"environmentVariables\": {\n              \"sunte\": \"uI}9\",\n              \"adc5\": \" \",\n              \"consequat_94\": \"6I'i\",\n              \"cupidatat_645\": \"3BC<5R|\",\n              \"adipisicingd9\": \"z3'RBLU\",\n              \"suntb68\": \"/P[CUdfx\",\n              \"nonc\": \"Ikb;+@AC\",\n              \"fugiat31\": \"6[Q:D+i\",\n              \"laboris_4\": \"$k|S>]&J\",\n              \"exercitation05e\": \"i#U\",\n              \"incididuntb\": \"l(v#L^iyt\",\n              \"aliquip_15\": \".AoQ-w'~\",\n              \"occaecat9\": \"q+iy5/\",\n              \"sint_c9\": \"1HCJMV~J\",\n              \"reprehenderit_d6\": \"wT{,J#=Bu?\",\n              \"consecteturd9\": \"T:TfkH;PR\",\n              \"Ut_4\": \"$p*F@p8wUy\",\n              \"ullamcoaf\": \"W\",\n              \"ind\": \" \"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"z5i5di\",\n          \"key\": \"Iu&Jrwp8\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"&)|./|J\\\\\",\n      \"failureCode\": \"GreengrassDeploymentFailed\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:d\\\"m6J\",\n      \"fleet\": \"arn:\",\n      \"status\": \"InProgress\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:F\",\n          \"applicationVersion\": \"05\",\n          \"launchConfig\": {\n            \"packageName\": \"u\",\n            \"launchFile\": \" \",\n            \"preLaunchFile\": \"+Sbl9\",\n            \"postLaunchFile\": \"P>LE4V\",\n            \"environmentVariables\": {\n              \"ullamco53d\": \"I%{]6thp\",\n              \"officia_d8\": \"+7\",\n              \"ad1\": \"UMI\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"atrxd.6ezk\",\n          \"key\": \"Sfb+WnT\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"<\",\n      \"failureCode\": \"InternalServerError\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:e\",\n      \"fleet\": \"arn:\",\n      \"status\": \"Failed\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:@g:2^h|\",\n          \"applicationVersion\": \"938214\",\n          \"launchConfig\": {\n            \"packageName\": \"aKY1RA\",\n            \"launchFile\": \"ZGhf9tw\",\n            \"preLaunchFile\": \" \",\n            \"postLaunchFile\": \"D2QjT|W\",\n            \"environmentVariables\": {\n              \"adipisicing_b2\": \" \",\n              \"et_5\": \">s\",\n              \"esseaeb\": \"b5^U?_\",\n              \"cupidatat_4\": \"]J\",\n              \"veniam1\": \"T9Y[piHs[H\",\n              \"cillum_7\": \"Y\",\n              \"nulla_9_0\": \"i:wWJ\",\n              \"Ut_dc5\": \"'uT~y/\\\\\",\n              \"Excepteurc\": \"1S#0\",\n              \"eu99\": \"/+|]O|V_f#\",\n              \"consectetur57\": \"l8mSgo\",\n              \"in_2b\": \"/\",\n              \"fugiat0e8\": \">d%^Ler\",\n              \"fugiat_31\": \"d2?VG&\",\n              \"reprehenderit0\": \"W=N\\\"\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"2323\",\n          \"key\": \"JT\\\"f9f\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"J\",\n      \"failureCode\": \"DownloadConditionFailed\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:l\",\n      \"fleet\": \"arn:We\\\\I=MR\",\n      \"status\": \"InProgress\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:}lTfoim|6\",\n          \"applicationVersion\": \"625831530\",\n          \"launchConfig\": {\n            \"packageName\": \"h-0G9ZWe\",\n            \"launchFile\": \"7jH7qeIH\",\n            \"preLaunchFile\": \"dJExE\",\n            \"postLaunchFile\": \"%{Hc\",\n            \"environmentVariables\": {\n              \"amet_9\": \"u)f~'1~iK8\",\n              \"Duis_875\": \"xUXXm0^gp\",\n              \"laboris_e3_\": \"U@83C:5\",\n              \"aliquip_0\": \"|\",\n              \"ad7\": \"^F\",\n              \"Excepteur_38f\": \"W\\\\e_\",\n              \"commodod44\": \"8LR%=F\",\n              \"aliqua_d\": \" \",\n              \"in5_\": \"dm=[+qwZ4(\",\n              \"exercitation98\": \"3]qW5cu\",\n              \"Duis_0f0\": \"&^'1W\",\n              \"est_e71\": \"kXTJoF29%7\",\n              \"est_9\": \"Tlb\",\n              \"officiacf\": \"A\",\n              \"veniamd_\": \"o,\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"xa13w5wo\",\n          \"key\": \"~UPl\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"jO~aH`>\",\n      \"failureCode\": \"BadPermissionError\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:bm*34P?GJE\",\n      \"fleet\": \"arn:F/T8N@\",\n      \"status\": \"Preparing\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:7pBDQ7)6o\",\n          \"applicationVersion\": \"3387329\",\n          \"launchConfig\": {\n            \"packageName\": \"K-\",\n            \"launchFile\": \"HLS1.XP-kq\",\n            \"preLaunchFile\": \"Lv\",\n            \"postLaunchFile\": \"5=?S@\",\n            \"environmentVariables\": {\n              \"veniam_f17\": \"}\\\"\",\n              \"ipsum_90\": \"_oJ\",\n              \"incididunt7\": \";!\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"xf-4bgtw8f\",\n          \"key\": \" \",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"S@WcAFA*\",\n      \"failureCode\": \"BadLambdaAssociated\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:lKBt-kNJX\",\n      \"fleet\": \"arn:\",\n      \"status\": \"Failed\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:\",\n          \"applicationVersion\": \"30829609\",\n          \"launchConfig\": {\n            \"packageName\": \"vu9t11\",\n            \"launchFile\": \"rUy0k\",\n            \"preLaunchFile\": \"'8\",\n            \"postLaunchFile\": \"E\",\n            \"environmentVariables\": {\n              \"eu_d\": \"!=7\",\n              \"qui5\": \"t\",\n              \"in_9\": \"}$vZ\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"audkfi8\",\n          \"key\": \"k9?\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"MwG&*iGUK\",\n      \"failureCode\": \"PostLaunchFileFailure\",\n      \"createdAt\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:zeDt)XFCbX\",\n      \"fleet\": \"arn:-'6*\\\"Z\",\n      \"status\": \"Canceled\",\n      \"deploymentApplicationConfigs\": [\n        {\n          \"application\": \"arn:Kq\\\\WAm\",\n          \"applicationVersion\": \"283451\",\n          \"launchConfig\": {\n            \"packageName\": \"GrvHa\",\n            \"launchFile\": \" \",\n            \"preLaunchFile\": \"Y{DJFvs1o\",\n            \"postLaunchFile\": \"!tg\",\n            \"environmentVariables\": {\n              \"Excepteur_d\": \"LPPh]R\",\n              \"minim312\": \"[5k%\",\n              \"laborisf25\": \" \",\n              \"qui__26\": \"'\",\n              \"laboris_ed6\": \"$*G\\\\@g2\",\n              \"ut_2\": \"&R/`g~dfj@\",\n              \"officia_65f\": \"F~.!\",\n              \"do3f3\": \"HgZ33vW\",\n              \"Ut_2\": \"O\\\"rv\",\n              \"fugiata4\": \"(de+pe\\\\\",\n              \"commodo_8e\": \"c\",\n              \"cillum_e\": \"l\",\n              \"esse_3\": \"q[1YNm\",\n              \"anim0_6\": \"yl3\",\n              \"consequat_\": \"e7Z'z\"\n            }\n          }\n        }\n      ],\n      \"deploymentConfig\": {\n        \"concurrentDeploymentPercentage\": \"<integer>\",\n        \"failureThresholdPercentage\": \"<integer>\",\n        \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n        \"downloadConditionFile\": {\n          \"bucket\": \"f5f5\",\n          \"key\": \"M@QJE8zG\",\n          \"etag\": \"<string>\"\n        }\n      },\n      \"failureReason\": \"qbj1e\",\n      \"failureCode\": \"GreengrassGroupVersionDoesNotExist\",\n      \"createdAt\": \"<dateTime>\"\n    }\n  ],\n  \"nextToken\": \"MHlWrP\"\n}",
+              "createdAt": "2026-07-28T10:46:20.000Z",
+              "updatedAt": "2026-07-28T10:46:20.000Z",
+              "uid": "35240-0ea55871-4d6b-401b-9a3c-b658faecb73c"
+            },
+            {
+              "id": "254f6ca3-f576-47cb-be83-fb0cd832e388",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listDeploymentJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:20.000Z",
+              "updatedAt": "2026-07-28T10:46:20.000Z",
+              "uid": "35240-254f6ca3-f576-47cb-be83-fb0cd832e388"
+            },
+            {
+              "id": "f6d2bdea-985c-4bf1-8768-be9785656828",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listDeploymentJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:20.000Z",
+              "updatedAt": "2026-07-28T10:46:20.000Z",
+              "uid": "35240-f6d2bdea-985c-4bf1-8768-be9785656828"
+            },
+            {
+              "id": "0f543b56-c45b-4ddc-9de4-2540483b470b",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listDeploymentJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:20.000Z",
+              "updatedAt": "2026-07-28T10:46:20.000Z",
+              "uid": "35240-0f543b56-c45b-4ddc-9de4-2540483b470b"
+            },
+            {
+              "id": "bde103fb-6674-44d6-b2af-86ce93d7aa82",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"filters\": [\n    {\n      \"name\": \"J\",\n      \"values\": [\n        \"l\"\n      ]\n    }\n  ],\n  \"nextToken\": \"8cr_il\",\n  \"maxResults\": \"<integer>\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listDeploymentJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listDeploymentJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:20.000Z",
+              "updatedAt": "2026-07-28T10:46:20.000Z",
+              "uid": "35240-bde103fb-6674-44d6-b2af-86ce93d7aa82"
+            }
+          ],
+          "createdAt": "2026-07-28T10:46:20.000Z",
+          "updatedAt": "2026-07-28T10:46:20.000Z",
+          "uid": "35240-e6b7b03e-082b-4dec-8ca2-406e6f5c1bf8"
+        }
+      ],
+      "id": "73fb505f-f1fc-4e21-a5a3-ac92020c21b7",
+      "createdAt": "2026-07-28T10:46:20.000Z",
+      "updatedAt": "2026-07-28T10:46:20.000Z",
+      "uid": "35240-73fb505f-f1fc-4e21-a5a3-ac92020c21b7"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

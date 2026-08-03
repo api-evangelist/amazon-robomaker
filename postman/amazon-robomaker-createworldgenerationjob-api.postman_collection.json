@@ -1,0 +1,784 @@
+{
+  "info": {
+    "_postman_id": "c2805850-4966-4581-bf9b-0ffe7d91d079",
+    "name": "AWS RoboMaker BatchDeleteWorlds CreateWorldGenerationJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:10.000Z",
+    "updatedAt": "2026-07-28T10:45:10.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-c2805850-4966-4581-bf9b-0ffe7d91d079"
+  },
+  "item": [
+    {
+      "name": "createWorldGenerationJob",
+      "item": [
+        {
+          "name": "Create World Generation Job",
+          "id": "3d66e9d4-b6fc-491a-85d8-bbc2e31c73d4",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createWorldGenerationJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createWorldGenerationJob"
+              ]
+            },
+            "description": "Creates worlds using the specified template."
+          },
+          "response": [
+            {
+              "id": "5c3c4785-457d-4c70-afc1-7ad12d73f92a",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:Z*:=T,n~BA\",\n  \"status\": \"Failed\",\n  \"createdAt\": \"<dateTime>\",\n  \"failureCode\": \"InternalServiceError\",\n  \"clientRequestToken\": \"TyOjKJ6sWi\",\n  \"template\": \"arn:(t9?Z@M%\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"tags\": {\n    \"etd\": \"1jxk3x4v\",\n    \"tempor96\": \":e+wPYLcJ\",\n    \"enim_d06\": \"edobOnjL\",\n    \"amet_ad3\": \"\",\n    \"dolorc\": \"5-\",\n    \"do_0f\": \"Ke\",\n    \"ad_4\": \"YpQ9Jz7\",\n    \"ut0\": \"9:H\",\n    \"laboris31\": \"mnVH8GD\",\n    \"enim6de\": \"a\",\n    \"qui7\": \"1tXH+\",\n    \"dolorf\": \"YFCn8uDR\",\n    \"esse00b\": \"X H59d\",\n    \"commodo_f\": \"\",\n    \"veniam49\": \"A2\",\n    \"Ut7c\": \"rM6T1OV\",\n    \"voluptatec\": \"vmW9v\",\n    \"nulla_9b\": \"XNhTP9E\",\n    \"ex_0\": \"PgyoGiQrY\",\n    \"aliquip_fd\": \"Z5OPwNPe\",\n    \"amet1\": \"N6vu\",\n    \"Excepteur_f2\": \"ifce/l\",\n    \"elit0ce\": \":SxeS\",\n    \"nisi_85\": \"qNRJE3tj\",\n    \"cillum8dc\": \"jEqJh_xVv\",\n    \"labore_9ff\": \"3-w50picu:\",\n    \"ullamco7d\": \"twfn.h8Gs\",\n    \"irure__d\": \"K\",\n    \"ut_c4f\": \"Cs7r+vdEix\",\n    \"sunt0c4\": \"CnPX\",\n    \"voluptate_f5\": \"c:\",\n    \"in_81\": \"\",\n    \"laboris_0\": \"x8s\",\n    \"deserunt_e\": \"t:/\",\n    \"labore_413\": \"96wwEg\",\n    \"proident_84e\": \"X6\",\n    \"velit8\": \"=hcip\",\n    \"aute28d\": \"+Ao\",\n    \"amet_5\": \"ikyd\",\n    \"enim_d\": \"3ubQ\",\n    \"eiusmod2d\": \"d0NmDx0O1S\"\n  },\n  \"worldTags\": {\n    \"proident3\": \"hee3-kkiN4\",\n    \"nostrud_c\": \"8DPcdD\",\n    \"dolorecc2\": \"2\",\n    \"sit_a5\": \"W+NNH4.FP1\",\n    \"ipsum_d\": \"yM3\",\n    \"proident_c\": \"QApkEQ8cZ\",\n    \"tempor_e\": \"2v\",\n    \"do_8_0\": \"5\",\n    \"adipisicing2\": \"y2NP.k\",\n    \"eu_c8\": \"3Bi\",\n    \"voluptate_53b\": \"aU3N\",\n    \"minim06_\": \"fCNgrn\",\n    \"velit_a\": \"lBRLCqy\",\n    \"pariatur6\": \"e5bsR\",\n    \"elit_e_a\": \"LOO\",\n    \"ete\": \"\",\n    \"consequat_d02\": \"pD\",\n    \"ex_40\": \"+T gn1b\",\n    \"fugiat__6\": \"Qxsp1 u_\"\n  }\n}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-5c3c4785-457d-4c70-afc1-7ad12d73f92a"
+            },
+            {
+              "id": "ff677a73-9858-44cd-b5c4-d06306dfd741",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-ff677a73-9858-44cd-b5c4-d06306dfd741"
+            },
+            {
+              "id": "3f3fa3d8-c58e-4d5f-b63c-c922ca38459b",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-3f3fa3d8-c58e-4d5f-b63c-c922ca38459b"
+            },
+            {
+              "id": "ec31bbd6-5bea-4e4e-a134-01e9bf37ed7c",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-ec31bbd6-5bea-4e4e-a134-01e9bf37ed7c"
+            },
+            {
+              "id": "a9065b7d-3b04-4a3e-9dbb-2258628a1ef9",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-a9065b7d-3b04-4a3e-9dbb-2258628a1ef9"
+            },
+            {
+              "id": "41080f52-a4c7-42d2-af8d-f39dc900aba5",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-41080f52-a4c7-42d2-af8d-f39dc900aba5"
+            },
+            {
+              "id": "558aa60b-de3b-45f7-90da-7d77e215490d",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-558aa60b-de3b-45f7-90da-7d77e215490d"
+            },
+            {
+              "id": "74dfb465-7f9f-493c-9410-f6a5ff6a5d2d",
+              "name": "ServiceUnavailableException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"template\": \"arn:x5I^8PVj\",\n  \"worldCount\": {\n    \"floorplanCount\": \"<integer>\",\n    \"interiorCountPerFloorplan\": \"<integer>\"\n  },\n  \"clientRequestToken\": \"=aUC3\",\n  \"tags\": {\n    \"Duis_9\": \"wRkGj\",\n    \"occaecata2\": \"ockWJKgaI\",\n    \"elita3e\": \"3r\",\n    \"dolorf\": \"1p8cJ1\",\n    \"laborum_c8\": \"C=fFDA-g\",\n    \"enim2\": \"TysfMg-\",\n    \"amet_d4d\": \"jS-5I\",\n    \"ut_3d\": \"G_\",\n    \"cupidatat_707\": \"mud06r\",\n    \"mollit_7\": \"\",\n    \"officia2\": \"U_\",\n    \"aliqua_f5d\": \"ErcuZVNtvc\",\n    \"Duis_79\": \"yF2\",\n    \"pariatur_96c\": \"_jPV eYe\",\n    \"exercitation_0\": \"f9uQ\",\n    \"in_92\": \"+D-xWS:br \",\n    \"dolor_d0\": \"xy5G\",\n    \"minim__4\": \"1yUJ=4vD.R\",\n    \"laborum20c\": \"ILX:DP\",\n    \"sintd_\": \"\",\n    \"do_11b\": \"AjIicsJ/yr\",\n    \"sintb7a\": \"E55=\",\n    \"labore_b\": \"\",\n    \"sint_bf6\": \"7U\",\n    \"dolor77e\": \"\",\n    \"eu_a82\": \"\",\n    \"nulla02d\": \"6SzLA\",\n    \"doa\": \"VbS6j\",\n    \"cupidatat_38\": \"2TkmNH-\",\n    \"ut_c4\": \"4QGsX\",\n    \"do_2f3\": \"D\",\n    \"sint2\": \"MIdIBq+\",\n    \"eaf9\": \"6dMGHF\"\n  },\n  \"worldTags\": {\n    \"elit685\": \"\",\n    \"idc\": \"lonvb5F90\",\n    \"mollit_63\": \"p3\",\n    \"ipsum_6\": \"mP:lQTcT.\",\n    \"velitdf7\": \"iEx\",\n    \"enim4\": \"W+2P13wj\",\n    \"aute_a58\": \"yahnN\",\n    \"proident4_\": \"\",\n    \"ullamco2f1\": \"IF/:G6wL\",\n    \"deserunt_a28\": \"Z_S\",\n    \"molliteb\": \"GAfRup X\",\n    \"exercitation13f\": \"\",\n    \"mollit07\": \"QI.B\",\n    \"pariatur7c\": \"Y46B:iqaf\",\n    \"enim_ca\": \"eHE:fnT\",\n    \"aliqua_46\": \"kATlevM1\",\n    \"proident61\": \"ldyXUXSCkU\",\n    \"dolore_f\": \"FW:ptPmLN\",\n    \"do_693\": \"e3\",\n    \"culpa1\": \"a1. 3\",\n    \"irure_b4\": \"D6ZqW5s3\",\n    \"tempor2_\": \"YbUu1\",\n    \"commodo_e73\": \"A3\",\n    \"exercitation3\": \"a\",\n    \"officia1b\": \"G8KhMvOE\",\n    \"ipsum_5_\": \"5y\",\n    \"elit649\": \"u.vX=Rh\",\n    \"aliquaa_\": \"V/u\",\n    \"veniamf2\": \"7_v5Unx\",\n    \"dolor_2e\": \"\",\n    \"veniamcc\": \"Ovg/ d\",\n    \"ut49\": \"ZMi\",\n    \"magna_444\": \"-G2tCtLJU\",\n    \"do1f4\": \"o_b9EWz\",\n    \"est96\": \"7\",\n    \"cillumcf_\": \":3\",\n    \"esse_3_\": \"./r\",\n    \"veniam_e7\": \"5\",\n    \"aliquip_9\": \"C\",\n    \"deseruntb\": \"rSGT2KR\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createWorldGenerationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createWorldGenerationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:10.000Z",
+              "updatedAt": "2026-07-28T10:45:10.000Z",
+              "uid": "35240-74dfb465-7f9f-493c-9410-f6a5ff6a5d2d"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:10.000Z",
+          "updatedAt": "2026-07-28T10:45:10.000Z",
+          "uid": "35240-3d66e9d4-b6fc-491a-85d8-bbc2e31c73d4"
+        }
+      ],
+      "id": "ff08762c-da24-4b28-a0d5-53f0e3ec24c8",
+      "createdAt": "2026-07-28T10:45:10.000Z",
+      "updatedAt": "2026-07-28T10:45:10.000Z",
+      "uid": "35240-ff08762c-da24-4b28-a0d5-53f0e3ec24c8"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

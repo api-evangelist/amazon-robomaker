@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "75b38866-a5e6-48d6-9add-7e53b9aa94d0",
+    "name": "AWS RoboMaker BatchDeleteWorlds BatchDescribeSimulationJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:05.000Z",
+    "updatedAt": "2026-07-28T10:44:05.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-75b38866-a5e6-48d6-9add-7e53b9aa94d0"
+  },
+  "item": [
+    {
+      "name": "batchDescribeSimulationJob",
+      "item": [
+        {
+          "name": "Batch Describe Simulation Job",
+          "id": "517876f7-67aa-407c-9eed-ed078cf756a8",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "batchDescribeSimulationJob"
+              ]
+            },
+            "description": "Describes one or more simulation jobs."
+          },
+          "response": [
+            {
+              "id": "f8bd566c-d37e-4db2-8e9a-8eed4f413a19",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "batchDescribeSimulationJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"jobs\": [\n    {\n      \"arn\": \"arn:i7*(\",\n      \"name\": \"-sn\",\n      \"status\": \"Pending\",\n      \"lastStartedAt\": \"<dateTime>\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"failureBehavior\": \"Fail\",\n      \"failureCode\": \"InvalidBundleSimulationApplication\",\n      \"failureReason\": \"vXaRIO\",\n      \"clientRequestToken\": \"ARdQ-\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"ld55\",\n        \"s3Prefix\": \"ca \"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"simulationTimeMillis\": \"<integer>\",\n      \"iamRole\": \"arn:aws:iam::E0Cdyq:role/\",\n      \"robotApplications\": [\n        {\n          \"application\": \"arn:G43,-\",\n          \"launchConfig\": {\n            \"packageName\": \"4_O0d7w\",\n            \"launchFile\": \"8adf4\",\n            \"environmentVariables\": {\n              \"eiusmod13e\": \".\",\n              \"enim_15\": \"R\"\n            },\n            \"portForwardingConfig\": {\n              \"portMappings\": [\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                }\n              ]\n            },\n            \"streamUI\": \"<boolean>\",\n            \"command\": [\n              \"l*4zNtPSC5*\",\n              \"H7l_\"\n            ]\n          },\n          \"applicationVersion\": \"$LATEST\",\n          \"uploadConfigurations\": [\n            {\n              \"name\": \" \",\n              \"path\": \"-LOc~o0\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \" \",\n              \"path\": \"R\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"L3HL3xoH71\",\n              \"path\": \"9%-\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \" \",\n              \"path\": \"Z7YQIh'Gcg\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"k\",\n              \"path\": \"w]O\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"1lsYM\",\n              \"path\": \"Yz.\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"9reQ1\",\n              \"path\": \"=g!O%Ah\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"vbqXr3\",\n              \"path\": \"Sm^hIVt\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \" \",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"ruRoTFgQ\",\n              \"path\": \"A$\\\\s0Jd<Ts\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            }\n          ],\n          \"useDefaultUploadConfigurations\": \"<boolean>\",\n          \"tools\": [\n            {\n              \"name\": \"WD\",\n              \"command\": \"E!&\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"tn0QVXgHUp\",\n              \"command\": \" \",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"fSCYl_ol2\",\n              \"command\": \" \",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"YsMbqN1Nhn\",\n              \"command\": \",6Z\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"z\",\n              \"command\": \"X{z\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"6agMwH\",\n              \"command\": \"U3<X\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"Z\",\n              \"command\": \"<rV-+%\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"i\",\n              \"command\": \"Jq\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"VR\",\n              \"command\": \"M\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"6FnU\",\n              \"command\": \"!A~QZa&\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            }\n          ],\n          \"useDefaultTools\": \"<boolean>\"\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": \"arn:%dQ0hP\",\n          \"launchConfig\": {\n            \"packageName\": \"DXpTdJ4J\",\n            \"launchFile\": \"U4-oVY\",\n            \"environmentVariables\": {\n              \"adipisicing6\": \"04mEM%Fc(\",\n              \"sunt_80\": \"K\",\n              \"incididuntb\": \"F+xR[Lwp[\"\n            },\n            \"portForwardingConfig\": {\n              \"portMappings\": [\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                }\n              ]\n            },\n            \"streamUI\": \"<boolean>\",\n            \"command\": [\n              \"/!L6y37o\",\n              \"\\\\cv&:\"\n            ]\n          },\n          \"applicationVersion\": \"$LATEST\",\n          \"uploadConfigurations\": [\n            {\n              \"name\": \"jt--Ad3J\",\n              \"path\": \"F>kZ2wR\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"ZgP8D\",\n              \"path\": \">J9dG\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"6RykkNm5\",\n              \"path\": \";Ka0\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"eLweP\",\n              \"path\": \"nF,\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"bvCQNDw\",\n              \"path\": \"ce$\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"3\",\n              \"path\": \"$DmcG+}\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"FK5nCovhI\",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"VrS\",\n              \"path\": \"5$}G_\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"euvrN\",\n              \"path\": \"j\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \" \",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            }\n          ],\n          \"worldConfigs\": [\n            {\n              \"world\": \"arn:lXipJ\"\n            }\n          ],\n          \"useDefaultUploadConfigurations\": \"<boolean>\",\n          \"tools\": [\n            {\n              \"name\": \"Jzym\",\n              \"command\": \"CO\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"Wilu7\",\n              \"command\": \"FXK\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"g7vQ3ek0\",\n              \"command\": \"rQ\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"6lVdpHk\",\n              \"command\": \"aJ\\\"5\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"zwPHT8DR93\",\n              \"command\": \"cDz tXTZ]2\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"SCbVyRRjAn\",\n              \"command\": \"81o0(=_\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \" \",\n              \"command\": \"AxJCl,Fc5X\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"zpuM1dNJEA\",\n              \"command\": \"b/G1wE\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"oTamOr\",\n              \"command\": \"R_3ZQF\\\"<)\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"qolNkxBEA\",\n              \"command\": \"J5K~yp-y\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            }\n          ],\n          \"useDefaultTools\": \"<boolean>\"\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": \"GS\",\n          \"s3Bucket\": \"sfb94.z6trpg\",\n          \"s3Keys\": [\n            {\n              \"s3Key\": \"vp\",\n              \"etag\": \"<string>\"\n            },\n            {\n              \"s3Key\": \"x4MoVHaJ9*\",\n              \"etag\": \"<string>\"\n            }\n          ],\n          \"type\": \"Prefix\",\n          \"destination\": \"?{\"\n        },\n        {\n          \"name\": \"kKj-8\",\n          \"s3Bucket\": \"h5g1i8\",\n          \"s3Keys\": [\n            {\n              \"s3Key\": \"x#8_T0/Eb\",\n              \"etag\": \"<string>\"\n            },\n            {\n              \"s3Key\": \"yDmF($P\",\n              \"etag\": \"<string>\"\n            }\n          ],\n          \"type\": \"File\",\n          \"destination\": \"B^|,V\"\n        }\n      ],\n      \"tags\": {\n        \"in_5bf\": \"U+blw\",\n        \"ut16\": \"t002+KES\",\n        \"dolor_78\": \"Ii\",\n        \"ullamcod84\": \"wHDqogtN5\",\n        \"labore_6b\": \"\",\n        \"ad_f\": \"QRBdLt6Cw\",\n        \"sint_e9e\": \"\",\n        \"reprehenderit1e\": \"iFop_E\",\n        \"eu_001\": \"=PCKI\",\n        \"adipisicing__\": \"16\",\n        \"dolora\": \"qnA2jq\",\n        \"quis2\": \"muY\",\n        \"ex_668\": \"\",\n        \"pariatur_8\": \"Pw\",\n        \"occaecat_e\": \"/htwY\",\n        \"esse67a\": \"NNm/Os.L\"\n      },\n      \"vpcConfig\": {\n        \"subnets\": [\n          \"xr~\"\n        ],\n        \"securityGroups\": [\n          \"P:Lb\"\n        ],\n        \"vpcId\": \"BK;1fG^A\",\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"networkInterface\": {\n        \"networkInterfaceId\": \"8?lAuaRQ{\",\n        \"privateIpAddress\": \"6vs)a\",\n        \"publicIpAddress\": \")a~7\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"CPU\",\n        \"gpuUnitLimit\": \"<integer>\"\n      }\n    },\n    {\n      \"arn\": \"arn:xyoGDZ'\",\n      \"name\": \"k8i7QTRl\",\n      \"status\": \"RunningFailed\",\n      \"lastStartedAt\": \"<dateTime>\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"failureBehavior\": \"Fail\",\n      \"failureCode\": \"SimulationApplicationCrash\",\n      \"failureReason\": \"i8;,0\",\n      \"clientRequestToken\": \"cqp\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"jsts5c7j\",\n        \"s3Prefix\": \"zrH7Qm\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"simulationTimeMillis\": \"<integer>\",\n      \"iamRole\": \"arn:aws:iam::C3GqcGf:role/\",\n      \"robotApplications\": [\n        {\n          \"application\": \"arn:GA*B)\",\n          \"launchConfig\": {\n            \"packageName\": \"gNCSOkW\",\n            \"launchFile\": \"AZW_4YlpnS\",\n            \"environmentVariables\": {\n              \"et61_\": \"k#Q \\\\w\",\n              \"in_38\": \"In5*'?%Ef\",\n              \"consectetur__1d\": \"`{0Gl0\",\n              \"do_0\": \"4e)&!\",\n              \"dolore_ab\": \"F\",\n              \"pariatur2ae\": \"Nv\",\n              \"sint98\": \"z-4vrJ&\",\n              \"reprehenderit27d\": \" \",\n              \"ullamco03\": \"gp<4F!@Z\",\n              \"sunt396\": \"I~:C\\\"3\",\n              \"laboruma\": \")Zz@dcQB\",\n              \"ut_450\": \"3UY\\\"kDoVN\",\n              \"qui074\": \"#\",\n              \"minim__\": \"06\",\n              \"tempor_\": \" \",\n              \"anim7b\": \"67us) [1\"\n            },\n            \"portForwardingConfig\": {\n              \"portMappings\": [\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                }\n              ]\n            },\n            \"streamUI\": \"<boolean>\",\n            \"command\": [\n              \"8YUs8*C\",\n              \"7@W-Z *nR!{\"\n            ]\n          },\n          \"applicationVersion\": \"$LATEST\",\n          \"uploadConfigurations\": [\n            {\n              \"name\": \"AuX\",\n              \"path\": \"m[|HK\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"HUln_rh6\",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"sc\",\n              \"path\": \"3,fM{p<fk\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"Dx3\",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"84\",\n              \"path\": \"sbS!jS)V\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \" \",\n              \"path\": \"{\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"3susnRXw\",\n              \"path\": \"/v/K>3\\\\\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"Zwc9q\",\n              \"path\": \"L(2rNo\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"U-jJQpXQHu\",\n              \"path\": \"67&5@Yad\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"8uCj\",\n              \"path\": \"\\\"7\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            }\n          ],\n          \"useDefaultUploadConfigurations\": \"<boolean>\",\n          \"tools\": [\n            {\n              \"name\": \"4o8CMsa\",\n              \"command\": \".\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"IsRG\",\n              \"command\": \"q`Zh2z[l&=\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"AEXoYwVV\",\n              \"command\": \"%~Y$>l:myz\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"Py2P_S62F\",\n              \"command\": \"s`*qF\\\"_\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"4ebiv\",\n              \"command\": \"B#ADy{R$:p\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"M14Ot2UEV\",\n              \"command\": \"u0HI\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"n\",\n              \"command\": \" \",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"Vyn930\",\n              \"command\": \"f{T<#lOdm\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"xi\",\n              \"command\": \"PEp%'QIN\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"Mg9\",\n              \"command\": \"?N7h),F'%\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            }\n          ],\n          \"useDefaultTools\": \"<boolean>\"\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": \"arn:kEtXv0m1\",\n          \"launchConfig\": {\n            \"packageName\": \"Qa\",\n            \"launchFile\": \" \",\n            \"environmentVariables\": {\n              \"Loremf36\": \"X\",\n              \"Lorem9b2\": \"}bH+KaWB\",\n              \"veniam_ae\": \"[\",\n              \"fugiat_8b\": \";/dhk|{Z\",\n              \"veniam_580\": \" \",\n              \"reprehenderit_1\": \"%j\\\"9v\",\n              \"commodo9\": \"x|\"\n            },\n            \"portForwardingConfig\": {\n              \"portMappings\": [\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                },\n                {\n                  \"jobPort\": \"<integer>\",\n                  \"applicationPort\": \"<integer>\",\n                  \"enableOnPublicIp\": \"<boolean>\"\n                }\n              ]\n            },\n            \"streamUI\": \"<boolean>\",\n            \"command\": [\n              \"S\",\n              \"M%i_XMH\"\n            ]\n          },\n          \"applicationVersion\": \"40757998\",\n          \"uploadConfigurations\": [\n            {\n              \"name\": \"Cmfb73\",\n              \"path\": \"rzB#E\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"918W_3C5GB\",\n              \"path\": \"6cp,\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"qxDrAUuRK\",\n              \"path\": \"Vh>c{Ty/V:\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"mnyo45NkUz\",\n              \"path\": \"PtIR.l\",\n              \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n            },\n            {\n              \"name\": \"OwOrPIh_D\",\n              \"path\": \" \",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"NLx5pQP0Bk\",\n              \"path\": \"R\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"2Y15WGR\",\n              \"path\": \"^qcI%N\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"N\",\n              \"path\": \"rlxk.*zT\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"joRNk6H\",\n              \"path\": \"j1olt8\\\\]$\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            },\n            {\n              \"name\": \"NUNBmxop\",\n              \"path\": \"~S(jsi._iV\",\n              \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n            }\n          ],\n          \"worldConfigs\": [\n            {\n              \"world\": \"arn:p\"\n            }\n          ],\n          \"useDefaultUploadConfigurations\": \"<boolean>\",\n          \"tools\": [\n            {\n              \"name\": \"FdX_zs\",\n              \"command\": \"*}0K08k\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"I95F7X4J4r\",\n              \"command\": \"*u\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"r3d3StF6\",\n              \"command\": \"@x^N3*C:\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"S6\",\n              \"command\": \"a=tm-\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"wZ0\",\n              \"command\": \"\\\\l=sIyFaE\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"tJ\",\n              \"command\": \"*N\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"83Gj\",\n              \"command\": \"b9j3?Rx=\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"7E4oQtu\",\n              \"command\": \"Z)p\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            },\n            {\n              \"name\": \"hg\",\n              \"command\": \"i\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"RESTART\"\n            },\n            {\n              \"name\": \"WaPHm\",\n              \"command\": \"@$-.T0+Ebe\",\n              \"streamUI\": \"<boolean>\",\n              \"streamOutputToCloudWatch\": \"<boolean>\",\n              \"exitBehavior\": \"FAIL\"\n            }\n          ],\n          \"useDefaultTools\": \"<boolean>\"\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": \"hWUVsYrmH\",\n          \"s3Bucket\": \"dez\",\n          \"s3Keys\": [\n            {\n              \"s3Key\": \"u4Agy7\",\n              \"etag\": \"<string>\"\n            },\n            {\n              \"s3Key\": \"TQ:n\\\"tOIP\",\n              \"etag\": \"<string>\"\n            }\n          ],\n          \"type\": \"Archive\",\n          \"destination\": \"e:BKjgg#O\"\n        },\n        {\n          \"name\": \"LIJ\",\n          \"s3Bucket\": \"eds3naoku\",\n          \"s3Keys\": [\n            {\n              \"s3Key\": \"LZN\",\n              \"etag\": \"<string>\"\n            },\n            {\n              \"s3Key\": \"i}3UJ\",\n              \"etag\": \"<string>\"\n            }\n          ],\n          \"type\": \"File\",\n          \"destination\": \"\\\"~s\"\n        }\n      ],\n      \"tags\": {\n        \"reprehenderit_1\": \"ieH\",\n        \"sint8\": \"y_\",\n        \"fugiat5d3\": \"Z\",\n        \"quib\": \"XTffu4\",\n        \"autecbb\": \"7toLgy\",\n        \"minim7ba\": \"qi\",\n        \"ullamco02\": \"L0JBTsa\",\n        \"mollit_5\": \"r_spuTNoNB\",\n        \"mollit98a\": \"-\",\n        \"velit_fb\": \"V6\",\n        \"enim__ba\": \"aza_EMFo\",\n        \"aliqua_e5\": \"ES\",\n        \"proident_e0a\": \"x.vcqW\",\n        \"sedec\": \":ufK6h3/6+\",\n        \"aliqua_d9\": \"IKiJ4\",\n        \"tempor_22c\": \"4WWSE\",\n        \"veniam4\": \"nij0\",\n        \"in_0c4\": \"qW0k70d G1\",\n        \"adipisicing_ab4\": \"azFuws\",\n        \"cupidatat_06\": \"9OZzvP\",\n        \"voluptate469\": \"N\",\n        \"incididunt__d\": \"mAu\",\n        \"minim_1\": \"4_K\",\n        \"non4e\": \"j6=\",\n        \"nostrud66\": \"JoeUlpVIp\",\n        \"cillum628\": \"\",\n        \"aliquip60\": \"LQK\",\n        \"quis6f0\": \"xUfv\",\n        \"velit7b3\": \"xYmQarN\",\n        \"et4\": \"_YNAU:kg9O\",\n        \"essee3\": \"WUGo\"\n      },\n      \"vpcConfig\": {\n        \"subnets\": [\n          \"%r=9GWmt\"\n        ],\n        \"securityGroups\": [\n          \"c^{RpZ[@>F!\"\n        ],\n        \"vpcId\": \"\\\\\",\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"networkInterface\": {\n        \"networkInterfaceId\": \"N_k3&Ve\",\n        \"privateIpAddress\": \"k/4C+*\",\n        \"publicIpAddress\": \">aMfS_.G\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"GPU_AND_CPU\",\n        \"gpuUnitLimit\": \"<integer>\"\n      }\n    }\n  ],\n  \"unprocessedJobs\": [\n    \"arn:!6~kdM-v\"\n  ]\n}",
+              "createdAt": "2026-07-28T10:44:06.000Z",
+              "updatedAt": "2026-07-28T10:44:06.000Z",
+              "uid": "35240-f8bd566c-d37e-4db2-8e9a-8eed4f413a19"
+            },
+            {
+              "id": "2939318c-e50d-47bc-b773-040a6c87ca6b",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "batchDescribeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:06.000Z",
+              "updatedAt": "2026-07-28T10:44:06.000Z",
+              "uid": "35240-2939318c-e50d-47bc-b773-040a6c87ca6b"
+            },
+            {
+              "id": "81d38476-cfda-4805-a627-b266e8ac70ac",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "batchDescribeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:06.000Z",
+              "updatedAt": "2026-07-28T10:44:06.000Z",
+              "uid": "35240-81d38476-cfda-4805-a627-b266e8ac70ac"
+            },
+            {
+              "id": "054f0366-5d89-4683-b09e-eb860ed75e14",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "batchDescribeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:06.000Z",
+              "updatedAt": "2026-07-28T10:44:06.000Z",
+              "uid": "35240-054f0366-5d89-4683-b09e-eb860ed75e14"
+            },
+            {
+              "id": "d5955358-a8d1-4758-943a-eea3454ce2fb",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"jobs\": [\n    \"arn:NljF\"\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/batchDescribeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "batchDescribeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:06.000Z",
+              "updatedAt": "2026-07-28T10:44:06.000Z",
+              "uid": "35240-d5955358-a8d1-4758-943a-eea3454ce2fb"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:06.000Z",
+          "updatedAt": "2026-07-28T10:44:06.000Z",
+          "uid": "35240-517876f7-67aa-407c-9eed-ed078cf756a8"
+        }
+      ],
+      "id": "30211c4e-d27d-4a98-8388-506af746540b",
+      "createdAt": "2026-07-28T10:44:06.000Z",
+      "updatedAt": "2026-07-28T10:44:06.000Z",
+      "uid": "35240-30211c4e-d27d-4a98-8388-506af746540b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

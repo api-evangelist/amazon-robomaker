@@ -1,0 +1,702 @@
+{
+  "info": {
+    "_postman_id": "115c54d8-440a-44bc-989b-f98c092370f3",
+    "name": "AWS RoboMaker BatchDeleteWorlds CreateSimulationApplication API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:05.000Z",
+    "updatedAt": "2026-07-28T10:45:06.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-115c54d8-440a-44bc-989b-f98c092370f3"
+  },
+  "item": [
+    {
+      "name": "createSimulationApplication",
+      "item": [
+        {
+          "name": "Create Simulation Application",
+          "id": "9ec857bb-4f49-4292-8c43-3dcc68ed872d",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createSimulationApplication",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createSimulationApplication"
+              ]
+            },
+            "description": "Creates a simulation application."
+          },
+          "response": [
+            {
+              "id": "cc91110d-be15-455e-be33-1f00a71a41d4",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:7rLxB\",\n  \"name\": \"D\",\n  \"version\": \"$LATEST\",\n  \"sources\": [\n    {\n      \"s3Bucket\": \"wxf0v0k9ku\",\n      \"s3Key\": \"<\",\n      \"etag\": \"<string>\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"p4j-9ol4vr\",\n      \"s3Key\": \"4t\",\n      \"etag\": \"<string>\",\n      \"architecture\": \"X86_64\"\n    }\n  ],\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"9\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"ROS\",\n    \"version\": \"Melodic\"\n  },\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1dx\"\n  },\n  \"lastUpdatedAt\": \"<dateTime>\",\n  \"revisionId\": \"mE\",\n  \"tags\": {\n    \"aute_557\": \"Ngidorkx\",\n    \"tempor0\": \"Jz6K8t64py\",\n    \"tempor925\": \"\",\n    \"minim9d9\": \"6\",\n    \"ut_4ad\": \"SQwK=::+\",\n    \"Uta\": \"QGfR+/uL\",\n    \"euf2\": \"\",\n    \"laboris_5c\": \"\"\n  },\n  \"environment\": {\n    \"uri\": \"<Yh[QL ^\"\n  }\n}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-cc91110d-be15-455e-be33-1f00a71a41d4"
+            },
+            {
+              "id": "b82f578e-6fd1-41c3-b812-378d63bbc9fd",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-b82f578e-6fd1-41c3-b812-378d63bbc9fd"
+            },
+            {
+              "id": "21b9f40c-af11-4d99-826c-35c4747fd713",
+              "name": "ResourceAlreadyExistsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-21b9f40c-af11-4d99-826c-35c4747fd713"
+            },
+            {
+              "id": "02db229a-0c18-4429-b737-8005302c769c",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-02db229a-0c18-4429-b737-8005302c769c"
+            },
+            {
+              "id": "49eb1c72-94a0-4728-9761-b1a42a7dc00d",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-49eb1c72-94a0-4728-9761-b1a42a7dc00d"
+            },
+            {
+              "id": "ebd08a65-af91-46ff-a988-4312002080c8",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-ebd08a65-af91-46ff-a988-4312002080c8"
+            },
+            {
+              "id": "4f8ea413-0782-4edb-8580-e542ef0bd459",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \" \",\n  \"simulationSoftwareSuite\": {\n    \"name\": \"Gazebo\",\n    \"version\": \"7\"\n  },\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Melodic\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"hra595z6\",\n      \"s3Key\": \" \",\n      \"architecture\": \"X86_64\"\n    },\n    {\n      \"s3Bucket\": \"kfkf\",\n      \"s3Key\": \"c9QU8m^n\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"renderingEngine\": {\n    \"name\": \"OGRE\",\n    \"version\": \"1%x\"\n  },\n  \"tags\": {\n    \"culpa_3\": \"\",\n    \"nostrudc\": \"NT\",\n    \"dolor86\": \"5KwOp2oFY\",\n    \"aliquip_b\": \"\",\n    \"esse_af\": \"tQ2vU\",\n    \"ipsum_1\": \"KFHCs4y\",\n    \"do1_\": \"mJJqkH9h_.\",\n    \"ine7\": \"\",\n    \"deserunt_99\": \"5.8i1fo\",\n    \"in_35\": \".AFpY\"\n  },\n  \"environment\": {\n    \"uri\": \"]\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createSimulationApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createSimulationApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:06.000Z",
+              "updatedAt": "2026-07-28T10:45:06.000Z",
+              "uid": "35240-4f8ea413-0782-4edb-8580-e542ef0bd459"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:06.000Z",
+          "updatedAt": "2026-07-28T10:45:06.000Z",
+          "uid": "35240-9ec857bb-4f49-4292-8c43-3dcc68ed872d"
+        }
+      ],
+      "id": "c8d22caa-40bd-4329-8fe5-dce6613802e0",
+      "createdAt": "2026-07-28T10:45:06.000Z",
+      "updatedAt": "2026-07-28T10:45:06.000Z",
+      "uid": "35240-c8d22caa-40bd-4329-8fe5-dce6613802e0"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

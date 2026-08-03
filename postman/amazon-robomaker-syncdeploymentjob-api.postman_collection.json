@@ -1,0 +1,784 @@
+{
+  "info": {
+    "_postman_id": "571d230a-c3c4-43da-89db-49921517644d",
+    "name": "AWS RoboMaker BatchDeleteWorlds SyncDeploymentJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:46:39.000Z",
+    "updatedAt": "2026-07-28T10:46:40.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-571d230a-c3c4-43da-89db-49921517644d"
+  },
+  "item": [
+    {
+      "name": "syncDeploymentJob",
+      "item": [
+        {
+          "name": "Sync Deployment Job",
+          "id": "06867f26-7a1c-4ebe-b03d-cc92f756910e",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/syncDeploymentJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "syncDeploymentJob"
+              ]
+            },
+            "description": "<p>Syncrhonizes robots in a fleet to the latest deployment. This is helpful if robots were added after a deployment.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>"
+          },
+          "response": [
+            {
+              "id": "43d391b3-3e85-41a9-9254-bbba8a216ba2",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:B=+Cz|[\",\n  \"fleet\": \"arn:Yy3CuLV\",\n  \"status\": \"Succeeded\",\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"a4x3xyfk8b7\",\n      \"key\": \"y*-BM\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:K8z\",\n      \"applicationVersion\": \"8\",\n      \"launchConfig\": {\n        \"packageName\": \"6x6NATIK\",\n        \"launchFile\": \"Hu-\",\n        \"preLaunchFile\": \"_-%U\",\n        \"postLaunchFile\": \"fv,uu,$.E\",\n        \"environmentVariables\": {\n          \"in_e1d\": \"\\\\\",\n          \"culpa_e14\": \"+1.\\\"~z\",\n          \"consectetura1\": \"&Fy2C\",\n          \"exercitation_c\": \" \",\n          \"nulla_8\": \"b3C~so+R\",\n          \"adipisicing_50_\": \"(:6_YX7_\",\n          \"id55_\": \"pwxN\",\n          \"et_e\": \"Ja~\",\n          \"id6f_\": \"TP\\\\}_*_R\",\n          \"velit_c\": \"ln~ K1Y\",\n          \"nisi_8\": \"U2:\",\n          \"laboris_8ba\": \"+~vY\",\n          \"aliquip9c\": \" \",\n          \"adipisicing_3\": \"kXo00>tM;\",\n          \"labore_f\": \"h 4=:q\\\"R3\",\n          \"nullad_\": \"HuSD\",\n          \"esse49\": \"AA\",\n          \"tempor5\": \"uO5w\"\n        }\n      }\n    }\n  ],\n  \"failureReason\": \"(\",\n  \"failureCode\": \"GreengrassDeploymentFailed\",\n  \"createdAt\": \"<dateTime>\"\n}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-43d391b3-3e85-41a9-9254-bbba8a216ba2"
+            },
+            {
+              "id": "1c1b76bd-3c41-4834-9c15-c1426d0118c5",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-1c1b76bd-3c41-4834-9c15-c1426d0118c5"
+            },
+            {
+              "id": "364e9778-831c-4162-92e8-cfe4c99f027e",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-364e9778-831c-4162-92e8-cfe4c99f027e"
+            },
+            {
+              "id": "33d97623-c188-4287-ad48-8d893fbaf3ed",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-33d97623-c188-4287-ad48-8d893fbaf3ed"
+            },
+            {
+              "id": "dd64c560-2ae2-4051-8848-c61a8abaffbc",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-dd64c560-2ae2-4051-8848-c61a8abaffbc"
+            },
+            {
+              "id": "ceb6ec2f-c9c0-43cf-9b95-38db0916ab6e",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-ceb6ec2f-c9c0-43cf-9b95-38db0916ab6e"
+            },
+            {
+              "id": "1549d075-123a-42ff-8aee-398f8432e239",
+              "name": "ConcurrentDeploymentException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-1549d075-123a-42ff-8aee-398f8432e239"
+            },
+            {
+              "id": "1ead0d5b-72df-45ca-b20b-ea1eceb737b2",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \"qsrwk4\",\n  \"fleet\": \"arn:;F#y\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/syncDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "syncDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:40.000Z",
+              "updatedAt": "2026-07-28T10:46:40.000Z",
+              "uid": "35240-1ead0d5b-72df-45ca-b20b-ea1eceb737b2"
+            }
+          ],
+          "createdAt": "2026-07-28T10:46:40.000Z",
+          "updatedAt": "2026-07-28T10:46:40.000Z",
+          "uid": "35240-06867f26-7a1c-4ebe-b03d-cc92f756910e"
+        }
+      ],
+      "id": "762676a7-21ec-42ec-a994-5afd72ca041b",
+      "createdAt": "2026-07-28T10:46:40.000Z",
+      "updatedAt": "2026-07-28T10:46:40.000Z",
+      "uid": "35240-762676a7-21ec-42ec-a994-5afd72ca041b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

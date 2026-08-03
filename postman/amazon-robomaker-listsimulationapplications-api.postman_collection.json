@@ -1,0 +1,516 @@
+{
+  "info": {
+    "_postman_id": "bf9ee1f2-354c-4de7-93f7-13805c59fd50",
+    "name": "AWS RoboMaker BatchDeleteWorlds ListSimulationApplications API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:46:27.000Z",
+    "updatedAt": "2026-07-28T10:46:28.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-bf9ee1f2-354c-4de7-93f7-13805c59fd50"
+  },
+  "item": [
+    {
+      "name": "listSimulationApplications",
+      "item": [
+        {
+          "name": "List Simulation Applications",
+          "id": "12ea2942-6299-4957-a1c2-4d834a3339d7",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"versionQualifier\": \"ALL\",\n  \"nextToken\": \"yXB\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"mLE\",\n      \"values\": [\n        \"gqz\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listSimulationApplications?maxResults=<string>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "listSimulationApplications"
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Returns a list of simulation applications. You can optionally provide filters to retrieve specific simulation applications. "
+          },
+          "response": [
+            {
+              "id": "bb730bc8-a67f-4f49-bfea-b2ba03838604",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"versionQualifier\": \"ALL\",\n  \"nextToken\": \"yXB\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"mLE\",\n      \"values\": [\n        \"gqz\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listSimulationApplications?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listSimulationApplications"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"simulationApplicationSummaries\": [\n    {\n      \"name\": \"oNPJHDz7CA\",\n      \"arn\": \"arn:HJ~\",\n      \"version\": \"459\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"11\"\n      }\n    },\n    {\n      \"name\": \"9S\",\n      \"arn\": \"arn:l0\",\n      \"version\": \"138456034\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Dashing\"\n      }\n    },\n    {\n      \"name\": \"rmRp9yl1\",\n      \"arn\": \"arn:OgEbU,!m\\\"\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"General\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"9\"\n      }\n    },\n    {\n      \"name\": \"HtG\",\n      \"arn\": \"arn:\",\n      \"version\": \"13\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Melodic\"\n      }\n    },\n    {\n      \"name\": \" \",\n      \"arn\": \"arn:\",\n      \"version\": \"2154\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Dashing\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Dashing\"\n      }\n    },\n    {\n      \"name\": \"uF\",\n      \"arn\": \"arn:M.C;~p-\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Melodic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"RosbagPlay\",\n        \"version\": \"Melodic\"\n      }\n    },\n    {\n      \"name\": \"sISk3Bs4ux\",\n      \"arn\": \"arn:#6J\",\n      \"version\": \" \",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"General\",\n        \"version\": \"Melodic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"RosbagPlay\",\n        \"version\": \"7\"\n      }\n    },\n    {\n      \"name\": \"4q90i5Ke0\",\n      \"arn\": \"arn:1{c\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Melodic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Dashing\"\n      }\n    },\n    {\n      \"name\": \"mR0BJTbNqY\",\n      \"arn\": \"arn:4cQxB,a\",\n      \"version\": \"7\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"General\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"RosbagPlay\",\n        \"version\": \"7\"\n      }\n    },\n    {\n      \"name\": \"kn\",\n      \"arn\": \"arn:w870F^\\\"\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"Melodic\"\n      }\n    },\n    {\n      \"name\": \"62Wx\",\n      \"arn\": \"arn:OJ_\\\\.>&\",\n      \"version\": \" \",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"RosbagPlay\",\n        \"version\": \"Foxy\"\n      }\n    },\n    {\n      \"name\": \"R5Rj\",\n      \"arn\": \"arn:@rm\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"7\"\n      }\n    },\n    {\n      \"name\": \"F\",\n      \"arn\": \"arn:l4)[{DT3{\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"Foxy\"\n      }\n    },\n    {\n      \"name\": \"tDOU2qGf\",\n      \"arn\": \"arn:ylv4i%bg{\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Melodic\"\n      }\n    },\n    {\n      \"name\": \" \",\n      \"arn\": \"arn:}Yks\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS\",\n        \"version\": \"Dashing\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"Kinetic\"\n      }\n    },\n    {\n      \"name\": \"OysciJr\",\n      \"arn\": \"arn:/*>\",\n      \"version\": \"8733086\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Dashing\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"Foxy\"\n      }\n    },\n    {\n      \"name\": \"86ygNq\",\n      \"arn\": \"arn:0@`\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Melodic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"Gazebo\",\n        \"version\": \"7\"\n      }\n    },\n    {\n      \"name\": \"1K\",\n      \"arn\": \"arn:e8l\",\n      \"version\": \"$LATEST\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"General\",\n        \"version\": \"Dashing\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"9\"\n      }\n    },\n    {\n      \"name\": \"wRVtE2Um\",\n      \"arn\": \"arn:--;jD\",\n      \"version\": \"348\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Foxy\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"SimulationRuntime\",\n        \"version\": \"Foxy\"\n      }\n    },\n    {\n      \"name\": \"3\",\n      \"arn\": \"arn:/ws1\",\n      \"version\": \"659\",\n      \"lastUpdatedAt\": \"<dateTime>\",\n      \"robotSoftwareSuite\": {\n        \"name\": \"ROS2\",\n        \"version\": \"Kinetic\"\n      },\n      \"simulationSoftwareSuite\": {\n        \"name\": \"RosbagPlay\",\n        \"version\": \"Dashing\"\n      }\n    }\n  ],\n  \"nextToken\": \"xO-WB\"\n}",
+              "createdAt": "2026-07-28T10:46:28.000Z",
+              "updatedAt": "2026-07-28T10:46:28.000Z",
+              "uid": "35240-bb730bc8-a67f-4f49-bfea-b2ba03838604"
+            },
+            {
+              "id": "e3ba6bb2-773e-4f67-95b1-8b3dafa1c9d9",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"versionQualifier\": \"ALL\",\n  \"nextToken\": \"yXB\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"mLE\",\n      \"values\": [\n        \"gqz\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listSimulationApplications?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listSimulationApplications"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:28.000Z",
+              "updatedAt": "2026-07-28T10:46:28.000Z",
+              "uid": "35240-e3ba6bb2-773e-4f67-95b1-8b3dafa1c9d9"
+            },
+            {
+              "id": "3b502a2e-392a-4914-a627-b763576f1aea",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"versionQualifier\": \"ALL\",\n  \"nextToken\": \"yXB\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"mLE\",\n      \"values\": [\n        \"gqz\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listSimulationApplications?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listSimulationApplications"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:28.000Z",
+              "updatedAt": "2026-07-28T10:46:28.000Z",
+              "uid": "35240-3b502a2e-392a-4914-a627-b763576f1aea"
+            },
+            {
+              "id": "4d647ded-1951-4387-88b1-2772c74686a4",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"versionQualifier\": \"ALL\",\n  \"nextToken\": \"yXB\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"mLE\",\n      \"values\": [\n        \"gqz\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listSimulationApplications?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listSimulationApplications"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:28.000Z",
+              "updatedAt": "2026-07-28T10:46:28.000Z",
+              "uid": "35240-4d647ded-1951-4387-88b1-2772c74686a4"
+            }
+          ],
+          "createdAt": "2026-07-28T10:46:28.000Z",
+          "updatedAt": "2026-07-28T10:46:28.000Z",
+          "uid": "35240-12ea2942-6299-4957-a1c2-4d834a3339d7"
+        }
+      ],
+      "id": "74c8d860-b42d-4642-bcf0-5090f721c89a",
+      "createdAt": "2026-07-28T10:46:28.000Z",
+      "updatedAt": "2026-07-28T10:46:28.000Z",
+      "uid": "35240-74c8d860-b42d-4642-bcf0-5090f721c89a"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

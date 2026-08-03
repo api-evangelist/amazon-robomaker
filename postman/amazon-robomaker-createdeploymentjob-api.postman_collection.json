@@ -1,0 +1,784 @@
+{
+  "info": {
+    "_postman_id": "e269a151-a783-4d66-bc07-0033cd310cad",
+    "name": "AWS RoboMaker BatchDeleteWorlds CreateDeploymentJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:38.000Z",
+    "updatedAt": "2026-07-28T10:44:38.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-e269a151-a783-4d66-bc07-0033cd310cad"
+  },
+  "item": [
+    {
+      "name": "createDeploymentJob",
+      "item": [
+        {
+          "name": "Create Deployment Job",
+          "id": "26360054-7ec9-46df-8fb1-66109a54d891",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createDeploymentJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createDeploymentJob"
+              ]
+            },
+            "description": "<p>Deploys a specific version of a robot application to robots in a fleet.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important> <p>The robot application must have a numbered <code>applicationVersion</code> for consistency reasons. To create a new version, use <code>CreateRobotApplicationVersion</code> or see <a href=\"https://docs.aws.amazon.com/robomaker/latest/dg/create-robot-application-version.html\">Creating a Robot Application Version</a>. </p> <note> <p>After 90 days, deployment jobs expire and will be deleted. They will no longer be accessible. </p> </note>"
+          },
+          "response": [
+            {
+              "id": "62443e51-97d6-4e35-a5a7-b8097cbfed73",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:rk:GZ6Vd9h\",\n  \"fleet\": \"arn:|/{`K_uLg\",\n  \"status\": \"Preparing\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:<\",\n      \"applicationVersion\": \"51\",\n      \"launchConfig\": {\n        \"packageName\": \"8k.a\",\n        \"launchFile\": \"hJ\",\n        \"preLaunchFile\": \"d_vaE<<\",\n        \"postLaunchFile\": \"r.\",\n        \"environmentVariables\": {\n          \"exercitation_d6\": \"U;\",\n          \"cupidatat_044\": \"y\",\n          \"nullaf\": \"'`^Dd _j\",\n          \"adipisicing6\": \"8g\",\n          \"fugiat_7\": \"qF}YE ZaSw\",\n          \"quie3e\": \"pUM.A4K)!*\",\n          \"ullamco_027\": \"3t[t-+U\",\n          \"mollit9\": \"m.-WTw3HYj\",\n          \"elitde\": \"h \"\n        }\n      }\n    }\n  ],\n  \"failureReason\": \"F\",\n  \"failureCode\": \"RobotDeploymentNoResponse\",\n  \"createdAt\": \"<dateTime>\",\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"wgt99pgm15mj\",\n      \"key\": \"{XF!B\\\"z4\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"eub\": \"BBX=9w1S\",\n    \"Excepteur_a\": \"NfuXg\",\n    \"officia_83d\": \"\",\n    \"fugiat5d7\": \"\",\n    \"essed\": \"a5h\",\n    \"aliqua23\": \"3\",\n    \"fugiat_2\": \"1rk3Qqq1Fh\",\n    \"dolore3d\": \"4WcVSo7\",\n    \"occaecat1\": \"7N3c\",\n    \"dolor77_\": \"\",\n    \"commodo7\": \"ivIdA1\",\n    \"utc24\": \"\",\n    \"proident152\": \"a7Mtwq6j\",\n    \"Excepteur_8\": \"O8hCRm\",\n    \"sit8f\": \"\",\n    \"Ut5\": \"gk.x\",\n    \"dolore29\": \"R\",\n    \"consequat_1_8\": \"/\",\n    \"incididunt6\": \"WU\",\n    \"eu_177\": \"G5UxrWEh3\",\n    \"in_39\": \"nD-9\",\n    \"minim_3\": \"P.LcUcX\",\n    \"incididunte91\": \"7\",\n    \"ut_1\": \"buS4\",\n    \"sunt31\": \"\",\n    \"nulla35\": \"\",\n    \"officia179\": \"SE\",\n    \"aliquip_f7\": \"ubz2UFL_jo\",\n    \"incididunt__\": \"30FRWLb7\"\n  }\n}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-62443e51-97d6-4e35-a5a7-b8097cbfed73"
+            },
+            {
+              "id": "762a5a04-51e5-4a2c-a07e-62ca4fb33a00",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-762a5a04-51e5-4a2c-a07e-62ca4fb33a00"
+            },
+            {
+              "id": "687dc8b6-3ba7-42a0-9fe9-917554f4257f",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-687dc8b6-3ba7-42a0-9fe9-917554f4257f"
+            },
+            {
+              "id": "5ebcfe60-9210-44be-95c8-86b2729f5019",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-5ebcfe60-9210-44be-95c8-86b2729f5019"
+            },
+            {
+              "id": "69af0b16-0601-4d3c-836f-2bdd5a343483",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-69af0b16-0601-4d3c-836f-2bdd5a343483"
+            },
+            {
+              "id": "dca1ae95-94cc-4e86-a3c1-8e250cf0fb0f",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-dca1ae95-94cc-4e86-a3c1-8e250cf0fb0f"
+            },
+            {
+              "id": "c9668ff4-798f-494b-95df-54b80d590bf3",
+              "name": "ConcurrentDeploymentException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-c9668ff4-798f-494b-95df-54b80d590bf3"
+            },
+            {
+              "id": "c7b2ffd3-238c-42d1-8f52-c7ee911239d7",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"clientRequestToken\": \" \",\n  \"fleet\": \"arn:`7\",\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:)\",\n      \"applicationVersion\": \"5\",\n      \"launchConfig\": {\n        \"packageName\": \"Rvcu8D71\",\n        \"launchFile\": \"_zyK9Ax2K\",\n        \"preLaunchFile\": \"oEP~\",\n        \"postLaunchFile\": \" \",\n        \"environmentVariables\": {\n          \"ex_d\": \"{KGpf(\",\n          \"adipisicing_d\": \"]@/*\",\n          \"pariatur_2\": \"%\",\n          \"fugiate3\": \"sQ8#pA;\",\n          \"Excepteur_7\": \"{>c!r.I:\",\n          \"cupidatat86\": \"@ PR@2N`w\",\n          \"non_\": \"cY-2C\",\n          \"dolor43c\": \"+r@\"\n        }\n      }\n    }\n  ],\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"w9rzxi8er\",\n      \"key\": \"h#Wptcy6N\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"tags\": {\n    \"magnafd\": \"k.kIl-JFvm\",\n    \"sit_7\": \"Gnokgr3\",\n    \"eiusmod_3_a\": \"w+p3P0Q\",\n    \"officia_52\": \"0C\",\n    \"autea_a\": \"n\",\n    \"ut_13\": \"ahU97H\",\n    \"incf4\": \"Mk \",\n    \"sed_8f8\": \"\",\n    \"nulla_1_\": \" j1m6h8\",\n    \"laboris_1\": \"3cU=jz\",\n    \"sed_8a\": \"h\",\n    \"commodo_814\": \"3ItZUoOzv\",\n    \"in_76\": \"zR\",\n    \"labore_4\": \"uFqX-7BXQ.\",\n    \"veniam_ca6\": \"\",\n    \"aliquipe\": \":NX\",\n    \"sint_d6d\": \"T=:5C=\",\n    \"veniam5_\": \" Q9XNg32C\",\n    \"laborisf6d\": \"2pBspiUUX\",\n    \"dolor__\": \"Ag8Y_IT\",\n    \"esse_\": \"Cv+ENzRj\",\n    \"dolore__d3\": \"f2\",\n    \"aliquip_e9\": \"44\",\n    \"voluptate_0\": \"\",\n    \"aute_41_\": \"--amz\",\n    \"mollitb26\": \"\",\n    \"qui_95\": \"g1O\",\n    \"proidente\": \"\",\n    \"inddc\": \"FEJ\",\n    \"nond\": \"6RV\",\n    \"ipsum12\": \"9pw+l\",\n    \"dolore9\": \"1\",\n    \"dolore90c\": \"NB\",\n    \"consequat13\": \"_=b\",\n    \"culpa42e\": \"JhMVBlAn.\",\n    \"sint04\": \"sU\",\n    \"eiusmod1f\": \"Dsq1:\",\n    \"idc\": \"U/1F375y\",\n    \"proident_b\": \"36t:T\",\n    \"labore_7a\": \"rXT\",\n    \"qui_a9f\": \"3/chrWcTg\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:39.000Z",
+              "updatedAt": "2026-07-28T10:44:39.000Z",
+              "uid": "35240-c7b2ffd3-238c-42d1-8f52-c7ee911239d7"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:39.000Z",
+          "updatedAt": "2026-07-28T10:44:39.000Z",
+          "uid": "35240-26360054-7ec9-46df-8fb1-66109a54d891"
+        }
+      ],
+      "id": "3c463b8c-d360-4ab2-9e80-208678a4b895",
+      "createdAt": "2026-07-28T10:44:39.000Z",
+      "updatedAt": "2026-07-28T10:44:39.000Z",
+      "uid": "35240-3c463b8c-d360-4ab2-9e80-208678a4b895"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

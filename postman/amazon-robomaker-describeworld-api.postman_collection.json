@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "0012eede-62ea-4b6c-be80-e2e921846dcd",
+    "name": "AWS RoboMaker BatchDeleteWorlds DescribeWorld API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:49.000Z",
+    "updatedAt": "2026-07-28T10:45:50.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-0012eede-62ea-4b6c-be80-e2e921846dcd"
+  },
+  "item": [
+    {
+      "name": "describeWorld",
+      "item": [
+        {
+          "name": "Describe World",
+          "id": "e462868c-8eda-43b7-9b3a-ae16cb68cef2",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/describeWorld",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "describeWorld"
+              ]
+            },
+            "description": "Describes a world."
+          },
+          "response": [
+            {
+              "id": "8146fe0d-95b1-47ee-a460-258ed57168bb",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeWorld",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeWorld"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:pC{\",\n  \"generationJob\": \"arn:\\\\cO}l\",\n  \"template\": \"arn:<hZR\",\n  \"createdAt\": \"<dateTime>\",\n  \"tags\": {\n    \"utf\": \"wWcEXw1\",\n    \"nostrudc16\": \" uvnFvq6Ge\",\n    \"elit_b\": \"21RuOa2\",\n    \"sit__\": \"x3ONxZ\",\n    \"in_127\": \"Rhx6iifb\",\n    \"ea7\": \"/4\",\n    \"sintf\": \"\",\n    \"labore44\": \"lT\",\n    \"culpa_ad\": \"yq\",\n    \"magna_4\": \"zbrg+gC1\",\n    \"cupidatat406\": \"_w.lfp\",\n    \"qui62_\": \"bjMXWBoy\",\n    \"aliquip4_\": \"\",\n    \"nostrud38_\": \"\",\n    \"labore_800\": \"iW+VtX8Q\",\n    \"laboris_f98\": \"p\",\n    \"consectetur_ba\": \"/e\",\n    \"nisi_54d\": \"C\",\n    \"dolore58\": \"gWWLoOqCI\",\n    \"qui_7\": \"vz\",\n    \"Lorem09c\": \"\",\n    \"veniam_f\": \"7G6s3mu\",\n    \"aliquip_b\": \"M2KY\",\n    \"aute3\": \"rx\",\n    \"et56\": \"9YGEHCJ\",\n    \"dolorefc\": \"\",\n    \"incididunt1\": \"e-Xn+\",\n    \"laborum_c\": \"w\",\n    \"sit601\": \"VQ:jKXV:g/\",\n    \"pariatur_998\": \"A6+gB=Gn35\",\n    \"quis_8_1\": \"NB+d\",\n    \"laboris_7b\": \"8Kjx\",\n    \"reprehenderit01\": \"\",\n    \"dolor_b8d\": \"9qY\",\n    \"temporbe\": \"R\",\n    \"ut_0b\": \"qe\",\n    \"eucac\": \"xsLsZYC\",\n    \"consequat__a\": \"f3Z\",\n    \"eiusmod_ef\": \"\",\n    \"culpa__1\": \"hwVhiT=80L\",\n    \"mollit6\": \"M\",\n    \"exercitationb\": \"UB \",\n    \"et1\": \"5qlu2pxl6\",\n    \"ut_0\": \"l\",\n    \"exercitation_582\": \"dKf\",\n    \"quis_4e\": \"nYcOANev\",\n    \"Ut8b7\": \"oIoYZi-\",\n    \"dolor_1\": \"YTKDJD._pK\",\n    \"suntc2e\": \"6\"\n  },\n  \"worldDescriptionBody\": \"Gv'$n\u2004(W\"\n}",
+              "createdAt": "2026-07-28T10:45:50.000Z",
+              "updatedAt": "2026-07-28T10:45:50.000Z",
+              "uid": "35240-8146fe0d-95b1-47ee-a460-258ed57168bb"
+            },
+            {
+              "id": "9ca6a785-edf9-4a51-8e78-2fc1b52f12b7",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeWorld",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeWorld"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:50.000Z",
+              "updatedAt": "2026-07-28T10:45:50.000Z",
+              "uid": "35240-9ca6a785-edf9-4a51-8e78-2fc1b52f12b7"
+            },
+            {
+              "id": "e56289bd-52bc-4864-8d9e-1375be9117d5",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeWorld",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeWorld"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:50.000Z",
+              "updatedAt": "2026-07-28T10:45:50.000Z",
+              "uid": "35240-e56289bd-52bc-4864-8d9e-1375be9117d5"
+            },
+            {
+              "id": "575444cc-741d-4979-bdcf-a68276bb8c62",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeWorld",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeWorld"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:50.000Z",
+              "updatedAt": "2026-07-28T10:45:50.000Z",
+              "uid": "35240-575444cc-741d-4979-bdcf-a68276bb8c62"
+            },
+            {
+              "id": "11f58e40-d3d9-4293-ad16-ff292bdb8703",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"world\": \"arn:ALo|\\\\a8\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeWorld",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeWorld"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:50.000Z",
+              "updatedAt": "2026-07-28T10:45:50.000Z",
+              "uid": "35240-11f58e40-d3d9-4293-ad16-ff292bdb8703"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:50.000Z",
+          "updatedAt": "2026-07-28T10:45:50.000Z",
+          "uid": "35240-e462868c-8eda-43b7-9b3a-ae16cb68cef2"
+        }
+      ],
+      "id": "1e8cdb86-c778-45dc-8887-f67c7b061d0e",
+      "createdAt": "2026-07-28T10:45:50.000Z",
+      "updatedAt": "2026-07-28T10:45:50.000Z",
+      "uid": "35240-1e8cdb86-c778-45dc-8887-f67c7b061d0e"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

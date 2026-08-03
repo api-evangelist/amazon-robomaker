@@ -1,0 +1,610 @@
+{
+  "info": {
+    "_postman_id": "71752fda-a16b-4219-a0df-1a15fc5940c0",
+    "name": "AWS RoboMaker BatchDeleteWorlds ListRobots API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:46:26.000Z",
+    "updatedAt": "2026-07-28T10:46:26.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-71752fda-a16b-4219-a0df-1a15fc5940c0"
+  },
+  "item": [
+    {
+      "name": "listRobots",
+      "item": [
+        {
+          "name": "List Robots",
+          "id": "f68be3b2-9f53-402d-a596-482f3b4f4191",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "listRobots"
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "<p>Returns a list of robots. You can optionally provide filters to retrieve specific robots.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>"
+          },
+          "response": [
+            {
+              "id": "5ad1b10d-cf69-43fd-b5c0-a18daaaa2570",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listRobots"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"robots\": [\n    {\n      \"arn\": \"arn:+^As)l8\\\\n \",\n      \"name\": \"WUuAGh0Ut\",\n      \"fleetArn\": \"arn:\",\n      \"status\": \"Available\",\n      \"greenGrassGroupId\": \"T\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:@&w8-U\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn: \",\n      \"name\": \"b8EJEMz_F\",\n      \"fleetArn\": \"arn:sg46\",\n      \"status\": \"InSync\",\n      \"greenGrassGroupId\": \"9$pI\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:G,<0c\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\\\\Hclo\",\n      \"name\": \"R6r9Pa7XWs\",\n      \"fleetArn\": \"arn:#Agl7Y|<\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \",@]F\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:e`)!P\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\\\"\",\n      \"name\": \"SgM\",\n      \"fleetArn\": \"arn:iau8%1@0-\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"t#Zd{/G&U\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:f 0b{c3\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:rE+>8X\",\n      \"name\": \"4lJL4Sy\",\n      \"fleetArn\": \"arn:FSdWS=hl_\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"b4cI_r`Bmm\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:A\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:NVC\",\n      \"name\": \"Gmv3VEDo\",\n      \"fleetArn\": \"arn:( E9kp}G/\",\n      \"status\": \"Registered\",\n      \"greenGrassGroupId\": \"XbS\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:!\\\\ggyrdxR\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:LL\",\n      \"name\": \"5quUaF3h\",\n      \"fleetArn\": \"arn:E['B!f/\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"*Ad{,t:\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:Z\\\\)\\\\Bo\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:M%mJ%\",\n      \"name\": \" \",\n      \"fleetArn\": \"arn:&3+$9g,\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \"; 9vvu\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:R,\\\\\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:QvXOgth/\\\\\",\n      \"name\": \"Wx\",\n      \"fleetArn\": \"arn:PRXB\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"g],Nsw-\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:&?kndi\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn: B-EFLp^[\",\n      \"name\": \"OM\",\n      \"fleetArn\": \"arn:V\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"L99r&B;?\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:HYKI$\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:^1=MnC5=tK\",\n      \"name\": \"QqlTyKDj\",\n      \"fleetArn\": \"arn:54~q@1\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"oMu6fFO\\\"\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:7\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"name\": \" \",\n      \"fleetArn\": \"arn:Pj\",\n      \"status\": \"InSync\",\n      \"greenGrassGroupId\": \"!M:SV\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:tbD$\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:=|I\",\n      \"name\": \"pXg0i\",\n      \"fleetArn\": \"arn:'\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"wh\\\"n_\\\"G[\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:3,&;=l0\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn::0A@o=BO\",\n      \"name\": \"2G4Nv\",\n      \"fleetArn\": \"arn:6d\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \"p7_5?o6Q{V\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:<%QS/\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:((\",\n      \"name\": \"PBBkaaP\",\n      \"fleetArn\": \"arn:d0M\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"NSART:l(AU\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:TL\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:3\\\"zT.U\",\n      \"name\": \"MMgPc3Vlh2\",\n      \"fleetArn\": \"arn:6;\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"/wJV1d%\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:qwE3WQR\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:$=|ij\",\n      \"name\": \"vJHh\",\n      \"fleetArn\": \"arn:+Op7PKD&,\",\n      \"status\": \"InSync\",\n      \"greenGrassGroupId\": \"n<B*A\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:nvut@\",\n      \"name\": \"zcBI\",\n      \"fleetArn\": \"arn:\\\\$sJt\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"5\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:tzI@)S@P\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:j|V\\\\S@\",\n      \"name\": \"h-3RA5vF9\",\n      \"fleetArn\": \"arn:=&2#e\\\"\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \" \",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:<d/Z\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    },\n    {\n      \"arn\": \"arn:SR;JH\",\n      \"name\": \"3fFVU1H\",\n      \"fleetArn\": \"arn:^0\",\n      \"status\": \"Available\",\n      \"greenGrassGroupId\": \"-?i=+OsRm@\",\n      \"createdAt\": \"<dateTime>\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:oWn2\",\n      \"lastDeploymentTime\": \"<dateTime>\"\n    }\n  ],\n  \"nextToken\": \"jb.HiQx\"\n}",
+              "createdAt": "2026-07-28T10:46:26.000Z",
+              "updatedAt": "2026-07-28T10:46:26.000Z",
+              "uid": "35240-5ad1b10d-cf69-43fd-b5c0-a18daaaa2570"
+            },
+            {
+              "id": "fe164da0-79b1-4bb7-a4ad-80717f9b02ef",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listRobots"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:26.000Z",
+              "updatedAt": "2026-07-28T10:46:26.000Z",
+              "uid": "35240-fe164da0-79b1-4bb7-a4ad-80717f9b02ef"
+            },
+            {
+              "id": "beb6b4f9-8787-442a-b5ab-fa0bd757cb11",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listRobots"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:26.000Z",
+              "updatedAt": "2026-07-28T10:46:26.000Z",
+              "uid": "35240-beb6b4f9-8787-442a-b5ab-fa0bd757cb11"
+            },
+            {
+              "id": "b07ea7a9-800e-456d-93cf-67b169b13795",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listRobots"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:26.000Z",
+              "updatedAt": "2026-07-28T10:46:26.000Z",
+              "uid": "35240-b07ea7a9-800e-456d-93cf-67b169b13795"
+            },
+            {
+              "id": "ef176717-f046-4736-80b4-512140b6d4c3",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"-w_4w\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"C\",\n      \"values\": [\n        \"gv\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listRobots?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listRobots"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:26.000Z",
+              "updatedAt": "2026-07-28T10:46:26.000Z",
+              "uid": "35240-ef176717-f046-4736-80b4-512140b6d4c3"
+            }
+          ],
+          "createdAt": "2026-07-28T10:46:26.000Z",
+          "updatedAt": "2026-07-28T10:46:26.000Z",
+          "uid": "35240-f68be3b2-9f53-402d-a596-482f3b4f4191"
+        }
+      ],
+      "id": "880281a3-6676-45ed-9495-3658711e5224",
+      "createdAt": "2026-07-28T10:46:26.000Z",
+      "updatedAt": "2026-07-28T10:46:26.000Z",
+      "uid": "35240-880281a3-6676-45ed-9495-3658711e5224"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,702 @@
+{
+  "info": {
+    "_postman_id": "7cfbc402-f429-4150-ab65-a5ae03d77668",
+    "name": "AWS RoboMaker BatchDeleteWorlds CreateRobotApplication API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:03.000Z",
+    "updatedAt": "2026-07-28T10:45:04.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-7cfbc402-f429-4150-ab65-a5ae03d77668"
+  },
+  "item": [
+    {
+      "name": "createRobotApplication",
+      "item": [
+        {
+          "name": "Create Robot Application",
+          "id": "766a8355-e64c-48b2-abea-e8718ac35923",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createRobotApplication",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createRobotApplication"
+              ]
+            },
+            "description": "Creates a robot application. "
+          },
+          "response": [
+            {
+              "id": "b1fc9f90-7377-4f19-94ad-59c850c5b631",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:Qn\",\n  \"name\": \" \",\n  \"version\": \"050594\",\n  \"sources\": [\n    {\n      \"s3Bucket\": \"nl38vv9h\",\n      \"s3Key\": \"VZhVA\",\n      \"etag\": \"<string>\",\n      \"architecture\": \"ARMHF\"\n    },\n    {\n      \"s3Bucket\": \"miq0apr\",\n      \"s3Key\": \"ye1lA\",\n      \"etag\": \"<string>\",\n      \"architecture\": \"ARM64\"\n    }\n  ],\n  \"robotSoftwareSuite\": {\n    \"name\": \"ROS\",\n    \"version\": \"Kinetic\"\n  },\n  \"lastUpdatedAt\": \"<dateTime>\",\n  \"revisionId\": \"US9b415GQ\",\n  \"tags\": {\n    \"nisi52\": \"hFYv9q7tP\",\n    \"ad45\": \"\",\n    \"tempor81\": \" YVB9b7H\",\n    \"officia_f75\": \"O:9JJi\",\n    \"Lorem_5_\": \"lwWA/o2t\",\n    \"non_4\": \"IRsP-g\",\n    \"ullamco28\": \"a\",\n    \"proidentbb0\": \"HL+iNE\",\n    \"velit9c7\": \"xUQfa9=\",\n    \"ead8d\": \"2v\",\n    \"consectetura\": \"\",\n    \"eiusmod_ff9\": \"0CgF:Cw:\",\n    \"in_2\": \"-o5kXH_peg\",\n    \"sed_36\": \"\",\n    \"quis_64\": \"zWfT_pm/9\",\n    \"essec_c\": \"vJvy+n1K\",\n    \"tempor_a9\": \"T5I3S.P3\",\n    \"eiusmod_5\": \"f jp_b0d\"\n  },\n  \"environment\": {\n    \"uri\": \"3_\"\n  }\n}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-b1fc9f90-7377-4f19-94ad-59c850c5b631"
+            },
+            {
+              "id": "b5840407-bc55-4a72-8e08-b8376cbe8f5a",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-b5840407-bc55-4a72-8e08-b8376cbe8f5a"
+            },
+            {
+              "id": "71748074-3c5c-480a-99a8-03214391107f",
+              "name": "ResourceAlreadyExistsException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-71748074-3c5c-480a-99a8-03214391107f"
+            },
+            {
+              "id": "fe72c4e3-fcd6-4fea-949d-4ad3316b0db1",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-fe72c4e3-fcd6-4fea-949d-4ad3316b0db1"
+            },
+            {
+              "id": "ead16f14-308f-48d7-b039-3808831173d8",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-ead16f14-308f-48d7-b039-3808831173d8"
+            },
+            {
+              "id": "06d7f811-e97f-4106-a13c-4df448a36171",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-06d7f811-e97f-4106-a13c-4df448a36171"
+            },
+            {
+              "id": "d7619651-9301-4212-b9ba-f78889d568cb",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"tadrShRgIQ\",\n  \"robotSoftwareSuite\": {\n    \"name\": \"General\",\n    \"version\": \"Dashing\"\n  },\n  \"sources\": [\n    {\n      \"s3Bucket\": \"qr3z.w79r\",\n      \"s3Key\": \"/\",\n      \"architecture\": \"ARM64\"\n    },\n    {\n      \"s3Bucket\": \"c1t\",\n      \"s3Key\": \"~^tTX+p-\",\n      \"architecture\": \"ARMHF\"\n    }\n  ],\n  \"tags\": {\n    \"reprehenderit_e6\": \"l.mAyI\",\n    \"quisd\": \"p1qJXj\",\n    \"sit_4df\": \"Q\",\n    \"magna4_\": \"\",\n    \"proidentf\": \"bxz \",\n    \"minim_cb\": \"MUo\",\n    \"esse6_\": \"o2flC Wh\",\n    \"ut_0\": \"o\",\n    \"dolor6\": \"N\",\n    \"doloree6\": \"\",\n    \"esta0\": \"15IzsH\",\n    \"quidea\": \":vr_CY-XM\",\n    \"nullac_4\": \"5w\",\n    \"nonf1\": \"4/\",\n    \"elit38b\": \"MD7+-aU\",\n    \"fugiatf1\": \"iZQ\",\n    \"dolore_3\": \"9-\"\n  },\n  \"environment\": {\n    \"uri\": \"3J4\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createRobotApplication",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createRobotApplication"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:04.000Z",
+              "updatedAt": "2026-07-28T10:45:04.000Z",
+              "uid": "35240-d7619651-9301-4212-b9ba-f78889d568cb"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:04.000Z",
+          "updatedAt": "2026-07-28T10:45:04.000Z",
+          "uid": "35240-766a8355-e64c-48b2-abea-e8718ac35923"
+        }
+      ],
+      "id": "e549cd60-6b79-4c45-9026-eaeaa711a900",
+      "createdAt": "2026-07-28T10:45:04.000Z",
+      "updatedAt": "2026-07-28T10:45:04.000Z",
+      "uid": "35240-e549cd60-6b79-4c45-9026-eaeaa711a900"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

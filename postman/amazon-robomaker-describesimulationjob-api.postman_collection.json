@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "692a2f48-275a-421b-8a41-6ba79a29442d",
+    "name": "AWS RoboMaker BatchDeleteWorlds DescribeSimulationJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:47.000Z",
+    "updatedAt": "2026-07-28T10:45:47.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-692a2f48-275a-421b-8a41-6ba79a29442d"
+  },
+  "item": [
+    {
+      "name": "describeSimulationJob",
+      "item": [
+        {
+          "name": "Describe Simulation Job",
+          "id": "041497f8-57c5-4108-8d50-d7fb0bd4dad3",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/describeSimulationJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "describeSimulationJob"
+              ]
+            },
+            "description": "Describes a simulation job."
+          },
+          "response": [
+            {
+              "id": "0f9b8678-09c4-4c7e-8d59-533a75b45017",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeSimulationJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:{fA.z^&#8\",\n  \"name\": \"0PJvQ8K\",\n  \"status\": \"Running\",\n  \"lastStartedAt\": \"<dateTime>\",\n  \"lastUpdatedAt\": \"<dateTime>\",\n  \"failureBehavior\": \"Fail\",\n  \"failureCode\": \"WrongRegionS3Output\",\n  \"failureReason\": \"ncjP\",\n  \"clientRequestToken\": \" \",\n  \"outputLocation\": {\n    \"s3Bucket\": \"h7mr8\",\n    \"s3Prefix\": \"fIsd\"\n  },\n  \"loggingConfig\": {\n    \"recordAllRosTopics\": \"<boolean>\"\n  },\n  \"maxJobDurationInSeconds\": \"<integer>\",\n  \"simulationTimeMillis\": \"<integer>\",\n  \"iamRole\": \"arn:aws:iam::BeJ6a6t:role/-X?\",\n  \"robotApplications\": [\n    {\n      \"application\": \"arn:kY1O\",\n      \"launchConfig\": {\n        \"packageName\": \"Bp2wU\",\n        \"launchFile\": \" \",\n        \"environmentVariables\": {\n          \"nostrud_18d\": \"Z(9x\",\n          \"nostrud_8\": \"=(e%o\\\"\",\n          \"proident_7\": \"O@lqF6>\",\n          \"fugiat_bd1\": \"d\",\n          \"amet2f2\": \"=a\",\n          \"elita\": \"G\",\n          \"reprehenderit_3c5\": \"HOF;\\\\\",\n          \"labore_5\": \"~GCjILD\",\n          \"enimc\": \"e0<G\",\n          \"aliqua4\": \" \",\n          \"nisid0\": \"cy?e)vJ1\"\n        },\n        \"portForwardingConfig\": {\n          \"portMappings\": [\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            }\n          ]\n        },\n        \"streamUI\": \"<boolean>\",\n        \"command\": [\n          \"V3-X0/)^+\",\n          \"-h]aH}s\"\n        ]\n      },\n      \"applicationVersion\": \"3\",\n      \"uploadConfigurations\": [\n        {\n          \"name\": \"Uc\",\n          \"path\": \"pyfi?7!Bj2\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"5CZ4sK\",\n          \"path\": \"W\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"DTh0NnE\",\n          \"path\": \"Rymd\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"Q\",\n          \"path\": \"r\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"qzsupo\",\n          \"path\": \" T\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"sxpYY\",\n          \"path\": \"3nj]\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \" \",\n          \"path\": \"Cr7v-^$u\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"Kx8x6kKH\",\n          \"path\": \"G6~I;\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"VwAxaLz\",\n          \"path\": \"5*3Y,j3>HU\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"ldoyoRRa\",\n          \"path\": \"d5}Cu\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        }\n      ],\n      \"useDefaultUploadConfigurations\": \"<boolean>\",\n      \"tools\": [\n        {\n          \"name\": \"UTxBT\",\n          \"command\": \"5xNqT@\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"QKe\",\n          \"command\": \"`.}\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"093-9Sx2\",\n          \"command\": \"ZZ+{[,@j\\\"\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"bb-X85M\",\n          \"command\": \"BoGKYBi\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"MWV\",\n          \"command\": \"aKHEC0\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"DWfbVG7\",\n          \"command\": \"<^)E)^\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"dU4eL\",\n          \"command\": \" \",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \" \",\n          \"command\": \"zPc%c'\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"c-D\",\n          \"command\": \"7?\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"jwB03qOtT\",\n          \"command\": \"!a'^$.^TZc\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        }\n      ],\n      \"useDefaultTools\": \"<boolean>\"\n    }\n  ],\n  \"simulationApplications\": [\n    {\n      \"application\": \"arn:kcDax@8o\",\n      \"launchConfig\": {\n        \"packageName\": \"ZN\",\n        \"launchFile\": \"I0KXQA\",\n        \"environmentVariables\": {\n          \"nisia\": \"\\\"h\",\n          \"Duis_52\": \"cf_#x+SUCA\",\n          \"exercitation974\": \"]fA/{q8p\",\n          \"et_3\": \":h1p:T\",\n          \"dolor98\": \".\",\n          \"esse_1\": \" SKL#\",\n          \"sunt_ec\": \"=\",\n          \"aliquipdb\": \"F%ADS\",\n          \"enim4\": \"C4\",\n          \"veniam79\": \"BL^+<W#8kP\",\n          \"fugiatd\": \"=7\\\"mC<g\"\n        },\n        \"portForwardingConfig\": {\n          \"portMappings\": [\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            },\n            {\n              \"jobPort\": \"<integer>\",\n              \"applicationPort\": \"<integer>\",\n              \"enableOnPublicIp\": \"<boolean>\"\n            }\n          ]\n        },\n        \"streamUI\": \"<boolean>\",\n        \"command\": [\n          \"K[!k\\\\1#2j\",\n          \":1\"\n        ]\n      },\n      \"applicationVersion\": \"$LATEST\",\n      \"uploadConfigurations\": [\n        {\n          \"name\": \"TeaAJKrGTr\",\n          \"path\": \"Ov3>Q0ig\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"l0CQUXt7\",\n          \"path\": \"*[)7Wtp]\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"eo\",\n          \"path\": \"1N4l\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"cujp4bue\",\n          \"path\": \"g1c!Pr}bsh\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"uHKoquMlb\",\n          \"path\": \"Oj7$/Wb-\",\n          \"uploadBehavior\": \"UPLOAD_ROLLING_AUTO_REMOVE\"\n        },\n        {\n          \"name\": \"oguNS\",\n          \"path\": \"n}v0s\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"ULGsl4fvx\",\n          \"path\": \"c=\\\\FSY*U\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"5nCXwNg\",\n          \"path\": \"j)'AJJ\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"evhwJVW\",\n          \"path\": \"e@;#MYP][\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        },\n        {\n          \"name\": \"Hz2ppFK_u\",\n          \"path\": \"Rv&|*b'&\",\n          \"uploadBehavior\": \"UPLOAD_ON_TERMINATE\"\n        }\n      ],\n      \"worldConfigs\": [\n        {\n          \"world\": \"arn:.R\"\n        }\n      ],\n      \"useDefaultUploadConfigurations\": \"<boolean>\",\n      \"tools\": [\n        {\n          \"name\": \"4Dl3jZsdD\",\n          \"command\": \"#6 C.5q\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"yA3PUDs\",\n          \"command\": \"3\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"xRUsaVZ\",\n          \"command\": \"-jD;\\\\\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"L7WiIJkvdv\",\n          \"command\": \"|$KH#\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"08FAdPiM\",\n          \"command\": \"pxTn3%jS\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"V\",\n          \"command\": \"L\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"Wh1jy6hGIE\",\n          \"command\": \"ug2\\\"G\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \" \",\n          \"command\": \"xOhg\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        },\n        {\n          \"name\": \"S\",\n          \"command\": \"$yy3C\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"FAIL\"\n        },\n        {\n          \"name\": \"qxwThBkSwV\",\n          \"command\": \"#mZc\",\n          \"streamUI\": \"<boolean>\",\n          \"streamOutputToCloudWatch\": \"<boolean>\",\n          \"exitBehavior\": \"RESTART\"\n        }\n      ],\n      \"useDefaultTools\": \"<boolean>\"\n    }\n  ],\n  \"dataSources\": [\n    {\n      \"name\": \"EES\",\n      \"s3Bucket\": \"znsf\",\n      \"s3Keys\": [\n        {\n          \"s3Key\": \",BGH\",\n          \"etag\": \"<string>\"\n        },\n        {\n          \"s3Key\": \"\",\n          \"etag\": \"<string>\"\n        }\n      ],\n      \"type\": \"Prefix\",\n      \"destination\": \"oF.tAUs \"\n    },\n    {\n      \"name\": \"one4pP\",\n      \"s3Bucket\": \"jnjn\",\n      \"s3Keys\": [\n        {\n          \"s3Key\": \"S.xzt]s\",\n          \"etag\": \"<string>\"\n        },\n        {\n          \"s3Key\": \"+\",\n          \"etag\": \"<string>\"\n        }\n      ],\n      \"type\": \"Prefix\",\n      \"destination\": \"{^rM_c\"\n    }\n  ],\n  \"tags\": {\n    \"exercitation7\": \"\",\n    \"exercitation_168\": \"C\",\n    \"aute_1bf\": \"F\",\n    \"sit6\": \"sxEA2c=\",\n    \"consectetur_b3\": \"\",\n    \"pariatur__d\": \"p+F\",\n    \"enim_36_\": \"NfpNqgWZ\",\n    \"culpa_ac\": \"_1H/L6t\",\n    \"in049\": \".6P:\",\n    \"in8\": \"\",\n    \"elit_a5\": \"/T49LYR\",\n    \"do_00\": \"uU=nb\",\n    \"Duis0__\": \"yS_vb\",\n    \"cillum8\": \"4HA/xf3Pq9\",\n    \"irure13\": \"we\",\n    \"elit_0a\": \"1+8f\",\n    \"voluptate_f\": \"4e+nF9\",\n    \"officia_9\": \"Gtr1IxzQ\",\n    \"ametb1\": \"\",\n    \"Excepteur_6e2\": \"_4\",\n    \"etea\": \"\",\n    \"aliqua_7_2\": \"WCLEUAn\",\n    \"cupidatatc4f\": \"oe8\",\n    \"in2c\": \"KMz\",\n    \"exercitation48\": \"v1\",\n    \"laboris_a64\": \"\",\n    \"consequat6\": \"kyMDqLTTeY\",\n    \"ipsum_361\": \"wZAMW\",\n    \"id_c3\": \"\",\n    \"incididunt_30\": \"jMgW:\",\n    \"nonb1f\": \"3xUAk\",\n    \"laborum4d7\": \"8Z40SPMt\",\n    \"proident_f\": \"ms\",\n    \"cillum_8d\": \"0p569I2\",\n    \"consectetur_fb\": \"x_QK\",\n    \"Lorem6f3\": \"i4=w\",\n    \"occaecat87f\": \"ZDl5Jj\",\n    \"magna_d8\": \":Y=0\",\n    \"ullamco_56\": \"Nl\",\n    \"irure_823\": \"Oc0- RBKN\",\n    \"ut2\": \"u\",\n    \"in_b_9\": \"3oJb\"\n  },\n  \"vpcConfig\": {\n    \"subnets\": [\n      \"SC\"\n    ],\n    \"securityGroups\": [\n      \"]duw\"\n    ],\n    \"vpcId\": \"M4ERXVB\",\n    \"assignPublicIp\": \"<boolean>\"\n  },\n  \"networkInterface\": {\n    \"networkInterfaceId\": \"\",\n    \"privateIpAddress\": \"\",\n    \"publicIpAddress\": \"\"\n  },\n  \"compute\": {\n    \"simulationUnitLimit\": \"<integer>\",\n    \"computeType\": \"GPU_AND_CPU\",\n    \"gpuUnitLimit\": \"<integer>\"\n  }\n}",
+              "createdAt": "2026-07-28T10:45:48.000Z",
+              "updatedAt": "2026-07-28T10:45:48.000Z",
+              "uid": "35240-0f9b8678-09c4-4c7e-8d59-533a75b45017"
+            },
+            {
+              "id": "3a536b58-da4e-465d-8015-606e7162de1b",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:48.000Z",
+              "updatedAt": "2026-07-28T10:45:48.000Z",
+              "uid": "35240-3a536b58-da4e-465d-8015-606e7162de1b"
+            },
+            {
+              "id": "c75fd5b0-87a6-4276-ac83-3c075f6bfa05",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:48.000Z",
+              "updatedAt": "2026-07-28T10:45:48.000Z",
+              "uid": "35240-c75fd5b0-87a6-4276-ac83-3c075f6bfa05"
+            },
+            {
+              "id": "4b2bde2c-c6da-4722-82c1-3873758a2557",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:48.000Z",
+              "updatedAt": "2026-07-28T10:45:48.000Z",
+              "uid": "35240-4b2bde2c-c6da-4722-82c1-3873758a2557"
+            },
+            {
+              "id": "cc1cdd95-698a-43a2-b556-a8092ba04dd0",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:%2:>q\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeSimulationJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeSimulationJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:48.000Z",
+              "updatedAt": "2026-07-28T10:45:48.000Z",
+              "uid": "35240-cc1cdd95-698a-43a2-b556-a8092ba04dd0"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:48.000Z",
+          "updatedAt": "2026-07-28T10:45:48.000Z",
+          "uid": "35240-041497f8-57c5-4108-8d50-d7fb0bd4dad3"
+        }
+      ],
+      "id": "a55940f0-735c-4a16-b313-3c56d79e9098",
+      "createdAt": "2026-07-28T10:45:48.000Z",
+      "updatedAt": "2026-07-28T10:45:48.000Z",
+      "uid": "35240-a55940f0-735c-4a16-b313-3c56d79e9098"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "135f99d5-a5b9-4df4-bd75-4512ed7c60b0",
+    "name": "AWS RoboMaker BatchDeleteWorlds DescribeDeploymentJob API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:45:30.000Z",
+    "updatedAt": "2026-07-28T10:45:31.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-135f99d5-a5b9-4df4-bd75-4512ed7c60b0"
+  },
+  "item": [
+    {
+      "name": "describeDeploymentJob",
+      "item": [
+        {
+          "name": "Describe Deployment Job",
+          "id": "94353c3e-3cdb-4de2-8f5e-12c07ec2105b",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/describeDeploymentJob",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "describeDeploymentJob"
+              ]
+            },
+            "description": "<p>Describes a deployment job.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>"
+          },
+          "response": [
+            {
+              "id": "f90111e4-a83f-48f0-a375-76a29c5d0fc8",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeDeploymentJob"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:E+/)|\",\n  \"fleet\": \"arn:7D\",\n  \"status\": \"Preparing\",\n  \"deploymentConfig\": {\n    \"concurrentDeploymentPercentage\": \"<integer>\",\n    \"failureThresholdPercentage\": \"<integer>\",\n    \"robotDeploymentTimeoutInSeconds\": \"<integer>\",\n    \"downloadConditionFile\": {\n      \"bucket\": \"lf4jjj-r6zwl\",\n      \"key\": \"KtI?3dh-k\",\n      \"etag\": \"<string>\"\n    }\n  },\n  \"deploymentApplicationConfigs\": [\n    {\n      \"application\": \"arn:\",\n      \"applicationVersion\": \"04043\",\n      \"launchConfig\": {\n        \"packageName\": \" \",\n        \"launchFile\": \"rTDY\",\n        \"preLaunchFile\": \"4aPQ(%E\",\n        \"postLaunchFile\": \"\\\">rMh+XnG\",\n        \"environmentVariables\": {\n          \"veniam_f7f\": \"3SbXn'p\",\n          \"in_7\": \"^BSNe,$\",\n          \"ex_f3a\": \"i~5@4`w)tf\",\n          \"cillum_5\": \"{_\",\n          \"minim4ac\": \"V\",\n          \"aliquipb9\": \"}s}KPffa\\\\z\",\n          \"fugiat_b7\": \"F?\",\n          \"magna_6\": \"~\",\n          \"in_ae\": \"4.7\",\n          \"euef_\": \"/7~%7-ddy\",\n          \"elitd8\": \"-I<<|\",\n          \"sedc\": \"Z5-\",\n          \"ex6\": \"p\\\\ qE\",\n          \"voluptate5\": \"; Oco>\",\n          \"ut_e5\": \"Xh'~WTl9u\",\n          \"ut6d\": \"PF0\\\"5\",\n          \"culpa_b\": \"2BzKUz;\",\n          \"dolor5\": \" \",\n          \"proident_4d\": \"oYwtI,4v\"\n        }\n      }\n    }\n  ],\n  \"failureReason\": \"^tvrau#^RX\",\n  \"failureCode\": \"MissingRobotApplicationArchitecture\",\n  \"createdAt\": \"<dateTime>\",\n  \"robotDeploymentSummary\": [\n    {\n      \"arn\": \"arn:_Ug*3t4\",\n      \"deploymentStartTime\": \"<dateTime>\",\n      \"deploymentFinishTime\": \"<dateTime>\",\n      \"status\": \"NoResponse\",\n      \"progressDetail\": {\n        \"currentProgress\": \"ExecutingDownloadCondition\",\n        \"percentDone\": \"<float>\",\n        \"estimatedTimeRemainingSeconds\": \"<integer>\",\n        \"targetResource\": \"e$FHgQr\"\n      },\n      \"failureReason\": \"I>dkUXs\",\n      \"failureCode\": \"RobotDeploymentNoResponse\"\n    },\n    {\n      \"arn\": \"arn:$2CNhv.1\",\n      \"deploymentStartTime\": \"<dateTime>\",\n      \"deploymentFinishTime\": \"<dateTime>\",\n      \"status\": \"PendingNewDeployment\",\n      \"progressDetail\": {\n        \"currentProgress\": \"Launching\",\n        \"percentDone\": \"<float>\",\n        \"estimatedTimeRemainingSeconds\": \"<integer>\",\n        \"targetResource\": \"Vl~* D\"\n      },\n      \"failureReason\": \"Z;NJs2+s\",\n      \"failureCode\": \"MissingRobotDeploymentResource\"\n    }\n  ],\n  \"tags\": {\n    \"culpa1\": \"_Nj_\",\n    \"occaecat_63b\": \"l20tNPm\",\n    \"eiusmod__\": \"DWAIExW6\",\n    \"adipisicing9a8\": \"xK\",\n    \"consequat1\": \"tkLI/Oubk\",\n    \"velit40\": \"a\",\n    \"proident2\": \"+srpR3\",\n    \"laborum_428\": \"T5\",\n    \"reprehenderit_b5\": \"-ulTw33Gnd\",\n    \"cupidatat_3\": \"3u1B.P4\",\n    \"voluptate_824\": \"bEwFFu_\",\n    \"nisi43\": \"1xPeYb\",\n    \"ex_7aa\": \"/FSGHyOANN\",\n    \"dolore6bc\": \"BcuFo_EEo\",\n    \"consequat__1\": \"86cO/Ux1\",\n    \"adipisicing__f\": \"Z+-I9hMf\",\n    \"quis_a\": \"O0dCqzwK\",\n    \"anim_3\": \"c\",\n    \"dolor_b1\": \"o.Lr\",\n    \"utf7\": \"/D\",\n    \"aute_1c\": \"Kh5.x n\",\n    \"Lorem2ec\": \"y\",\n    \"et_87\": \"uZBYO:Ve.\",\n    \"Lorema8c\": \"\",\n    \"incididunt_7e6\": \"EF.\",\n    \"do4_\": \"\",\n    \"ea87e\": \"lyPW-gv-C\",\n    \"magna7c\": \"t\",\n    \"voluptate_fe2\": \"JMNLh+\",\n    \"Duisa7\": \"IE\",\n    \"ipsuma\": \"yu1\",\n    \"sint_26\": \"EzzDuE\",\n    \"Lorem_84\": \"\",\n    \"consequat_8d\": \"gtLF20l\",\n    \"commodo_e08\": \"UNZ\",\n    \"officia_a\": \"PAu-N\"\n  }\n}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-f90111e4-a83f-48f0-a375-76a29c5d0fc8"
+            },
+            {
+              "id": "8cf1bc6e-70cc-48d1-87fc-650e2f35b632",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-8cf1bc6e-70cc-48d1-87fc-650e2f35b632"
+            },
+            {
+              "id": "253986fc-3729-4999-ba33-4aaa245cf230",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-253986fc-3729-4999-ba33-4aaa245cf230"
+            },
+            {
+              "id": "cfa06d6d-763d-4a7e-913c-90a1a838d59b",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-cfa06d6d-763d-4a7e-913c-90a1a838d59b"
+            },
+            {
+              "id": "a414913c-382d-43b9-879b-5047c3f785ef",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"job\": \"arn:U~4Wtw.B$P\"\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/describeDeploymentJob",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "describeDeploymentJob"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:45:31.000Z",
+              "updatedAt": "2026-07-28T10:45:31.000Z",
+              "uid": "35240-a414913c-382d-43b9-879b-5047c3f785ef"
+            }
+          ],
+          "createdAt": "2026-07-28T10:45:31.000Z",
+          "updatedAt": "2026-07-28T10:45:31.000Z",
+          "uid": "35240-94353c3e-3cdb-4de2-8f5e-12c07ec2105b"
+        }
+      ],
+      "id": "d137154c-b248-4b85-87db-1efc5e0f3cf6",
+      "createdAt": "2026-07-28T10:45:31.000Z",
+      "updatedAt": "2026-07-28T10:45:31.000Z",
+      "uid": "35240-d137154c-b248-4b85-87db-1efc5e0f3cf6"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

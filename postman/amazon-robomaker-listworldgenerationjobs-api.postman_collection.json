@@ -1,0 +1,516 @@
+{
+  "info": {
+    "_postman_id": "6296f9a4-ff96-42da-a828-0d36009e1176",
+    "name": "AWS RoboMaker BatchDeleteWorlds ListWorldGenerationJobs API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:46:32.000Z",
+    "updatedAt": "2026-07-28T10:46:32.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-6296f9a4-ff96-42da-a828-0d36009e1176"
+  },
+  "item": [
+    {
+      "name": "listWorldGenerationJobs",
+      "item": [
+        {
+          "name": "List World Generation Jobs",
+          "id": "c10612a1-b635-4c23-b678-696d0ad83167",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"nextToken\": \"y2yMV63DK\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"RL0MjOvOQ\",\n      \"values\": [\n        \"m\"\n      ]\n    }\n  ]\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/listWorldGenerationJobs?maxResults=<string>&nextToken=<string>",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "listWorldGenerationJobs"
+              ],
+              "query": [
+                {
+                  "description": "Pagination limit",
+                  "key": "maxResults",
+                  "value": "<string>"
+                },
+                {
+                  "description": "Pagination token",
+                  "key": "nextToken",
+                  "value": "<string>"
+                }
+              ]
+            },
+            "description": "Lists world generator jobs."
+          },
+          "response": [
+            {
+              "id": "5a2cc6e2-8581-4a29-bb7d-631ca034dd4d",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"y2yMV63DK\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"RL0MjOvOQ\",\n      \"values\": [\n        \"m\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listWorldGenerationJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listWorldGenerationJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"worldGenerationJobSummaries\": [\n    {\n      \"arn\": \"arn:;U#o8=p!1\\\"\",\n      \"template\": \"arn:E~u\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:n*m|.!_\",\n      \"template\": \"arn:Z~C\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"PartialFailed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:H~`Uu%*!\",\n      \"template\": \"arn:xnOx/i@@5\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:yoO\",\n      \"template\": \"arn:$:D[TH\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:jy{9\",\n      \"template\": \"arn:;zU\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:B'9qi~\",\n      \"template\": \"arn:Lw2y7\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Failed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:KpX.CE6y\",\n      \"template\": \"arn:\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Pending\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:NbBl1\",\n      \"template\": \"arn:E$I3N\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Failed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:[N$Qg\",\n      \"template\": \"arn:T)LAyEYb\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Canceling\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:ii!8\",\n      \"template\": \"arn:|u~\\\"{\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Canceling\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:Vjw\",\n      \"template\": \"arn:&NR(3N:^k\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Failed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:1(D!?<\",\n      \"template\": \"arn:2>b~a[\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Failed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:pWmK(S\",\n      \"template\": \"arn:[s~&\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:)A\",\n      \"template\": \"arn:X&!YKNuk\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Canceled\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"template\": \"arn:pqBH.x{`),\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Pending\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"template\": \"arn:PZ8\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Canceling\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:of\",\n      \"template\": \"arn:]{KI\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"PartialFailed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:$INsNYF:\",\n      \"template\": \"arn:-Dv/gu\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Running\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:KadrYi`\",\n      \"template\": \"arn:zM(O).,:>\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Failed\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    },\n    {\n      \"arn\": \"arn:n1\",\n      \"template\": \"arn:3Q6=7>.6\",\n      \"createdAt\": \"<dateTime>\",\n      \"status\": \"Pending\",\n      \"worldCount\": {\n        \"floorplanCount\": \"<integer>\",\n        \"interiorCountPerFloorplan\": \"<integer>\"\n      },\n      \"succeededWorldCount\": \"<integer>\",\n      \"failedWorldCount\": \"<integer>\"\n    }\n  ],\n  \"nextToken\": \"t8.\"\n}",
+              "createdAt": "2026-07-28T10:46:33.000Z",
+              "updatedAt": "2026-07-28T10:46:33.000Z",
+              "uid": "35240-5a2cc6e2-8581-4a29-bb7d-631ca034dd4d"
+            },
+            {
+              "id": "37743f9a-40e0-456c-9844-3fe4643406f7",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"y2yMV63DK\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"RL0MjOvOQ\",\n      \"values\": [\n        \"m\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listWorldGenerationJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listWorldGenerationJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:33.000Z",
+              "updatedAt": "2026-07-28T10:46:33.000Z",
+              "uid": "35240-37743f9a-40e0-456c-9844-3fe4643406f7"
+            },
+            {
+              "id": "4098c70b-964f-44c1-bd46-73c87a3a63d4",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"y2yMV63DK\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"RL0MjOvOQ\",\n      \"values\": [\n        \"m\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listWorldGenerationJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listWorldGenerationJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:33.000Z",
+              "updatedAt": "2026-07-28T10:46:33.000Z",
+              "uid": "35240-4098c70b-964f-44c1-bd46-73c87a3a63d4"
+            },
+            {
+              "id": "b745d7a1-570e-4947-b5f9-b3d9da8373a2",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"nextToken\": \"y2yMV63DK\",\n  \"maxResults\": \"<integer>\",\n  \"filters\": [\n    {\n      \"name\": \"RL0MjOvOQ\",\n      \"values\": [\n        \"m\"\n      ]\n    }\n  ]\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/listWorldGenerationJobs?maxResults=<string>&nextToken=<string>",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "listWorldGenerationJobs"
+                  ],
+                  "query": [
+                    {
+                      "description": "Pagination limit",
+                      "key": "maxResults",
+                      "value": "<string>"
+                    },
+                    {
+                      "description": "Pagination token",
+                      "key": "nextToken",
+                      "value": "<string>"
+                    }
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:46:33.000Z",
+              "updatedAt": "2026-07-28T10:46:33.000Z",
+              "uid": "35240-b745d7a1-570e-4947-b5f9-b3d9da8373a2"
+            }
+          ],
+          "createdAt": "2026-07-28T10:46:33.000Z",
+          "updatedAt": "2026-07-28T10:46:33.000Z",
+          "uid": "35240-c10612a1-b635-4c23-b678-696d0ad83167"
+        }
+      ],
+      "id": "73263ab2-051c-4f64-a2bd-486b406b29e3",
+      "createdAt": "2026-07-28T10:46:33.000Z",
+      "updatedAt": "2026-07-28T10:46:33.000Z",
+      "uid": "35240-73263ab2-051c-4f64-a2bd-486b406b29e3"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}

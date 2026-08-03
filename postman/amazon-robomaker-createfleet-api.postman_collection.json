@@ -1,0 +1,538 @@
+{
+  "info": {
+    "_postman_id": "52d3c5bd-93f5-48b0-b7ae-6684a08d81bd",
+    "name": "AWS RoboMaker BatchDeleteWorlds CreateFleet API",
+    "description": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "createdAt": "2026-07-28T10:44:39.000Z",
+    "updatedAt": "2026-07-28T10:44:39.000Z",
+    "lastUpdatedBy": "35240",
+    "uid": "35240-52d3c5bd-93f5-48b0-b7ae-6684a08d81bd"
+  },
+  "item": [
+    {
+      "name": "createFleet",
+      "item": [
+        {
+          "name": "Create Fleet",
+          "id": "0e723018-d47b-43e8-b03c-c449f3e9fd69",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Date",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Algorithm",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Credential",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Security-Token",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-Signature",
+                "value": "<string>"
+              },
+              {
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "headerFamily": "json",
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{baseUrl}}/createFleet",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "createFleet"
+              ]
+            },
+            "description": "<p>Creates a fleet, a logical group of robots running the same robot application.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>"
+          },
+          "response": [
+            {
+              "id": "84a7b5f7-0859-4738-8dd4-a3342ca95787",
+              "name": "Success",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createFleet",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createFleet"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n  \"arn\": \"arn:Df}?aV\",\n  \"name\": \"ZEONH\",\n  \"createdAt\": \"<dateTime>\",\n  \"tags\": {\n    \"do_a\": \"1\",\n    \"fugiatc\": \"h0KE-AJI19\",\n    \"cupidatat0f\": \"B=WfkQ+qH\",\n    \"quid1\": \"ICsZuLp=e\",\n    \"sit_bbf\": \"-ontQL\",\n    \"id_1e7\": \"8n\",\n    \"labore__\": \"n2DxSu=.\",\n    \"occaecat_2e5\": \"bvbY\",\n    \"voluptate_67\": \" B9xU\",\n    \"veniam_67\": \"c=1Et\",\n    \"in_e47\": \" nrcFn\",\n    \"magna_d1c\": \"//hTty\",\n    \"utc\": \"D-s\",\n    \"nostrudb\": \"z\",\n    \"proident_5e\": \"Q4n3uBoeKs\",\n    \"sit9\": \"_PiR\",\n    \"Lorem_d34\": \"Xm\",\n    \"temporc\": \"=msruWQf\",\n    \"dolore_9\": \"DI0k0DqN0\",\n    \"aliquip_4d_\": \"sVfaQQ\",\n    \"in_998\": \"W/+qWfI\",\n    \"sit5\": \"_0K:q\",\n    \"mollit396\": \"wh8JA\",\n    \"sunt_69\": \"GNmm\",\n    \"Ut_6\": \"q8ZlY2V5\",\n    \"non38c\": \"lQZwxof1\",\n    \"in7c\": \"5+/\",\n    \"dolor_47\": \"H\",\n    \"Duis_dd\": \"aim/PbR=\",\n    \"eiusmodd\": \"gk\",\n    \"consectetur_76a\": \"EX1X70r=r-\",\n    \"dolore_d\": \"s\",\n    \"reprehenderit_a\": \"t_XT.Ftbgq\",\n    \"fugiat_a\": \"\",\n    \"pariaturc\": \"uQiGYN.AEf\",\n    \"in_4d\": \"VP6tUnjd\",\n    \"eu_c5\": \"9\",\n    \"occaecat1\": \"i19F2h3.V\",\n    \"elit_eb_\": \"OY\",\n    \"Excepteur_46\": \"jnZ:wV\",\n    \"mollitf6\": \"LxYrmP/\",\n    \"cillum_0\": \"426l0Ua\",\n    \"nullac69\": \"/9z=R\",\n    \"Ut_7\": \"\",\n    \"tempor_54\": \"9\",\n    \"pariatur_711\": \":_Z\"\n  }\n}",
+              "createdAt": "2026-07-28T10:44:40.000Z",
+              "updatedAt": "2026-07-28T10:44:40.000Z",
+              "uid": "35240-84a7b5f7-0859-4738-8dd4-a3342ca95787"
+            },
+            {
+              "id": "ac36255d-6b40-495d-8e4b-22a4d3e83c59",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createFleet",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createFleet"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:40.000Z",
+              "updatedAt": "2026-07-28T10:44:40.000Z",
+              "uid": "35240-ac36255d-6b40-495d-8e4b-22a4d3e83c59"
+            },
+            {
+              "id": "bf76aa4e-f9c3-4e5d-9a02-dcd52d92cbfc",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createFleet",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createFleet"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:40.000Z",
+              "updatedAt": "2026-07-28T10:44:40.000Z",
+              "uid": "35240-bf76aa4e-f9c3-4e5d-9a02-dcd52d92cbfc"
+            },
+            {
+              "id": "24c4766e-7e86-460f-8822-5b827635786b",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createFleet",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createFleet"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:40.000Z",
+              "updatedAt": "2026-07-28T10:44:40.000Z",
+              "uid": "35240-24c4766e-7e86-460f-8822-5b827635786b"
+            },
+            {
+              "id": "0b92b673-d4a0-49e6-8578-894b691cb477",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "method": "POST",
+                "header": [
+                  {
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Date",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Credential",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-Signature",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>"
+                  },
+                  {
+                    "key": "Content-Type",
+                    "value": "application/json"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  },
+                  {
+                    "description": "Added as a part of security scheme: apikey",
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  }
+                ],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"Rx364r\",\n  \"tags\": {\n    \"id_9\": \"\",\n    \"eiusmod_94\": \"=W Ts\",\n    \"voluptate_f\": \"nZ_k\",\n    \"qui_25\": \"RPTr8bNY\",\n    \"amet_345\": \"I:PY5M\",\n    \"mollit2f7\": \"6ASjnKW8\",\n    \"autef6\": \"klL\",\n    \"aliquip_038\": \".\",\n    \"veniam_5b\": \"glfR0X6u\",\n    \"do_de\": \"h\",\n    \"laborum_de\": \"N9\",\n    \"sunt_6\": \"UfS\",\n    \"voluptate_4\": \"1Y3N.7ic\",\n    \"enim16\": \"Gfb\",\n    \"nisi_4cf\": \"7wp1t-/\",\n    \"sed_d3\": \"\",\n    \"nisi_0\": \"6\",\n    \"nisi_5_\": \"jE=j5gf\",\n    \"eiusmod54\": \"4MfS18y0 v\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "headerFamily": "json",
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{baseUrl}}/createFleet",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "createFleet"
+                  ]
+                }
+              },
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{}",
+              "createdAt": "2026-07-28T10:44:40.000Z",
+              "updatedAt": "2026-07-28T10:44:40.000Z",
+              "uid": "35240-0b92b673-d4a0-49e6-8578-894b691cb477"
+            }
+          ],
+          "createdAt": "2026-07-28T10:44:40.000Z",
+          "updatedAt": "2026-07-28T10:44:40.000Z",
+          "uid": "35240-0e723018-d47b-43e8-b03c-c449f3e9fd69"
+        }
+      ],
+      "id": "a1abe25e-c1d1-4aa6-9b82-b254b652d71b",
+      "createdAt": "2026-07-28T10:44:40.000Z",
+      "updatedAt": "2026-07-28T10:44:40.000Z",
+      "uid": "35240-a1abe25e-c1d1-4aa6-9b82-b254b652d71b"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization",
+        "type": "string"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}",
+        "type": "string"
+      },
+      {
+        "key": "in",
+        "value": "header",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "region",
+      "value": "us-east-1"
+    },
+    {
+      "key": "baseUrl",
+      "value": "http://robomaker.{{region}}.amazonaws.com"
+    }
+  ]
+}
