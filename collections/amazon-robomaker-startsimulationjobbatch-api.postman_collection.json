@@ -1,0 +1,750 @@
+{
+  "item": [
+    {
+      "id": "c4e4303a-c686-4a3f-a8e9-e1b118496bb0",
+      "name": "StartSimulationJobBatch",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "505cbded-6be8-4d5a-aa92-f65e8933b977",
+          "name": "Start Simulation Job Batch",
+          "request": {
+            "name": "Start Simulation Job Batch",
+            "description": {
+              "content": "Starts a new simulation job batch. The batch is defined using one or more <code>SimulationJobRequest</code> objects. ",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "startSimulationJobBatch"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\",\n    \"key_11\": \"<string>\",\n    \"key_12\": \"<string>\",\n    \"key_13\": \"<string>\",\n    \"key_14\": \"<string>\",\n    \"key_15\": \"<string>\",\n    \"key_16\": \"<string>\",\n    \"key_17\": \"<string>\",\n    \"key_18\": \"<string>\",\n    \"key_19\": \"<string>\",\n    \"key_20\": \"<string>\",\n    \"key_21\": \"<string>\",\n    \"key_22\": \"<string>\",\n    \"key_23\": \"<string>\",\n    \"key_24\": \"<string>\",\n    \"key_25\": \"<string>\",\n    \"key_26\": \"<string>\",\n    \"key_27\": \"<string>\",\n    \"key_28\": \"<string>\",\n    \"key_29\": \"<string>\",\n    \"key_30\": \"<string>\",\n    \"key_31\": \"<string>\",\n    \"key_32\": \"<string>\",\n    \"key_33\": \"<string>\",\n    \"key_34\": \"<string>\",\n    \"key_35\": \"<string>\"\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "9474981d-20f8-4cd9-94f6-8cfb4f029497",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"arn\": \"arn:\",\n  \"status\": \"Pending\",\n  \"createdAt\": \"1988-02-03T22:21:31.799Z\",\n  \"clientRequestToken\": \"C1\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"failureCode\": \"InternalServiceError\",\n  \"failureReason\": \"{4|O]n 2\",\n  \"failedRequests\": [\n    {\n      \"request\": {\n        \"maxJobDurationInSeconds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"outputLocation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"loggingConfig\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"iamRole\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"failureBehavior\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useDefaultApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"robotApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"simulationApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dataSources\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vpcConfig\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"compute\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"failureReason\": \"+jM,<\",\n      \"failureCode\": \"SimulationApplicationHealthCheckFailure\",\n      \"failedAt\": \"1980-05-27T16:49:36.297Z\"\n    },\n    {\n      \"request\": {\n        \"maxJobDurationInSeconds\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"outputLocation\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"loggingConfig\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"iamRole\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"failureBehavior\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"useDefaultApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"robotApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"simulationApplications\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"dataSources\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"vpcConfig\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"compute\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"tags\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"failureReason\": \"3Y[\\\\oC\",\n      \"failureCode\": \"WrongRegionRobotApplication\",\n      \"failedAt\": \"1956-08-06T16:13:30.277Z\"\n    }\n  ],\n  \"pendingRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"description\": \"The S3 bucket for output.\"\n        },\n        \"s3Prefix\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"description\": \"The S3 folder in the <code>s3Bucket</code> where output files will be placed.\"\n        }\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"deprecated\": true,\n          \"description\": \"<p>A boolean indicating whether to record all ROS topics.</p> <important> <p>This API is no longer supported and will throw an error if used.</p> </important>AWS RoboMaker is ending support for ROS software suite. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/software-support-policy.html.\"\n        }\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"description\": \"A list of one or more subnet IDs in your VPC.\"\n        },\n        \"securityGroups\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"description\": \"A list of one or more security groups IDs in your VPC.\"\n        },\n        \"assignPublicIp\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\",\n          \"description\": \"A boolean indicating whether to assign a public IP address.\"\n        }\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"computeType\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"gpuUnitLimit\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      },\n      \"tags\": {\n        \"key_0\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        \"key_1\": {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      }\n    }\n  ],\n  \"createdRequests\": [\n    {\n      \"arn\": \"arn:\",\n      \"lastUpdatedAt\": \"1947-11-15T17:12:06.876Z\",\n      \"name\": \"L-cukySA\",\n      \"status\": \"RunningFailed\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:2J2||$\",\n      \"lastUpdatedAt\": \"1997-12-29T09:36:17.199Z\",\n      \"name\": \"_7ig465I\",\n      \"status\": \"Running\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:-SS/7{fh]*\",\n      \"lastUpdatedAt\": \"1960-01-26T04:13:06.916Z\",\n      \"name\": \"IDi\",\n      \"status\": \"Terminated\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:$kqmq79o2\",\n      \"lastUpdatedAt\": \"2004-12-07T03:26:49.048Z\",\n      \"name\": \"THQcEioi\",\n      \"status\": \"Canceled\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:2-+w9Q@A7>\",\n      \"lastUpdatedAt\": \"1966-04-25T12:54:08.353Z\",\n      \"name\": \"T\",\n      \"status\": \"Completed\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:Y=\\\\Kzsd=\",\n      \"lastUpdatedAt\": \"1946-12-18T07:44:56.564Z\",\n      \"name\": \"CZxhMp\",\n      \"status\": \"Pending\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:[(e,cqFk\",\n      \"lastUpdatedAt\": \"1973-01-01T18:01:22.212Z\",\n      \"name\": \"Bn2rlA2\",\n      \"status\": \"Restarting\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"lastUpdatedAt\": \"2006-07-28T05:27:07.789Z\",\n      \"name\": \"X\",\n      \"status\": \"Terminating\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:+vH7`HkD]W\",\n      \"lastUpdatedAt\": \"1975-06-06T20:48:33.770Z\",\n      \"name\": \"5s\",\n      \"status\": \"Terminated\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:\",\n      \"lastUpdatedAt\": \"1995-11-06T12:45:06.073Z\",\n      \"name\": \"1tV2VUdGAy\",\n      \"status\": \"Canceled\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:Xz6*u_\",\n      \"lastUpdatedAt\": \"1961-11-28T11:45:08.950Z\",\n      \"name\": \"fpXEUjIX-\",\n      \"status\": \"Pending\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:5$5),EKd-\",\n      \"lastUpdatedAt\": \"1988-01-03T12:09:05.768Z\",\n      \"name\": \"DY7_SFaw\",\n      \"status\": \"Terminated\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:7tXhQ\",\n      \"lastUpdatedAt\": \"2008-02-24T12:46:31.381Z\",\n      \"name\": \"Se_RR\",\n      \"status\": \"Canceled\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:L\\\")%42\",\n      \"lastUpdatedAt\": \"1989-06-15T11:40:02.410Z\",\n      \"name\": \" \",\n      \"status\": \"Canceled\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:zt\",\n      \"lastUpdatedAt\": \"1994-08-24T08:01:20.396Z\",\n      \"name\": \"kW\",\n      \"status\": \"Completed\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:{JI\",\n      \"lastUpdatedAt\": \"1970-04-27T15:00:43.167Z\",\n      \"name\": \"Vpom2qGtGw\",\n      \"status\": \"Preparing\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:kXu\",\n      \"lastUpdatedAt\": \"1974-08-19T00:23:33.114Z\",\n      \"name\": \"MgK\",\n      \"status\": \"Running\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:I,;/%!X[Y5\",\n      \"lastUpdatedAt\": \"1999-07-31T11:08:58.244Z\",\n      \"name\": \"U6Cc\",\n      \"status\": \"Failed\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:+2E&VP\",\n      \"lastUpdatedAt\": \"1977-02-12T03:52:03.523Z\",\n      \"name\": \"scA06p\",\n      \"status\": \"Canceled\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    },\n    {\n      \"arn\": \"arn:@YWg{]/WA0\",\n      \"lastUpdatedAt\": \"1970-04-29T16:11:31.522Z\",\n      \"name\": \"3d\",\n      \"status\": \"Failed\",\n      \"simulationApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"robotApplicationNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"dataSourceNames\": [\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        },\n        {\n          \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n        }\n      ],\n      \"computeType\": \"<string>\"\n    }\n  ],\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\",\n    \"key_11\": \"<string>\",\n    \"key_12\": \"<string>\",\n    \"key_13\": \"<string>\",\n    \"key_14\": \"<string>\",\n    \"key_15\": \"<string>\",\n    \"key_16\": \"<string>\",\n    \"key_17\": \"<string>\",\n    \"key_18\": \"<string>\",\n    \"key_19\": \"<string>\",\n    \"key_20\": \"<string>\",\n    \"key_21\": \"<string>\",\n    \"key_22\": \"<string>\",\n    \"key_23\": \"<string>\",\n    \"key_24\": \"<string>\",\n    \"key_25\": \"<string>\",\n    \"key_26\": \"<string>\",\n    \"key_27\": \"<string>\",\n    \"key_28\": \"<string>\",\n    \"key_29\": \"<string>\",\n    \"key_30\": \"<string>\",\n    \"key_31\": \"<string>\",\n    \"key_32\": \"<string>\",\n    \"key_33\": \"<string>\",\n    \"key_34\": \"<string>\",\n    \"key_35\": \"<string>\",\n    \"key_36\": \"<string>\",\n    \"key_37\": \"<string>\",\n    \"key_38\": \"<string>\",\n    \"key_39\": \"<string>\",\n    \"key_40\": \"<string>\",\n    \"key_41\": \"<string>\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "7afbe0f9-e799-4d32-ab60-f078c0b8c530",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8e9f6cfb-f9b3-474f-a41b-5ac32b289bc1",
+              "name": "LimitExceededException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8b68c2f4-fa95-43e1-bee7-54385c8bd36b",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "f3504f8b-fbea-48a9-82ff-142a0138294a",
+              "name": "IdempotentParameterMismatchException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "37061170-4385-403d-ad6e-45db8b45d7b7",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "startSimulationJobBatch"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"createSimulationJobRequests\": [\n    {\n      \"maxJobDurationInSeconds\": \"<integer>\",\n      \"outputLocation\": {\n        \"s3Bucket\": \"<string>\",\n        \"s3Prefix\": \"<string>\"\n      },\n      \"loggingConfig\": {\n        \"recordAllRosTopics\": \"<boolean>\"\n      },\n      \"iamRole\": \"<string>\",\n      \"failureBehavior\": \"<string>\",\n      \"useDefaultApplications\": \"<boolean>\",\n      \"robotApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"simulationApplications\": [\n        {\n          \"application\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"launchConfig\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"applicationVersion\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"uploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"worldConfigs\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultUploadConfigurations\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"tools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"useDefaultTools\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"dataSources\": [\n        {\n          \"name\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Bucket\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"s3Keys\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"type\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          },\n          \"destination\": {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        }\n      ],\n      \"vpcConfig\": {\n        \"subnets\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"securityGroups\": [\n          {\n            \"value\": \"<Error: Too many levels of nesting to fake this schema>\"\n          }\n        ],\n        \"assignPublicIp\": \"<boolean>\"\n      },\n      \"compute\": {\n        \"simulationUnitLimit\": \"<integer>\",\n        \"computeType\": \"<string>\",\n        \"gpuUnitLimit\": \"<integer>\"\n      },\n      \"tags\": {\n        \"key_0\": \"<string>\",\n        \"key_1\": \"<string>\",\n        \"key_2\": \"<string>\",\n        \"key_3\": \"<string>\",\n        \"key_4\": \"<string>\",\n        \"key_5\": \"<string>\",\n        \"key_6\": \"<string>\",\n        \"key_7\": \"<string>\",\n        \"key_8\": \"<string>\",\n        \"key_9\": \"<string>\",\n        \"key_10\": \"<string>\",\n        \"key_11\": \"<string>\",\n        \"key_12\": \"<string>\",\n        \"key_13\": \"<string>\",\n        \"key_14\": \"<string>\",\n        \"key_15\": \"<string>\",\n        \"key_16\": \"<string>\",\n        \"key_17\": \"<string>\",\n        \"key_18\": \"<string>\",\n        \"key_19\": \"<string>\",\n        \"key_20\": \"<string>\",\n        \"key_21\": \"<string>\",\n        \"key_22\": \"<string>\",\n        \"key_23\": \"<string>\",\n        \"key_24\": \"<string>\",\n        \"key_25\": \"<string>\",\n        \"key_26\": \"<string>\",\n        \"key_27\": \"<string>\",\n        \"key_28\": \"<string>\",\n        \"key_29\": \"<string>\",\n        \"key_30\": \"<string>\",\n        \"key_31\": \"<string>\",\n        \"key_32\": \"<string>\",\n        \"key_33\": \"<string>\",\n        \"key_34\": \"<string>\",\n        \"key_35\": \"<string>\",\n        \"key_36\": \"<string>\",\n        \"key_37\": \"<string>\",\n        \"key_38\": \"<string>\",\n        \"key_39\": \"<string>\",\n        \"key_40\": \"<string>\",\n        \"key_41\": \"<string>\",\n        \"key_42\": \"<string>\",\n        \"key_43\": \"<string>\",\n        \"key_44\": \"<string>\"\n      }\n    }\n  ],\n  \"clientRequestToken\": \"<string>\",\n  \"batchPolicy\": {\n    \"timeoutInSeconds\": \"<integer>\",\n    \"maxConcurrency\": \"<integer>\"\n  },\n  \"tags\": {\n    \"key_0\": \"<string>\",\n    \"key_1\": \"<string>\",\n    \"key_2\": \"<string>\",\n    \"key_3\": \"<string>\",\n    \"key_4\": \"<string>\",\n    \"key_5\": \"<string>\",\n    \"key_6\": \"<string>\",\n    \"key_7\": \"<string>\",\n    \"key_8\": \"<string>\",\n    \"key_9\": \"<string>\",\n    \"key_10\": \"<string>\"\n  }\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 484,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "http://robomaker.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "7ce1cb82-62be-4696-9775-bd99af2c11cc",
+    "name": "AWS RoboMaker BatchDeleteWorlds StartSimulationJobBatch API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}

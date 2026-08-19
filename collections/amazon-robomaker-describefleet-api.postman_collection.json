@@ -1,0 +1,651 @@
+{
+  "item": [
+    {
+      "id": "c02f1e9f-d378-4649-8573-21a2a0e79a73",
+      "name": "DescribeFleet",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "e39ab332-20d6-4714-b87f-b5d453a8227f",
+          "name": "Describe Fleet",
+          "request": {
+            "name": "Describe Fleet",
+            "description": {
+              "content": "<p>Describes a fleet.</p> <important> <p>This API will no longer be supported as of May 2, 2022. Use it to remove resources that were created for Deployment Service.</p> </important>",
+              "type": "text/plain"
+            },
+            "url": {
+              "path": [
+                "describeFleet"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                  "type": "any",
+                  "value": "{{region}}",
+                  "key": "region"
+                }
+              ]
+            },
+            "header": [
+              {
+                "disabled": false,
+                "key": "X-Amz-Content-Sha256",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Date",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Algorithm",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Credential",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Security-Token",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-Signature",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "disabled": false,
+                "key": "X-Amz-SignedHeaders",
+                "value": "<string>",
+                "description": ""
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              },
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"fleet\": \"<string>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "0716038d-2ea8-40b7-a2e0-5dc68907b850",
+              "name": "Success",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "describeFleet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fleet\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"name\": \"kzhIKZBz\",\n  \"arn\": \"arn:\\\\g\",\n  \"robots\": [\n    {\n      \"arn\": \"arn:,=~\",\n      \"name\": \"1\",\n      \"fleetArn\": \"arn:\",\n      \"status\": \"Registered\",\n      \"greenGrassGroupId\": \"Jt[J\",\n      \"createdAt\": \"2020-03-13T15:12:42.474Z\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:*\",\n      \"lastDeploymentTime\": \"2014-06-06T02:58:12.955Z\"\n    },\n    {\n      \"arn\": \"arn:%J5d\",\n      \"name\": \"hMN\",\n      \"fleetArn\": \"arn:X5?dp\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"==qQ.pP\",\n      \"createdAt\": \"1978-12-09T15:34:09.258Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:]s\",\n      \"lastDeploymentTime\": \"1963-03-17T12:34:33.758Z\"\n    },\n    {\n      \"arn\": \"arn:p_j\",\n      \"name\": \"NJ\",\n      \"fleetArn\": \"arn:/JA@\",\n      \"status\": \"InSync\",\n      \"greenGrassGroupId\": \"1BNZLR3^\",\n      \"createdAt\": \"1969-05-28T22:17:04.892Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:3iCDh*QRA\",\n      \"lastDeploymentTime\": \"1986-08-08T00:35:33.986Z\"\n    },\n    {\n      \"arn\": \"arn::o6Dw}_?\",\n      \"name\": \"Ix\",\n      \"fleetArn\": \"arn:+&2m\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"+a\",\n      \"createdAt\": \"1972-04-23T05:35:43.683Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:Yt!\",\n      \"lastDeploymentTime\": \"1952-09-15T09:15:42.900Z\"\n    },\n    {\n      \"arn\": \"arn:#tF\",\n      \"name\": \"aZn\",\n      \"fleetArn\": \"arn:|\\\"x^C\",\n      \"status\": \"InSync\",\n      \"greenGrassGroupId\": \"b/zq9 \",\n      \"createdAt\": \"1952-10-14T10:29:20.500Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:]$H0<8c#!Y\",\n      \"lastDeploymentTime\": \"2023-09-29T20:38:12.303Z\"\n    },\n    {\n      \"arn\": \"arn:{\",\n      \"name\": \" \",\n      \"fleetArn\": \"arn:},+Z[awR\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \"wBsS\",\n      \"createdAt\": \"2019-10-07T10:06:44.812Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:yW!B=\",\n      \"lastDeploymentTime\": \"1976-06-15T08:52:33.223Z\"\n    },\n    {\n      \"arn\": \"arn:pIDtrQ\",\n      \"name\": \"7vKmaE\",\n      \"fleetArn\": \"arn:wr3X=q\",\n      \"status\": \"Deploying\",\n      \"greenGrassGroupId\": \"B`\\\\\",\n      \"createdAt\": \"1963-12-11T00:10:25.644Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:En\\\\/Oa6JW\",\n      \"lastDeploymentTime\": \"1951-12-10T15:13:52.975Z\"\n    },\n    {\n      \"arn\": \"arn:%Nz\",\n      \"name\": \"m8woDJQ2E\",\n      \"fleetArn\": \"arn:lzlaUKcT_\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \";fL9} +HuJ\",\n      \"createdAt\": \"2016-04-23T17:28:28.318Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:\",\n      \"lastDeploymentTime\": \"2023-03-22T22:45:26.429Z\"\n    },\n    {\n      \"arn\": \"arn:KwiE7\",\n      \"name\": \"vOPsw\",\n      \"fleetArn\": \"arn:4x?M+v|\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \"msW$\",\n      \"createdAt\": \"1977-10-18T02:46:49.651Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:#s0%\",\n      \"lastDeploymentTime\": \"1968-08-14T01:05:39.619Z\"\n    },\n    {\n      \"arn\": \"arn:N@*R_\",\n      \"name\": \"2bpmVm6qlH\",\n      \"fleetArn\": \"arn:rzV\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"bX%'iD\",\n      \"createdAt\": \"2020-11-07T15:58:14.480Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:'q%B~VT9|Q\",\n      \"lastDeploymentTime\": \"1951-09-08T17:02:09.180Z\"\n    },\n    {\n      \"arn\": \"arn:s*\\\"Fki\",\n      \"name\": \"BPRgXdZ\",\n      \"fleetArn\": \"arn:wync\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"3tmu\\\"|x\",\n      \"createdAt\": \"1951-02-06T04:09:46.486Z\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:y \",\n      \"lastDeploymentTime\": \"1973-02-26T19:21:25.675Z\"\n    },\n    {\n      \"arn\": \"arn:)-\\\\#gt]\",\n      \"name\": \"zHDG\",\n      \"fleetArn\": \"arn:|qU|R%\",\n      \"status\": \"Registered\",\n      \"greenGrassGroupId\": \"ty&iBSU\",\n      \"createdAt\": \"1986-06-06T02:36:16.128Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:e$|\",\n      \"lastDeploymentTime\": \"2014-07-05T06:41:25.523Z\"\n    },\n    {\n      \"arn\": \"arn:G4F!Wh(\",\n      \"name\": \"JM_0EvU\",\n      \"fleetArn\": \"arn:(nn]\",\n      \"status\": \"NoResponse\",\n      \"greenGrassGroupId\": \"T}l}X6bLRC\",\n      \"createdAt\": \"2014-09-26T21:12:32.482Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:N!\",\n      \"lastDeploymentTime\": \"1957-06-09T23:35:38.008Z\"\n    },\n    {\n      \"arn\": \"arn:'\",\n      \"name\": \"opRok\",\n      \"fleetArn\": \"arn:fPr5C\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \"@vS\",\n      \"createdAt\": \"2000-02-28T21:43:27.514Z\",\n      \"architecture\": \"ARM64\",\n      \"lastDeploymentJob\": \"arn:6\\\\Q\",\n      \"lastDeploymentTime\": \"1955-10-22T20:09:35.672Z\"\n    },\n    {\n      \"arn\": \"arn:M:\\\\p.~D\",\n      \"name\": \"6Xg\",\n      \"fleetArn\": \"arn:[d\",\n      \"status\": \"Available\",\n      \"greenGrassGroupId\": \"hn`i\",\n      \"createdAt\": \"2000-04-22T09:37:50.064Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:nhOmP|oKx\",\n      \"lastDeploymentTime\": \"1971-01-13T22:28:21.390Z\"\n    },\n    {\n      \"arn\": \"arn:DYYg}^F\",\n      \"name\": \"FUbo\",\n      \"fleetArn\": \"arn:aLlfJoC6\",\n      \"status\": \"Failed\",\n      \"greenGrassGroupId\": \">-+x!r%e:%\",\n      \"createdAt\": \"1993-09-14T22:13:45.094Z\",\n      \"architecture\": \"ARMHF\",\n      \"lastDeploymentJob\": \"arn:BcN|\",\n      \"lastDeploymentTime\": \"2012-09-02T19:18:37.044Z\"\n    },\n    {\n      \"arn\": \"arn:Kvgl7U;7b8\",\n      \"name\": \"kK\",\n      \"fleetArn\": \"arn:.MIgxmysO$\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"(W\",\n      \"createdAt\": \"1971-05-07T19:40:17.443Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:Gu|NKBz\",\n      \"lastDeploymentTime\": \"2004-08-13T14:46:15.293Z\"\n    },\n    {\n      \"arn\": \"arn:c\\\"mHjB2J\",\n      \"name\": \"nWIav\",\n      \"fleetArn\": \"arn:Dc2?{.\",\n      \"status\": \"PendingNewDeployment\",\n      \"greenGrassGroupId\": \"NY\",\n      \"createdAt\": \"1972-05-20T00:50:10.796Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:pJYJBzc'5\",\n      \"lastDeploymentTime\": \"2024-01-09T10:42:08.690Z\"\n    },\n    {\n      \"arn\": \"arn:O;\",\n      \"name\": \"S\",\n      \"fleetArn\": \"arn:b)HKnrg\",\n      \"status\": \"Available\",\n      \"greenGrassGroupId\": \"O\",\n      \"createdAt\": \"1974-03-15T18:16:44.092Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:Jky\",\n      \"lastDeploymentTime\": \"2022-02-14T02:02:49.330Z\"\n    },\n    {\n      \"arn\": \"arn:WkJ/kx\",\n      \"name\": \"86y\",\n      \"fleetArn\": \"arn:xq\",\n      \"status\": \"Available\",\n      \"greenGrassGroupId\": \"}5U2H\",\n      \"createdAt\": \"2022-09-10T12:40:45.246Z\",\n      \"architecture\": \"X86_64\",\n      \"lastDeploymentJob\": \"arn:'e\",\n      \"lastDeploymentTime\": \"1997-08-11T00:41:32.883Z\"\n    }\n  ],\n  \"createdAt\": \"1970-09-06T02:21:06.172Z\",\n  \"lastDeploymentStatus\": \"Preparing\",\n  \"lastDeploymentJob\": \"arn:m_A/xNv\",\n  \"lastDeploymentTime\": \"2007-06-22T05:32:59.700Z\",\n  \"tags\": {\n    \"key_0\": \"Xt6tpa\",\n    \"key_1\": \"Pc\",\n    \"key_2\": \"m\",\n    \"key_3\": \"cS\",\n    \"key_4\": \"1/_WLqHU-/\",\n    \"key_5\": \"HE:4fE r1\",\n    \"key_6\": \"U\",\n    \"key_7\": \"\",\n    \"key_8\": \"2Q\",\n    \"key_9\": \"jAhpCDS b\",\n    \"key_10\": \"XK9mw1:\",\n    \"key_11\": \"0Pb9EuRPp\",\n    \"key_12\": \"zwil\"\n  }\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "3006be86-717d-4f20-ac29-1a5b70d98914",
+              "name": "ResourceNotFoundException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "describeFleet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fleet\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 480,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "53773947-b44a-49c4-bd65-44f6751e5fea",
+              "name": "InvalidParameterException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "describeFleet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fleet\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 481,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "5874b969-3f37-4f2a-95aa-9f9267a60a25",
+              "name": "InternalServerException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "describeFleet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fleet\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 482,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            },
+            {
+              "id": "8bac2de5-7848-459c-ad50-7be6a054ff74",
+              "name": "ThrottlingException",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "describeFleet"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+                      "type": "any",
+                      "value": "{{region}}",
+                      "key": "region"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: apikey",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "<API Key>"
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Content-Sha256",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Date",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Algorithm",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Credential",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Security-Token",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-Signature",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "disabled": false,
+                    "key": "X-Amz-SignedHeaders",
+                    "value": "<string>",
+                    "description": ""
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"fleet\": \"<string>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "code": 483,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "The AWS region (This can only be one of us-east-1,us-east-2,us-west-1,us-west-2,us-gov-west-1,us-gov-east-1,ca-central-1,eu-north-1,eu-west-1,eu-west-2,eu-west-3,eu-central-1,eu-south-1,af-south-1,ap-northeast-1,ap-northeast-2,ap-northeast-3,ap-southeast-1,ap-southeast-2,ap-east-1,ap-south-1,sa-east-1,me-south-1)",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "us-east-1",
+      "key": "region"
+    },
+    {
+      "type": "string",
+      "value": "http://robomaker.{{region}}.amazonaws.com",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "apikey",
+    "apikey": [
+      {
+        "key": "key",
+        "value": "Authorization"
+      },
+      {
+        "key": "value",
+        "value": "{{apiKey}}"
+      },
+      {
+        "key": "in",
+        "value": "header"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "5088374c-5f32-43b0-aac1-6a141bb9adb1",
+    "name": "AWS RoboMaker BatchDeleteWorlds DescribeFleet API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "This section provides documentation for the AWS RoboMaker API operations.\n\nContact Support:\n Name: Mike Ralphson\n Email: mike.ralphson@gmail.com",
+      "type": "text/plain"
+    }
+  }
+}
