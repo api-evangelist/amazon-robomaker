@@ -4,6 +4,7 @@ description: >-
   applications. RoboMaker extends the most widely used open-source robotics software framework, Robot Operating System
   (ROS), with connectivity to cloud services, providing tools for building, testing, and deploying robotics applications
   at scale.
+specificationVersion: '0.23'
 accessModel:
   pricing: freemium
   onboarding: self-serve
