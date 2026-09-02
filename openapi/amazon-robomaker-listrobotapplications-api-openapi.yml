@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: AWS RoboMaker BatchDeleteWorlds ListRobotApplications API
+  title: AWS RoboMaker BatchDeleteWorlds List Robot Applications API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -197,36 +197,6 @@ paths:
       - ListRobotApplications
 components:
   schemas:
-    RobotSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
-          - description: The name of the robot software suite (ROS distribution).
-        version:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
-          - description: The version of the robot software suite (ROS distribution).
-      description: Information about a robot software suite (ROS distribution).
-    RobotSoftwareSuiteType:
-      type: string
-      enum:
-      - ROS
-      - ROS2
-      - General
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
     ListRobotApplicationsResponse:
       type: object
       properties:
@@ -245,6 +215,30 @@ components:
       - Melodic
       - Dashing
       - Foxy
+    InternalServerException: {}
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    RobotSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
+    InvalidParameterException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
     RobotApplicationSummary:
       type: object
       properties:
@@ -269,59 +263,53 @@ components:
           - $ref: '#/components/schemas/RobotSoftwareSuite'
           - description: Information about a robot software suite (ROS distribution).
       description: Summary information for a robot application.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    InvalidParameterException: {}
-    LastUpdatedAt:
-      type: string
-      format: date-time
-    InternalServerException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
     RobotApplicationSummaries:
       type: array
       items:
         $ref: '#/components/schemas/RobotApplicationSummary'
       minItems: 0
       maxItems: 100
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    RobotSoftwareSuiteType:
+      type: string
+      enum:
+      - ROS
+      - ROS2
+      - General
     ThrottlingException: {}
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -338,8 +326,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

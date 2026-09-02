@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: AWS RoboMaker BatchDeleteWorlds ListDeploymentJobs API
+  title: AWS RoboMaker BatchDeleteWorlds List Deployment Jobs API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -198,9 +198,51 @@ paths:
       - ListDeploymentJobs
 components:
   schemas:
-    CreatedAt:
+    DeploymentStatus:
       type: string
-      format: date-time
+      enum:
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
+    S3Object:
+      type: object
+      required:
+      - bucket
+      - key
+      properties:
+        bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The bucket containing the object.
+        key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The key of the object.
+        etag:
+          allOf:
+          - $ref: '#/components/schemas/S3Etag'
+          - description: The etag of the object.
+      description: Information about an S3 object.
+    DeploymentApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    InternalServerException: {}
+    Path:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
     DeploymentApplicationConfig:
       type: object
       required:
@@ -221,143 +263,11 @@ components:
           - $ref: '#/components/schemas/DeploymentLaunchConfig'
           - description: The launch configuration.
       description: Information about a deployment application configuration.
-    Path:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    S3Etag:
-      type: string
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
-    DeploymentVersion:
-      type: string
-      pattern: '[0-9]*'
-      minLength: 1
-      maxLength: 255
-    DeploymentJobErrorCode:
-      type: string
-      enum:
-      - ResourceNotFound
-      - EnvironmentSetupError
-      - EtagMismatch
-      - FailureThresholdBreached
-      - RobotDeploymentAborted
-      - RobotDeploymentNoResponse
-      - RobotAgentConnectionTimeout
-      - GreengrassDeploymentFailed
-      - InvalidGreengrassGroup
-      - MissingRobotArchitecture
-      - MissingRobotApplicationArchitecture
-      - MissingRobotDeploymentResource
-      - GreengrassGroupVersionDoesNotExist
-      - LambdaDeleted
-      - ExtractingBundleFailure
-      - PreLaunchFileFailure
-      - PostLaunchFileFailure
-      - BadPermissionError
-      - DownloadConditionFailed
-      - BadLambdaAssociated
-      - InternalServerError
-      - RobotApplicationDoesNotExist
-      - DeploymentFleetDoesNotExist
-      - FleetDeploymentTimeout
-    DeploymentConfig:
-      type: object
-      properties:
-        concurrentDeploymentPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of robots receiving the deployment at the same time.
-        failureThresholdPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of deployments that need to fail before stopping deployment.
-        robotDeploymentTimeoutInSeconds:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentTimeout'
-          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
-        downloadConditionFile:
-          allOf:
-          - $ref: '#/components/schemas/S3Object'
-          - description: The download condition file.
-      description: Information about a deployment configuration.
-    Command:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 1024
-    DeploymentTimeout:
-      type: integer
-    DeploymentJobs:
-      type: array
-      items:
-        $ref: '#/components/schemas/DeploymentJob'
-      minItems: 0
-      maxItems: 200
-    S3Object:
-      type: object
-      required:
-      - bucket
-      - key
-      properties:
-        bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The bucket containing the object.
-        key:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The key of the object.
-        etag:
-          allOf:
-          - $ref: '#/components/schemas/S3Etag'
-          - description: The etag of the object.
-      description: Information about an S3 object.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    DeploymentStatus:
-      type: string
-      enum:
-      - Pending
-      - Preparing
-      - InProgress
-      - Failed
-      - Succeeded
-      - Canceled
-    InvalidParameterException: {}
     S3Bucket:
       type: string
       pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
       minLength: 3
       maxLength: 63
-    Percentage:
-      type: integer
-      minimum: 1
-      maximum: 100
-    EnvironmentVariableValue:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
     DeploymentLaunchConfig:
       type: object
       required:
@@ -385,28 +295,17 @@ components:
           - $ref: '#/components/schemas/EnvironmentVariableMap'
           - description: An array of key/value pairs specifying environment variables for the robot application
       description: Configuration information for a deployment launch.
-    InternalServerException: {}
+    InvalidParameterException: {}
     Name:
       type: string
       pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
       maxLength: 255
-    GenericString:
+    S3Key:
       type: string
       pattern: .*
-      minLength: 0
-      maxLength: 1024
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
-      maxLength: 2048
+      maxLength: 1024
     DeploymentJob:
       type: object
       properties:
@@ -443,6 +342,32 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time, in milliseconds since the epoch, when the deployment job was created.
       description: Information about a deployment job.
+    EnvironmentVariableValue:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    CreatedAt:
+      type: string
+      format: date-time
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    S3Etag:
+      type: string
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
     ListDeploymentJobsResponse:
       type: object
       deprecated: true
@@ -456,35 +381,98 @@ components:
           - $ref: '#/components/schemas/PaginationToken'
           - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListDeploymentJobs</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    DeploymentApplicationConfigs:
+    DeploymentJobs:
       type: array
       items:
-        $ref: '#/components/schemas/DeploymentApplicationConfig'
-      minItems: 1
-      maxItems: 1
+        $ref: '#/components/schemas/DeploymentJob'
+      minItems: 0
+      maxItems: 200
+    DeploymentVersion:
+      type: string
+      pattern: '[0-9]*'
+      minLength: 1
+      maxLength: 255
     ThrottlingException: {}
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
     ResourceNotFoundException: {}
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    DeploymentConfig:
+      type: object
+      properties:
+        concurrentDeploymentPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of robots receiving the deployment at the same time.
+        failureThresholdPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of deployments that need to fail before stopping deployment.
+        robotDeploymentTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentTimeout'
+          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
+        downloadConditionFile:
+          allOf:
+          - $ref: '#/components/schemas/S3Object'
+          - description: The download condition file.
+      description: Information about a deployment configuration.
+    DeploymentJobErrorCode:
+      type: string
+      enum:
+      - ResourceNotFound
+      - EnvironmentSetupError
+      - EtagMismatch
+      - FailureThresholdBreached
+      - RobotDeploymentAborted
+      - RobotDeploymentNoResponse
+      - RobotAgentConnectionTimeout
+      - GreengrassDeploymentFailed
+      - InvalidGreengrassGroup
+      - MissingRobotArchitecture
+      - MissingRobotApplicationArchitecture
+      - MissingRobotDeploymentResource
+      - GreengrassGroupVersionDoesNotExist
+      - LambdaDeleted
+      - ExtractingBundleFailure
+      - PreLaunchFileFailure
+      - PostLaunchFileFailure
+      - BadPermissionError
+      - DownloadConditionFailed
+      - BadLambdaAssociated
+      - InternalServerError
+      - RobotApplicationDoesNotExist
+      - DeploymentFleetDoesNotExist
+      - FleetDeploymentTimeout
     EnvironmentVariableMap:
       type: object
       minProperties: 0
       maxProperties: 20
       additionalProperties:
         $ref: '#/components/schemas/EnvironmentVariableValue'
+    Percentage:
+      type: integer
+      minimum: 1
+      maximum: 100
+    DeploymentTimeout:
+      type: integer
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -501,8 +489,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

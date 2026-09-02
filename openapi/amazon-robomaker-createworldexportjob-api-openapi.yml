@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: AWS RoboMaker BatchDeleteWorlds CreateWorldExportJob API
+  title: AWS RoboMaker BatchDeleteWorlds Create World Export Job API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -223,47 +223,60 @@ paths:
       - CreateWorldExportJob
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
-    TagMap:
+    InternalServerException: {}
+    OutputLocation:
       type: object
-      minProperties: 0
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    WorldExportJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - Canceling
-      - Canceled
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ServiceUnavailableException: {}
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The S3 bucket for output.
+        s3Prefix:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The S3 folder in the <code>s3Bucket</code> where output files will be placed.
+      description: The output location.
     S3Bucket:
       type: string
       pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
       minLength: 3
       maxLength: 63
     InvalidParameterException: {}
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
     IdempotentParameterMismatchException: {}
+    IamRole:
+      type: string
+      pattern: arn:aws:iam::\w+:role/.*
+      minLength: 1
+      maxLength: 255
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    CreatedAt:
+      type: string
+      format: date-time
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    WorldExportJobErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+      - LimitExceeded
+      - ResourceNotFound
+      - RequestThrottled
+      - InvalidInput
+      - AccessDenied
+    ServiceUnavailableException: {}
+    ThrottlingException: {}
     CreateWorldExportJobResponse:
       type: object
       properties:
@@ -297,55 +310,30 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the world export job.
-    WorldExportJobErrorCode:
+    TagMap:
+      type: object
+      minProperties: 0
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    ResourceNotFoundException: {}
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    WorldExportJobStatus:
       type: string
       enum:
-      - InternalServiceError
-      - LimitExceeded
-      - ResourceNotFound
-      - RequestThrottled
-      - InvalidInput
-      - AccessDenied
-    OutputLocation:
-      type: object
-      properties:
-        s3Bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The S3 bucket for output.
-        s3Prefix:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The S3 folder in the <code>s3Bucket</code> where output files will be placed.
-      description: The output location.
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    InternalServerException: {}
-    IamRole:
-      type: string
-      pattern: arn:aws:iam::\w+:role/.*
-      minLength: 1
-      maxLength: 255
-    ThrottlingException: {}
-    ResourceNotFoundException: {}
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - Canceling
+      - Canceled
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -362,8 +350,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

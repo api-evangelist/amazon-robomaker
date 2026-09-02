@@ -2583,3 +2583,5 @@ tags:
   - AWS
   - Robotics
   - Simulation
+x-parent: aws
+x-relationship: product

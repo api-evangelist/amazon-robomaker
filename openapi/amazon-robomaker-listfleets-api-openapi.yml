@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: AWS RoboMaker BatchDeleteWorlds ListFleets API
+  title: AWS RoboMaker BatchDeleteWorlds List Fleets API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -198,21 +198,41 @@ paths:
       - ListFleets
 components:
   schemas:
-    CreatedAt:
+    DeploymentStatus:
       type: string
-      format: date-time
-    Filter:
+      enum:
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
+    InternalServerException: {}
+    Fleets:
+      type: array
+      items:
+        $ref: '#/components/schemas/Fleet'
+      minItems: 0
+      maxItems: 200
+    InvalidParameterException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    ListFleetsResponse:
       type: object
+      deprecated: true
       properties:
-        name:
+        fleetDetails:
           allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
+          - $ref: '#/components/schemas/Fleets'
+          - description: A list of fleet details meeting the request criteria.
+        nextToken:
           allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListFleets</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
     Fleet:
       type: object
       properties:
@@ -241,74 +261,42 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time of the last deployment.
       description: Information about a fleet.
+    CreatedAt:
+      type: string
+      format: date-time
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    DeploymentStatus:
-      type: string
-      enum:
-      - Pending
-      - Preparing
-      - InProgress
-      - Failed
-      - Succeeded
-      - Canceled
-    InvalidParameterException: {}
-    Fleets:
-      type: array
-      items:
-        $ref: '#/components/schemas/Fleet'
-      minItems: 0
-      maxItems: 200
-    InternalServerException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
     FilterValues:
       type: array
       items:
         $ref: '#/components/schemas/Name'
       minItems: 1
       maxItems: 1
-    ListFleetsResponse:
-      type: object
-      deprecated: true
-      properties:
-        fleetDetails:
-          allOf:
-          - $ref: '#/components/schemas/Fleets'
-          - description: A list of fleet details meeting the request criteria.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListFleets</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
     ThrottlingException: {}
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
     ResourceNotFoundException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -325,8 +313,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

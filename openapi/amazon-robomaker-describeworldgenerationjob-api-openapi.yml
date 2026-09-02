@@ -1,8 +1,8 @@
-openapi: 3.0.0
+openapi: 3.2.0
 info:
-  version: "1.0.0"
+  version: 1.0.0
   x-release: v4
-  title: AWS RoboMaker BatchDeleteWorlds DescribeWorldGenerationJob API
+  title: AWS RoboMaker BatchDeleteWorlds Describe World Generation Job API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -177,48 +177,6 @@ paths:
       - DescribeWorldGenerationJob
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
-    TagMap:
-      type: object
-      minProperties: 0
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    WorldFailure:
-      type: object
-      properties:
-        failureCode:
-          allOf:
-          - $ref: '#/components/schemas/WorldGenerationJobErrorCode'
-          - description: <p>The failure code of the world export job if it failed:</p> <dl> <dt>InternalServiceError</dt> <dd> <p>Internal service error.</p> </dd> <dt>LimitExceeded</dt> <dd> <p>The requested resource exceeds the maximum number allowed, or the number of concurrent stream requests exceeds the maximum number allowed. </p> </dd> <dt>ResourceNotFound</dt> <dd> <p>The specified resource could not be found. </p> </dd> <dt>RequestThrottled</dt> <dd> <p>The request was throttled.</p> </dd> <dt>InvalidInput</dt> <dd> <p>An input parameter in the request is not valid.</p> </dd> </dl>
-        sampleFailureReason:
-          allOf:
-          - $ref: '#/components/schemas/GenericString'
-          - description: 'The sample reason why the world failed. World errors are aggregated. A sample is used as the <code>sampleFailureReason</code>. '
-        failureCount:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The number of failed worlds.
-      description: Information about a failed world.
-    FailureSummary:
-      type: object
-      properties:
-        totalFailureCount:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The total number of failures.
-        failures:
-          allOf:
-          - $ref: '#/components/schemas/WorldFailures'
-          - description: The worlds that failed.
-      description: Information about worlds that failed.
     WorldCount:
       type: object
       properties:
@@ -231,17 +189,20 @@ components:
           - $ref: '#/components/schemas/InteriorCountPerFloorplan'
           - description: The number of unique interiors per floorplan.
       description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
-    Arns:
-      type: array
-      items:
-        $ref: '#/components/schemas/Arn'
-      minItems: 1
-      maxItems: 100
+    FailureSummary:
+      type: object
+      properties:
+        totalFailureCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The total number of failures.
+        failures:
+          allOf:
+          - $ref: '#/components/schemas/WorldFailures'
+          - description: The worlds that failed.
+      description: Information about worlds that failed.
+    InternalServerException: {}
+    InvalidParameterException: {}
     DescribeWorldGenerationJobResponse:
       type: object
       properties:
@@ -289,6 +250,72 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the generated worlds.
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    WorldGenerationJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - PartialFailed
+      - Canceling
+      - Canceled
+    CreatedAt:
+      type: string
+      format: date-time
+    FloorplanCount:
+      type: integer
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    InteriorCountPerFloorplan:
+      type: integer
+    WorldGenerationJobErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+      - LimitExceeded
+      - ResourceNotFound
+      - RequestThrottled
+      - InvalidInput
+      - AllWorldGenerationFailed
+    ThrottlingException: {}
+    TagMap:
+      type: object
+      minProperties: 0
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    ResourceNotFoundException: {}
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    Arns:
+      type: array
+      items:
+        $ref: '#/components/schemas/Arn'
+      minItems: 1
+      maxItems: 100
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    WorldFailures:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldFailure'
+      minItems: 0
+      maxItems: 100
     FinishedWorldsSummary:
       type: object
       properties:
@@ -305,66 +332,27 @@ components:
           - $ref: '#/components/schemas/FailureSummary'
           - description: Information about worlds that failed.
       description: Information about worlds that finished.
-    WorldFailures:
-      type: array
-      items:
-        $ref: '#/components/schemas/WorldFailure'
-      minItems: 0
-      maxItems: 100
-    WorldGenerationJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - PartialFailed
-      - Canceling
-      - Canceled
     Integer:
       type: integer
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    InvalidParameterException: {}
-    FloorplanCount:
-      type: integer
-    WorldGenerationJobErrorCode:
-      type: string
-      enum:
-      - InternalServiceError
-      - LimitExceeded
-      - ResourceNotFound
-      - RequestThrottled
-      - InvalidInput
-      - AllWorldGenerationFailed
-    InternalServerException: {}
-    GenericString:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 1024
-    ThrottlingException: {}
-    InteriorCountPerFloorplan:
-      type: integer
-    ResourceNotFoundException: {}
+    WorldFailure:
+      type: object
+      properties:
+        failureCode:
+          allOf:
+          - $ref: '#/components/schemas/WorldGenerationJobErrorCode'
+          - description: <p>The failure code of the world export job if it failed:</p> <dl> <dt>InternalServiceError</dt> <dd> <p>Internal service error.</p> </dd> <dt>LimitExceeded</dt> <dd> <p>The requested resource exceeds the maximum number allowed, or the number of concurrent stream requests exceeds the maximum number allowed. </p> </dd> <dt>ResourceNotFound</dt> <dd> <p>The specified resource could not be found. </p> </dd> <dt>RequestThrottled</dt> <dd> <p>The request was throttled.</p> </dd> <dt>InvalidInput</dt> <dd> <p>An input parameter in the request is not valid.</p> </dd> </dl>
+        sampleFailureReason:
+          allOf:
+          - $ref: '#/components/schemas/GenericString'
+          - description: 'The sample reason why the world failed. World errors are aggregated. A sample is used as the <code>sampleFailureReason</code>. '
+        failureCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The number of failed worlds.
+      description: Information about a failed world.
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -381,8 +369,20 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Date:
       name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string
