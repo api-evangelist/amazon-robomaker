@@ -2,7 +2,7 @@ openapi: 3.2.0
 info:
   version: '2018-06-29'
   x-release: v4
-  title: AWS RoboMaker Tags API
+  title: AWS RoboMaker Cancel World Export Job API
   description: This section provides documentation for the AWS RoboMaker API operations.
   x-logo:
     url: https://api.apis.guru/v2/cache/logo/https_twitter.com_awscloud_profile_image.png
@@ -113,9 +113,9 @@ servers:
 security:
 - hmac: []
 tags:
-- name: Tags
+- name: Cancel World Export Job
 paths:
-  /tags/{resourceArn}:
+  /cancelWorldExportJob:
     parameters:
     - $ref: '#/components/parameters/X-Amz-Content-Sha256'
     - $ref: '#/components/parameters/X-Amz-Date'
@@ -124,104 +124,41 @@ paths:
     - $ref: '#/components/parameters/X-Amz-Security-Token'
     - $ref: '#/components/parameters/X-Amz-Signature'
     - $ref: '#/components/parameters/X-Amz-SignedHeaders'
-    get:
-      operationId: ListTagsForResource
-      description: Lists all tags on a AWS RoboMaker resource.
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ListTagsForResourceResponse'
-        '480':
-          description: InternalServerException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalServerException'
-        '481':
-          description: ResourceNotFoundException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceNotFoundException'
-        '482':
-          description: InvalidParameterException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InvalidParameterException'
-        '483':
-          description: ThrottlingException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ThrottlingException'
-      parameters:
-      - name: resourceArn
-        in: path
-        required: true
-        description: The AWS RoboMaker Amazon Resource Name (ARN) with tags to be listed.
-        schema:
-          type: string
-          pattern: arn:.*
-          minLength: 1
-          maxLength: 1224
-      tags:
-      - Tags
-      summary: List tags for resource
-      x-summary-source: derived
     post:
-      operationId: TagResource
-      description: 'Adds or edits tags for a AWS RoboMaker resource.
-
-
-        Each tag consists of a tag key and a tag value. Tag keys and tag values are both required, but tag values can be empty strings.
-
-
-        For information about the rules that apply to tag keys and tag values, see User-Defined Tag Restrictions in the AWS Billing and Cost Management User Guide.'
+      operationId: CancelWorldExportJob
+      description: Cancels the specified export job.
       responses:
         '200':
           description: Success
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/TagResourceResponse'
+                $ref: '#/components/schemas/CancelWorldExportJobResponse'
         '480':
-          description: InternalServerException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalServerException'
-        '481':
           description: ResourceNotFoundException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ResourceNotFoundException'
-        '482':
+        '481':
           description: InvalidParameterException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/InvalidParameterException'
+        '482':
+          description: InternalServerException
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InternalServerException'
         '483':
           description: ThrottlingException
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/ThrottlingException'
-      parameters:
-      - name: resourceArn
-        in: path
-        required: true
-        description: The Amazon Resource Name (ARN) of the AWS RoboMaker resource you are tagging.
-        schema:
-          type: string
-          pattern: arn:.*
-          minLength: 1
-          maxLength: 1224
+      parameters: []
       requestBody:
         required: true
         content:
@@ -229,121 +166,26 @@ paths:
             schema:
               type: object
               required:
-              - tags
+              - job
               properties:
-                tags:
-                  description: A map that contains tag keys and tag values that are attached to the resource.
-                  type: object
-                  minProperties: 0
-                  maxProperties: 50
-                  additionalProperties:
-                    $ref: '#/components/schemas/TagValue'
+                job:
+                  description: The Amazon Resource Name (arn) of the world export job to cancel.
+                  type: string
+                  pattern: arn:.*
+                  minLength: 1
+                  maxLength: 1224
       tags:
-      - Tags
-      summary: Tag resource
-      x-summary-source: derived
-  /tags/{resourceArn}#tagKeys:
-    parameters:
-    - $ref: '#/components/parameters/X-Amz-Content-Sha256'
-    - $ref: '#/components/parameters/X-Amz-Date'
-    - $ref: '#/components/parameters/X-Amz-Algorithm'
-    - $ref: '#/components/parameters/X-Amz-Credential'
-    - $ref: '#/components/parameters/X-Amz-Security-Token'
-    - $ref: '#/components/parameters/X-Amz-Signature'
-    - $ref: '#/components/parameters/X-Amz-SignedHeaders'
-    delete:
-      operationId: UntagResource
-      description: 'Removes the specified tags from the specified AWS RoboMaker resource.
-
-
-        To remove a tag, specify the tag key. To change the tag value of an existing tag key, use TagResource .'
-      responses:
-        '200':
-          description: Success
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UntagResourceResponse'
-        '480':
-          description: InternalServerException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InternalServerException'
-        '481':
-          description: ResourceNotFoundException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ResourceNotFoundException'
-        '482':
-          description: InvalidParameterException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/InvalidParameterException'
-        '483':
-          description: ThrottlingException
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ThrottlingException'
-      parameters:
-      - name: resourceArn
-        in: path
-        required: true
-        description: The Amazon Resource Name (ARN) of the AWS RoboMaker resource you are removing tags.
-        schema:
-          type: string
-          pattern: arn:.*
-          minLength: 1
-          maxLength: 1224
-      - name: tagKeys
-        in: query
-        required: true
-        description: A map that contains tag keys and tag values that will be unattached from the resource.
-        schema:
-          type: array
-          items:
-            $ref: '#/components/schemas/TagKey'
-      tags:
-      - Tags
-      summary: Untag resource
+      - Cancel World Export Job
+      summary: Cancel world export job
       x-summary-source: derived
 components:
   schemas:
     InvalidParameterException: {}
-    TagResourceResponse:
-      type: object
-      properties: {}
     InternalServerException: {}
-    TagKey:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 1
-      maxLength: 128
-    TagMap:
-      type: object
-      minProperties: 0
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ListTagsForResourceResponse:
-      type: object
-      properties:
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/TagMap'
-          - description: The list of all tags added to the specified resource.
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
-    ResourceNotFoundException: {}
-    UntagResourceResponse:
+    CancelWorldExportJobResponse:
       type: object
       properties: {}
+    ResourceNotFoundException: {}
     ThrottlingException: {}
   parameters:
     X-Amz-Algorithm:
