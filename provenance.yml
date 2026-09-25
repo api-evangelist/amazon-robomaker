@@ -10,311 +10,311 @@ artifacts:
     method: derived
     evidence: declared in the artifact
   collections/amazon-robomaker-batchdeleteworlds-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdeleteworlds-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-batchdeleteworlds-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdeleteworlds-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-batchdescribesimulationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdescribesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-batchdescribesimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdescribesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-canceldeploymentjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-canceldeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-canceldeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-canceldeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelsimulationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelsimulationjobbatch-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelsimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelworldexportjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelworldgenerationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-cancelworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createdeploymentjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createdeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createfleet-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createfleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createfleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createfleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobotapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobotapplicationversion-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createrobotapplicationversion-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationapplicationversion-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationapplicationversion-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldexportjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldgenerationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldtemplate-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-createworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deletefleet-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletefleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deletefleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletefleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleterobot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleterobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleterobotapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleterobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deletesimulationapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deletesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleteworldtemplate-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleteworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deleteworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleteworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deregisterrobot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deregisterrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-deregisterrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deregisterrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describedeploymentjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describedeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describedeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describedeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describefleet-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describefleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describefleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describefleet-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describerobot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describerobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describerobotapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describerobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationjobbatch-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describesimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworld-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworld-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworld-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworld-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldexportjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldgenerationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldtemplate-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-describeworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-getworldtemplatebody-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-getworldtemplatebody-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-getworldtemplatebody-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-getworldtemplatebody-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listdeploymentjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listdeploymentjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listdeploymentjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listdeploymentjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listfleets-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listfleets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listfleets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listfleets-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listrobotapplications-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobotapplications-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listrobotapplications-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobotapplications-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listrobots-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobots-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listrobots-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobots-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationapplications-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationapplications-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationapplications-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationapplications-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationjobbatches-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobbatches-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationjobbatches-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobbatches-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listsimulationjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldexportjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldexportjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldexportjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldexportjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldgenerationjobs-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldgenerationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldgenerationjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldgenerationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworlds-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworlds-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworlds-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworlds-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldtemplates-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldtemplates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-listworldtemplates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldtemplates-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-registerrobot-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-registerrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-registerrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-registerrobot-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-restartsimulationjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-restartsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-restartsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-restartsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-startsimulationjobbatch-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-startsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-startsimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-startsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-syncdeploymentjob-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-syncdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-syncdeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-syncdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-tags-api.opencollection.json:
     method: derived
     evidence: openapi/amazon-robomaker-tags-api
@@ -322,23 +322,23 @@ artifacts:
     method: derived
     evidence: openapi/amazon-robomaker-tags-api
   collections/amazon-robomaker-updaterobotapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updaterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-updaterobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updaterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-updatesimulationapplication-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updatesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-updatesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updatesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-updateworldtemplate-api.opencollection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updateworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker-updateworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updateworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   collections/amazon-robomaker.opencollection.json:
     method: derived
     evidence: openapi/amazon-robomaker
@@ -798,6 +798,9 @@ artifacts:
   finops/amazon-robomaker-finops.yml:
     method: generated
     evidence: declared in the artifact
+  front-door-ai/2026-09-17.yml:
+    method: unknown
+    evidence: no authorship recorded
   json-ld/amazon-robomaker-context-context.jsonld:
     method: unknown
     evidence: no authorship recorded
@@ -2535,55 +2538,7 @@ artifacts:
   json-structure/amazon-robomaker-openapi-world-summary-structure.json:
     method: unknown
     evidence: no authorship recorded
-  kin/checks-2026-09-05T072335.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-06T210741.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-07T135032.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T093022.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-10T111628.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-11T211707.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-12T193225.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-17T064519.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T080027.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T082702.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-19T114122.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T165047.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T191845.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-20T205517.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-21T110057.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T064859.yml:
-    method: generated
-    evidence: Kin Score snapshot written by score.rb
-  kin/score-2026-08-24T171257.yml:
+  kin/checks-2026-09-24T064009.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-08-25T125852.yml:
@@ -2670,342 +2625,454 @@ artifacts:
   kin/score-2026-09-05T072335.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T144739.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T195450.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-05T211839.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T011047.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T211804.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-06T224210.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T200636.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-07T213054.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T214843.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-08T232836.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T204815.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-10T222408.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T062655.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T080032.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T204651.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-12T221936.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-13T214537.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T064754.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T210656.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-14T225847.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T211329.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-15T230249.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T210549.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-16T225339.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T211151.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-17T233623.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T205255.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-18T231945.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T165737.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-19T193153.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T205903.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-20T232958.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T211425.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-21T233935.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-22T213221.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-23T000603.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-09-24T064009.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   openapi/_original/amazon-robomaker-openapi.yml:
     method: harvested
-    evidence: fetched from the provider as-is; byte-identical to the source
-  openapi/amazon-robomaker-batchdeleteworlds-api-openapi.yml:
+    evidence: found in openapi/_original/; the fetch URL and bytes were not recorded, so byte-identity
+      to the provider's source is unverified
+  openapi/amazon-robomaker-batch-delete-worlds-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-batchdescribesimulationjob-api-openapi.yml:
+  openapi/amazon-robomaker-batch-describe-simulation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-canceldeploymentjob-api-openapi.yml:
+  openapi/amazon-robomaker-cancel-deployment-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-cancelsimulationjob-api-openapi.yml:
+  openapi/amazon-robomaker-cancel-simulation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-cancelsimulationjobbatch-api-openapi.yml:
+  openapi/amazon-robomaker-cancel-simulation-job-batch-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-cancelworldexportjob-api-openapi.yml:
+  openapi/amazon-robomaker-cancel-world-export-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-cancelworldgenerationjob-api-openapi.yml:
+  openapi/amazon-robomaker-cancel-world-generation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createdeploymentjob-api-openapi.yml:
+  openapi/amazon-robomaker-create-deployment-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createfleet-api-openapi.yml:
+  openapi/amazon-robomaker-create-fleet-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createrobot-api-openapi.yml:
+  openapi/amazon-robomaker-create-robot-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createrobotapplication-api-openapi.yml:
+  openapi/amazon-robomaker-create-robot-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createrobotapplicationversion-api-openapi.yml:
+  openapi/amazon-robomaker-create-robot-application-version-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createsimulationapplication-api-openapi.yml:
+  openapi/amazon-robomaker-create-simulation-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createsimulationapplicationversion-api-openapi.yml:
+  openapi/amazon-robomaker-create-simulation-application-version-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createsimulationjob-api-openapi.yml:
+  openapi/amazon-robomaker-create-simulation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createworldexportjob-api-openapi.yml:
+  openapi/amazon-robomaker-create-world-export-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createworldgenerationjob-api-openapi.yml:
+  openapi/amazon-robomaker-create-world-generation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-createworldtemplate-api-openapi.yml:
+  openapi/amazon-robomaker-create-world-template-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deletefleet-api-openapi.yml:
+  openapi/amazon-robomaker-delete-fleet-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deleterobot-api-openapi.yml:
+  openapi/amazon-robomaker-delete-robot-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deleterobotapplication-api-openapi.yml:
+  openapi/amazon-robomaker-delete-robot-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deletesimulationapplication-api-openapi.yml:
+  openapi/amazon-robomaker-delete-simulation-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deleteworldtemplate-api-openapi.yml:
+  openapi/amazon-robomaker-delete-world-template-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-deregisterrobot-api-openapi.yml:
+  openapi/amazon-robomaker-deregister-robot-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describedeploymentjob-api-openapi.yml:
+  openapi/amazon-robomaker-describe-deployment-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describefleet-api-openapi.yml:
+  openapi/amazon-robomaker-describe-fleet-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describerobot-api-openapi.yml:
+  openapi/amazon-robomaker-describe-robot-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describerobotapplication-api-openapi.yml:
+  openapi/amazon-robomaker-describe-robot-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describesimulationapplication-api-openapi.yml:
+  openapi/amazon-robomaker-describe-simulation-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describesimulationjob-api-openapi.yml:
+  openapi/amazon-robomaker-describe-simulation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describesimulationjobbatch-api-openapi.yml:
+  openapi/amazon-robomaker-describe-simulation-job-batch-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describeworld-api-openapi.yml:
+  openapi/amazon-robomaker-describe-world-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describeworldexportjob-api-openapi.yml:
+  openapi/amazon-robomaker-describe-world-export-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describeworldgenerationjob-api-openapi.yml:
+  openapi/amazon-robomaker-describe-world-generation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-describeworldtemplate-api-openapi.yml:
+  openapi/amazon-robomaker-describe-world-template-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-getworldtemplatebody-api-openapi.yml:
+  openapi/amazon-robomaker-get-world-template-body-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listdeploymentjobs-api-openapi.yml:
+  openapi/amazon-robomaker-list-deployment-jobs-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listfleets-api-openapi.yml:
+  openapi/amazon-robomaker-list-fleets-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listrobotapplications-api-openapi.yml:
+  openapi/amazon-robomaker-list-robot-applications-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listrobots-api-openapi.yml:
+  openapi/amazon-robomaker-list-robots-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listsimulationapplications-api-openapi.yml:
+  openapi/amazon-robomaker-list-simulation-applications-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listsimulationjobbatches-api-openapi.yml:
+  openapi/amazon-robomaker-list-simulation-job-batches-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listsimulationjobs-api-openapi.yml:
+  openapi/amazon-robomaker-list-simulation-jobs-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listworldexportjobs-api-openapi.yml:
+  openapi/amazon-robomaker-list-world-export-jobs-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listworldgenerationjobs-api-openapi.yml:
+  openapi/amazon-robomaker-list-world-generation-jobs-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listworlds-api-openapi.yml:
+  openapi/amazon-robomaker-list-world-templates-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-listworldtemplates-api-openapi.yml:
+  openapi/amazon-robomaker-list-worlds-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-registerrobot-api-openapi.yml:
+  openapi/amazon-robomaker-register-robot-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-restartsimulationjob-api-openapi.yml:
+  openapi/amazon-robomaker-restart-simulation-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-startsimulationjobbatch-api-openapi.yml:
+  openapi/amazon-robomaker-start-simulation-job-batch-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-syncdeploymentjob-api-openapi.yml:
+  openapi/amazon-robomaker-sync-deployment-job-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   openapi/amazon-robomaker-tags-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-updaterobotapplication-api-openapi.yml:
+  openapi/amazon-robomaker-update-robot-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-updatesimulationapplication-api-openapi.yml:
+  openapi/amazon-robomaker-update-simulation-application-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
-  openapi/amazon-robomaker-updateworldtemplate-api-openapi.yml:
+  openapi/amazon-robomaker-update-world-template-api-openapi.yml:
     method: derived
     evidence: paths are a subset of openapi/_original/ (split from the harvested spec)
   plans/amazon-robomaker-plans-pricing.yml:
     method: generated
     evidence: declared in the artifact
   postman/amazon-robomaker-batchdeleteworlds-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdeleteworlds-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-batchdescribesimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-batchdescribesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-canceldeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-canceldeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-cancelsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-cancelsimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-cancelworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-cancelworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-cancelworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createdeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createfleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createfleet-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobot-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createrobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createrobotapplicationversion-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createrobotapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createsimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createsimulationapplicationversion-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationapplicationversion-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-createworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-createworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deletefleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletefleet-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deleterobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobot-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deleterobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deletesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deletesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deleteworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deleteworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-deregisterrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-deregisterrobot-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describedeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describedeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describefleet-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describefleet-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describerobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobot-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describerobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describerobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describesimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describesimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describesimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describeworld-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworld-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describeworldexportjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldexportjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describeworldgenerationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldgenerationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-describeworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-describeworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-getworldtemplatebody-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-getworldtemplatebody-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listdeploymentjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listdeploymentjobs-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listfleets-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listfleets-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listrobotapplications-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobotapplications-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listrobots-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listrobots-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listsimulationapplications-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationapplications-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listsimulationjobbatches-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobbatches-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listsimulationjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listsimulationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listworldexportjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldexportjobs-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listworldgenerationjobs-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldgenerationjobs-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listworlds-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworlds-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-listworldtemplates-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-listworldtemplates-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-registerrobot-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-registerrobot-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-restartsimulationjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-restartsimulationjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-startsimulationjobbatch-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-startsimulationjobbatch-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-syncdeploymentjob-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-syncdeploymentjob-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-tags-api.postman_collection.json:
     method: derived
     evidence: openapi/amazon-robomaker-tags-api
   postman/amazon-robomaker-updaterobotapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updaterobotapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-updatesimulationapplication-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updatesimulationapplication-api
+    method: unknown
+    evidence: no authorship recorded
   postman/amazon-robomaker-updateworldtemplate-api.postman_collection.json:
-    method: derived
-    evidence: openapi/amazon-robomaker-updateworldtemplate-api
+    method: unknown
+    evidence: no authorship recorded
   rate-limits/amazon-robomaker-rate-limits.yml:
     method: generated
     evidence: declared in the artifact
