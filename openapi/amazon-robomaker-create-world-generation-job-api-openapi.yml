@@ -231,7 +231,30 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    CreatedAt:
+      type: string
+      format: date-time
+    WorldGenerationJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - PartialFailed
+      - Canceling
+      - Canceled
+    IdempotentParameterMismatchException: {}
     LimitExceededException: {}
+    InteriorCountPerFloorplan:
+      type: integer
+    FloorplanCount:
+      type: integer
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
     ClientRequestToken:
       type: string
       pattern: '[a-zA-Z0-9_\-=]*'
@@ -243,12 +266,7 @@ components:
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
-    InteriorCountPerFloorplan:
-      type: integer
-    ResourceNotFoundException: {}
     ThrottlingException: {}
-    InvalidParameterException: {}
-    ServiceUnavailableException: {}
     CreateWorldGenerationJobResponse:
       type: object
       properties:
@@ -288,33 +306,24 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the generated worlds.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    FloorplanCount:
-      type: integer
-    CreatedAt:
-      type: string
-      format: date-time
-    IdempotentParameterMismatchException: {}
     InternalServerException: {}
-    WorldGenerationJobStatus:
+    ResourceNotFoundException: {}
+    WorldGenerationJobErrorCode:
       type: string
       enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - PartialFailed
-      - Canceling
-      - Canceled
+      - InternalServiceError
+      - LimitExceeded
+      - ResourceNotFound
+      - RequestThrottled
+      - InvalidInput
+      - AllWorldGenerationFailed
+    ServiceUnavailableException: {}
     TagValue:
       type: string
       pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
       minLength: 0
       maxLength: 256
+    InvalidParameterException: {}
     WorldCount:
       type: object
       properties:
@@ -327,18 +336,33 @@ components:
           - $ref: '#/components/schemas/InteriorCountPerFloorplan'
           - description: The number of unique interiors per floorplan.
       description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
-    WorldGenerationJobErrorCode:
-      type: string
-      enum:
-      - InternalServiceError
-      - LimitExceeded
-      - ResourceNotFound
-      - RequestThrottled
-      - InvalidInput
-      - AllWorldGenerationFailed
   parameters:
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -351,30 +375,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string

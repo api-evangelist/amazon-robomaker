@@ -185,36 +185,9 @@ paths:
       summary: Restart simulation job
       x-summary-source: derived
 components:
-  schemas:
-    RestartSimulationJobResponse:
-      type: object
-      properties: {}
-    InvalidParameterException: {}
-    LimitExceededException: {}
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    ThrottlingException: {}
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Security-Token:
       name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string
@@ -225,8 +198,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -237,6 +210,33 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    LimitExceededException: {}
+    ResourceNotFoundException: {}
+    InvalidParameterException: {}
+    InternalServerException: {}
+    RestartSimulationJobResponse:
+      type: object
+      properties: {}
+    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

@@ -204,52 +204,50 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    Filter:
+    CreatedAt:
+      type: string
+      format: date-time
+    ListRobotsResponse:
       type: object
+      deprecated: true
       properties:
-        name:
+        robots:
           allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
+          - $ref: '#/components/schemas/Robots'
+          - description: A list of robots that meet the criteria of the request.
+        nextToken:
           allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
-    ResourceNotFoundException: {}
-    ThrottlingException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    InvalidParameterException: {}
-    Id:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1224
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListRobots</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
     Architecture:
       type: string
       enum:
       - X86_64
       - ARM64
       - ARMHF
-    RobotStatus:
+    Arn:
       type: string
-      enum:
-      - Available
-      - Registered
-      - PendingNewDeployment
-      - Deploying
-      - Failed
-      - InSync
-      - NoResponse
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    Robots:
+      type: array
+      items:
+        $ref: '#/components/schemas/Robot'
+      minItems: 0
+      maxItems: 1000
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    ThrottlingException: {}
     Robot:
       type: object
       properties:
@@ -290,43 +288,69 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time of the last deployment.
       description: Information about a robot.
-    CreatedAt:
-      type: string
-      format: date-time
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
-    InternalServerException: {}
     FilterValues:
       type: array
       items:
         $ref: '#/components/schemas/Name'
       minItems: 1
       maxItems: 1
-    ListRobotsResponse:
+    InternalServerException: {}
+    RobotStatus:
+      type: string
+      enum:
+      - Available
+      - Registered
+      - PendingNewDeployment
+      - Deploying
+      - Failed
+      - InSync
+      - NoResponse
+    ResourceNotFoundException: {}
+    Id:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1224
+    InvalidParameterException: {}
+    Filter:
       type: object
-      deprecated: true
       properties:
-        robots:
+        name:
           allOf:
-          - $ref: '#/components/schemas/Robots'
-          - description: A list of robots that meet the criteria of the request.
-        nextToken:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
           allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListRobots</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    Robots:
-      type: array
-      items:
-        $ref: '#/components/schemas/Robot'
-      minItems: 0
-      maxItems: 1000
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
   parameters:
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -339,30 +363,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string

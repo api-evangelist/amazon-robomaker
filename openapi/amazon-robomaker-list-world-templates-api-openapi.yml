@@ -187,23 +187,50 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    TemplateSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/TemplateSummary'
-    ThrottlingException: {}
-    InvalidParameterException: {}
+    CreatedAt:
+      type: string
+      format: date-time
+    ListWorldTemplatesResponse:
+      type: object
+      properties:
+        templateSummaries:
+          allOf:
+          - $ref: '#/components/schemas/TemplateSummaries'
+          - description: Summary information for templates.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldTemplates</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    TemplateName:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 255
+    ThrottlingException: {}
+    TemplateSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/TemplateSummary'
     LastUpdatedAt:
       type: string
       format: date-time
-    CreatedAt:
+    InternalServerException: {}
+    GenericString:
       type: string
-      format: date-time
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
+    InvalidParameterException: {}
     TemplateSummary:
       type: object
       properties:
@@ -228,36 +255,33 @@ components:
           - $ref: '#/components/schemas/GenericString'
           - description: The version of the template that you're using.
       description: Summary information for a template.
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
-    GenericString:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 1024
-    InternalServerException: {}
-    TemplateName:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 255
-    ListWorldTemplatesResponse:
-      type: object
-      properties:
-        templateSummaries:
-          allOf:
-          - $ref: '#/components/schemas/TemplateSummaries'
-          - description: Summary information for templates.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldTemplates</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
   parameters:
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -270,30 +294,6 @@ components:
       required: false
     X-Amz-Date:
       name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
       in: header
       schema:
         type: string

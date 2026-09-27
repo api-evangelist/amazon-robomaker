@@ -2603,5 +2603,9 @@ tags:
 - AWS
 - Robotics
 - Simulation
-x-parent: aws
+- Defunct
+x-parent: amazon-web-services
 x-relationship: product
+x-status: defunct
+x-status-detail: 'AWS service discontinued; AWS points users to AWS Batch (AWS, Services in Full Shutdown).'
+x-status-source: https://docs.aws.amazon.com/general/latest/gr/full_shutdown_services.html
