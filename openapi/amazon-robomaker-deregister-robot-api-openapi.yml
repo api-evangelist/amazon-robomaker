@@ -190,15 +190,56 @@ paths:
       summary: Deregister robot
       x-summary-source: derived
 components:
+  schemas:
+    ResourceNotFoundException: {}
+    InternalServerException: {}
+    DeregisterRobotResponse:
+      type: object
+      deprecated: true
+      properties:
+        fleet:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the fleet.
+        robot:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the robot.
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    InvalidParameterException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -215,47 +256,6 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-  schemas:
-    InvalidParameterException: {}
-    DeregisterRobotResponse:
-      type: object
-      deprecated: true
-      properties:
-        fleet:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the fleet.
-        robot:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the robot.
-      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

@@ -200,6 +200,24 @@ paths:
       x-summary-source: derived
 components:
   parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
@@ -218,24 +236,6 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -243,47 +243,17 @@ components:
         type: string
       required: false
   schemas:
-    SimulationSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
-          - description: The name of the simulation software suite.
-        version:
-          allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
-          - description: The version of the simulation software suite.
-      description: Information about a simulation software suite.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    RobotSoftwareSuiteVersionType:
-      type: string
-      enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
-    RobotSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
-          - description: The name of the robot software suite (ROS distribution).
-        version:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
-          - description: The version of the robot software suite (ROS distribution).
-      description: Information about a robot software suite (ROS distribution).
     PaginationToken:
       type: string
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
     SimulationApplicationSummary:
       type: object
       properties:
@@ -312,44 +282,12 @@ components:
           - $ref: '#/components/schemas/SimulationSoftwareSuite'
           - description: Information about a simulation software suite.
       description: Summary information for a simulation application.
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    ThrottlingException: {}
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
-    LastUpdatedAt:
-      type: string
-      format: date-time
     RobotSoftwareSuiteType:
       type: string
       enum:
       - ROS
       - ROS2
       - General
-    SimulationSoftwareSuiteType:
-      type: string
-      enum:
-      - Gazebo
-      - RosbagPlay
-      - SimulationRuntime
-    InternalServerException: {}
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
-    SimulationSoftwareSuiteVersionType:
-      type: string
-      pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
-      minLength: 0
-      maxLength: 1024
     ListSimulationApplicationsResponse:
       type: object
       properties:
@@ -361,13 +299,47 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListSimulationApplications</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    InvalidParameterException: {}
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    InternalServerException: {}
     SimulationApplicationSummaries:
       type: array
       items:
         $ref: '#/components/schemas/SimulationApplicationSummary'
       minItems: 0
       maxItems: 100
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
+    SimulationSoftwareSuiteVersionType:
+      type: string
+      pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
+      minLength: 0
+      maxLength: 1024
+    SimulationSoftwareSuiteType:
+      type: string
+      enum:
+      - Gazebo
+      - RosbagPlay
+      - SimulationRuntime
+    RobotSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
     Filter:
       type: object
       properties:
@@ -380,6 +352,34 @@ components:
           - $ref: '#/components/schemas/FilterValues'
           - description: A list of values.
       description: Information about a filter.
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    SimulationSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
+          - description: The name of the simulation software suite.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
+          - description: The version of the simulation software suite.
+      description: Information about a simulation software suite.
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
+    InvalidParameterException: {}
   securitySchemes:
     hmac:
       type: apiKey

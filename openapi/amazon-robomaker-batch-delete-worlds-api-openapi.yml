@@ -174,37 +174,33 @@ paths:
       summary: Batch delete worlds
       x-summary-source: derived
 components:
-  schemas:
-    Arns:
-      type: array
-      items:
-        $ref: '#/components/schemas/Arn'
-      minItems: 1
-      maxItems: 100
-    InvalidParameterException: {}
-    BatchDeleteWorldsResponse:
-      type: object
-      properties:
-        unprocessedWorlds:
-          allOf:
-          - $ref: '#/components/schemas/Arns'
-          - description: A list of unprocessed worlds associated with the call. These worlds were not deleted.
-    InternalServerException: {}
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -221,24 +217,28 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
+  schemas:
+    Arns:
+      type: array
+      items:
+        $ref: '#/components/schemas/Arn'
+      minItems: 1
+      maxItems: 100
+    InternalServerException: {}
+    BatchDeleteWorldsResponse:
+      type: object
+      properties:
+        unprocessedWorlds:
+          allOf:
+          - $ref: '#/components/schemas/Arns'
+          - description: A list of unprocessed worlds associated with the call. These worlds were not deleted.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    InvalidParameterException: {}
   securitySchemes:
     hmac:
       type: apiKey

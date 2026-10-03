@@ -204,24 +204,8 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    TemplateName:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 255
+    ResourceNotFoundException: {}
     InternalServerException: {}
-    InvalidParameterException: {}
-    LastUpdatedAt:
-      type: string
-      format: date-time
     UpdateWorldTemplateResponse:
       type: object
       properties:
@@ -241,27 +225,61 @@ components:
           allOf:
           - $ref: '#/components/schemas/LastUpdatedAt'
           - description: The time, in milliseconds since the epoch, when the world template was last updated.
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    TemplateName:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 255
+    CreatedAt:
+      type: string
+      format: date-time
+    ThrottlingException: {}
+    InvalidParameterException: {}
+    LastUpdatedAt:
+      type: string
+      format: date-time
     S3Bucket:
       type: string
       pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
       minLength: 3
       maxLength: 63
-    ResourceNotFoundException: {}
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    ThrottlingException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -274,24 +292,6 @@ components:
       required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string

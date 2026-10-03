@@ -180,35 +180,6 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    TemplateName:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 255
-    TagMap:
-      type: object
-      minProperties: 0
-      maxProperties: 50
-      additionalProperties:
-        $ref: '#/components/schemas/TagValue'
-    ThrottlingException: {}
-    LastUpdatedAt:
-      type: string
-      format: date-time
-    InternalServerException: {}
     ResourceNotFoundException: {}
     DescribeWorldTemplateResponse:
       type: object
@@ -241,32 +212,49 @@ components:
           allOf:
           - $ref: '#/components/schemas/GenericString'
           - description: The version of the world template that you're using.
-    GenericString:
+    TagMap:
+      type: object
+      minProperties: 0
+      maxProperties: 50
+      additionalProperties:
+        $ref: '#/components/schemas/TagValue'
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    CreatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
+    TemplateName:
       type: string
       pattern: .*
       minLength: 0
-      maxLength: 1024
+      maxLength: 255
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    LastUpdatedAt:
+      type: string
+      format: date-time
     TagValue:
       type: string
       pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
       minLength: 0
       maxLength: 256
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
     InvalidParameterException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -283,8 +271,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

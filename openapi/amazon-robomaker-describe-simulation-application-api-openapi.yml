@@ -186,87 +186,26 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    RenderingEngineType:
+    ResourceNotFoundException: {}
+    S3Etag:
       type: string
-      enum:
-      - OGRE
-    Architecture:
+    RepositoryUrl:
       type: string
-      enum:
-      - X86_64
-      - ARM64
-      - ARMHF
-    SimulationSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
-          - description: The name of the simulation software suite.
-        version:
-          allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
-          - description: The version of the simulation software suite.
-      description: Information about a simulation software suite.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    RobotSoftwareSuiteVersionType:
-      type: string
-      enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
-    RobotSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
-          - description: The name of the robot software suite (ROS distribution).
-        version:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
-          - description: The version of the robot software suite (ROS distribution).
-      description: Information about a robot software suite (ROS distribution).
-    S3Key:
-      type: string
-      pattern: .*
+      pattern: .+
       minLength: 1
       maxLength: 1024
-    Environment:
-      type: object
-      properties:
-        uri:
-          allOf:
-          - $ref: '#/components/schemas/RepositoryUrl'
-          - description: The Docker image URI for either your robot or simulation applications.
-      description: The object that contains the Docker image URI for either your robot or simulation applications.
-    ImageDigest:
-      type: string
-      pattern: '[Ss][Hh][Aa]256:[0-9a-fA-F]{64}'
-      minLength: 0
-      maxLength: 72
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
-    ThrottlingException: {}
-    RepositoryUrl:
+    Arn:
       type: string
-      pattern: .+
+      pattern: arn:.*
       minLength: 1
-      maxLength: 1024
+      maxLength: 1224
+    ThrottlingException: {}
     DescribeSimulationApplicationResponse:
       type: object
       properties:
@@ -318,42 +257,40 @@ components:
           allOf:
           - $ref: '#/components/schemas/ImageDigest'
           - description: A SHA256 identifier for the Docker image that you use for your simulation application.
-    LastUpdatedAt:
-      type: string
-      format: date-time
-    RevisionId:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 40
     RobotSoftwareSuiteType:
       type: string
       enum:
       - ROS
       - ROS2
       - General
-    SimulationSoftwareSuiteType:
+    RenderingEngineVersionType:
       type: string
-      enum:
-      - Gazebo
-      - RosbagPlay
-      - SimulationRuntime
-    InternalServerException: {}
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    ResourceNotFoundException: {}
-    Sources:
-      type: array
-      items:
-        $ref: '#/components/schemas/Source'
+      pattern: 1.x
+      minLength: 1
+      maxLength: 4
     Version:
       type: string
       pattern: (\$LATEST)|[0-9]*
       minLength: 1
       maxLength: 255
+    InternalServerException: {}
+    RenderingEngine:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineType'
+          - description: The name of the rendering engine.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineVersionType'
+          - description: The version of the rendering engine.
+      description: Information about a rendering engine.
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
     Source:
       type: object
       properties:
@@ -379,46 +316,97 @@ components:
       pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
       minLength: 0
       maxLength: 1024
-    S3Etag:
+    RenderingEngineType:
       type: string
-    RenderingEngineVersionType:
+      enum:
+      - OGRE
+    RevisionId:
       type: string
-      pattern: 1.x
+      pattern: '[a-zA-Z0-9_.\-]*'
       minLength: 1
-      maxLength: 4
-    RenderingEngine:
+      maxLength: 40
+    SimulationSoftwareSuiteType:
+      type: string
+      enum:
+      - Gazebo
+      - RosbagPlay
+      - SimulationRuntime
+    ImageDigest:
+      type: string
+      pattern: '[Ss][Hh][Aa]256:[0-9a-fA-F]{64}'
+      minLength: 0
+      maxLength: 72
+    RobotSoftwareSuite:
       type: object
       properties:
         name:
           allOf:
-          - $ref: '#/components/schemas/RenderingEngineType'
-          - description: The name of the rendering engine.
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
         version:
           allOf:
-          - $ref: '#/components/schemas/RenderingEngineVersionType'
-          - description: The version of the rendering engine.
-      description: Information about a rendering engine.
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    SimulationSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
+          - description: The name of the simulation software suite.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
+          - description: The version of the simulation software suite.
+      description: Information about a simulation software suite.
+    Environment:
+      type: object
+      properties:
+        uri:
+          allOf:
+          - $ref: '#/components/schemas/RepositoryUrl'
+          - description: The Docker image URI for either your robot or simulation applications.
+      description: The object that contains the Docker image URI for either your robot or simulation applications.
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    Architecture:
+      type: string
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
+    Sources:
+      type: array
+      items:
+        $ref: '#/components/schemas/Source'
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
     TagValue:
       type: string
       pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
       minLength: 0
       maxLength: 256
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
     InvalidParameterException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -435,8 +423,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

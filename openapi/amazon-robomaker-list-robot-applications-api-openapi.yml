@@ -200,6 +200,24 @@ paths:
       x-summary-source: derived
 components:
   parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
@@ -218,24 +236,6 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -243,18 +243,52 @@ components:
         type: string
       required: false
   schemas:
+    ListRobotApplicationsResponse:
+      type: object
+      properties:
+        robotApplicationSummaries:
+          allOf:
+          - $ref: '#/components/schemas/RobotApplicationSummaries'
+          - description: A list of robot application summaries that meet the criteria of the request.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListRobotApplications</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    RobotSoftwareSuiteVersionType:
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    ThrottlingException: {}
+    RobotApplicationSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/RobotApplicationSummary'
+      minItems: 0
+      maxItems: 100
+    RobotSoftwareSuiteType:
       type: string
       enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
+      - ROS
+      - ROS2
+      - General
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    InternalServerException: {}
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
     RobotSoftwareSuite:
       type: object
       properties:
@@ -267,16 +301,26 @@ components:
           - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
           - description: The version of the robot software suite (ROS distribution).
       description: Information about a robot software suite (ROS distribution).
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
     Name:
       type: string
       pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
       maxLength: 255
+    LastUpdatedAt:
+      type: string
+      format: date-time
     RobotApplicationSummary:
       type: object
       properties:
@@ -301,58 +345,14 @@ components:
           - $ref: '#/components/schemas/RobotSoftwareSuite'
           - description: Information about a robot software suite (ROS distribution).
       description: Summary information for a robot application.
-    ThrottlingException: {}
-    ListRobotApplicationsResponse:
-      type: object
-      properties:
-        robotApplicationSummaries:
-          allOf:
-          - $ref: '#/components/schemas/RobotApplicationSummaries'
-          - description: A list of robot application summaries that meet the criteria of the request.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListRobotApplications</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    RobotApplicationSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/RobotApplicationSummary'
-      minItems: 0
-      maxItems: 100
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
-    LastUpdatedAt:
-      type: string
-      format: date-time
-    RobotSoftwareSuiteType:
+    RobotSoftwareSuiteVersionType:
       type: string
       enum:
-      - ROS
-      - ROS2
-      - General
-    InternalServerException: {}
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
     InvalidParameterException: {}
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
   securitySchemes:
     hmac:
       type: apiKey

@@ -193,14 +193,61 @@ paths:
       summary: List worlds
       x-summary-source: derived
 components:
+  parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
   schemas:
-    WorldSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/WorldSummary'
-    CreatedAt:
-      type: string
-      format: date-time
+    ListWorldsResponse:
+      type: object
+      properties:
+        worldSummaries:
+          allOf:
+          - $ref: '#/components/schemas/WorldSummaries'
+          - description: Summary information for worlds.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorlds</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     Arn:
       type: string
       pattern: arn:.*
@@ -211,11 +258,38 @@ components:
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
+    ThrottlingException: {}
+    CreatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
     Name:
       type: string
       pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
       maxLength: 255
+    WorldSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldSummary'
     WorldSummary:
       type: object
       properties:
@@ -236,81 +310,7 @@ components:
           - $ref: '#/components/schemas/Arn'
           - description: The Amazon Resource Name (arn) of the world template.
       description: Information about a world.
-    ThrottlingException: {}
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
-    InternalServerException: {}
-    ListWorldsResponse:
-      type: object
-      properties:
-        worldSummaries:
-          allOf:
-          - $ref: '#/components/schemas/WorldSummaries'
-          - description: Summary information for worlds.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorlds</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     InvalidParameterException: {}
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
-  parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   securitySchemes:
     hmac:
       type: apiKey

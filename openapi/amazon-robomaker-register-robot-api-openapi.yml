@@ -196,27 +196,39 @@ paths:
       summary: Register robot
       x-summary-source: derived
 components:
+  schemas:
+    ResourceNotFoundException: {}
+    LimitExceededException: {}
+    InternalServerException: {}
+    RegisterRobotResponse:
+      type: object
+      deprecated: true
+      properties:
+        fleet:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the fleet that the robot will join.
+        robot:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: Information about the robot registration.
+      description: AWS RoboMaker is unable to process this request as the support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    InvalidParameterException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
@@ -233,36 +245,24 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
       required: false
-  schemas:
-    LimitExceededException: {}
-    InvalidParameterException: {}
-    RegisterRobotResponse:
-      type: object
-      deprecated: true
-      properties:
-        fleet:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the fleet that the robot will join.
-        robot:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: Information about the robot registration.
-      description: AWS RoboMaker is unable to process this request as the support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

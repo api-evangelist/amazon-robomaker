@@ -204,9 +204,7 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
+    ResourceNotFoundException: {}
     ListFleetsResponse:
       type: object
       deprecated: true
@@ -220,16 +218,6 @@ components:
           - $ref: '#/components/schemas/PaginationToken'
           - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListFleets</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
     Fleet:
       type: object
       properties:
@@ -258,36 +246,33 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time of the last deployment.
       description: Information about a fleet.
-    Name:
+    PaginationToken:
       type: string
-      pattern: '[a-zA-Z0-9_\-]*'
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
-      maxLength: 255
+      maxLength: 2048
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    CreatedAt:
+      type: string
+      format: date-time
     Fleets:
       type: array
       items:
         $ref: '#/components/schemas/Fleet'
       minItems: 0
       maxItems: 200
-    ThrottlingException: {}
+    InternalServerException: {}
     FilterValues:
       type: array
       items:
         $ref: '#/components/schemas/Name'
       minItems: 1
       maxItems: 1
-    InternalServerException: {}
-    DeploymentStatus:
-      type: string
-      enum:
-      - Pending
-      - Preparing
-      - InProgress
-      - Failed
-      - Succeeded
-      - Canceled
-    ResourceNotFoundException: {}
-    InvalidParameterException: {}
     Filter:
       type: object
       properties:
@@ -300,21 +285,24 @@ components:
           - $ref: '#/components/schemas/FilterValues'
           - description: A list of values.
       description: Information about a filter.
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    DeploymentStatus:
+      type: string
+      enum:
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
+    InvalidParameterException: {}
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -331,8 +319,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

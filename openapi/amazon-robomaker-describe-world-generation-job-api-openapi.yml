@@ -180,29 +180,7 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    CreatedAt:
-      type: string
-      format: date-time
-    WorldGenerationJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - PartialFailed
-      - Canceling
-      - Canceled
-    WorldFailures:
-      type: array
-      items:
-        $ref: '#/components/schemas/WorldFailure'
-      minItems: 0
-      maxItems: 100
-    InteriorCountPerFloorplan:
-      type: integer
-    FloorplanCount:
-      type: integer
+    ResourceNotFoundException: {}
     FinishedWorldsSummary:
       type: object
       properties:
@@ -219,43 +197,53 @@ components:
           - $ref: '#/components/schemas/FailureSummary'
           - description: Information about worlds that failed.
       description: Information about worlds that finished.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    FailureSummary:
-      type: object
-      properties:
-        totalFailureCount:
-          allOf:
-          - $ref: '#/components/schemas/Integer'
-          - description: The total number of failures.
-        failures:
-          allOf:
-          - $ref: '#/components/schemas/WorldFailures'
-          - description: The worlds that failed.
-      description: Information about worlds that failed.
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    Integer:
-      type: integer
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    WorldGenerationJobErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+      - LimitExceeded
+      - ResourceNotFound
+      - RequestThrottled
+      - InvalidInput
+      - AllWorldGenerationFailed
     ThrottlingException: {}
+    CreatedAt:
+      type: string
+      format: date-time
+    FloorplanCount:
+      type: integer
+    WorldCount:
+      type: object
+      properties:
+        floorplanCount:
+          allOf:
+          - $ref: '#/components/schemas/FloorplanCount'
+          - description: The number of unique floorplans.
+        interiorCountPerFloorplan:
+          allOf:
+          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
+          - description: The number of unique interiors per floorplan.
+      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
     Arns:
       type: array
       items:
         $ref: '#/components/schemas/Arn'
       minItems: 1
       maxItems: 100
+    InternalServerException: {}
+    Integer:
+      type: integer
     DescribeWorldGenerationJobResponse:
       type: object
       properties:
@@ -303,22 +291,41 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the generated worlds.
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    WorldGenerationJobErrorCode:
+    FailureSummary:
+      type: object
+      properties:
+        totalFailureCount:
+          allOf:
+          - $ref: '#/components/schemas/Integer'
+          - description: The total number of failures.
+        failures:
+          allOf:
+          - $ref: '#/components/schemas/WorldFailures'
+          - description: The worlds that failed.
+      description: Information about worlds that failed.
+    InteriorCountPerFloorplan:
+      type: integer
+    WorldGenerationJobStatus:
       type: string
       enum:
-      - InternalServiceError
-      - LimitExceeded
-      - ResourceNotFound
-      - RequestThrottled
-      - InvalidInput
-      - AllWorldGenerationFailed
-    GenericString:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - PartialFailed
+      - Canceling
+      - Canceled
+    ClientRequestToken:
       type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 1024
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    WorldFailures:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldFailure'
+      minItems: 0
+      maxItems: 100
     WorldFailure:
       type: object
       properties:
@@ -340,34 +347,15 @@ components:
       pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
       minLength: 0
       maxLength: 256
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
     InvalidParameterException: {}
-    WorldCount:
-      type: object
-      properties:
-        floorplanCount:
-          allOf:
-          - $ref: '#/components/schemas/FloorplanCount'
-          - description: The number of unique floorplans.
-        interiorCountPerFloorplan:
-          allOf:
-          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
-          - description: The number of unique interiors per floorplan.
-      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
   parameters:
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -384,8 +372,20 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string

@@ -183,15 +183,50 @@ paths:
       summary: Get world template body
       x-summary-source: derived
 components:
+  schemas:
+    ResourceNotFoundException: {}
+    InternalServerException: {}
+    Json:
+      type: string
+      pattern: '[\S\s]+'
+      minLength: 1
+      maxLength: 262144
+    ThrottlingException: {}
+    InvalidParameterException: {}
+    GetWorldTemplateBodyResponse:
+      type: object
+      properties:
+        templateBody:
+          allOf:
+          - $ref: '#/components/schemas/Json'
+          - description: The world template body.
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -208,41 +243,6 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-  schemas:
-    GetWorldTemplateBodyResponse:
-      type: object
-      properties:
-        templateBody:
-          allOf:
-          - $ref: '#/components/schemas/Json'
-          - description: The world template body.
-    InvalidParameterException: {}
-    Json:
-      type: string
-      pattern: '[\S\s]+'
-      minLength: 1
-      maxLength: 262144
-    InternalServerException: {}
-    ResourceNotFoundException: {}
-    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

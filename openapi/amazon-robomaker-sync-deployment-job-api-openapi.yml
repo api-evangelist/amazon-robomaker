@@ -209,27 +209,11 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    EnvironmentVariableMap:
-      type: object
-      minProperties: 0
-      maxProperties: 20
-      additionalProperties:
-        $ref: '#/components/schemas/EnvironmentVariableValue'
-    CreatedAt:
-      type: string
-      format: date-time
-    IdempotentParameterMismatchException: {}
+    ResourceNotFoundException: {}
     LimitExceededException: {}
-    Path:
+    S3Etag:
       type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
+    ConcurrentDeploymentException: {}
     DeploymentLaunchConfig:
       type: object
       required:
@@ -257,11 +241,39 @@ components:
           - $ref: '#/components/schemas/EnvironmentVariableMap'
           - description: An array of key/value pairs specifying environment variables for the robot application
       description: Configuration information for a deployment launch.
-    S3Key:
+    DeploymentApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    DeploymentJobErrorCode:
       type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
+      enum:
+      - ResourceNotFound
+      - EnvironmentSetupError
+      - EtagMismatch
+      - FailureThresholdBreached
+      - RobotDeploymentAborted
+      - RobotDeploymentNoResponse
+      - RobotAgentConnectionTimeout
+      - GreengrassDeploymentFailed
+      - InvalidGreengrassGroup
+      - MissingRobotArchitecture
+      - MissingRobotApplicationArchitecture
+      - MissingRobotDeploymentResource
+      - GreengrassGroupVersionDoesNotExist
+      - LambdaDeleted
+      - ExtractingBundleFailure
+      - PreLaunchFileFailure
+      - PostLaunchFileFailure
+      - BadPermissionError
+      - DownloadConditionFailed
+      - BadLambdaAssociated
+      - InternalServerError
+      - RobotApplicationDoesNotExist
+      - DeploymentFleetDoesNotExist
+      - FleetDeploymentTimeout
     S3Object:
       type: object
       required:
@@ -281,50 +293,39 @@ components:
           - $ref: '#/components/schemas/S3Etag'
           - description: The etag of the object.
       description: Information about an S3 object.
-    DeploymentApplicationConfig:
-      type: object
-      required:
-      - application
-      - applicationVersion
-      - launchConfig
-      properties:
-        application:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the robot application.
-        applicationVersion:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentVersion'
-          - description: The version of the application.
-        launchConfig:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentLaunchConfig'
-          - description: The launch configuration.
-      description: Information about a deployment application configuration.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
     ThrottlingException: {}
-    ConcurrentDeploymentException: {}
-    DeploymentApplicationConfigs:
-      type: array
-      items:
-        $ref: '#/components/schemas/DeploymentApplicationConfig'
-      minItems: 1
-      maxItems: 1
+    CreatedAt:
+      type: string
+      format: date-time
+    IdempotentParameterMismatchException: {}
     InternalServerException: {}
-    S3Bucket:
+    S3Key:
       type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    DeploymentStatus:
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    InvalidParameterException: {}
+    Path:
       type: string
-      enum:
-      - Pending
-      - Preparing
-      - InProgress
-      - Failed
-      - Succeeded
-      - Canceled
-    ResourceNotFoundException: {}
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    EnvironmentVariableMap:
+      type: object
+      minProperties: 0
+      maxProperties: 20
+      additionalProperties:
+        $ref: '#/components/schemas/EnvironmentVariableValue'
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
     DeploymentConfig:
       type: object
       properties:
@@ -345,13 +346,36 @@ components:
           - $ref: '#/components/schemas/S3Object'
           - description: The download condition file.
       description: Information about a deployment configuration.
+    DeploymentApplicationConfig:
+      type: object
+      required:
+      - application
+      - applicationVersion
+      - launchConfig
+      properties:
+        application:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the robot application.
+        applicationVersion:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentVersion'
+          - description: The version of the application.
+        launchConfig:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentLaunchConfig'
+          - description: The launch configuration.
+      description: Information about a deployment application configuration.
     EnvironmentVariableValue:
       type: string
       pattern: .*
       minLength: 1
       maxLength: 1024
-    S3Etag:
+    DeploymentVersion:
       type: string
+      pattern: '[0-9]*'
+      minLength: 1
+      maxLength: 255
     SyncDeploymentJobResponse:
       type: object
       deprecated: true
@@ -389,56 +413,50 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time, in milliseconds since the epoch, when the fleet was created.
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    Command:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 1024
     DeploymentTimeout:
       type: integer
+    Percentage:
+      type: integer
+      minimum: 1
+      maximum: 100
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
     GenericString:
       type: string
       pattern: .*
       minLength: 0
       maxLength: 1024
-    Percentage:
-      type: integer
-      minimum: 1
-      maximum: 100
-    InvalidParameterException: {}
-    DeploymentVersion:
-      type: string
-      pattern: '[0-9]*'
-      minLength: 1
-      maxLength: 255
-    DeploymentJobErrorCode:
+    DeploymentStatus:
       type: string
       enum:
-      - ResourceNotFound
-      - EnvironmentSetupError
-      - EtagMismatch
-      - FailureThresholdBreached
-      - RobotDeploymentAborted
-      - RobotDeploymentNoResponse
-      - RobotAgentConnectionTimeout
-      - GreengrassDeploymentFailed
-      - InvalidGreengrassGroup
-      - MissingRobotArchitecture
-      - MissingRobotApplicationArchitecture
-      - MissingRobotDeploymentResource
-      - GreengrassGroupVersionDoesNotExist
-      - LambdaDeleted
-      - ExtractingBundleFailure
-      - PreLaunchFileFailure
-      - PostLaunchFileFailure
-      - BadPermissionError
-      - DownloadConditionFailed
-      - BadLambdaAssociated
-      - InternalServerError
-      - RobotApplicationDoesNotExist
-      - DeploymentFleetDoesNotExist
-      - FleetDeploymentTimeout
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
   parameters:
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
@@ -453,24 +471,6 @@ components:
       required: false
     X-Amz-Algorithm:
       name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
