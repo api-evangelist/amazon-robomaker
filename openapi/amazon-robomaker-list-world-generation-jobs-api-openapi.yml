@@ -193,50 +193,52 @@ paths:
       summary: List world generation jobs
       x-summary-source: derived
 components:
-  parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
+    PaginationToken:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-\/+=]*'
+      minLength: 1
+      maxLength: 2048
+    Filter:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
+          allOf:
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
+    InvalidParameterException: {}
+    WorldCount:
+      type: object
+      properties:
+        floorplanCount:
+          allOf:
+          - $ref: '#/components/schemas/FloorplanCount'
+          - description: The number of unique floorplans.
+        interiorCountPerFloorplan:
+          allOf:
+          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
+          - description: The number of unique interiors per floorplan.
+      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
+    Integer:
+      type: integer
+    ListWorldGenerationJobsResponse:
+      type: object
+      required:
+      - worldGenerationJobSummaries
+      properties:
+        worldGenerationJobSummaries:
+          allOf:
+          - $ref: '#/components/schemas/WorldGenerationJobSummaries'
+          - description: Summary information for world generator jobs.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldGeneratorJobsRequest</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     WorldGenerationJobSummary:
       type: object
       properties:
@@ -269,45 +271,19 @@ components:
           - $ref: '#/components/schemas/Integer'
           - description: The number of worlds that failed.
       description: Information about a world generator job.
-    WorldGenerationJobSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/WorldGenerationJobSummary'
-      minItems: 0
-      maxItems: 100
-    PaginationToken:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-\/+=]*'
-      minLength: 1
-      maxLength: 2048
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
-      type: string
-      format: date-time
     FloorplanCount:
-      type: integer
-    WorldCount:
-      type: object
-      properties:
-        floorplanCount:
-          allOf:
-          - $ref: '#/components/schemas/FloorplanCount'
-          - description: The number of unique floorplans.
-        interiorCountPerFloorplan:
-          allOf:
-          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
-          - description: The number of unique interiors per floorplan.
-      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
-    InternalServerException: {}
-    Integer:
       type: integer
     InteriorCountPerFloorplan:
       type: integer
+    CreatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
     FilterValues:
       type: array
       items:
@@ -324,37 +300,61 @@ components:
       - PartialFailed
       - Canceling
       - Canceled
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
+    WorldGenerationJobSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldGenerationJobSummary'
+      minItems: 0
+      maxItems: 100
+    ThrottlingException: {}
     Name:
       type: string
       pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
       maxLength: 255
-    ListWorldGenerationJobsResponse:
-      type: object
-      required:
-      - worldGenerationJobSummaries
-      properties:
-        worldGenerationJobSummaries:
-          allOf:
-          - $ref: '#/components/schemas/WorldGenerationJobSummaries'
-          - description: Summary information for world generator jobs.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldGeneratorJobsRequest</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    InvalidParameterException: {}
+  parameters:
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

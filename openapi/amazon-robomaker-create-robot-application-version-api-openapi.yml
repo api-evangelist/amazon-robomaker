@@ -202,82 +202,8 @@ paths:
       summary: Create robot application version
       x-summary-source: derived
 components:
-  parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
-    LimitExceededException: {}
-    S3Etag:
-      type: string
-    RepositoryUrl:
-      type: string
-      pattern: .+
-      minLength: 1
-      maxLength: 1024
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
     IdempotentParameterMismatchException: {}
-    RobotSoftwareSuiteType:
-      type: string
-      enum:
-      - ROS
-      - ROS2
-      - General
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
-    InternalServerException: {}
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
     Source:
       type: object
       properties:
@@ -298,6 +224,22 @@ components:
           - $ref: '#/components/schemas/Architecture'
           - description: The taget processor architecture for the application.
       description: Information about a source.
+    InvalidParameterException: {}
+    S3Etag:
+      type: string
+    RobotSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
+    LimitExceededException: {}
     CreateRobotApplicationVersionResponse:
       type: object
       properties:
@@ -333,28 +275,52 @@ components:
           allOf:
           - $ref: '#/components/schemas/Environment'
           - description: The object that contains the Docker image URI used to create your robot application.
-    RevisionId:
+    Version:
       type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 40
-    RobotSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
-          - description: The name of the robot software suite (ROS distribution).
-        version:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
-          - description: The version of the robot software suite (ROS distribution).
-      description: Information about a robot software suite (ROS distribution).
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
+      pattern: (\$LATEST)|[0-9]*
       minLength: 1
       maxLength: 255
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    Architecture:
+      type: string
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
+    RepositoryUrl:
+      type: string
+      pattern: .+
+      minLength: 1
+      maxLength: 1024
+    Sources:
+      type: array
+      items:
+        $ref: '#/components/schemas/Source'
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    RobotSoftwareSuiteType:
+      type: string
+      enum:
+      - ROS
+      - ROS2
+      - General
+    ThrottlingException: {}
     Environment:
       type: object
       properties:
@@ -363,19 +329,16 @@ components:
           - $ref: '#/components/schemas/RepositoryUrl'
           - description: The Docker image URI for either your robot or simulation applications.
       description: The object that contains the Docker image URI for either your robot or simulation applications.
-    LastUpdatedAt:
+    Name:
       type: string
-      format: date-time
-    Architecture:
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    RevisionId:
       type: string
-      enum:
-      - X86_64
-      - ARM64
-      - ARMHF
-    Sources:
-      type: array
-      items:
-        $ref: '#/components/schemas/Source'
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 40
     RobotSoftwareSuiteVersionType:
       type: string
       enum:
@@ -383,12 +346,49 @@ components:
       - Melodic
       - Dashing
       - Foxy
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    InvalidParameterException: {}
+  parameters:
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

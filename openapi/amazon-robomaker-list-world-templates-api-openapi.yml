@@ -186,74 +186,12 @@ paths:
       summary: List world templates
       x-summary-source: derived
 components:
-  parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
     PaginationToken:
       type: string
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
-      type: string
-      format: date-time
-    TemplateSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/TemplateSummary'
-    InternalServerException: {}
-    TemplateName:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 255
     TemplateSummary:
       type: object
       properties:
@@ -278,6 +216,23 @@ components:
           - $ref: '#/components/schemas/GenericString'
           - description: The version of the template that you're using.
       description: Summary information for a template.
+    TemplateName:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 255
+    InvalidParameterException: {}
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    CreatedAt:
+      type: string
+      format: date-time
     ListWorldTemplatesResponse:
       type: object
       properties:
@@ -289,15 +244,60 @@ components:
           allOf:
           - $ref: '#/components/schemas/PaginationToken'
           - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldTemplates</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    LastUpdatedAt:
-      type: string
-      format: date-time
+    InternalServerException: {}
+    TemplateSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/TemplateSummary'
     GenericString:
       type: string
       pattern: .*
       minLength: 0
       maxLength: 1024
-    InvalidParameterException: {}
+    ThrottlingException: {}
+  parameters:
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

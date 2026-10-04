@@ -184,54 +184,12 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResourceNotFoundException: {}
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
-    Id:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1224
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
-      type: string
-      format: date-time
-    InternalServerException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    Architecture:
-      type: string
-      enum:
-      - X86_64
-      - ARM64
-      - ARMHF
-    RobotStatus:
-      type: string
-      enum:
-      - Available
-      - Registered
-      - PendingNewDeployment
-      - Deploying
-      - Failed
-      - InSync
-      - NoResponse
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
     InvalidParameterException: {}
     DescribeRobotResponse:
       type: object
@@ -278,9 +236,51 @@ components:
           - $ref: '#/components/schemas/TagMap'
           - description: The list of all tags added to the specified robot.
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    Architecture:
+      type: string
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
+    CreatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
+    ResourceNotFoundException: {}
+    RobotStatus:
+      type: string
+      enum:
+      - Available
+      - Registered
+      - PendingNewDeployment
+      - Deploying
+      - Failed
+      - InSync
+      - NoResponse
+    Id:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
   parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -291,20 +291,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -315,8 +309,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

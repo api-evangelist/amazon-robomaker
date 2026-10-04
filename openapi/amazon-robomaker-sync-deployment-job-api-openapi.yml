@@ -209,173 +209,11 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResourceNotFoundException: {}
-    LimitExceededException: {}
-    S3Etag:
-      type: string
-    ConcurrentDeploymentException: {}
-    DeploymentLaunchConfig:
-      type: object
-      required:
-      - packageName
-      - launchFile
-      properties:
-        packageName:
-          allOf:
-          - $ref: '#/components/schemas/Command'
-          - description: The package name.
-        preLaunchFile:
-          allOf:
-          - $ref: '#/components/schemas/Path'
-          - description: The deployment pre-launch file. This file will be executed prior to the launch file.
-        launchFile:
-          allOf:
-          - $ref: '#/components/schemas/Command'
-          - description: The launch file name.
-        postLaunchFile:
-          allOf:
-          - $ref: '#/components/schemas/Path'
-          - description: The deployment post-launch file. This file will be executed after the launch file.
-        environmentVariables:
-          allOf:
-          - $ref: '#/components/schemas/EnvironmentVariableMap'
-          - description: An array of key/value pairs specifying environment variables for the robot application
-      description: Configuration information for a deployment launch.
-    DeploymentApplicationConfigs:
-      type: array
-      items:
-        $ref: '#/components/schemas/DeploymentApplicationConfig'
-      minItems: 1
-      maxItems: 1
-    DeploymentJobErrorCode:
-      type: string
-      enum:
-      - ResourceNotFound
-      - EnvironmentSetupError
-      - EtagMismatch
-      - FailureThresholdBreached
-      - RobotDeploymentAborted
-      - RobotDeploymentNoResponse
-      - RobotAgentConnectionTimeout
-      - GreengrassDeploymentFailed
-      - InvalidGreengrassGroup
-      - MissingRobotArchitecture
-      - MissingRobotApplicationArchitecture
-      - MissingRobotDeploymentResource
-      - GreengrassGroupVersionDoesNotExist
-      - LambdaDeleted
-      - ExtractingBundleFailure
-      - PreLaunchFileFailure
-      - PostLaunchFileFailure
-      - BadPermissionError
-      - DownloadConditionFailed
-      - BadLambdaAssociated
-      - InternalServerError
-      - RobotApplicationDoesNotExist
-      - DeploymentFleetDoesNotExist
-      - FleetDeploymentTimeout
-    S3Object:
-      type: object
-      required:
-      - bucket
-      - key
-      properties:
-        bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The bucket containing the object.
-        key:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The key of the object.
-        etag:
-          allOf:
-          - $ref: '#/components/schemas/S3Etag'
-          - description: The etag of the object.
-      description: Information about an S3 object.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
-      type: string
-      format: date-time
     IdempotentParameterMismatchException: {}
-    InternalServerException: {}
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    InvalidParameterException: {}
-    Path:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    EnvironmentVariableMap:
-      type: object
-      minProperties: 0
-      maxProperties: 20
-      additionalProperties:
-        $ref: '#/components/schemas/EnvironmentVariableValue'
-    Command:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 1024
-    DeploymentConfig:
-      type: object
-      properties:
-        concurrentDeploymentPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of robots receiving the deployment at the same time.
-        failureThresholdPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of deployments that need to fail before stopping deployment.
-        robotDeploymentTimeoutInSeconds:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentTimeout'
-          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
-        downloadConditionFile:
-          allOf:
-          - $ref: '#/components/schemas/S3Object'
-          - description: The download condition file.
-      description: Information about a deployment configuration.
-    DeploymentApplicationConfig:
-      type: object
-      required:
-      - application
-      - applicationVersion
-      - launchConfig
-      properties:
-        application:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the robot application.
-        applicationVersion:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentVersion'
-          - description: The version of the application.
-        launchConfig:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentLaunchConfig'
-          - description: The launch configuration.
-      description: Information about a deployment application configuration.
-    EnvironmentVariableValue:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    DeploymentVersion:
-      type: string
-      pattern: '[0-9]*'
-      minLength: 1
-      maxLength: 255
+    Percentage:
+      type: integer
+      minimum: 1
+      maximum: 100
     SyncDeploymentJobResponse:
       type: object
       deprecated: true
@@ -415,19 +253,129 @@ components:
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
     DeploymentTimeout:
       type: integer
-    Percentage:
-      type: integer
-      minimum: 1
-      maximum: 100
+    InvalidParameterException: {}
+    S3Object:
+      type: object
+      required:
+      - bucket
+      - key
+      properties:
+        bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The bucket containing the object.
+        key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The key of the object.
+        etag:
+          allOf:
+          - $ref: '#/components/schemas/S3Etag'
+          - description: The etag of the object.
+      description: Information about an S3 object.
+    S3Etag:
+      type: string
+    LimitExceededException: {}
+    DeploymentJobErrorCode:
+      type: string
+      enum:
+      - ResourceNotFound
+      - EnvironmentSetupError
+      - EtagMismatch
+      - FailureThresholdBreached
+      - RobotDeploymentAborted
+      - RobotDeploymentNoResponse
+      - RobotAgentConnectionTimeout
+      - GreengrassDeploymentFailed
+      - InvalidGreengrassGroup
+      - MissingRobotArchitecture
+      - MissingRobotApplicationArchitecture
+      - MissingRobotDeploymentResource
+      - GreengrassGroupVersionDoesNotExist
+      - LambdaDeleted
+      - ExtractingBundleFailure
+      - PreLaunchFileFailure
+      - PostLaunchFileFailure
+      - BadPermissionError
+      - DownloadConditionFailed
+      - BadLambdaAssociated
+      - InternalServerError
+      - RobotApplicationDoesNotExist
+      - DeploymentFleetDoesNotExist
+      - FleetDeploymentTimeout
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    EnvironmentVariableMap:
+      type: object
+      minProperties: 0
+      maxProperties: 20
+      additionalProperties:
+        $ref: '#/components/schemas/EnvironmentVariableValue'
+    Path:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
     S3Bucket:
       type: string
       pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
       minLength: 3
       maxLength: 63
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
+    InternalServerException: {}
+    CreatedAt:
+      type: string
+      format: date-time
     GenericString:
       type: string
       pattern: .*
       minLength: 0
+      maxLength: 1024
+    DeploymentLaunchConfig:
+      type: object
+      required:
+      - packageName
+      - launchFile
+      properties:
+        packageName:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The package name.
+        preLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment pre-launch file. This file will be executed prior to the launch file.
+        launchFile:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The launch file name.
+        postLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment post-launch file. This file will be executed after the launch file.
+        environmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/EnvironmentVariableMap'
+          - description: An array of key/value pairs specifying environment variables for the robot application
+      description: Configuration information for a deployment launch.
+    ResourceNotFoundException: {}
+    DeploymentApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentApplicationConfig'
+      minItems: 1
+      maxItems: 1
+    EnvironmentVariableValue:
+      type: string
+      pattern: .*
+      minLength: 1
       maxLength: 1024
     DeploymentStatus:
       type: string
@@ -438,9 +386,61 @@ components:
       - Failed
       - Succeeded
       - Canceled
+    ConcurrentDeploymentException: {}
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    DeploymentConfig:
+      type: object
+      properties:
+        concurrentDeploymentPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of robots receiving the deployment at the same time.
+        failureThresholdPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of deployments that need to fail before stopping deployment.
+        robotDeploymentTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentTimeout'
+          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
+        downloadConditionFile:
+          allOf:
+          - $ref: '#/components/schemas/S3Object'
+          - description: The download condition file.
+      description: Information about a deployment configuration.
+    ThrottlingException: {}
+    DeploymentVersion:
+      type: string
+      pattern: '[0-9]*'
+      minLength: 1
+      maxLength: 255
+    DeploymentApplicationConfig:
+      type: object
+      required:
+      - application
+      - applicationVersion
+      - launchConfig
+      properties:
+        application:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the robot application.
+        applicationVersion:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentVersion'
+          - description: The version of the application.
+        launchConfig:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentLaunchConfig'
+          - description: The launch configuration.
+      description: Information about a deployment application configuration.
   parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -451,20 +451,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -475,8 +469,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

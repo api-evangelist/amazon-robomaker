@@ -184,46 +184,60 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResourceNotFoundException: {}
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
+    InvalidParameterException: {}
+    DescribeFleetResponse:
+      type: object
+      deprecated: true
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the fleet.
+        arn:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the fleet.
+        robots:
+          allOf:
+          - $ref: '#/components/schemas/Robots'
+          - description: A list of robots.
+        createdAt:
+          allOf:
+          - $ref: '#/components/schemas/CreatedAt'
+          - description: The time, in milliseconds since the epoch, when the fleet was created.
+        lastDeploymentStatus:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentStatus'
+          - description: The status of the last deployment.
+        lastDeploymentJob:
+          allOf:
+          - $ref: '#/components/schemas/Arn'
+          - description: The Amazon Resource Name (ARN) of the last deployment job.
+        lastDeploymentTime:
+          allOf:
+          - $ref: '#/components/schemas/CreatedAt'
+          - description: The time of the last deployment.
+        tags:
+          allOf:
+          - $ref: '#/components/schemas/TagMap'
+          - description: The list of all tags added to the specified fleet.
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    Id:
+    TagValue:
       type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
-      type: string
-      format: date-time
-    InternalServerException: {}
-    Robots:
-      type: array
-      items:
-        $ref: '#/components/schemas/Robot'
-      minItems: 0
-      maxItems: 1000
-    InvalidParameterException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    Architecture:
-      type: string
-      enum:
-      - X86_64
-      - ARM64
-      - ARMHF
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
     Robot:
       type: object
       properties:
@@ -264,6 +278,17 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time of the last deployment.
       description: Information about a robot.
+    Architecture:
+      type: string
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
+    CreatedAt:
+      type: string
+      format: date-time
+    InternalServerException: {}
+    ResourceNotFoundException: {}
     RobotStatus:
       type: string
       enum:
@@ -274,48 +299,17 @@ components:
       - Failed
       - InSync
       - NoResponse
-    DescribeFleetResponse:
-      type: object
-      deprecated: true
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the fleet.
-        arn:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the fleet.
-        robots:
-          allOf:
-          - $ref: '#/components/schemas/Robots'
-          - description: A list of robots.
-        createdAt:
-          allOf:
-          - $ref: '#/components/schemas/CreatedAt'
-          - description: The time, in milliseconds since the epoch, when the fleet was created.
-        lastDeploymentStatus:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentStatus'
-          - description: The status of the last deployment.
-        lastDeploymentJob:
-          allOf:
-          - $ref: '#/components/schemas/Arn'
-          - description: The Amazon Resource Name (ARN) of the last deployment job.
-        lastDeploymentTime:
-          allOf:
-          - $ref: '#/components/schemas/CreatedAt'
-          - description: The time of the last deployment.
-        tags:
-          allOf:
-          - $ref: '#/components/schemas/TagMap'
-          - description: The list of all tags added to the specified fleet.
-      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    TagValue:
+    Id:
       type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
+      pattern: .*
+      minLength: 1
+      maxLength: 1224
+    Robots:
+      type: array
+      items:
+        $ref: '#/components/schemas/Robot'
+      minItems: 0
+      maxItems: 1000
     DeploymentStatus:
       type: string
       enum:
@@ -325,9 +319,15 @@ components:
       - Failed
       - Succeeded
       - Canceled
+    ThrottlingException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
   parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -338,20 +338,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -362,8 +356,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

@@ -226,28 +226,52 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    ResourceNotFoundException: {}
+    OutputLocation:
+      type: object
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The S3 bucket for output.
+        s3Prefix:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The S3 folder in the <code>s3Bucket</code> where output files will be placed.
+      description: The output location.
+    IdempotentParameterMismatchException: {}
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
+    InvalidParameterException: {}
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
     IamRole:
       type: string
       pattern: arn:aws:iam::\w+:role/.*
       minLength: 1
       maxLength: 255
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
     Arn:
       type: string
       pattern: arn:.*
       minLength: 1
       maxLength: 1224
-    ThrottlingException: {}
-    CreatedAt:
+    S3Bucket:
       type: string
-      format: date-time
-    IdempotentParameterMismatchException: {}
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    ServiceUnavailableException: {}
     CreateWorldExportJobResponse:
       type: object
       properties:
@@ -282,49 +306,6 @@ components:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the world export job.
     InternalServerException: {}
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    ServiceUnavailableException: {}
-    OutputLocation:
-      type: object
-      properties:
-        s3Bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The S3 bucket for output.
-        s3Prefix:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The S3 folder in the <code>s3Bucket</code> where output files will be placed.
-      description: The output location.
-    WorldExportJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - Canceling
-      - Canceled
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    InvalidParameterException: {}
     WorldExportJobErrorCode:
       type: string
       enum:
@@ -334,9 +315,28 @@ components:
       - RequestThrottled
       - InvalidInput
       - AccessDenied
+    CreatedAt:
+      type: string
+      format: date-time
+    WorldExportJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - Canceling
+      - Canceled
+    ResourceNotFoundException: {}
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    ThrottlingException: {}
   parameters:
-    X-Amz-Signature:
-      name: X-Amz-Signature
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -347,20 +347,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Content-Sha256:
       name: X-Amz-Content-Sha256
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Date:
+      name: X-Amz-Date
       in: header
       schema:
         type: string
@@ -371,8 +365,14 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Date:
-      name: X-Amz-Date
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
       in: header
       schema:
         type: string

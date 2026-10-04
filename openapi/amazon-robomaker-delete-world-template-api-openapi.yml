@@ -179,35 +179,9 @@ paths:
       summary: Delete world template
       x-summary-source: derived
 components:
-  schemas:
-    ResourceNotFoundException: {}
-    InternalServerException: {}
-    DeleteWorldTemplateResponse:
-      type: object
-      properties: {}
-    ThrottlingException: {}
-    InvalidParameterException: {}
   parameters:
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -218,8 +192,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
+    X-Amz-Signature:
+      name: X-Amz-Signature
       in: header
       schema:
         type: string
@@ -230,6 +204,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+  schemas:
+    DeleteWorldTemplateResponse:
+      type: object
+      properties: {}
+    InternalServerException: {}
+    InvalidParameterException: {}
+    ThrottlingException: {}
+    ResourceNotFoundException: {}
   securitySchemes:
     hmac:
       type: apiKey
