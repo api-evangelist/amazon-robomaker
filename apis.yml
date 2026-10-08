@@ -1084,6 +1084,12 @@ apis:
   - type: FAQ
     url: https://aws.amazon.com/robomaker/faqs/
 common:
+- type: Plans
+  url: plans/amazon-robomaker-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/amazon-robomaker-rate-limits.yml
+- type: FinOps
+  url: finops/amazon-robomaker-finops.yml
 - type: Website
   url: https://amazon.com
 - type: PostmanWorkspace
