@@ -1,18 +1,45 @@
-generated: '2026-07-15'
+generated: '2026-09-23'
 method: generated
-source: openapi/amazon-robomaker-openapi.yml
+source: openapi/amazon-robomaker-batch-delete-worlds-api-openapi.yml, openapi/amazon-robomaker-batch-describe-simulation-job-api-openapi.yml,
+  openapi/amazon-robomaker-cancel-deployment-job-api-openapi.yml, openapi/amazon-robomaker-cancel-simulation-job-api-openapi.yml,
+  openapi/amazon-robomaker-cancel-simulation-job-batch-api-openapi.yml, openapi/amazon-robomaker-cancel-world-export-job-api-openapi.yml,
+  openapi/amazon-robomaker-cancel-world-generation-job-api-openapi.yml, openapi/amazon-robomaker-create-deployment-job-api-openapi.yml,
+  openapi/amazon-robomaker-create-fleet-api-openapi.yml, openapi/amazon-robomaker-create-robot-api-openapi.yml,
+  openapi/amazon-robomaker-create-robot-application-api-openapi.yml, openapi/amazon-robomaker-create-robot-application-version-api-openapi.yml,
+  openapi/amazon-robomaker-create-simulation-application-api-openapi.yml, openapi/amazon-robomaker-create-simulation-application-version-api-openapi.yml,
+  openapi/amazon-robomaker-create-simulation-job-api-openapi.yml, openapi/amazon-robomaker-create-world-export-job-api-openapi.yml,
+  openapi/amazon-robomaker-create-world-generation-job-api-openapi.yml, openapi/amazon-robomaker-create-world-template-api-openapi.yml,
+  openapi/amazon-robomaker-delete-fleet-api-openapi.yml, openapi/amazon-robomaker-delete-robot-api-openapi.yml,
+  openapi/amazon-robomaker-delete-robot-application-api-openapi.yml, openapi/amazon-robomaker-delete-simulation-application-api-openapi.yml,
+  openapi/amazon-robomaker-delete-world-template-api-openapi.yml, openapi/amazon-robomaker-deregister-robot-api-openapi.yml,
+  openapi/amazon-robomaker-describe-deployment-job-api-openapi.yml, openapi/amazon-robomaker-describe-fleet-api-openapi.yml,
+  openapi/amazon-robomaker-describe-robot-api-openapi.yml, openapi/amazon-robomaker-describe-robot-application-api-openapi.yml,
+  openapi/amazon-robomaker-describe-simulation-application-api-openapi.yml, openapi/amazon-robomaker-describe-simulation-job-api-openapi.yml,
+  openapi/amazon-robomaker-describe-simulation-job-batch-api-openapi.yml, openapi/amazon-robomaker-describe-world-api-openapi.yml,
+  openapi/amazon-robomaker-describe-world-export-job-api-openapi.yml, openapi/amazon-robomaker-describe-world-generation-job-api-openapi.yml,
+  openapi/amazon-robomaker-describe-world-template-api-openapi.yml, openapi/amazon-robomaker-get-world-template-body-api-openapi.yml,
+  openapi/amazon-robomaker-list-deployment-jobs-api-openapi.yml, openapi/amazon-robomaker-list-fleets-api-openapi.yml,
+  openapi/amazon-robomaker-list-robot-applications-api-openapi.yml, openapi/amazon-robomaker-list-robots-api-openapi.yml,
+  openapi/amazon-robomaker-list-simulation-applications-api-openapi.yml, openapi/amazon-robomaker-list-simulation-job-batches-api-openapi.yml,
+  openapi/amazon-robomaker-list-simulation-jobs-api-openapi.yml, openapi/amazon-robomaker-list-world-export-jobs-api-openapi.yml,
+  openapi/amazon-robomaker-list-world-generation-jobs-api-openapi.yml, openapi/amazon-robomaker-list-world-templates-api-openapi.yml,
+  openapi/amazon-robomaker-list-worlds-api-openapi.yml, openapi/amazon-robomaker-register-robot-api-openapi.yml,
+  openapi/amazon-robomaker-restart-simulation-job-api-openapi.yml, openapi/amazon-robomaker-start-simulation-job-batch-api-openapi.yml,
+  openapi/amazon-robomaker-sync-deployment-job-api-openapi.yml, openapi/amazon-robomaker-tags-api-openapi.yml,
+  openapi/amazon-robomaker-update-robot-application-api-openapi.yml, openapi/amazon-robomaker-update-simulation-application-api-openapi.yml,
+  openapi/amazon-robomaker-update-world-template-api-openapi.yml
 description: Recommended x-agentic-access execution contracts, classified heuristically from
   the OpenAPI. A governance starting point for exposing this API to AI agents — review and bind
   audience per deployment. See research/curity/agentic-governance/.
 summary:
   operations: 57
   by_action_class:
-    acting: 56
-    connected: 1
+    acting: 44
+    connected: 13
   by_consequence:
-    write: 51
-    physical: 5
-    read: 1
+    write: 40
+    physical: 4
+    read: 13
   human_in_the_loop_required: 0
 operations:
 - path: /batchDeleteWorlds
@@ -585,135 +612,15 @@ operations:
   method: post
   operationId: GetWorldTemplateBody
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /listDeploymentJobs
   method: post
   operationId: ListDeploymentJobs
-  x-agentic-access:
-    action-class: acting
-    consequence: physical
-    subject: required
-    audience: null
-    token:
-      max-ttl: 300
-      exchange: true
-      purpose-required: true
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listFleets
-  method: post
-  operationId: ListFleets
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listRobotApplications
-  method: post
-  operationId: ListRobotApplications
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listRobots
-  method: post
-  operationId: ListRobots
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listSimulationApplications
-  method: post
-  operationId: ListSimulationApplications
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listSimulationJobBatches
-  method: post
-  operationId: ListSimulationJobBatches
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /listSimulationJobs
-  method: post
-  operationId: ListSimulationJobs
-  x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
-    token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
-- path: /tags/{resourceArn}
-  method: get
-  operationId: ListTagsForResource
   x-agentic-access:
     action-class: connected
     consequence: read
@@ -721,86 +628,106 @@ operations:
     token:
       max-ttl: 3600
     audit: none
-- path: /tags/{resourceArn}
+- path: /listFleets
   method: post
-  operationId: TagResource
+  operationId: ListFleets
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
+- path: /listRobotApplications
+  method: post
+  operationId: ListRobotApplications
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /listRobots
+  method: post
+  operationId: ListRobots
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /listSimulationApplications
+  method: post
+  operationId: ListSimulationApplications
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /listSimulationJobBatches
+  method: post
+  operationId: ListSimulationJobBatches
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /listSimulationJobs
+  method: post
+  operationId: ListSimulationJobs
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
 - path: /listWorldExportJobs
   method: post
   operationId: ListWorldExportJobs
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /listWorldGenerationJobs
   method: post
   operationId: ListWorldGenerationJobs
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /listWorldTemplates
   method: post
   operationId: ListWorldTemplates
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /listWorlds
   method: post
   operationId: ListWorlds
   x-agentic-access:
-    action-class: acting
-    consequence: write
-    subject: required
-    audience: null
+    action-class: connected
+    consequence: read
+    subject: optional
     token:
-      max-ttl: 900
-    escalation:
-      human-in-the-loop: conditional
-      triggers:
-      - abnormal
-      - high-value
-    audit: required
+      max-ttl: 3600
+    audit: none
 - path: /registerRobot
   method: post
   operationId: RegisterRobot
@@ -861,6 +788,32 @@ operations:
       max-ttl: 300
       exchange: true
       purpose-required: true
+    escalation:
+      human-in-the-loop: conditional
+      triggers:
+      - abnormal
+      - high-value
+    audit: required
+- path: /tags/{resourceArn}
+  method: get
+  operationId: ListTagsForResource
+  x-agentic-access:
+    action-class: connected
+    consequence: read
+    subject: optional
+    token:
+      max-ttl: 3600
+    audit: none
+- path: /tags/{resourceArn}
+  method: post
+  operationId: TagResource
+  x-agentic-access:
+    action-class: acting
+    consequence: write
+    subject: required
+    audience: null
+    token:
+      max-ttl: 900
     escalation:
       human-in-the-loop: conditional
       triggers:
