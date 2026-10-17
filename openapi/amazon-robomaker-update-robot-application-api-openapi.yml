@@ -218,42 +218,20 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    SourceConfig:
-      type: object
-      properties:
-        s3Bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The Amazon S3 bucket name.
-        s3Key:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The s3 object key.
-        architecture:
-          allOf:
-          - $ref: '#/components/schemas/Architecture'
-          - description: The target processor architecture for the application.
-      description: Information about a source configuration.
-    Source:
-      type: object
-      properties:
-        s3Bucket:
-          allOf:
-          - $ref: '#/components/schemas/S3Bucket'
-          - description: The s3 bucket name.
-        s3Key:
-          allOf:
-          - $ref: '#/components/schemas/S3Key'
-          - description: The s3 object key.
-        etag:
-          allOf:
-          - $ref: '#/components/schemas/S3Etag'
-          - description: A hash of the object specified by <code>s3Bucket</code> and <code>s3Key</code>.
-        architecture:
-          allOf:
-          - $ref: '#/components/schemas/Architecture'
-          - description: The taget processor architecture for the application.
-      description: Information about a source.
+    ThrottlingException: {}
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    RevisionId:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 40
     UpdateRobotApplicationResponse:
       type: object
       properties:
@@ -289,9 +267,6 @@ components:
           allOf:
           - $ref: '#/components/schemas/Environment'
           - description: The object that contains the Docker image URI for your robot application.
-    InvalidParameterException: {}
-    S3Etag:
-      type: string
     RobotSoftwareSuite:
       type: object
       properties:
@@ -304,54 +279,90 @@ components:
           - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
           - description: The version of the robot software suite (ROS distribution).
       description: Information about a robot software suite (ROS distribution).
-    LimitExceededException: {}
-    Version:
+    S3Etag:
       type: string
-      pattern: (\$LATEST)|[0-9]*
+    Sources:
+      type: array
+      items:
+        $ref: '#/components/schemas/Source'
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    SourceConfig:
+      type: object
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The Amazon S3 bucket name.
+        s3Key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The s3 object key.
+        architecture:
+          allOf:
+          - $ref: '#/components/schemas/Architecture'
+          - description: The target processor architecture for the application.
+      description: Information about a source configuration.
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    InvalidParameterException: {}
+    Source:
+      type: object
+      properties:
+        s3Bucket:
+          allOf:
+          - $ref: '#/components/schemas/S3Bucket'
+          - description: The s3 bucket name.
+        s3Key:
+          allOf:
+          - $ref: '#/components/schemas/S3Key'
+          - description: The s3 object key.
+        etag:
+          allOf:
+          - $ref: '#/components/schemas/S3Etag'
+          - description: A hash of the object specified by <code>s3Bucket</code> and <code>s3Key</code>.
+        architecture:
+          allOf:
+          - $ref: '#/components/schemas/Architecture'
+          - description: The taget processor architecture for the application.
+      description: Information about a source.
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
       maxLength: 255
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
+    ResourceNotFoundException: {}
     Architecture:
       type: string
       enum:
       - X86_64
       - ARM64
       - ARMHF
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    LastUpdatedAt:
-      type: string
-      format: date-time
     InternalServerException: {}
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    LimitExceededException: {}
     RepositoryUrl:
       type: string
       pattern: .+
       minLength: 1
       maxLength: 1024
-    ResourceNotFoundException: {}
-    Sources:
-      type: array
-      items:
-        $ref: '#/components/schemas/Source'
-    RobotSoftwareSuiteType:
-      type: string
-      enum:
-      - ROS
-      - ROS2
-      - General
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    ThrottlingException: {}
     Environment:
       type: object
       properties:
@@ -360,42 +371,13 @@ components:
           - $ref: '#/components/schemas/RepositoryUrl'
           - description: The Docker image URI for either your robot or simulation applications.
       description: The object that contains the Docker image URI for either your robot or simulation applications.
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    RevisionId:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 40
-    RobotSoftwareSuiteVersionType:
+    RobotSoftwareSuiteType:
       type: string
       enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
+      - ROS
+      - ROS2
+      - General
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -408,14 +390,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

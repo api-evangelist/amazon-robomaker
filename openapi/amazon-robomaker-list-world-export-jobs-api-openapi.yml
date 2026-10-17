@@ -194,12 +194,16 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    WorldExportJobSummaries:
-      type: array
-      items:
-        $ref: '#/components/schemas/WorldExportJobSummary'
-      minItems: 0
-      maxItems: 100
+    ThrottlingException: {}
+    WorldExportJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - Canceling
+      - Canceled
     OutputLocation:
       type: object
       properties:
@@ -217,6 +221,31 @@ components:
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    CreatedAt:
+      type: string
+      format: date-time
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    WorldExportJobSummaries:
+      type: array
+      items:
+        $ref: '#/components/schemas/WorldExportJobSummary'
+      minItems: 0
+      maxItems: 100
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    InvalidParameterException: {}
     Filter:
       type: object
       properties:
@@ -229,55 +258,13 @@ components:
           - $ref: '#/components/schemas/FilterValues'
           - description: A list of values.
       description: Information about a filter.
-    InvalidParameterException: {}
-    Arns:
-      type: array
-      items:
-        $ref: '#/components/schemas/Arn'
-      minItems: 1
-      maxItems: 100
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    ListWorldExportJobsResponse:
-      type: object
-      required:
-      - worldExportJobSummaries
-      properties:
-        worldExportJobSummaries:
-          allOf:
-          - $ref: '#/components/schemas/WorldExportJobSummaries'
-          - description: Summary information for world export jobs.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldExportJobsRequest</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    InternalServerException: {}
-    CreatedAt:
-      type: string
-      format: date-time
     FilterValues:
       type: array
       items:
         $ref: '#/components/schemas/Name'
       minItems: 1
       maxItems: 1
-    WorldExportJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - Canceling
-      - Canceled
+    InternalServerException: {}
     WorldExportJobSummary:
       type: object
       properties:
@@ -300,36 +287,31 @@ components:
         outputLocation:
           $ref: '#/components/schemas/OutputLocation'
       description: Information about a world export job.
-    S3Key:
+    Arn:
       type: string
-      pattern: .*
+      pattern: arn:.*
       minLength: 1
-      maxLength: 1024
-    ThrottlingException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
+      maxLength: 1224
+    Arns:
+      type: array
+      items:
+        $ref: '#/components/schemas/Arn'
+      minItems: 1
+      maxItems: 100
+    ListWorldExportJobsResponse:
+      type: object
+      required:
+      - worldExportJobSummaries
+      properties:
+        worldExportJobSummaries:
+          allOf:
+          - $ref: '#/components/schemas/WorldExportJobSummaries'
+          - description: Summary information for world export jobs.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListWorldExportJobsRequest</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -342,14 +324,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

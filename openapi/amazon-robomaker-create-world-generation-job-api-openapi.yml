@@ -231,71 +231,13 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    IdempotentParameterMismatchException: {}
+    ThrottlingException: {}
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
-    InvalidParameterException: {}
-    WorldCount:
-      type: object
-      properties:
-        floorplanCount:
-          allOf:
-          - $ref: '#/components/schemas/FloorplanCount'
-          - description: The number of unique floorplans.
-        interiorCountPerFloorplan:
-          allOf:
-          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
-          - description: The number of unique interiors per floorplan.
-      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
-    ClientRequestToken:
-      type: string
-      pattern: '[a-zA-Z0-9_\-=]*'
-      minLength: 1
-      maxLength: 64
-    LimitExceededException: {}
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    WorldGenerationJobErrorCode:
-      type: string
-      enum:
-      - InternalServiceError
-      - LimitExceeded
-      - ResourceNotFound
-      - RequestThrottled
-      - InvalidInput
-      - AllWorldGenerationFailed
-    FloorplanCount:
-      type: integer
-    InteriorCountPerFloorplan:
-      type: integer
-    ServiceUnavailableException: {}
-    InternalServerException: {}
-    CreatedAt:
-      type: string
-      format: date-time
-    ResourceNotFoundException: {}
-    WorldGenerationJobStatus:
-      type: string
-      enum:
-      - Pending
-      - Running
-      - Completed
-      - Failed
-      - PartialFailed
-      - Canceling
-      - Canceled
     CreateWorldGenerationJobResponse:
       type: object
       properties:
@@ -335,26 +277,66 @@ components:
           allOf:
           - $ref: '#/components/schemas/TagMap'
           - description: A map that contains tag keys and tag values that are attached to the generated worlds.
-    ThrottlingException: {}
+    FloorplanCount:
+      type: integer
+    WorldCount:
+      type: object
+      properties:
+        floorplanCount:
+          allOf:
+          - $ref: '#/components/schemas/FloorplanCount'
+          - description: The number of unique floorplans.
+        interiorCountPerFloorplan:
+          allOf:
+          - $ref: '#/components/schemas/InteriorCountPerFloorplan'
+          - description: The number of unique interiors per floorplan.
+      description: <p>The number of worlds that will be created. You can configure the number of unique floorplans and the number of unique interiors for each floor plan. For example, if you want 1 world with 20 unique interiors, you set <code>floorplanCount = 1</code> and <code>interiorCountPerFloorplan = 20</code>. This will result in 20 worlds (<code>floorplanCount</code> * <code>interiorCountPerFloorplan)</code>. </p> <p>If you set <code>floorplanCount = 4</code> and <code>interiorCountPerFloorplan = 5</code>, there will be 20 worlds with 5 unique floor plans. </p>
+    CreatedAt:
+      type: string
+      format: date-time
+    WorldGenerationJobErrorCode:
+      type: string
+      enum:
+      - InternalServiceError
+      - LimitExceeded
+      - ResourceNotFound
+      - RequestThrottled
+      - InvalidInput
+      - AllWorldGenerationFailed
+    InvalidParameterException: {}
+    ResourceNotFoundException: {}
+    ServiceUnavailableException: {}
+    InternalServerException: {}
+    WorldGenerationJobStatus:
+      type: string
+      enum:
+      - Pending
+      - Running
+      - Completed
+      - Failed
+      - PartialFailed
+      - Canceling
+      - Canceled
+    ClientRequestToken:
+      type: string
+      pattern: '[a-zA-Z0-9_\-=]*'
+      minLength: 1
+      maxLength: 64
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    InteriorCountPerFloorplan:
+      type: integer
+    LimitExceededException: {}
+    IdempotentParameterMismatchException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -367,14 +349,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

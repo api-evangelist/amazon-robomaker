@@ -177,21 +177,30 @@ paths:
       summary: Delete fleet
       x-summary-source: derived
 components:
+  schemas:
+    ThrottlingException: {}
+    InternalServerException: {}
+    DeleteFleetResponse:
+      type: object
+      deprecated: true
+      properties: {}
+      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    InvalidParameterException: {}
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -208,8 +217,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -220,15 +229,6 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    InternalServerException: {}
-    DeleteFleetResponse:
-      type: object
-      deprecated: true
-      properties: {}
-      description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    InvalidParameterException: {}
-    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

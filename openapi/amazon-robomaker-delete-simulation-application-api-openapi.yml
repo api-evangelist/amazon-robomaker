@@ -179,21 +179,28 @@ paths:
       summary: Delete simulation application
       x-summary-source: derived
 components:
+  schemas:
+    ThrottlingException: {}
+    InternalServerException: {}
+    InvalidParameterException: {}
+    DeleteSimulationApplicationResponse:
+      type: object
+      properties: {}
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -210,8 +217,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -222,13 +229,6 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    DeleteSimulationApplicationResponse:
-      type: object
-      properties: {}
-    InternalServerException: {}
-    InvalidParameterException: {}
-    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey

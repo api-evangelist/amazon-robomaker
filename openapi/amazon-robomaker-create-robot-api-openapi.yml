@@ -212,38 +212,32 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    ThrottlingException: {}
     TagMap:
       type: object
       minProperties: 0
       maxProperties: 50
       additionalProperties:
         $ref: '#/components/schemas/TagValue'
+    CreatedAt:
+      type: string
+      format: date-time
     InvalidParameterException: {}
-    LimitExceededException: {}
-    Arn:
+    Name:
       type: string
-      pattern: arn:.*
+      pattern: '[a-zA-Z0-9_\-]*'
       minLength: 1
-      maxLength: 1224
-    TagValue:
-      type: string
-      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
-      minLength: 0
-      maxLength: 256
+      maxLength: 255
+    InternalServerException: {}
     Architecture:
       type: string
       enum:
       - X86_64
       - ARM64
       - ARMHF
-    ResourceAlreadyExistsException: {}
-    CreatedAt:
+    Arn:
       type: string
-      format: date-time
-    InternalServerException: {}
-    Id:
-      type: string
-      pattern: .*
+      pattern: arn:.*
       minLength: 1
       maxLength: 1224
     CreateRobotResponse:
@@ -275,31 +269,19 @@ components:
           - $ref: '#/components/schemas/TagMap'
           - description: The list of all tags added to the robot.
       description: AWS RoboMaker is unable to process this request as the support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
-    ThrottlingException: {}
-    Name:
+    Id:
       type: string
-      pattern: '[a-zA-Z0-9_\-]*'
+      pattern: .*
       minLength: 1
-      maxLength: 255
+      maxLength: 1224
+    TagValue:
+      type: string
+      pattern: '[a-zA-Z0-9 _.\-\/+=:]*'
+      minLength: 0
+      maxLength: 256
+    LimitExceededException: {}
+    ResourceAlreadyExistsException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -312,14 +294,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

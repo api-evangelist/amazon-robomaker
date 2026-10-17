@@ -194,15 +194,25 @@ paths:
       x-summary-source: derived
 components:
   schemas:
+    ThrottlingException: {}
+    SimulationApplicationNames:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+    LastUpdatedAt:
+      type: string
+      format: date-time
     PaginationToken:
       type: string
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
-    RobotApplicationNames:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
+    InvalidParameterException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
     Filter:
       type: object
       properties:
@@ -251,28 +261,6 @@ components:
           - $ref: '#/components/schemas/ComputeType'
           - description: The compute type for the simulation job summary.
       description: Summary information for a simulation job.
-    InvalidParameterException: {}
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    ListSimulationJobsResponse:
-      type: object
-      required:
-      - simulationJobSummaries
-      properties:
-        simulationJobSummaries:
-          allOf:
-          - $ref: '#/components/schemas/SimulationJobSummaries'
-          - description: A list of simulation job summaries that meet the criteria of the request.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListSimulationJobs</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
-    LastUpdatedAt:
-      type: string
-      format: date-time
     SimulationJobStatus:
       type: string
       enum:
@@ -286,32 +274,44 @@ components:
       - Terminating
       - Terminated
       - Canceled
-    ComputeType:
-      type: string
-      enum:
-      - CPU
-      - GPU_AND_CPU
-    InternalServerException: {}
     FilterValues:
       type: array
       items:
         $ref: '#/components/schemas/Name'
       minItems: 1
       maxItems: 1
+    InternalServerException: {}
     DataSourceNames:
       type: array
       items:
         $ref: '#/components/schemas/Name'
-    SimulationApplicationNames:
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    RobotApplicationNames:
       type: array
       items:
         $ref: '#/components/schemas/Name'
-    ThrottlingException: {}
-    Name:
+    ListSimulationJobsResponse:
+      type: object
+      required:
+      - simulationJobSummaries
+      properties:
+        simulationJobSummaries:
+          allOf:
+          - $ref: '#/components/schemas/SimulationJobSummaries'
+          - description: A list of simulation job summaries that meet the criteria of the request.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListSimulationJobs</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+    ComputeType:
       type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
+      enum:
+      - CPU
+      - GPU_AND_CPU
     SimulationJobSummaries:
       type: array
       items:
@@ -319,24 +319,6 @@ components:
       minItems: 0
       maxItems: 100
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -349,14 +331,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

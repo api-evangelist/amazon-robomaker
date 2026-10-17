@@ -199,68 +199,21 @@ paths:
       summary: List simulation applications
       x-summary-source: derived
 components:
-  parameters:
-    X-Amz-Credential:
-      name: X-Amz-Credential
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Date:
-      name: X-Amz-Date
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Signature:
-      name: X-Amz-Signature
-      in: header
-      schema:
-        type: string
-      required: false
   schemas:
+    ThrottlingException: {}
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    LastUpdatedAt:
+      type: string
+      format: date-time
     PaginationToken:
       type: string
       pattern: '[a-zA-Z0-9_.\-\/+=]*'
       minLength: 1
       maxLength: 2048
-    Filter:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/Name'
-          - description: The name of the filter.
-        values:
-          allOf:
-          - $ref: '#/components/schemas/FilterValues'
-          - description: A list of values.
-      description: Information about a filter.
-    InvalidParameterException: {}
     RobotSoftwareSuite:
       type: object
       properties:
@@ -273,55 +226,71 @@ components:
           - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
           - description: The version of the robot software suite (ROS distribution).
       description: Information about a robot software suite (ROS distribution).
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
     SimulationSoftwareSuiteVersionType:
       type: string
       pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
       minLength: 0
       maxLength: 1024
-    LastUpdatedAt:
-      type: string
-      format: date-time
-    InternalServerException: {}
-    FilterValues:
-      type: array
-      items:
-        $ref: '#/components/schemas/Name'
-      minItems: 1
-      maxItems: 1
+    ListSimulationApplicationsResponse:
+      type: object
+      properties:
+        simulationApplicationSummaries:
+          allOf:
+          - $ref: '#/components/schemas/SimulationApplicationSummaries'
+          - description: A list of simulation application summaries that meet the criteria of the request.
+        nextToken:
+          allOf:
+          - $ref: '#/components/schemas/PaginationToken'
+          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListSimulationApplications</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
     SimulationApplicationSummaries:
       type: array
       items:
         $ref: '#/components/schemas/SimulationApplicationSummary'
       minItems: 0
       maxItems: 100
-    SimulationSoftwareSuite:
+    InvalidParameterException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
+    Filter:
       type: object
       properties:
         name:
           allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
-          - description: The name of the simulation software suite.
-        version:
+          - $ref: '#/components/schemas/Name'
+          - description: The name of the filter.
+        values:
           allOf:
-          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
-          - description: The version of the simulation software suite.
-      description: Information about a simulation software suite.
+          - $ref: '#/components/schemas/FilterValues'
+          - description: A list of values.
+      description: Information about a filter.
+    FilterValues:
+      type: array
+      items:
+        $ref: '#/components/schemas/Name'
+      minItems: 1
+      maxItems: 1
+    InternalServerException: {}
     SimulationSoftwareSuiteType:
       type: string
       enum:
       - Gazebo
       - RosbagPlay
       - SimulationRuntime
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
     SimulationApplicationSummary:
       type: object
       properties:
@@ -350,36 +319,67 @@ components:
           - $ref: '#/components/schemas/SimulationSoftwareSuite'
           - description: Information about a simulation software suite.
       description: Summary information for a simulation application.
+    SimulationSoftwareSuite:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteType'
+          - description: The name of the simulation software suite.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
+          - description: The version of the simulation software suite.
+      description: Information about a simulation software suite.
     RobotSoftwareSuiteType:
       type: string
       enum:
       - ROS
       - ROS2
       - General
-    ThrottlingException: {}
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    RobotSoftwareSuiteVersionType:
-      type: string
-      enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
-    ListSimulationApplicationsResponse:
-      type: object
-      properties:
-        simulationApplicationSummaries:
-          allOf:
-          - $ref: '#/components/schemas/SimulationApplicationSummaries'
-          - description: A list of simulation application summaries that meet the criteria of the request.
-        nextToken:
-          allOf:
-          - $ref: '#/components/schemas/PaginationToken'
-          - description: 'If the previous paginated request did not return all of the remaining results, the response object''s <code>nextToken</code> parameter value is set to a token. To retrieve the next set of results, call <code>ListSimulationApplications</code> again and assign that token to the request object''s <code>nextToken</code> parameter. If there are no remaining results, the previous response object''s NextToken parameter is set to null. '
+  parameters:
+    X-Amz-Date:
+      name: X-Amz-Date
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Signature:
+      name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
+      in: header
+      schema:
+        type: string
+      required: false
   securitySchemes:
     hmac:
       type: apiKey

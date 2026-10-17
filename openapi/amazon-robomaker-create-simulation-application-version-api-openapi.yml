@@ -203,19 +203,64 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    IdempotentParameterMismatchException: {}
-    RenderingEngine:
+    ThrottlingException: {}
+    Version:
+      type: string
+      pattern: (\$LATEST)|[0-9]*
+      minLength: 1
+      maxLength: 255
+    LastUpdatedAt:
+      type: string
+      format: date-time
+    RevisionId:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 40
+    RobotSoftwareSuite:
       type: object
       properties:
         name:
           allOf:
-          - $ref: '#/components/schemas/RenderingEngineType'
-          - description: The name of the rendering engine.
+          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
+          - description: The name of the robot software suite (ROS distribution).
         version:
           allOf:
-          - $ref: '#/components/schemas/RenderingEngineVersionType'
-          - description: The version of the rendering engine.
-      description: Information about a rendering engine.
+          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
+          - description: The version of the robot software suite (ROS distribution).
+      description: Information about a robot software suite (ROS distribution).
+    SimulationSoftwareSuiteVersionType:
+      type: string
+      pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
+      minLength: 0
+      maxLength: 1024
+    S3Etag:
+      type: string
+    Sources:
+      type: array
+      items:
+        $ref: '#/components/schemas/Source'
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    RenderingEngineVersionType:
+      type: string
+      pattern: 1.x
+      minLength: 1
+      maxLength: 4
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
+    InvalidParameterException: {}
+    Name:
+      type: string
+      pattern: '[a-zA-Z0-9_\-]*'
+      minLength: 1
+      maxLength: 255
     Source:
       type: object
       properties:
@@ -236,52 +281,6 @@ components:
           - $ref: '#/components/schemas/Architecture'
           - description: The taget processor architecture for the application.
       description: Information about a source.
-    InvalidParameterException: {}
-    S3Etag:
-      type: string
-    RobotSoftwareSuite:
-      type: object
-      properties:
-        name:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteType'
-          - description: The name of the robot software suite (ROS distribution).
-        version:
-          allOf:
-          - $ref: '#/components/schemas/RobotSoftwareSuiteVersionType'
-          - description: The version of the robot software suite (ROS distribution).
-      description: Information about a robot software suite (ROS distribution).
-    LimitExceededException: {}
-    Version:
-      type: string
-      pattern: (\$LATEST)|[0-9]*
-      minLength: 1
-      maxLength: 255
-    RenderingEngineType:
-      type: string
-      enum:
-      - OGRE
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    Architecture:
-      type: string
-      enum:
-      - X86_64
-      - ARM64
-      - ARMHF
-    SimulationSoftwareSuiteVersionType:
-      type: string
-      pattern: 7|9|11|Kinetic|Melodic|Dashing|Foxy
-      minLength: 0
-      maxLength: 1024
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
     CreateSimulationApplicationVersionResponse:
       type: object
       properties:
@@ -325,15 +324,47 @@ components:
           allOf:
           - $ref: '#/components/schemas/Environment'
           - description: The object that contains the Docker image URI used to create the simulation application.
-    LastUpdatedAt:
+    Architecture:
       type: string
-      format: date-time
+      enum:
+      - X86_64
+      - ARM64
+      - ARMHF
     InternalServerException: {}
-    RepositoryUrl:
+    RenderingEngine:
+      type: object
+      properties:
+        name:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineType'
+          - description: The name of the rendering engine.
+        version:
+          allOf:
+          - $ref: '#/components/schemas/RenderingEngineVersionType'
+          - description: The version of the rendering engine.
+      description: Information about a rendering engine.
+    SimulationSoftwareSuiteType:
       type: string
-      pattern: .+
+      enum:
+      - Gazebo
+      - RosbagPlay
+      - SimulationRuntime
+    RenderingEngineType:
+      type: string
+      enum:
+      - OGRE
+    RobotSoftwareSuiteVersionType:
+      type: string
+      enum:
+      - Kinetic
+      - Melodic
+      - Dashing
+      - Foxy
+    Arn:
+      type: string
+      pattern: arn:.*
       minLength: 1
-      maxLength: 1024
+      maxLength: 1224
     SimulationSoftwareSuite:
       type: object
       properties:
@@ -346,33 +377,13 @@ components:
           - $ref: '#/components/schemas/SimulationSoftwareSuiteVersionType'
           - description: The version of the simulation software suite.
       description: Information about a simulation software suite.
-    SimulationSoftwareSuiteType:
+    LimitExceededException: {}
+    RepositoryUrl:
       type: string
-      enum:
-      - Gazebo
-      - RosbagPlay
-      - SimulationRuntime
-    Sources:
-      type: array
-      items:
-        $ref: '#/components/schemas/Source'
-    S3Key:
-      type: string
-      pattern: .*
+      pattern: .+
       minLength: 1
       maxLength: 1024
-    RobotSoftwareSuiteType:
-      type: string
-      enum:
-      - ROS
-      - ROS2
-      - General
-    RenderingEngineVersionType:
-      type: string
-      pattern: 1.x
-      minLength: 1
-      maxLength: 4
-    ThrottlingException: {}
+    IdempotentParameterMismatchException: {}
     Environment:
       type: object
       properties:
@@ -381,42 +392,13 @@ components:
           - $ref: '#/components/schemas/RepositoryUrl'
           - description: The Docker image URI for either your robot or simulation applications.
       description: The object that contains the Docker image URI for either your robot or simulation applications.
-    Name:
-      type: string
-      pattern: '[a-zA-Z0-9_\-]*'
-      minLength: 1
-      maxLength: 255
-    RevisionId:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 40
-    RobotSoftwareSuiteVersionType:
+    RobotSoftwareSuiteType:
       type: string
       enum:
-      - Kinetic
-      - Melodic
-      - Dashing
-      - Foxy
+      - ROS
+      - ROS2
+      - General
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -429,14 +411,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

@@ -209,11 +209,74 @@ paths:
       x-summary-source: derived
 components:
   schemas:
-    IdempotentParameterMismatchException: {}
-    Percentage:
-      type: integer
-      minimum: 1
-      maximum: 100
+    DeploymentStatus:
+      type: string
+      enum:
+      - Pending
+      - Preparing
+      - InProgress
+      - Failed
+      - Succeeded
+      - Canceled
+    ThrottlingException: {}
+    Path:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    S3Etag:
+      type: string
+    DeploymentLaunchConfig:
+      type: object
+      required:
+      - packageName
+      - launchFile
+      properties:
+        packageName:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The package name.
+        preLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment pre-launch file. This file will be executed prior to the launch file.
+        launchFile:
+          allOf:
+          - $ref: '#/components/schemas/Command'
+          - description: The launch file name.
+        postLaunchFile:
+          allOf:
+          - $ref: '#/components/schemas/Path'
+          - description: The deployment post-launch file. This file will be executed after the launch file.
+        environmentVariables:
+          allOf:
+          - $ref: '#/components/schemas/EnvironmentVariableMap'
+          - description: An array of key/value pairs specifying environment variables for the robot application
+      description: Configuration information for a deployment launch.
+    EnvironmentVariableValue:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    S3Key:
+      type: string
+      pattern: .*
+      minLength: 1
+      maxLength: 1024
+    Command:
+      type: string
+      pattern: '[a-zA-Z0-9_.\-]*'
+      minLength: 1
+      maxLength: 1024
+    CreatedAt:
+      type: string
+      format: date-time
+    ConcurrentDeploymentException: {}
+    S3Bucket:
+      type: string
+      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
+      minLength: 3
+      maxLength: 63
     SyncDeploymentJobResponse:
       type: object
       deprecated: true
@@ -251,9 +314,20 @@ components:
           - $ref: '#/components/schemas/CreatedAt'
           - description: The time, in milliseconds since the epoch, when the fleet was created.
       description: Support for the AWS RoboMaker application deployment feature has ended. For additional information, see https://docs.aws.amazon.com/robomaker/latest/dg/fleets.html.
+    GenericString:
+      type: string
+      pattern: .*
+      minLength: 0
+      maxLength: 1024
     DeploymentTimeout:
       type: integer
     InvalidParameterException: {}
+    DeploymentApplicationConfigs:
+      type: array
+      items:
+        $ref: '#/components/schemas/DeploymentApplicationConfig'
+      minItems: 1
+      maxItems: 1
     S3Object:
       type: object
       required:
@@ -273,9 +347,8 @@ components:
           - $ref: '#/components/schemas/S3Etag'
           - description: The etag of the object.
       description: Information about an S3 object.
-    S3Etag:
-      type: string
-    LimitExceededException: {}
+    ResourceNotFoundException: {}
+    InternalServerException: {}
     DeploymentJobErrorCode:
       type: string
       enum:
@@ -303,116 +376,12 @@ components:
       - RobotApplicationDoesNotExist
       - DeploymentFleetDoesNotExist
       - FleetDeploymentTimeout
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
     EnvironmentVariableMap:
       type: object
       minProperties: 0
       maxProperties: 20
       additionalProperties:
         $ref: '#/components/schemas/EnvironmentVariableValue'
-    Path:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    S3Bucket:
-      type: string
-      pattern: '[a-z0-9][a-z0-9.\-]*[a-z0-9]'
-      minLength: 3
-      maxLength: 63
-    Command:
-      type: string
-      pattern: '[a-zA-Z0-9_.\-]*'
-      minLength: 1
-      maxLength: 1024
-    InternalServerException: {}
-    CreatedAt:
-      type: string
-      format: date-time
-    GenericString:
-      type: string
-      pattern: .*
-      minLength: 0
-      maxLength: 1024
-    DeploymentLaunchConfig:
-      type: object
-      required:
-      - packageName
-      - launchFile
-      properties:
-        packageName:
-          allOf:
-          - $ref: '#/components/schemas/Command'
-          - description: The package name.
-        preLaunchFile:
-          allOf:
-          - $ref: '#/components/schemas/Path'
-          - description: The deployment pre-launch file. This file will be executed prior to the launch file.
-        launchFile:
-          allOf:
-          - $ref: '#/components/schemas/Command'
-          - description: The launch file name.
-        postLaunchFile:
-          allOf:
-          - $ref: '#/components/schemas/Path'
-          - description: The deployment post-launch file. This file will be executed after the launch file.
-        environmentVariables:
-          allOf:
-          - $ref: '#/components/schemas/EnvironmentVariableMap'
-          - description: An array of key/value pairs specifying environment variables for the robot application
-      description: Configuration information for a deployment launch.
-    ResourceNotFoundException: {}
-    DeploymentApplicationConfigs:
-      type: array
-      items:
-        $ref: '#/components/schemas/DeploymentApplicationConfig'
-      minItems: 1
-      maxItems: 1
-    EnvironmentVariableValue:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    DeploymentStatus:
-      type: string
-      enum:
-      - Pending
-      - Preparing
-      - InProgress
-      - Failed
-      - Succeeded
-      - Canceled
-    ConcurrentDeploymentException: {}
-    S3Key:
-      type: string
-      pattern: .*
-      minLength: 1
-      maxLength: 1024
-    DeploymentConfig:
-      type: object
-      properties:
-        concurrentDeploymentPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of robots receiving the deployment at the same time.
-        failureThresholdPercentage:
-          allOf:
-          - $ref: '#/components/schemas/Percentage'
-          - description: The percentage of deployments that need to fail before stopping deployment.
-        robotDeploymentTimeoutInSeconds:
-          allOf:
-          - $ref: '#/components/schemas/DeploymentTimeout'
-          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
-        downloadConditionFile:
-          allOf:
-          - $ref: '#/components/schemas/S3Object'
-          - description: The download condition file.
-      description: Information about a deployment configuration.
-    ThrottlingException: {}
     DeploymentVersion:
       type: string
       pattern: '[0-9]*'
@@ -438,25 +407,38 @@ components:
           - $ref: '#/components/schemas/DeploymentLaunchConfig'
           - description: The launch configuration.
       description: Information about a deployment application configuration.
+    Percentage:
+      type: integer
+      minimum: 1
+      maximum: 100
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    DeploymentConfig:
+      type: object
+      properties:
+        concurrentDeploymentPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of robots receiving the deployment at the same time.
+        failureThresholdPercentage:
+          allOf:
+          - $ref: '#/components/schemas/Percentage'
+          - description: The percentage of deployments that need to fail before stopping deployment.
+        robotDeploymentTimeoutInSeconds:
+          allOf:
+          - $ref: '#/components/schemas/DeploymentTimeout'
+          - description: The amount of time, in seconds, to wait for deployment to a single robot to complete. Choose a time between 1 minute and 7 days. The default is 5 hours.
+        downloadConditionFile:
+          allOf:
+          - $ref: '#/components/schemas/S3Object'
+          - description: The download condition file.
+      description: Information about a deployment configuration.
+    LimitExceededException: {}
+    IdempotentParameterMismatchException: {}
   parameters:
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Content-Sha256:
-      name: X-Amz-Content-Sha256
-      in: header
-      schema:
-        type: string
-      required: false
     X-Amz-Date:
       name: X-Amz-Date
       in: header
@@ -469,14 +451,32 @@ components:
       schema:
         type: string
       required: false
+    X-Amz-Credential:
+      name: X-Amz-Credential
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
+      in: header
+      schema:
+        type: string
+      required: false
     X-Amz-Signature:
       name: X-Amz-Signature
       in: header
       schema:
         type: string
       required: false
-    X-Amz-Credential:
-      name: X-Amz-Credential
+    X-Amz-Content-Sha256:
+      name: X-Amz-Content-Sha256
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string

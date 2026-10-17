@@ -174,21 +174,43 @@ paths:
       summary: Batch delete worlds
       x-summary-source: derived
 components:
+  schemas:
+    Arn:
+      type: string
+      pattern: arn:.*
+      minLength: 1
+      maxLength: 1224
+    ThrottlingException: {}
+    InternalServerException: {}
+    Arns:
+      type: array
+      items:
+        $ref: '#/components/schemas/Arn'
+      minItems: 1
+      maxItems: 100
+    InvalidParameterException: {}
+    BatchDeleteWorldsResponse:
+      type: object
+      properties:
+        unprocessedWorlds:
+          allOf:
+          - $ref: '#/components/schemas/Arns'
+          - description: A list of unprocessed worlds associated with the call. These worlds were not deleted.
   parameters:
-    X-Amz-Algorithm:
-      name: X-Amz-Algorithm
-      in: header
-      schema:
-        type: string
-      required: false
-    X-Amz-Security-Token:
-      name: X-Amz-Security-Token
+    X-Amz-SignedHeaders:
+      name: X-Amz-SignedHeaders
       in: header
       schema:
         type: string
       required: false
     X-Amz-Signature:
       name: X-Amz-Signature
+      in: header
+      schema:
+        type: string
+      required: false
+    X-Amz-Algorithm:
+      name: X-Amz-Algorithm
       in: header
       schema:
         type: string
@@ -205,8 +227,8 @@ components:
       schema:
         type: string
       required: false
-    X-Amz-SignedHeaders:
-      name: X-Amz-SignedHeaders
+    X-Amz-Security-Token:
+      name: X-Amz-Security-Token
       in: header
       schema:
         type: string
@@ -217,28 +239,6 @@ components:
       schema:
         type: string
       required: false
-  schemas:
-    BatchDeleteWorldsResponse:
-      type: object
-      properties:
-        unprocessedWorlds:
-          allOf:
-          - $ref: '#/components/schemas/Arns'
-          - description: A list of unprocessed worlds associated with the call. These worlds were not deleted.
-    Arn:
-      type: string
-      pattern: arn:.*
-      minLength: 1
-      maxLength: 1224
-    Arns:
-      type: array
-      items:
-        $ref: '#/components/schemas/Arn'
-      minItems: 1
-      maxItems: 100
-    InternalServerException: {}
-    InvalidParameterException: {}
-    ThrottlingException: {}
   securitySchemes:
     hmac:
       type: apiKey
