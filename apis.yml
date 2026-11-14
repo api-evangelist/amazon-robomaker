@@ -31,7 +31,7 @@ accessModel:
   - plans
   - authentication
   - security
-  generated: '2026-11-06'
+  generated: '2026-11-13'
   method: derived
 image: https://a0.awsstatic.com/libra-css/images/logos/aws_logo_smile_1200x630.png
 url: https://raw.githubusercontent.com/api-evangelist/amazon-robomaker/refs/heads/main/apis.yml
@@ -2595,6 +2595,16 @@ common:
   url: vocabulary/amazon-robomaker-vocabulary.yaml
 - type: Integrations
   url: https://aws.amazon.com/partners/
+- type: UsageTerms
+  url: terms/amazon-robomaker-terms-of-service.yml
+- type: DataProcessing
+  url: privacy/amazon-robomaker-privacy-policy.yml
+- type: Attestations
+  url: compliance/amazon-robomaker-compliance.yml
+- type: Eligibility
+  url: eligibility/amazon-robomaker-eligibility.yml
+- type: AIPreferences
+  url: ai-preferences/amazon-robomaker-ai-preferences.yml
 integrations:
 - name: Partner Programs
 - name: Resources
